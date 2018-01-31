@@ -62,7 +62,7 @@
     Private Sub btnRanking_Click(sender As Object, e As EventArgs) Handles btnRanking.Click
         Dim viewer As New frmRankingHub()
         viewer.ShowDialog()
-    End SubS
+    End Sub
 
     Private Sub btnGrades_Click(sender As Object, e As EventArgs) Handles btnGrades.Click
         Dim viewer As New frmGradesHub

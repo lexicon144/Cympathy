@@ -30,7 +30,6 @@
         ' Add any initialization after the InitializeComponent() call.
         Me._IsModal = True
         Me.btnOK.Enabled = True
-        Me.btnCreate.Enabled = False
         Me.btnView.Enabled = False
 
         LoadAllMaterials()

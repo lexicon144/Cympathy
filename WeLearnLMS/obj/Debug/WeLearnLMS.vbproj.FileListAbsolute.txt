@@ -57,5 +57,5 @@ C:\Users\genocideDaemon\Documents\Visual Studio 2012\Projects\Cympathy\WeLearnLM
 C:\Users\genocideDaemon\Documents\Visual Studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmGradesQuizPreCreator.resources
 C:\Users\genocideDaemon\Documents\Visual Studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmExamsHub.resources
 C:\Users\genocideDaemon\documents\visual studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmLessonListHub.resources
-C:\Users\genocideDaemon\documents\visual studio 2012\Projects\Cympathy\WeLearnLMS\bin\Debug\MySql.Data.dll
 C:\Users\genocideDaemon\documents\visual studio 2012\Projects\Cympathy\WeLearnLMS\bin\Debug\MySql.Data.xml
+C:\Users\genocideDaemon\Documents\Visual Studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.vbprojResolveAssemblyReference.cache

@@ -29,7 +29,6 @@ Public Class frmExamsHub
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        Me.btnCreate.Enabled = False
         Me.btnView.Enabled = False
         Me.btnOK.Enabled = False
         Me._IsModal = True
