@@ -1,0 +1,628 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2207AFD-B676-4C75-AE79-ED2EC8940C31}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WeLearnLMS.My.MyApplication</StartupObject>
+    <RootNamespace>WeLearnLMS</RootNamespace>
+    <AssemblyName>WeLearnLMS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WeLearnLMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WeLearnLMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="MySql" />
+    <Import Include="MySql.Data" />
+    <Import Include="MySql.Data.MySqlClient" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContextCreateQuestionnaire.vb" />
+    <Compile Include="ContextValidateInput.vb" />
+    <Compile Include="ContextVerification.vb" />
+    <Compile Include="context_QuestionAmount.vb" />
+    <Compile Include="c_AdvancedCredentials.vb" />
+    <Compile Include="c_Article.vb" />
+    <Compile Include="c_Classroom.vb" />
+    <Compile Include="c_Day.vb" />
+    <Compile Include="c_Exam.vb" />
+    <Compile Include="c_Grades.vb" />
+    <Compile Include="c_Material.vb" />
+    <Compile Include="c_Message.vb" />
+    <Compile Include="c_MainCredentials.vb" />
+    <Compile Include="c_PinCodeGenerator.vb" />
+    <Compile Include="c_PreGrade.vb" />
+    <Compile Include="c_Questionnaire.vb" />
+    <Compile Include="c_Quiz.vb" />
+    <Compile Include="c_Schedule.vb" />
+    <Compile Include="c_SmallCredentials.vb" />
+    <Compile Include="c_SmallQuestion.vb" />
+    <Compile Include="c_Time.vb" />
+    <Compile Include="frmAccess.Designer.vb">
+      <DependentUpon>frmAccess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccess.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArticleHub.Designer.vb">
+      <DependentUpon>frmArticleHub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmArticleHub.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArticleLinker.Designer.vb">
+      <DependentUpon>frmArticleLinker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmArticleLinker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClassroomCreator.Designer.vb">
+      <DependentUpon>frmClassroomCreator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClassroomCreator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClassroomHub.Designer.vb">
+      <DependentUpon>frmClassroomHub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClassroomHub.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClassroomLinker.Designer.vb">
+      <DependentUpon>frmClassroomLinker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClassroomLinker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArticleCreator.Designer.vb">
+      <DependentUpon>frmArticleCreator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmArticleCreator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArticleViewer.Designer.vb">
+      <DependentUpon>frmArticleViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmArticleViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClassroomDialog.Designer.vb">
+      <DependentUpon>frmClassroomDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClassroomDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDayDialog.Designer.vb">
+      <DependentUpon>frmDayDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDayDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGradeFinal.Designer.vb">
+      <DependentUpon>frmGradeFinal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGradeFinal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGradesExamPreCreator.Designer.vb">
+      <DependentUpon>frmGradesExamPreCreator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGradesExamPreCreator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGradesHub.Designer.vb">
+      <DependentUpon>frmGradesHub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGradesHub.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGradesQuizPreCreator.Designer.vb">
+      <DependentUpon>frmGradesQuizPreCreator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGradesQuizPreCreator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLessonListHub.Designer.vb">
+      <DependentUpon>frmLessonListHub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLessonListHub.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOfficialExamsCreator.Designer.vb">
+      <DependentUpon>frmOfficialExamsCreator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOfficialExamsCreator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExamsHub.Designer.vb">
+      <DependentUpon>frmExamsHub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmExamsHub.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExamsCreator.Designer.vb">
+      <DependentUpon>frmExamsCreator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmExamsCreator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuestSecurity.Designer.vb">
+      <DependentUpon>frmQuestSecurity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuestSecurity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExamsLinker.Designer.vb">
+      <DependentUpon>frmExamsLinker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmExamsLinker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExamsViewer.Designer.vb">
+      <DependentUpon>frmExamsViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmExamsViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageCreator.Designer.vb">
+      <DependentUpon>frmMessageCreator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageCreator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageHub.Designer.vb">
+      <DependentUpon>frmMessageHub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageHub.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageViewer.Designer.vb">
+      <DependentUpon>frmMessageViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRankingHub.Designer.vb">
+      <DependentUpon>frmRankingHub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRankingHub.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRankingProfessors.Designer.vb">
+      <DependentUpon>frmRankingProfessors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRankingProfessors.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRankingViewer.Designer.vb">
+      <DependentUpon>frmRankingViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRankingViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserLogin.Designer.vb">
+      <DependentUpon>frmUserLogin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.vb">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPasswordChallenge.Designer.vb">
+      <DependentUpon>frmPasswordChallenge.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPasswordChallenge.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPasswordModifier.Designer.vb">
+      <DependentUpon>frmPasswordModifier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPasswordModifier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGradesPreViewer.Designer.vb">
+      <DependentUpon>frmGradesPreViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGradesPreViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuestionnaireCreator.Designer.vb">
+      <DependentUpon>frmQuestionnaireCreator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuestionnaireCreator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuestionnaireViewer.Designer.vb">
+      <DependentUpon>frmQuestionnaireViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuestionnaireViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuizCreator.Designer.vb">
+      <DependentUpon>frmQuizCreator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuizCreator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuizViewer.Designer.vb">
+      <DependentUpon>frmQuizViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuizViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserRegistration.Designer.vb">
+      <DependentUpon>frmUserRegistration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserRegistration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScheduleCreator.Designer.vb">
+      <DependentUpon>frmScheduleCreator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmScheduleCreator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScheduleViewer.Designer.vb">
+      <DependentUpon>frmScheduleViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmScheduleViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuizHub.Designer.vb">
+      <DependentUpon>frmQuizHub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuizHub.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuizLinker.Designer.vb">
+      <DependentUpon>frmQuizLinker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuizLinker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSQLPinger.Designer.vb">
+      <DependentUpon>frmSQLPinger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSQLPinger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudyMaterialsCreator.Designer.vb">
+      <DependentUpon>frmStudyMaterialsCreator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudyMaterialsCreator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudyMaterialsHub.Designer.vb">
+      <DependentUpon>frmStudyMaterialsHub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudyMaterialsHub.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudyMaterialsLinker.Designer.vb">
+      <DependentUpon>frmStudyMaterialsLinker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudyMaterialsLinker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudyMaterialsViewer.Designer.vb">
+      <DependentUpon>frmStudyMaterialsViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudyMaterialsViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimeManagementHub.Designer.vb">
+      <DependentUpon>frmTimeManagementHub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimeManagementHub.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimeSlotHub.Designer.vb">
+      <DependentUpon>frmTimeSlotHub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimeSlotHub.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimeDialog.Designer.vb">
+      <DependentUpon>frmTimeDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimeDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsersViewer.Designer.vb">
+      <DependentUpon>frmUsersViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsersViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IAnswerArrayShuffler.vb" />
+    <Compile Include="IConStringBuilder.vb" />
+    <Compile Include="ICreateQuestionnaire.vb" />
+    <Compile Include="IDataDeserializer.vb" />
+    <Compile Include="IHashing.vb" />
+    <Compile Include="ImpAnswerArrayShuffler.vb" />
+    <Compile Include="ImpConStringBuilder.vb" />
+    <Compile Include="ImpCreateQuestionnaireSQUIZ.vb" />
+    <Compile Include="ImpDataDeserializer.vb" />
+    <Compile Include="ImpQuestionAmount_PEXAM.vb" />
+    <Compile Include="ImpQuestionAmount_SQUIZ.vb" />
+    <Compile Include="ImpDataSerializer.vb" />
+    <Compile Include="ImpSalter.vb" />
+    <Compile Include="IQuestionAmount.vb" />
+    <Compile Include="IDataSerializer.vb" />
+    <Compile Include="ISalter.vb" />
+    <Compile Include="IVerifyTextInput.vb" />
+    <Compile Include="mod_ExceptionMessage.vb" />
+    <Compile Include="MonikaLovesYou.Designer.vb">
+      <DependentUpon>MonikaLovesYou.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MonikaLovesYou.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="POSIXEpoch.vb" />
+    <Compile Include="SharedMod.vb" />
+    <Compile Include="StrategyHashingSHA512.vb" />
+    <Compile Include="StrategyVerifyCellularNumber.vb" />
+    <Compile Include="StrategyVerifyLandline.vb" />
+    <Compile Include="StrategyVerifyNumbers.vb" />
+    <Compile Include="StrategyVerifyUsername.vb" />
+    <Compile Include="StrategyVerifyVerySimple.vb" />
+    <Compile Include="SharedMod2.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAccess.resx">
+      <DependentUpon>frmAccess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArticleCreator.resx">
+      <DependentUpon>frmArticleCreator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArticleHub.resx">
+      <DependentUpon>frmArticleHub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArticleLinker.resx">
+      <DependentUpon>frmArticleLinker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArticleViewer.resx">
+      <DependentUpon>frmArticleViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClassroomCreator.resx">
+      <DependentUpon>frmClassroomCreator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClassroomDialog.resx">
+      <DependentUpon>frmClassroomDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClassroomHub.resx">
+      <DependentUpon>frmClassroomHub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClassroomLinker.resx">
+      <DependentUpon>frmClassroomLinker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDayDialog.resx">
+      <DependentUpon>frmDayDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGradeFinal.resx">
+      <DependentUpon>frmGradeFinal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGradesExamPreCreator.resx">
+      <DependentUpon>frmGradesExamPreCreator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGradesHub.resx">
+      <DependentUpon>frmGradesHub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGradesQuizPreCreator.resx">
+      <DependentUpon>frmGradesQuizPreCreator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLessonListHub.resx">
+      <DependentUpon>frmLessonListHub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOfficialExamsCreator.resx">
+      <DependentUpon>frmOfficialExamsCreator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExamsHub.resx">
+      <DependentUpon>frmExamsHub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExamsCreator.resx">
+      <DependentUpon>frmExamsCreator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuestSecurity.resx">
+      <DependentUpon>frmQuestSecurity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExamsLinker.resx">
+      <DependentUpon>frmExamsLinker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExamsViewer.resx">
+      <DependentUpon>frmExamsViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageCreator.resx">
+      <DependentUpon>frmMessageCreator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageHub.resx">
+      <DependentUpon>frmMessageHub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageViewer.resx">
+      <DependentUpon>frmMessageViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRankingHub.resx">
+      <DependentUpon>frmRankingHub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRankingProfessors.resx">
+      <DependentUpon>frmRankingProfessors.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRankingViewer.resx">
+      <DependentUpon>frmRankingViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserLogin.resx">
+      <DependentUpon>frmUserLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPasswordChallenge.resx">
+      <DependentUpon>frmPasswordChallenge.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPasswordModifier.resx">
+      <DependentUpon>frmPasswordModifier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGradesPreViewer.resx">
+      <DependentUpon>frmGradesPreViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuestionnaireCreator.resx">
+      <DependentUpon>frmQuestionnaireCreator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuestionnaireViewer.resx">
+      <DependentUpon>frmQuestionnaireViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuizCreator.resx">
+      <DependentUpon>frmQuizCreator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuizViewer.resx">
+      <DependentUpon>frmQuizViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserRegistration.resx">
+      <DependentUpon>frmUserRegistration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScheduleCreator.resx">
+      <DependentUpon>frmScheduleCreator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScheduleViewer.resx">
+      <DependentUpon>frmScheduleViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuizHub.resx">
+      <DependentUpon>frmQuizHub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuizLinker.resx">
+      <DependentUpon>frmQuizLinker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSQLPinger.resx">
+      <DependentUpon>frmSQLPinger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudyMaterialsCreator.resx">
+      <DependentUpon>frmStudyMaterialsCreator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudyMaterialsHub.resx">
+      <DependentUpon>frmStudyMaterialsHub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudyMaterialsLinker.resx">
+      <DependentUpon>frmStudyMaterialsLinker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudyMaterialsViewer.resx">
+      <DependentUpon>frmStudyMaterialsViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimeManagementHub.resx">
+      <DependentUpon>frmTimeManagementHub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimeDialog.resx">
+      <DependentUpon>frmTimeDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsersViewer.resx">
+      <DependentUpon>frmUsersViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonikaLovesYou.resx">
+      <DependentUpon>MonikaLovesYou.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
