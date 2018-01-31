@@ -149,4 +149,8 @@ Public Class frmExamsHub
         Dim viewer As New frmExamsViewer
         viewer.ShowDialog()
     End Sub
+
+    Private Sub btnCreate_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

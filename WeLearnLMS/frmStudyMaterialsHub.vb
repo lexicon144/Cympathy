@@ -160,7 +160,7 @@
         Viewer.ShowDialog()
     End Sub
 
-    Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
+    Private Sub btnCreate_Click(sender As Object, e As EventArgs)
         Dim creator As New frmStudyMaterialsCreator()
         creator.ShowDialog()
     End Sub

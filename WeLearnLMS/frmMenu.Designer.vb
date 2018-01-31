@@ -30,6 +30,8 @@ Partial Class frmMenu
         Me.btnCreateArticles = New System.Windows.Forms.Button()
         Me.btnCreateQuestionnaire = New System.Windows.Forms.Button()
         Me.btnLessonList = New System.Windows.Forms.Button()
+        Me.btnRanking = New System.Windows.Forms.Button()
+        Me.btnGrades = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnClassroomHub
@@ -104,11 +106,31 @@ Partial Class frmMenu
         Me.btnLessonList.Text = "Lesson List"
         Me.btnLessonList.UseVisualStyleBackColor = True
         '
+        'btnRanking
+        '
+        Me.btnRanking.Location = New System.Drawing.Point(253, 300)
+        Me.btnRanking.Name = "btnRanking"
+        Me.btnRanking.Size = New System.Drawing.Size(137, 23)
+        Me.btnRanking.TabIndex = 28
+        Me.btnRanking.Text = "Ranking"
+        Me.btnRanking.UseVisualStyleBackColor = True
+        '
+        'btnGrades
+        '
+        Me.btnGrades.Location = New System.Drawing.Point(253, 271)
+        Me.btnGrades.Name = "btnGrades"
+        Me.btnGrades.Size = New System.Drawing.Size(137, 23)
+        Me.btnGrades.TabIndex = 29
+        Me.btnGrades.Text = "Grades"
+        Me.btnGrades.UseVisualStyleBackColor = True
+        '
         'frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(402, 335)
+        Me.Controls.Add(Me.btnGrades)
+        Me.Controls.Add(Me.btnRanking)
         Me.Controls.Add(Me.btnLessonList)
         Me.Controls.Add(Me.btnCreateExam)
         Me.Controls.Add(Me.btnCreateMaterials)
@@ -130,4 +152,6 @@ Partial Class frmMenu
     Private WithEvents btnCreateArticles As System.Windows.Forms.Button
     Private WithEvents btnCreateQuestionnaire As System.Windows.Forms.Button
     Friend WithEvents btnLessonList As System.Windows.Forms.Button
+    Friend WithEvents btnRanking As System.Windows.Forms.Button
+    Friend WithEvents btnGrades As System.Windows.Forms.Button
 End Class

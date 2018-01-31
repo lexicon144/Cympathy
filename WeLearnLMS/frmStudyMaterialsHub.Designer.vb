@@ -28,7 +28,6 @@ Partial Class frmStudyMaterialsHub
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnOK = New System.Windows.Forms.Button()
-        Me.btnCreate = New System.Windows.Forms.Button()
         Me.btnView = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtMaterialDescription = New System.Windows.Forms.TextBox()
@@ -90,15 +89,6 @@ Partial Class frmStudyMaterialsHub
         Me.btnOK.Text = "O K"
         Me.btnOK.UseVisualStyleBackColor = True
         '
-        'btnCreate
-        '
-        Me.btnCreate.Location = New System.Drawing.Point(404, 278)
-        Me.btnCreate.Name = "btnCreate"
-        Me.btnCreate.Size = New System.Drawing.Size(75, 23)
-        Me.btnCreate.TabIndex = 10
-        Me.btnCreate.Text = "Create"
-        Me.btnCreate.UseVisualStyleBackColor = True
-        '
         'btnView
         '
         Me.btnView.Location = New System.Drawing.Point(323, 278)
@@ -133,7 +123,6 @@ Partial Class frmStudyMaterialsHub
         Me.Controls.Add(Me.txtMaterialDescription)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnOK)
-        Me.Controls.Add(Me.btnCreate)
         Me.Controls.Add(Me.btnView)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -155,7 +144,6 @@ Partial Class frmStudyMaterialsHub
     Friend WithEvents tid As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents tdescription As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents btnOK As System.Windows.Forms.Button
-    Friend WithEvents btnCreate As System.Windows.Forms.Button
     Friend WithEvents btnView As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtMaterialDescription As System.Windows.Forms.TextBox
