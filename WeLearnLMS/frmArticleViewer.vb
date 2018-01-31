@@ -29,9 +29,13 @@
     End Sub
 
     Private Sub frmArticleViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            ConvertBinary()
+            DisplayRichText()
+        Catch Exx As Exception
+            DisplayGeneralException(Exx)
+        End Try
 
-        ConvertBinary()
-        DisplayRichText()
     End Sub
 
     ''' <summary>

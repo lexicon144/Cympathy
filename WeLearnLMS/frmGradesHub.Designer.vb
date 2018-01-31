@@ -34,14 +34,14 @@ Partial Class frmGradesHub
         Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(605, 136)
+        Me.DataGridView1.Size = New System.Drawing.Size(477, 136)
         Me.DataGridView1.TabIndex = 0
         '
         'frmGradesHub
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(629, 306)
+        Me.ClientSize = New System.Drawing.Size(507, 306)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmGradesHub"
         Me.Text = "frmGradesHub"

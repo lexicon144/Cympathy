@@ -45,7 +45,7 @@ Partial Class frmMenu
         '
         'btnTimeManagement
         '
-        Me.btnTimeManagement.Location = New System.Drawing.Point(12, 41)
+        Me.btnTimeManagement.Location = New System.Drawing.Point(155, 41)
         Me.btnTimeManagement.Name = "btnTimeManagement"
         Me.btnTimeManagement.Size = New System.Drawing.Size(138, 23)
         Me.btnTimeManagement.TabIndex = 1
@@ -54,7 +54,7 @@ Partial Class frmMenu
         '
         'btnFeedback
         '
-        Me.btnFeedback.Location = New System.Drawing.Point(12, 70)
+        Me.btnFeedback.Location = New System.Drawing.Point(253, 242)
         Me.btnFeedback.Name = "btnFeedback"
         Me.btnFeedback.Size = New System.Drawing.Size(138, 23)
         Me.btnFeedback.TabIndex = 2
@@ -63,7 +63,7 @@ Partial Class frmMenu
         '
         'btnCreateExam
         '
-        Me.btnCreateExam.Location = New System.Drawing.Point(12, 226)
+        Me.btnCreateExam.Location = New System.Drawing.Point(252, 129)
         Me.btnCreateExam.Name = "btnCreateExam"
         Me.btnCreateExam.Size = New System.Drawing.Size(138, 23)
         Me.btnCreateExam.TabIndex = 26
@@ -72,7 +72,7 @@ Partial Class frmMenu
         '
         'btnCreateMaterials
         '
-        Me.btnCreateMaterials.Location = New System.Drawing.Point(12, 197)
+        Me.btnCreateMaterials.Location = New System.Drawing.Point(252, 187)
         Me.btnCreateMaterials.Name = "btnCreateMaterials"
         Me.btnCreateMaterials.Size = New System.Drawing.Size(138, 23)
         Me.btnCreateMaterials.TabIndex = 25
@@ -81,7 +81,7 @@ Partial Class frmMenu
         '
         'btnCreateArticles
         '
-        Me.btnCreateArticles.Location = New System.Drawing.Point(12, 168)
+        Me.btnCreateArticles.Location = New System.Drawing.Point(252, 158)
         Me.btnCreateArticles.Name = "btnCreateArticles"
         Me.btnCreateArticles.Size = New System.Drawing.Size(138, 23)
         Me.btnCreateArticles.TabIndex = 24
@@ -90,11 +90,11 @@ Partial Class frmMenu
         '
         'btnCreateQuestionnaire
         '
-        Me.btnCreateQuestionnaire.Location = New System.Drawing.Point(12, 139)
+        Me.btnCreateQuestionnaire.Location = New System.Drawing.Point(252, 100)
         Me.btnCreateQuestionnaire.Name = "btnCreateQuestionnaire"
         Me.btnCreateQuestionnaire.Size = New System.Drawing.Size(138, 23)
         Me.btnCreateQuestionnaire.TabIndex = 23
-        Me.btnCreateQuestionnaire.Text = "Create Questionnaire"
+        Me.btnCreateQuestionnaire.Text = "Create Quiz"
         Me.btnCreateQuestionnaire.UseVisualStyleBackColor = True
         '
         'btnLessonList
