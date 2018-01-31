@@ -80,8 +80,8 @@
                 End Using
             Catch Exx As Exception
                 ArticleLinkingTransaction.Rollback()
-                MessageBox.Show("Article Linking from " & _Classroom.ClassroomName & " ON " & _Material.MaterialName & " has been performed unsuccessfully. Rolledback automaticaly", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
+                'MessageBox.Show("Article Linking from " & _Classroom.ClassroomName & " ON " & _Material.MaterialName & " has been performed unsuccessfully. Rolledback automaticaly", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                DisplayLinkingTransactionFailed(Exx)
             End Try
         End Using
     End Sub
