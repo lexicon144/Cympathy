@@ -76,6 +76,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="a_Article.vb" />
     <Compile Include="ContextCreateQuestionnaire.vb" />
     <Compile Include="ContextValidateInput.vb" />
     <Compile Include="ContextVerification.vb" />
@@ -604,8 +605,67 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmAccess.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmArticleCreator.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmArticleHub.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmArticleLinker.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmArticleViewer.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmClassroomCreator.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmClassroomDialog.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmClassroomHub.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmClassroomLinker.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmDayDialog.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmExamsCreator.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmExamsHub.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmExamsLinker.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmExamsViewer.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmGradeFinal.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmGradesExamPreCreator.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmGradesHub.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmGradesPreViewer.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmGradesQuizPreCreator.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmLessonListHub.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmLogin.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmMenu.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmMessageCreator.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmMessageHub.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmMessageViewer.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmOfficialExamsCreator.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmPasswordChallenge.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmPasswordModifier.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmQuestionnaireCreator.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmQuestionnaireViewer.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmQuestSecurity.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmQuizCreator.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmQuizHub.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmQuizLinker.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmQuizViewer.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmRankingHub.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmRankingProfessors.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmRankingViewer.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmRegistration.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmScheduleCreator.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmScheduleViewer.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmSQLPinger.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmStudyMaterialsCreator.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmStudyMaterialsHub.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmStudyMaterialsLinker.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmStudyMaterialsViewer.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmTimeDialog.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmTimeManagementHub.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmTimeSlotCreator.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmTimeslotDialog.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmTimeSlotViewer.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmUserLogin.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmUserRegistration.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmUsersViewer.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.MonikaLovesYou.resources" />
+    <EmbeddedResource Include="obj\Debug\WeLearnLMS.Resources.resources" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\WeLearnLMS.exe.config" />
+    <None Include="bin\Debug\WeLearnLMS.vshost.exe.config" />
+    <None Include="bin\Debug\WeLearnLMS.vshost.exe.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -616,6 +676,25 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\WeLearnLMS.vbproj.GenerateResource.Cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\MySql.Data.dll" />
+    <Content Include="bin\Debug\MySql.Data.xml" />
+    <Content Include="bin\Debug\WeLearnLMS.exe" />
+    <Content Include="bin\Debug\WeLearnLMS.pdb" />
+    <Content Include="bin\Debug\WeLearnLMS.vshost.exe" />
+    <Content Include="bin\Debug\WeLearnLMS.xml" />
+    <Content Include="obj\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
+    <Content Include="obj\Debug\WeLearnLMS.exe" />
+    <Content Include="obj\Debug\WeLearnLMS.pdb" />
+    <Content Include="obj\Debug\WeLearnLMS.vbproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\WeLearnLMS.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
