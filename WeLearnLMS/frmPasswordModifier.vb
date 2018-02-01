@@ -8,19 +8,21 @@ Public Class frmPasswordModifier
     Private _Salt As String
     Private _Hasher As IHashing = New StrategyHashingSHA512
     Private _Salter As ISalter = New ImpSalter
+    Private _UserID As String
 
-    Public Sub New()
+    Public Sub New(ByRef UserID As String)
 
         ' This call is required by the designer.
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
         btnOK.Enabled = False
+        Me._UserID = UserID
     End Sub
 
     Private Sub frmPasswordModifier_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Dim Challenge As New frmPasswordChallenge()
+        Dim Challenge As New frmPasswordChallenge(_UserID)
         If Challenge.ShowDialog = Windows.Forms.DialogResult.Yes Then
             btnOK.Enabled = True
             Exit Sub
