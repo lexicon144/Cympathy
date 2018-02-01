@@ -31,12 +31,14 @@ Partial Class frmArticleHub
         Me.btnOK = New System.Windows.Forms.Button()
         Me.txtArticleBase = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnView
         '
-        Me.btnView.Location = New System.Drawing.Point(254, 214)
+        Me.btnView.Location = New System.Drawing.Point(335, 214)
         Me.btnView.Name = "btnView"
         Me.btnView.Size = New System.Drawing.Size(75, 23)
         Me.btnView.TabIndex = 0
@@ -57,7 +59,7 @@ Partial Class frmArticleHub
         '
         'txtArticleID
         '
-        Me.txtArticleID.Location = New System.Drawing.Point(99, 168)
+        Me.txtArticleID.Location = New System.Drawing.Point(94, 19)
         Me.txtArticleID.Name = "txtArticleID"
         Me.txtArticleID.ReadOnly = True
         Me.txtArticleID.Size = New System.Drawing.Size(100, 20)
@@ -65,7 +67,7 @@ Partial Class frmArticleHub
         '
         'txtArticleName
         '
-        Me.txtArticleName.Location = New System.Drawing.Point(99, 195)
+        Me.txtArticleName.Location = New System.Drawing.Point(94, 46)
         Me.txtArticleName.Name = "txtArticleName"
         Me.txtArticleName.ReadOnly = True
         Me.txtArticleName.Size = New System.Drawing.Size(100, 20)
@@ -74,20 +76,20 @@ Partial Class frmArticleHub
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(43, 171)
+        Me.Label1.Location = New System.Drawing.Point(70, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 13)
+        Me.Label1.Size = New System.Drawing.Size(18, 13)
         Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Article ID"
+        Me.Label1.Text = "ID"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(26, 198)
+        Me.Label2.Location = New System.Drawing.Point(53, 49)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 13)
+        Me.Label2.Size = New System.Drawing.Size(35, 13)
         Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Article Name"
+        Me.Label2.Text = "Name"
         '
         'btnOK
         '
@@ -100,7 +102,7 @@ Partial Class frmArticleHub
         '
         'txtArticleBase
         '
-        Me.txtArticleBase.Location = New System.Drawing.Point(99, 221)
+        Me.txtArticleBase.Location = New System.Drawing.Point(94, 72)
         Me.txtArticleBase.Name = "txtArticleBase"
         Me.txtArticleBase.ReadOnly = True
         Me.txtArticleBase.Size = New System.Drawing.Size(100, 20)
@@ -109,31 +111,42 @@ Partial Class frmArticleHub
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(26, 224)
+        Me.Label3.Location = New System.Drawing.Point(57, 75)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 13)
+        Me.Label3.Size = New System.Drawing.Size(31, 13)
         Me.Label3.TabIndex = 10
-        Me.Label3.Text = "Article Base"
+        Me.Label3.Text = "Base"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.txtArticleID)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.txtArticleName)
+        Me.GroupBox1.Controls.Add(Me.txtArticleBase)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 168)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(200, 100)
+        Me.GroupBox1.TabIndex = 11
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Article"
         '
         'frmArticleHub
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(422, 252)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.txtArticleBase)
+        Me.ClientSize = New System.Drawing.Size(422, 278)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnOK)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtArticleName)
-        Me.Controls.Add(Me.txtArticleID)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnView)
         Me.Name = "frmArticleHub"
         Me.Text = "frmArticleHub"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents btnView As System.Windows.Forms.Button
@@ -145,4 +158,5 @@ Partial Class frmArticleHub
     Friend WithEvents btnOK As System.Windows.Forms.Button
     Friend WithEvents txtArticleBase As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
 End Class

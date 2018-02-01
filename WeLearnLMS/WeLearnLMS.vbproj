@@ -92,6 +92,7 @@
     <Compile Include="c_MainCredentials.vb" />
     <Compile Include="c_PinCodeGenerator.vb" />
     <Compile Include="c_PreGrade.vb" />
+    <Compile Include="c_PreGradeExam.vb" />
     <Compile Include="c_Questionnaire.vb" />
     <Compile Include="c_Quiz.vb" />
     <Compile Include="c_Schedule.vb" />
@@ -164,10 +165,22 @@
     <Compile Include="frmGradeFinal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmGradesComputer.Designer.vb">
+      <DependentUpon>frmGradesComputer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGradesComputer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmGradesExamPreCreator.Designer.vb">
       <DependentUpon>frmGradesExamPreCreator.vb</DependentUpon>
     </Compile>
     <Compile Include="frmGradesExamPreCreator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGradesFinalCreator.Designer.vb">
+      <DependentUpon>frmGradesFinalCreator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGradesFinalCreator.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmGradesHub.Designer.vb">
@@ -482,8 +495,14 @@
     <EmbeddedResource Include="frmGradeFinal.resx">
       <DependentUpon>frmGradeFinal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGradesComputer.resx">
+      <DependentUpon>frmGradesComputer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGradesExamPreCreator.resx">
       <DependentUpon>frmGradesExamPreCreator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGradesFinalCreator.resx">
+      <DependentUpon>frmGradesFinalCreator.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGradesHub.resx">
       <DependentUpon>frmGradesHub.vb</DependentUpon>

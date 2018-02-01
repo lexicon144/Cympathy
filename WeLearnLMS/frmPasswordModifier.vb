@@ -9,8 +9,23 @@ Public Class frmPasswordModifier
     Private _Hasher As IHashing = New StrategyHashingSHA512
     Private _Salter As ISalter = New ImpSalter
 
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        btnOK.Enabled = False
+    End Sub
+
     Private Sub frmPasswordModifier_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        Dim Challenge As New frmPasswordChallenge()
+        If Challenge.ShowDialog = Windows.Forms.DialogResult.Yes Then
+            btnOK.Enabled = True
+            Exit Sub
+        End If
+        btnOK.Enabled = False
     End Sub
 
     Private Sub GenerateSalt()
@@ -22,9 +37,11 @@ Public Class frmPasswordModifier
     End Sub
 
     Private Sub PasswordModifier()
-        Using Connection As New MySqlConnection
+        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
-                .ConnectionString = _SharedConnString.ConnString
+                If .State = ConnectionState.Closed Then
+                    .Open()
+                End If
             End With
 
             Dim PasswordModifierTransaction As MySqlTransaction = Connection.BeginTransaction
@@ -47,7 +64,7 @@ Public Class frmPasswordModifier
                 End Using
             Catch EEE As Exception
                 PasswordModifierTransaction.Rollback()
-                MessageBox.Show("Password Modification Failed. Changes were not comitted", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                DisplayLinkingTransactionFailed(EEE)
             End Try
         End Using
     End Sub
@@ -64,5 +81,11 @@ Public Class frmPasswordModifier
             End If
             e.Cancel = True
         End With
+    End Sub
+
+    Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
+        If Me.txtPassword1.Text IsNot Me.txtPassword2.Text Then Exit Sub
+
+        PasswordModifier()
     End Sub
 End Class

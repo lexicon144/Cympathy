@@ -151,4 +151,12 @@ Public Class frmUserLogin
         End If
         ErrorProvider1.SetError(DirectCast(sender, TextBox), "")
     End Sub
+
+    Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+        'check if this user id exists
+        If Me._PreInfo.Rows(0)("user_id").ToString() Is Nothing Then Exit Sub
+
+        Dim passwordchallenge As New frmPasswordChallenge(_PreInfo.Rows(0)("user_id").ToString())
+        passwordchallenge.ShowDialog()
+    End Sub
 End Class

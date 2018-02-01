@@ -77,7 +77,14 @@
         End If
     End Sub
 
+    Private Function Evaluated()
+        Return (txtClassroom.Text IsNot "") AndAlso (txtDay.Text IsNot "") AndAlso (txtTime.Text IsNot "")
+    End Function
+
     Private Sub btnCreateSchedule_Click(sender As Object, e As EventArgs) Handles btnCreateSchedule.Click
-        PerformLink()
+        If Evaluated() Then
+
+            PerformLink()
+        End If
     End Sub
 End Class

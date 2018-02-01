@@ -157,14 +157,15 @@
 
     Private Sub ParseFromTextbox()
         With Me._ThisArticle
-            .ArticleID = txtArticleID.Text
+            .ArticleID = Convert.ToUInt32(txtArticleID.Text)
             .ArticleName = txtArticleName.Text
             .ArticleBase = System.Text.Encoding.ASCII.GetBytes(txtArticleBase.Text)
         End With
     End Sub
+
     Private Sub ParseFromTextbox(ByRef DimArticle As c_Article)
         With DimArticle
-            .ArticleID = txtArticleID.Text
+            .ArticleID = Convert.ToUInt32(txtArticleID.Text)
             .ArticleName = txtArticleName.Text
             .ArticleBase = System.Text.Encoding.ASCII.GetBytes(txtArticleBase.Text)
         End With

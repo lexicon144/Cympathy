@@ -10,7 +10,7 @@
 
     End Sub
 
-    Friend Property QuestID As String
+    Friend Property ClassroomID As String
         Get
             Return _ClassroomID
         End Get
@@ -19,7 +19,7 @@
         End Set
     End Property
 
-    Friend Property QuestName As String
+    Friend Property ClassroomName As String
         Get
             Return _ClassroomName
         End Get

@@ -117,23 +117,27 @@
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        If TypeOf DataGridView1.Columns(e.ColumnIndex) Is DataGridViewButtonColumn Then
-            If DataGridView1.Columns(e.ColumnIndex).Name = "btn" Then
+        Try
+            If TypeOf DataGridView1.Columns(e.ColumnIndex) Is DataGridViewButtonColumn Then
+                If DataGridView1.Columns(e.ColumnIndex).Name = "btn" Then
 
-                With DataGridView1.Rows(e.RowIndex)
-                    txtTimeslotID.Text = .Cells("timeslotID").Value.ToString()
-                    txtClassroomID.Text = .Cells("id").Value.ToString()
-                    txtClassroomName.Text = .Cells("class_name").Value.ToString()
-                    txtClassroomType.Text = [Enum].GetName(GetType(eClassType), .Cells("classType").Value)
-                    txtClassroomDescription.Text = .Cells("class_description").Value.ToString
-                    txtTimeID.Text = .Cells("timeslotID").Value.ToString
-                    txtTimestart.Text = .Cells("timestart").Value.ToString
-                    txtTimeDescription.Text = .Cells("timedesc").Value.ToString
-                    txtDayDescription.Text = .Cells(7).Value.ToString
-                    txtDayID.Text = .Cells(8).Value.ToString
-                End With
+                    With DataGridView1.Rows(e.RowIndex)
+                        txtTimeslotID.Text = .Cells("timeslotID").Value.ToString()
+                        txtClassroomID.Text = .Cells("id").Value.ToString()
+                        txtClassroomName.Text = .Cells("class_name").Value.ToString()
+                        txtClassroomType.Text = [Enum].GetName(GetType(eClassType), .Cells("classType").Value)
+                        txtClassroomDescription.Text = .Cells("class_description").Value.ToString
+                        txtTimeID.Text = .Cells("timeslotID").Value.ToString
+                        txtTimestart.Text = .Cells("timestart").Value.ToString
+                        txtTimeDescription.Text = .Cells("timedesc").Value.ToString
+                        txtDayDescription.Text = .Cells(7).Value.ToString
+                        txtDayID.Text = .Cells(8).Value.ToString
+                    End With
 
+                End If
             End If
-        End If
+        Catch EXX As Exception
+            DisplayGeneralException(EXX)
+        End Try
     End Sub
 End Class
