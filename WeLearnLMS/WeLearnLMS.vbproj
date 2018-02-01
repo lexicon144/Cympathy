@@ -116,6 +116,12 @@
     <Compile Include="frmArticleLinker.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmArticleMaker.Designer.vb">
+      <DependentUpon>frmArticleMaker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmArticleMaker.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmClassroomCreator.Designer.vb">
       <DependentUpon>frmClassroomCreator.vb</DependentUpon>
     </Compile>
@@ -132,12 +138,6 @@
       <DependentUpon>frmClassroomLinker.vb</DependentUpon>
     </Compile>
     <Compile Include="frmClassroomLinker.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmArticleCreator.Designer.vb">
-      <DependentUpon>frmArticleCreator.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmArticleCreator.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmArticleViewer.Designer.vb">
@@ -452,14 +452,14 @@
     <EmbeddedResource Include="frmAccess.resx">
       <DependentUpon>frmAccess.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmArticleCreator.resx">
-      <DependentUpon>frmArticleCreator.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmArticleHub.resx">
       <DependentUpon>frmArticleHub.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmArticleLinker.resx">
       <DependentUpon>frmArticleLinker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArticleMaker.resx">
+      <DependentUpon>frmArticleMaker.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmArticleViewer.resx">
       <DependentUpon>frmArticleViewer.vb</DependentUpon>

@@ -49,7 +49,7 @@
     End Sub
 
     Private Sub btnCreateArticles_Click(sender As Object, e As EventArgs) Handles btnCreateArticles.Click
-        Dim CreateArticle As New frmArticleCreator
+        Dim CreateArticle As New frmArticleMaker
         CreateArticle.ShowDialog()
     End Sub
 #End Region
