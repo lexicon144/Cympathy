@@ -58,4 +58,14 @@
         Dim viewer As New frmLessonListHub
         viewer.ShowDialog()
     End Sub
+
+    Private Sub btnRanking_Click(sender As Object, e As EventArgs) Handles btnRanking.Click
+        Dim viewer As New frmRankingHub()
+        viewer.ShowDialog()
+    End Sub
+
+    Private Sub btnGrades_Click(sender As Object, e As EventArgs) Handles btnGrades.Click
+        Dim viewer As New frmGradesHub
+        viewer.ShowDialog()
+    End Sub
 End Class

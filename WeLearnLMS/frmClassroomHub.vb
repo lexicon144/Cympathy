@@ -95,10 +95,15 @@
         Dim ExamLinker As New frmExamsLinker(Me._Classroom)
         ExamLinker.ShowDialog()
     End Sub
-#End Region
 
     Private Sub btnViewLessonlist_Click(sender As Object, e As EventArgs) Handles btnViewLessonlist.Click
         Dim ViewLessonList As New frmLessonListHub()
         ViewLessonList.ShowDialog()
     End Sub
+
+    Private Sub btnViewExams_Click(sender As Object, e As EventArgs) Handles btnViewExams.Click
+        Dim ViewExams As New frmExamsHub()
+        ViewExams.ShowDialog()
+    End Sub
+#End Region
 End Class

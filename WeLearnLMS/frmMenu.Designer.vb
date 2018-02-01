@@ -30,6 +30,8 @@ Partial Class frmMenu
         Me.btnCreateArticles = New System.Windows.Forms.Button()
         Me.btnCreateQuestionnaire = New System.Windows.Forms.Button()
         Me.btnLessonList = New System.Windows.Forms.Button()
+        Me.btnRanking = New System.Windows.Forms.Button()
+        Me.btnGrades = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnClassroomHub
@@ -43,7 +45,7 @@ Partial Class frmMenu
         '
         'btnTimeManagement
         '
-        Me.btnTimeManagement.Location = New System.Drawing.Point(12, 41)
+        Me.btnTimeManagement.Location = New System.Drawing.Point(155, 41)
         Me.btnTimeManagement.Name = "btnTimeManagement"
         Me.btnTimeManagement.Size = New System.Drawing.Size(138, 23)
         Me.btnTimeManagement.TabIndex = 1
@@ -52,7 +54,7 @@ Partial Class frmMenu
         '
         'btnFeedback
         '
-        Me.btnFeedback.Location = New System.Drawing.Point(12, 70)
+        Me.btnFeedback.Location = New System.Drawing.Point(253, 242)
         Me.btnFeedback.Name = "btnFeedback"
         Me.btnFeedback.Size = New System.Drawing.Size(138, 23)
         Me.btnFeedback.TabIndex = 2
@@ -61,7 +63,7 @@ Partial Class frmMenu
         '
         'btnCreateExam
         '
-        Me.btnCreateExam.Location = New System.Drawing.Point(12, 226)
+        Me.btnCreateExam.Location = New System.Drawing.Point(252, 129)
         Me.btnCreateExam.Name = "btnCreateExam"
         Me.btnCreateExam.Size = New System.Drawing.Size(138, 23)
         Me.btnCreateExam.TabIndex = 26
@@ -70,7 +72,7 @@ Partial Class frmMenu
         '
         'btnCreateMaterials
         '
-        Me.btnCreateMaterials.Location = New System.Drawing.Point(12, 197)
+        Me.btnCreateMaterials.Location = New System.Drawing.Point(252, 187)
         Me.btnCreateMaterials.Name = "btnCreateMaterials"
         Me.btnCreateMaterials.Size = New System.Drawing.Size(138, 23)
         Me.btnCreateMaterials.TabIndex = 25
@@ -79,7 +81,7 @@ Partial Class frmMenu
         '
         'btnCreateArticles
         '
-        Me.btnCreateArticles.Location = New System.Drawing.Point(12, 168)
+        Me.btnCreateArticles.Location = New System.Drawing.Point(252, 158)
         Me.btnCreateArticles.Name = "btnCreateArticles"
         Me.btnCreateArticles.Size = New System.Drawing.Size(138, 23)
         Me.btnCreateArticles.TabIndex = 24
@@ -88,11 +90,11 @@ Partial Class frmMenu
         '
         'btnCreateQuestionnaire
         '
-        Me.btnCreateQuestionnaire.Location = New System.Drawing.Point(12, 139)
+        Me.btnCreateQuestionnaire.Location = New System.Drawing.Point(252, 100)
         Me.btnCreateQuestionnaire.Name = "btnCreateQuestionnaire"
         Me.btnCreateQuestionnaire.Size = New System.Drawing.Size(138, 23)
         Me.btnCreateQuestionnaire.TabIndex = 23
-        Me.btnCreateQuestionnaire.Text = "Create Questionnaire"
+        Me.btnCreateQuestionnaire.Text = "Create Quiz"
         Me.btnCreateQuestionnaire.UseVisualStyleBackColor = True
         '
         'btnLessonList
@@ -104,11 +106,31 @@ Partial Class frmMenu
         Me.btnLessonList.Text = "Lesson List"
         Me.btnLessonList.UseVisualStyleBackColor = True
         '
+        'btnRanking
+        '
+        Me.btnRanking.Location = New System.Drawing.Point(253, 300)
+        Me.btnRanking.Name = "btnRanking"
+        Me.btnRanking.Size = New System.Drawing.Size(137, 23)
+        Me.btnRanking.TabIndex = 28
+        Me.btnRanking.Text = "Ranking"
+        Me.btnRanking.UseVisualStyleBackColor = True
+        '
+        'btnGrades
+        '
+        Me.btnGrades.Location = New System.Drawing.Point(253, 271)
+        Me.btnGrades.Name = "btnGrades"
+        Me.btnGrades.Size = New System.Drawing.Size(137, 23)
+        Me.btnGrades.TabIndex = 29
+        Me.btnGrades.Text = "Grades"
+        Me.btnGrades.UseVisualStyleBackColor = True
+        '
         'frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(402, 335)
+        Me.Controls.Add(Me.btnGrades)
+        Me.Controls.Add(Me.btnRanking)
         Me.Controls.Add(Me.btnLessonList)
         Me.Controls.Add(Me.btnCreateExam)
         Me.Controls.Add(Me.btnCreateMaterials)
@@ -130,4 +152,6 @@ Partial Class frmMenu
     Private WithEvents btnCreateArticles As System.Windows.Forms.Button
     Private WithEvents btnCreateQuestionnaire As System.Windows.Forms.Button
     Friend WithEvents btnLessonList As System.Windows.Forms.Button
+    Friend WithEvents btnRanking As System.Windows.Forms.Button
+    Friend WithEvents btnGrades As System.Windows.Forms.Button
 End Class

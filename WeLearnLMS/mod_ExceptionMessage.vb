@@ -25,4 +25,24 @@ Friend Module mod_ExceptionMessage
 
     End Sub
 
+    Friend Sub DisplayGeneralException(ByRef XXX As Exception)
+        Dim NewMessage As New StringBuilder()
+        With NewMessage
+            .Append("General Exception Caught!")
+            .Append(vbNewLine)
+            .Append("Reasons: ")
+            .Append(XXX.Message)
+            .Append(vbNewLine)
+
+            .Append("Source: ")
+            .Append(XXX.Source)
+            .Append(vbNewLine)
+
+            .Append("Stack Trace: ")
+            .Append(XXX.StackTrace)
+        End With
+        MessageBox.Show(NewMessage.ToString, "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+    End Sub
+
 End Module

@@ -1,6 +1,7 @@
 ﻿Public Class frmGradesExamPreCreator
 
     Private _ExamID As String
+    Private _ExamName As String
     Private _UserID As String
     Private _PreGrade As New c_PreGrade
 
@@ -18,6 +19,9 @@
             ._ExamID = ExamID
             ._UserID = UserID
             ._PreGrade = PreGrade
+
+            .txtExamID.Text = ExamID
+            .txtGrade.Text = _PreGrade.ReturnFullScore
         End With
     End Sub
 
@@ -55,7 +59,7 @@
                     MarkingTransaction.Rollback()
                     With Label5
                         .ForeColor = Color.Red
-                        .Text = "An error occurred when committing your Progress"
+                        .Text = "An error occurred when committing your Progress: REason " & XXX.Message
                     End With
                 End Try
             End Using
@@ -63,6 +67,6 @@
     End Sub
 
     Private Sub frmGradesExamPreCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Procure()
     End Sub
 End Class

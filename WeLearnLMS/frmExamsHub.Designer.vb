@@ -29,7 +29,6 @@ Partial Class frmExamsHub
         Me.txtExamID = New System.Windows.Forms.TextBox()
         Me.txtExamName = New System.Windows.Forms.TextBox()
         Me.btnOK = New System.Windows.Forms.Button()
-        Me.btnCreate = New System.Windows.Forms.Button()
         Me.btnView = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpExamDisplay.SuspendLayout()
@@ -103,15 +102,6 @@ Partial Class frmExamsHub
         Me.btnOK.Text = "O K"
         Me.btnOK.UseVisualStyleBackColor = True
         '
-        'btnCreate
-        '
-        Me.btnCreate.Location = New System.Drawing.Point(283, 340)
-        Me.btnCreate.Name = "btnCreate"
-        Me.btnCreate.Size = New System.Drawing.Size(75, 23)
-        Me.btnCreate.TabIndex = 10
-        Me.btnCreate.Text = "Create"
-        Me.btnCreate.UseVisualStyleBackColor = True
-        '
         'btnView
         '
         Me.btnView.Location = New System.Drawing.Point(202, 340)
@@ -121,17 +111,16 @@ Partial Class frmExamsHub
         Me.btnView.Text = "View"
         Me.btnView.UseVisualStyleBackColor = True
         '
-        'frmExamHub
+        'frmExamsHub
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(373, 377)
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.grpExamDisplay)
-        Me.Controls.Add(Me.btnCreate)
         Me.Controls.Add(Me.btnView)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Name = "frmExamHub"
+        Me.Name = "frmExamsHub"
         Me.Text = "frmExamHub"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpExamDisplay.ResumeLayout(False)
@@ -146,6 +135,5 @@ Partial Class frmExamsHub
     Friend WithEvents txtExamID As System.Windows.Forms.TextBox
     Friend WithEvents txtExamName As System.Windows.Forms.TextBox
     Friend WithEvents btnOK As System.Windows.Forms.Button
-    Friend WithEvents btnCreate As System.Windows.Forms.Button
     Friend WithEvents btnView As System.Windows.Forms.Button
 End Class

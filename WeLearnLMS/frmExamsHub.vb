@@ -29,7 +29,6 @@ Public Class frmExamsHub
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        Me.btnCreate.Enabled = False
         Me.btnView.Enabled = False
         Me.btnOK.Enabled = False
         Me._IsModal = True
@@ -148,5 +147,9 @@ Public Class frmExamsHub
     Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
         Dim viewer As New frmExamsViewer
         viewer.ShowDialog()
+    End Sub
+
+    Private Sub btnCreate_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

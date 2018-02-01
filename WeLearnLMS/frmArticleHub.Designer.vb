@@ -23,7 +23,6 @@ Partial Class frmArticleHub
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnView = New System.Windows.Forms.Button()
-        Me.btnCreate = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.txtArticleID = New System.Windows.Forms.TextBox()
         Me.txtArticleName = New System.Windows.Forms.TextBox()
@@ -43,15 +42,6 @@ Partial Class frmArticleHub
         Me.btnView.TabIndex = 0
         Me.btnView.Text = "View"
         Me.btnView.UseVisualStyleBackColor = True
-        '
-        'btnCreate
-        '
-        Me.btnCreate.Location = New System.Drawing.Point(335, 214)
-        Me.btnCreate.Name = "btnCreate"
-        Me.btnCreate.Size = New System.Drawing.Size(75, 23)
-        Me.btnCreate.TabIndex = 1
-        Me.btnCreate.Text = "Create"
-        Me.btnCreate.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
@@ -138,7 +128,6 @@ Partial Class frmArticleHub
         Me.Controls.Add(Me.txtArticleName)
         Me.Controls.Add(Me.txtArticleID)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.btnCreate)
         Me.Controls.Add(Me.btnView)
         Me.Name = "frmArticleHub"
         Me.Text = "frmArticleHub"
@@ -148,7 +137,6 @@ Partial Class frmArticleHub
 
     End Sub
     Friend WithEvents btnView As System.Windows.Forms.Button
-    Friend WithEvents btnCreate As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents txtArticleID As System.Windows.Forms.TextBox
     Friend WithEvents txtArticleName As System.Windows.Forms.TextBox

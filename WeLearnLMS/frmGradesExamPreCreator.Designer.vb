@@ -24,7 +24,7 @@ Partial Class frmGradesExamPreCreator
     Private Sub InitializeComponent()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.grpGrade = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtGradeNumber = New System.Windows.Forms.TextBox()
         Me.txtGrade = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -48,7 +48,7 @@ Partial Class frmGradesExamPreCreator
         '
         'grpGrade
         '
-        Me.grpGrade.Controls.Add(Me.TextBox1)
+        Me.grpGrade.Controls.Add(Me.txtGradeNumber)
         Me.grpGrade.Controls.Add(Me.txtGrade)
         Me.grpGrade.Controls.Add(Me.Label4)
         Me.grpGrade.Controls.Add(Me.Label3)
@@ -59,13 +59,13 @@ Partial Class frmGradesExamPreCreator
         Me.grpGrade.TabStop = False
         Me.grpGrade.Text = "Grade"
         '
-        'TextBox1
+        'txtGradeNumber
         '
-        Me.TextBox1.Location = New System.Drawing.Point(94, 45)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 3
+        Me.txtGradeNumber.Location = New System.Drawing.Point(94, 45)
+        Me.txtGradeNumber.Name = "txtGradeNumber"
+        Me.txtGradeNumber.ReadOnly = True
+        Me.txtGradeNumber.Size = New System.Drawing.Size(100, 20)
+        Me.txtGradeNumber.TabIndex = 3
         '
         'txtGrade
         '
@@ -160,7 +160,7 @@ Partial Class frmGradesExamPreCreator
     End Sub
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents grpGrade As System.Windows.Forms.GroupBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtGradeNumber As System.Windows.Forms.TextBox
     Friend WithEvents txtGrade As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label

@@ -40,6 +40,7 @@ Partial Class frmClassroomHub
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnViewLessonlist = New System.Windows.Forms.Button()
+        Me.btnViewExams = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -112,7 +113,7 @@ Partial Class frmClassroomHub
         Me.btnOpenQuestionnaire.Name = "btnOpenQuestionnaire"
         Me.btnOpenQuestionnaire.Size = New System.Drawing.Size(138, 23)
         Me.btnOpenQuestionnaire.TabIndex = 11
-        Me.btnOpenQuestionnaire.Text = "Start Studying"
+        Me.btnOpenQuestionnaire.Text = "View Quizes"
         Me.btnOpenQuestionnaire.UseVisualStyleBackColor = True
         '
         'Panel1
@@ -128,7 +129,7 @@ Partial Class frmClassroomHub
         Me.Panel1.Location = New System.Drawing.Point(12, 10)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(304, 98)
+        Me.Panel1.Size = New System.Drawing.Size(315, 98)
         Me.Panel1.TabIndex = 27
         '
         'Label2
@@ -219,11 +220,21 @@ Partial Class frmClassroomHub
         Me.btnViewLessonlist.Text = "View Lesson List"
         Me.btnViewLessonlist.UseVisualStyleBackColor = True
         '
+        'btnViewExams
+        '
+        Me.btnViewExams.Location = New System.Drawing.Point(12, 228)
+        Me.btnViewExams.Name = "btnViewExams"
+        Me.btnViewExams.Size = New System.Drawing.Size(138, 23)
+        Me.btnViewExams.TabIndex = 29
+        Me.btnViewExams.Text = "View Exams"
+        Me.btnViewExams.UseVisualStyleBackColor = True
+        '
         'frmClassroomHub
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(339, 265)
+        Me.Controls.Add(Me.btnViewExams)
         Me.Controls.Add(Me.btnViewLessonlist)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnLinkExamHere)
@@ -259,4 +270,5 @@ Partial Class frmClassroomHub
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents btnViewLessonlist As System.Windows.Forms.Button
+    Friend WithEvents btnViewExams As System.Windows.Forms.Button
 End Class
