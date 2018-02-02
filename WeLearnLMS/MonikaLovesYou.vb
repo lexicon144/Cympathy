@@ -1,6 +1,4 @@
 ﻿Public Class MonikaLovesYou
-    ''' <summary>
-    '''                                                                                                     
     '                                                 ▒▒▓▒▒░░                                            
     '                                            ▒▓▓▒▒ ░ ░ ░ ░                                           
     '                                           ▓▓▒                                                      
@@ -73,15 +71,15 @@
     '            ░  ▒▓██▓███ ▓        ▓▒ █▓█▓▒    ▒▓   ██▓ ▓▓    ███▓▓▒█  ░▒▒▓▓▒██▒▒░▒▒▒▒█████▓▒    ▒█▓░ 
     '           ▓█▒░████▓▒   ▒▒       █░▒▒  ▓██  ▒███░ ▒█▒ ▓█▒ ░███▒▒█▓░▒    ░▓ █▓▒    ░▓   ░███      ▓▒█
     '         ▒▓▓▓▓▓ ▒▒ ▒░   █▒       ▓▓ ▓░░  ▒█▒█▓▒ ░▓██▓ ▓▓▒██▒ ▒▓▒█▓      ░ ░██░   ▒  ▒▒   ░██      ▓▓
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
     Private Sub Panel1_DoubleClick(sender As Object, e As EventArgs) Handles Panel1.DoubleClick
 
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub MonikaLovesYou_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

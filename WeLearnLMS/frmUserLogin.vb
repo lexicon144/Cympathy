@@ -118,16 +118,14 @@ Public Class frmUserLogin
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-
         Dim value As Boolean = e.Argument
-
         e.Result = value
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-        Dim Access As New frmAccess(e.Result)
-        Access.Show()
-        If e.Result = True Then
+        'Dim Access As New frmAccess(e.Result)
+        'Access.Show()
+        If e.Result Then
             Dim MainMenu As New frmMenu(Me._UserAdvancedCredentials)
             MainMenu.ShowDialog()
         End If

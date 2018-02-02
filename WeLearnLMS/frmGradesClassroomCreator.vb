@@ -79,6 +79,10 @@
     End Sub
 
     Private Sub btnFinalizeGrades_Click(sender As Object, e As EventArgs) Handles btnFinalizeGrades.Click
+        PerformTransaction(Me._UserID, Me._ClassID, Me._GradeValue)
+    End Sub
+
+    Private Sub btnMakeGrades_Click(sender As Object, e As EventArgs) Handles btnMakeGrades.Click
 
     End Sub
 End Class
