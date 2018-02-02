@@ -47,4 +47,24 @@ Friend Module mod_ExceptionMessage
 
     End Sub
 
+    Friend Sub DisplayExamCreationException(ByRef XXX As Exception)
+        Dim NewMessage As New StringBuilder()
+        With NewMessage
+            .Append("A problem was encountered in Creating the XML format of the Exam")
+            .Append(vbNewLine)
+            .Append(vbNewLine)
+            .Append("Reasons: ")
+            .Append(XXX.Message)
+            .Append(vbNewLine)
+            .Append(vbNewLine)
+            .Append("Source: ")
+            .Append(XXX.Source)
+            .Append(vbNewLine)
+            .Append(vbNewLine)
+            .Append("Stack Trace: ")
+            .Append(XXX.StackTrace)
+        End With
+        MessageBox.Show(NewMessage.ToString, "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+    End Sub
+
 End Module

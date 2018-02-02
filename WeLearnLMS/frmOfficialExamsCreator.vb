@@ -59,7 +59,7 @@ Public Class frmOfficialExamsCreator
     End Sub
 
     ''' <summary>
-    ''' Return This Exam
+    ''' Return The generated Exam
     ''' </summary>
     ''' <value></value>
     ''' <returns></returns>
@@ -141,7 +141,7 @@ Public Class frmOfficialExamsCreator
     End Sub
 
     Private Sub btnFillUpQuiz_Click(sender As Object, e As EventArgs) Handles btnFillUpQuiz.Click
-        For I As UInt32 = 0 To 99
+        For I As UInt32 = 1 To 100
             txtQuestion.Text = "correct answer is : " & I
             txtDisc1.Text = Randomizer.ToString
             txtDisc2.Text = Randomizer.ToString

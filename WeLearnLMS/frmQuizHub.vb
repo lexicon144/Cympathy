@@ -56,7 +56,8 @@
             Using Command As New MySqlCommand
                 With Command
                     .Connection = Connection
-                    .CommandText = "SELECT * FROM tbl_quizes"
+                    .CommandType = CommandType.Text
+                    .CommandText = "SELECT tbl_quizes.id, tbl_quizes.quest_name, tbl_quizes.xml_base, tbl_quizes.state_long FROM tbl_quizes"
                 End With
 
                 Using Adapter As New MySqlDataAdapter
@@ -105,17 +106,21 @@
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        If TypeOf DataGridView1.Columns(e.ColumnIndex) Is DataGridViewButtonColumn Then
-            If DataGridView1.Columns(e.ColumnIndex).Name = "btn" Then
+        Try
+            If TypeOf DataGridView1.Columns(e.ColumnIndex) Is DataGridViewButtonColumn Then
+                If DataGridView1.Columns(e.ColumnIndex).Name = "btn" Then
 
-                With DataGridView1.Rows(e.RowIndex)
-                    txtQuizID.Text = .Cells(0).Value.ToString()
-                    txtQuizName.Text = .Cells(1).Value.ToString()
-                    _XmlBase = .Cells(2).Value.ToString()
-                End With
+                    With DataGridView1.Rows(e.RowIndex)
+                        txtQuizID.Text = .Cells(0).Value.ToString()
+                        txtQuizName.Text = .Cells(1).Value.ToString()
+                        _XmlBase = .Cells(2).Value.ToString()
+                    End With
 
+                End If
             End If
-        End If
+        Catch XXX As Exception
+            DisplayGeneralException(XXX)
+        End Try
     End Sub
 
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click

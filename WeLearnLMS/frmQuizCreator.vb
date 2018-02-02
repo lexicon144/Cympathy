@@ -11,7 +11,8 @@ Public Class frmQuizCreator
 
         Dim Creator As New frmQuestionnaireCreator
 
-        If Creator.ShowDialog = Windows.Forms.DialogResult.OK Then Me._NewQuiz = Creator.GetQuiz
+        If Creator.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then Me._NewQuiz = Creator.GetQuiz
+
         If Me._NewQuiz.QuestionBase Is Nothing Then Exit Sub
         ParseToTextbox()
     End Sub

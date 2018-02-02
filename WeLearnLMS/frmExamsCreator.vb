@@ -19,13 +19,14 @@ Public Class frmExamsCreator
 
     Private Sub frmExamsCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+
         Dim Creator As New frmOfficialExamsCreator()
-        If Creator.ShowDialog = Windows.Forms.DialogResult.OK Then
 
-            Me._NewExam = Creator.GetOfficialExam
-        End If
+        If Creator.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then Me._NewExam = Creator.GetOfficialExam
 
+        If Me._NewExam.QuestionBase Is Nothing Then Exit Sub
         ParseToTextbox()
+
 
     End Sub
 
@@ -92,9 +93,9 @@ Public Class frmExamsCreator
 
         Dim Editor As New frmOfficialExamsCreator()
         If Editor.ShowDialog() = Windows.Forms.DialogResult.OK Then
-
             Me._NewExam = Editor.GetOfficialExam
         End If
+
         ParseToTextbox()
     End Sub
 
@@ -104,7 +105,7 @@ Public Class frmExamsCreator
             Me.txtExamName.Text = _NewExam.QuestionnaireName
             Me.txtExamPIN.Text = _NewExam.PIN
         Catch XXX As Exception
-            MessageBox.Show("There was a problem in making an XML Form from the Exam. Reasons: " & XXX.Message, "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+            DisplayExamCreationException(XXX)
         End Try
     End Sub
 

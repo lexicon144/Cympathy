@@ -36,6 +36,17 @@ WeLearnLMS
  Displays RichTextData from the richtext field of this class
  </summary>
 	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuizViewer.#ctor">
+	<summary>
+  Null constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuizViewer.#ctor(WeLearnLMS.c_Quiz@)">
+	<summary>
+ Constructor for making QuizRelated
+ </summary>
+	<param name="ThisQuiz"></param>
+	<remarks></remarks>
 </member><member name="M:WeLearnLMS.frmQuizViewer.MarkQuiz">
 	<summary>
  Mark Quiz
@@ -421,7 +432,7 @@ WeLearnLMS
 	<remarks></remarks>
 </member><member name="P:WeLearnLMS.frmOfficialExamsCreator.GetOfficialExam">
 	<summary>
- Return This Exam
+ Return The generated Exam
  </summary>
 	<value></value>
 	<returns></returns>

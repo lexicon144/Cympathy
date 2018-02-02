@@ -42,18 +42,22 @@
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        If TypeOf DataGridView1.Columns(e.ColumnIndex) Is DataGridViewButtonColumn Then
-            If DataGridView1.Columns(e.ColumnIndex).Name = "btn" Then
+        Try
+            If TypeOf DataGridView1.Columns(e.ColumnIndex) Is DataGridViewButtonColumn Then
+                If DataGridView1.Columns(e.ColumnIndex).Name = "btn" Then
 
-                With DataGridView1.Rows(e.RowIndex)
-                    txtClassId.Text = .Cells(0).Value.ToString()
-                    txtClassName.Text = .Cells(1).Value.ToString()
-                    txtClassDescription.Text = .Cells(2).Value.ToString()
-                    txtClassType.Text = .Cells(3).Value.ToString
-                End With
+                    With DataGridView1.Rows(e.RowIndex)
+                        txtClassId.Text = .Cells(0).Value.ToString()
+                        txtClassName.Text = .Cells(1).Value.ToString()
+                        txtClassDescription.Text = .Cells(2).Value.ToString()
+                        txtClassType.Text = .Cells(3).Value.ToString
+                    End With
 
+                End If
             End If
-        End If
+        Catch XXX As Exception
+            DisplayGeneralException(XXX)
+        End Try
     End Sub
 
     Private Sub frmClassroomDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load

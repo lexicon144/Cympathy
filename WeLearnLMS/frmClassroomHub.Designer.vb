@@ -46,7 +46,7 @@ Partial Class frmClassroomHub
         '
         'btnLinkExamHere
         '
-        Me.btnLinkExamHere.Location = New System.Drawing.Point(189, 231)
+        Me.btnLinkExamHere.Location = New System.Drawing.Point(394, 231)
         Me.btnLinkExamHere.Name = "btnLinkExamHere"
         Me.btnLinkExamHere.Size = New System.Drawing.Size(138, 23)
         Me.btnLinkExamHere.TabIndex = 21
@@ -55,7 +55,7 @@ Partial Class frmClassroomHub
         '
         'btnLinkQuizHere
         '
-        Me.btnLinkQuizHere.Location = New System.Drawing.Point(189, 201)
+        Me.btnLinkQuizHere.Location = New System.Drawing.Point(394, 201)
         Me.btnLinkQuizHere.Name = "btnLinkQuizHere"
         Me.btnLinkQuizHere.Size = New System.Drawing.Size(138, 23)
         Me.btnLinkQuizHere.TabIndex = 20
@@ -64,7 +64,7 @@ Partial Class frmClassroomHub
         '
         'btnLinkMaterialHere
         '
-        Me.btnLinkMaterialHere.Location = New System.Drawing.Point(189, 171)
+        Me.btnLinkMaterialHere.Location = New System.Drawing.Point(394, 171)
         Me.btnLinkMaterialHere.Name = "btnLinkMaterialHere"
         Me.btnLinkMaterialHere.Size = New System.Drawing.Size(138, 23)
         Me.btnLinkMaterialHere.TabIndex = 19
@@ -73,7 +73,7 @@ Partial Class frmClassroomHub
         '
         'btnLinkArticleHere
         '
-        Me.btnLinkArticleHere.Location = New System.Drawing.Point(189, 142)
+        Me.btnLinkArticleHere.Location = New System.Drawing.Point(394, 142)
         Me.btnLinkArticleHere.Name = "btnLinkArticleHere"
         Me.btnLinkArticleHere.Size = New System.Drawing.Size(138, 23)
         Me.btnLinkArticleHere.TabIndex = 18
@@ -82,7 +82,7 @@ Partial Class frmClassroomHub
         '
         'btnLinkStudentToClassroom
         '
-        Me.btnLinkStudentToClassroom.Location = New System.Drawing.Point(189, 112)
+        Me.btnLinkStudentToClassroom.Location = New System.Drawing.Point(394, 112)
         Me.btnLinkStudentToClassroom.Name = "btnLinkStudentToClassroom"
         Me.btnLinkStudentToClassroom.Size = New System.Drawing.Size(138, 23)
         Me.btnLinkStudentToClassroom.TabIndex = 17
@@ -91,7 +91,7 @@ Partial Class frmClassroomHub
         '
         'btnViewMaterials
         '
-        Me.btnViewMaterials.Location = New System.Drawing.Point(12, 170)
+        Me.btnViewMaterials.Location = New System.Drawing.Point(189, 141)
         Me.btnViewMaterials.Name = "btnViewMaterials"
         Me.btnViewMaterials.Size = New System.Drawing.Size(138, 23)
         Me.btnViewMaterials.TabIndex = 15
@@ -100,7 +100,7 @@ Partial Class frmClassroomHub
         '
         'btnViewArticles
         '
-        Me.btnViewArticles.Location = New System.Drawing.Point(12, 141)
+        Me.btnViewArticles.Location = New System.Drawing.Point(189, 112)
         Me.btnViewArticles.Name = "btnViewArticles"
         Me.btnViewArticles.Size = New System.Drawing.Size(138, 23)
         Me.btnViewArticles.TabIndex = 13
@@ -213,7 +213,7 @@ Partial Class frmClassroomHub
         '
         'btnViewLessonlist
         '
-        Me.btnViewLessonlist.Location = New System.Drawing.Point(12, 199)
+        Me.btnViewLessonlist.Location = New System.Drawing.Point(189, 170)
         Me.btnViewLessonlist.Name = "btnViewLessonlist"
         Me.btnViewLessonlist.Size = New System.Drawing.Size(138, 23)
         Me.btnViewLessonlist.TabIndex = 28
@@ -222,7 +222,7 @@ Partial Class frmClassroomHub
         '
         'btnViewExams
         '
-        Me.btnViewExams.Location = New System.Drawing.Point(12, 228)
+        Me.btnViewExams.Location = New System.Drawing.Point(12, 141)
         Me.btnViewExams.Name = "btnViewExams"
         Me.btnViewExams.Size = New System.Drawing.Size(138, 23)
         Me.btnViewExams.TabIndex = 29
@@ -233,7 +233,7 @@ Partial Class frmClassroomHub
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(339, 265)
+        Me.ClientSize = New System.Drawing.Size(561, 265)
         Me.Controls.Add(Me.btnViewExams)
         Me.Controls.Add(Me.btnViewLessonlist)
         Me.Controls.Add(Me.Panel1)
