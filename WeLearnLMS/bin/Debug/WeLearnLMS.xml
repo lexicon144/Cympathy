@@ -1,0 +1,484 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+WeLearnLMS
+</name>
+</assembly>
+<members>
+<member name="M:WeLearnLMS.ImpConStringBuilder.ConnString">
+	<summary>
+ Return Current Implementation of ConStringBuilder
+ Use this Implementation as TESTING PURPOSES ONLY FOR LOCALHOST
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.ContextVerification.#ctor">
+	<summary>
+ THIS CONSTUCTS THE CONTEXT
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.ContextVerification.Verify(WeLearnLMS.SharedMod2.VMethodology@,System.String)">
+	<summary>
+ Use the verification method implied with accordance to the designated ENUMERATION chosen
+ </summary>
+	<param name="Methodology"></param>
+	<param name="Q"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmArticleViewer.#ctor(WeLearnLMS.c_Article@)">
+	<summary>
+ Constructor for me
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmArticleViewer.DisplayRichText">
+	<summary>
+ Displays RichTextData from the richtext field of this class
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuizViewer.#ctor">
+	<summary>
+  Null constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuizViewer.#ctor(WeLearnLMS.c_Quiz@)">
+	<summary>
+ Constructor for making QuizRelated
+ </summary>
+	<param name="ThisQuiz"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuizViewer.MarkQuiz">
+	<summary>
+ Mark Quiz
+ only mark the quiz, not grade it
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmArticleHub.#ctor">
+	<summary>
+ Modal Constructor for HUB
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmArticleHub.#ctor(System.String@)">
+	<summary>
+ Non Modal Constructor
+ </summary>
+	<param name="ClassroomID"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmGradesComputer.#ctor">
+	<summary>
+ Calculate All pregrades from Quiz and Exams
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.IDataDeserializer.DataDeserialize(System.String)">
+	<summary>
+ Use this to Deserialize the data
+ </summary>
+	<param name="data">XML String to return</param>
+	<returns>c_ShortQuiz</returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.ImpDataDeserializer.DataDeserialize(System.String)">
+	<summary>
+ Use this to Deserialize the data
+ </summary>
+	<param name="data">XML String to return</param>
+	<returns>c_ShortQuiz</returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmLessonListHub.#ctor(WeLearnLMS.c_Classroom@)">
+	<summary>
+ Create via Learning what Classroom is passed
+ STate will be
+ Browse Contents within the Classroom
+ </summary>
+	<param name="Classroom"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmLessonListHub.LoadClassroomNode(System.String@)">
+	<summary>
+ Select all Classrooms
+ present within this datatable
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.StrategyVerifyCellularNumber.Verify(System.String)">
+	<summary>
+ Verifies if string is an Acceptable Cellular Number 
+ </summary>
+	<param name="Subject">Keypress Events</param>
+	<remarks></remarks>
+</member><member name="T:WeLearnLMS.StrategyVerifyCellularNumber">
+	<summary>
+ Strategy to verify a CELLULAR number
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.c_Classroom.#ctor">
+	<summary>
+ Constructor for me
+ </summary>
+	<remarks></remarks>
+</member><member name="P:WeLearnLMS.c_Classroom.ClassroomDesc">
+	<summary>
+ Classroom Description property
+ </summary>
+	<value>String</value>
+	<returns>String</returns>
+	<remarks></remarks>
+</member><member name="P:WeLearnLMS.c_Classroom.ClassroomId">
+	<summary>
+ Classroom ID property
+ </summary>
+	<value>String</value>
+	<returns>String</returns>
+	<remarks></remarks>
+</member><member name="P:WeLearnLMS.c_Classroom.ClassroomName">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:WeLearnLMS.c_Classroom.ClassType">
+	<summary>
+ Classtype property
+ </summary>
+	<value>eClassType</value>
+	<returns>eClassType</returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmRankingProfessors.#ctor">
+	<summary>
+ Admin Constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmRankingProfessors.#ctor(WeLearnLMS.c_MainCredentials@)">
+	<summary>
+ Non admin constructor
+ </summary>
+	<param name="User"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.StrategyHashingSHA512.HashThis(System.String@,System.String@)">
+	<summary>
+ Hashing Strategy Implementing SHA512
+ </summary>
+	<param name="password"></param>
+	<param name="salt"></param>
+	<returns>Return the STRIng hash value</returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.ContextValidateInput.#ctor">
+	<summary>
+ THIS CONSTUCTS THE CONTEXT
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.ContextValidateInput.UseThisVerification(WeLearnLMS.SharedMod2.VMethodology@,System.String)">
+	<summary>
+ Use the verification method implied with accordance to the designated ENUMERATION chosen
+ </summary>
+	<param name="Methodology"></param>
+	<param name="Q"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.c_Article.#ctor">
+	<summary>
+ Constructor for new me
+ </summary>
+	<remarks></remarks>
+</member><member name="P:WeLearnLMS.c_Article.ArticleID">
+	<summary>
+ Article ID property
+ </summary>
+	<value>Unsigned integer 32</value>
+	<returns>returns Unsigned integer 32</returns>
+	<remarks></remarks>
+</member><member name="P:WeLearnLMS.c_Article.ArticleBase">
+	<summary>
+ Article BASE property
+ </summary>
+	<value>String</value>
+	<returns>String</returns>
+	<remarks></remarks>
+</member><member name="P:WeLearnLMS.c_Article.ArticleSize">
+	<summary>
+ Article Size property
+ </summary>
+	<value>Uint32</value>
+	<returns>Uint32</returns>
+	<remarks></remarks>
+</member><member name="P:WeLearnLMS.c_Article.ArticleName">
+	<summary>
+ Article Name property
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.c_Material.#ctor">
+	<summary>
+ Me Constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmStudyMaterialsHub.#ctor">
+	<summary>
+ Modal Constructor (return a complete Study Material)
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmStudyMaterialsHub.#ctor(System.String@)">
+	<summary>
+ NonModal Constructor
+ </summary>
+	<param name="ClassroomID">Classroom ID</param>
+	<remarks></remarks>
+</member><member name="P:WeLearnLMS.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:WeLearnLMS.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:WeLearnLMS.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:WeLearnLMS.StrategyVerifyLandline.Verify(System.String)">
+	<summary>
+ Verifies if string is an Acceptable Landline 
+ </summary>
+	<param name="Subject">Keypress Events</param>
+	<remarks></remarks>
+</member><member name="T:WeLearnLMS.StrategyVerifyLandline">
+	<summary>
+ Strategy to verify a LANDLINE number
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.StrategyVerifyVerySimiple.Verify(System.String)">
+	<summary>
+ Verifies if string is an Acceptable Characters 
+ </summary>
+	<param name="Subject">STRING to Regulate</param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmArticleMaker.WriteBlob">
+	<summary>
+ Write the Blob
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmArticleMaker.toolstripFILENAME_Validated(System.Object,System.EventArgs)">
+	<summary>
+ When validated, Set ArticleName as ThisTextbox
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmMessageCreator.#ctor(WeLearnLMS.c_MainCredentials@)">
+	<summary>
+ Constructor for me
+ </summary>
+	<param name="Sender"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmMessageCreator.SaveFeedback">
+	<summary>
+ Inserts Feedback into the database
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuestionnaireCreator.#ctor(WeLearnLMS.c_Quiz@)">
+	<summary>
+ Editor Constructor VIA QUIZ
+ </summary>
+	<param name="QUIZ"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuestionnaireCreator.DumpForEdit(WeLearnLMS.c_Quiz@)">
+	<summary>
+ Dump This Quiz to Textboxes
+ </summary>
+	<param name="Quiz"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuestionnaireCreator.ForEachStuff(System.Collections.Generic.List{WeLearnLMS.c_SmallQuestion})">
+	<summary>
+ Use this to parse the lists to the Datagridview
+ AKA
+ Setup the datagridview
+ </summary>
+	<param name="ThisType">List of C_SmallQuestion</param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuestionnaireCreator.CreateList">
+	<summary>
+ Create a list of questions from the Datagridview
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuestionnaireCreator.btnSerialize_Click(System.Object,System.EventArgs)">
+	<summary>
+ Create a Questionnaire Object (METHOD IS FULL SERIALIZATION)
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuestionnaireViewer.DataDeserialize(System.String)">
+	<summary>
+ Use this to Deserialize the data
+ </summary>
+	<param name="data">XML String to return</param>
+	<returns>c_ShortQuiz</returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuestionnaireViewer.ShufflePartTwo(System.Collections.Generic.List{WeLearnLMS.c_SmallQuestion})">
+	<summary>
+ Use this Shuffler for the Questions
+ </summary>
+	<param name="ThisCollection">c_SmallQuestions</param>
+	<returns>c_SmallQuestion List</returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuestionnaireViewer.ForEachStuff(System.Collections.Generic.List{WeLearnLMS.c_SmallQuestion}@)">
+	<summary>
+ Use this to parse the lists to the Datagridview
+ AKA
+ Setup the datagridview
+ </summary>
+	<param name="ThisType"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuestionnaireViewer.Counter">
+	<summary>
+ Count all the Correct Answers VS All Answers
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.StrategyVerifyNumbers.Verify(System.String)">
+	<summary>
+ Verifies if string is an Acceptable Number 
+ </summary>
+	<param name="Subject">Keypress Events</param>
+	<remarks></remarks>
+</member><member name="T:WeLearnLMS.StrategyVerifyNumbers">
+	<summary>
+ Strategy class for providing means of verifying valid NUMBERS
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmStudyMaterialsViewer.#ctor(WeLearnLMS.c_Material@)">
+	<summary>
+ Constructor for Study Materials Viewer
+ </summary>
+	<param name="ThisMaterial">Material to view</param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmExamsViewer.MarkExam">
+	<summary>
+ Mark Exam
+ </summary>
+	<remarks></remarks>
+</member><member name="T:WeLearnLMS.frmExamsViewer">
+	<summary>
+ Exam Viewing, Marking and Pregrading happen here
+ </summary>
+	<remarks></remarks>
+</member><member name="T:WeLearnLMS.frmUserLogin">
+	<summary>
+░░░░░░░█▐▓▓░████▄▄▄█▀▄▓▓▓▌█ 
+░░░░░▄█▌▀▄▓▓▄▄▄▄▀▀▀▄▓▓▓▓▓▌█ 
+░░░▄█▀▀▄▓█▓▓▓▓▓▓▓▓▓▓▓▓▀░▓▌█ 
+░░█▀▄▓▓▓███▓▓▓███▓▓▓▄░░▄▓▐█▌ 
+░█▌▓▓▓▀▀▓▓▓▓███▓▓▓▓▓▓▓▄▀▓▓▐█ 
+▐█▐██▐░▄▓▓▓▓▓▀▄░▀▓▓▓▓▓▓▓▓▓▌█▌ Big Doge is watching
+█▌███▓▓▓▓▓▓▓▓▐░░▄▓▓███▓▓▓▄▀▐█ 
+█▐█▓▀░░▀▓▓▓▓▓▓▓▓▓██████▓▓▓▓▐█ 
+▌▓▄▌▀░▀░▐▀█▄▓▓██████████▓▓▓▌█▌ 
+▌▓▓▓▄▄▀▀▓▓▓▀▓▓▓▓▓▓▓▓█▓█▓█▓▓▌█▌ 
+█▐▓▓▓▓▓▓▄▄▄▓▓▓▓▓▓█▓█▓█▓█▓▓▓▐█
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmScheduleViewer.#ctor">
+	<summary>
+ Admin Viewer
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmScheduleViewer.#ctor(System.String@)">
+	<summary>
+ Non Admin Viewer
+ </summary>
+	<param name="ClassroomID"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmClassroomCreator.#ctor">
+	<summary>
+ Null constructor for DiaClassCreation
+ </summary>
+	<remarks></remarks>
+</member><member name="P:WeLearnLMS.frmClassroomCreator.GetMyResult">
+	<summary>
+ Return the Classroom object to the form that requests it
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmClassroomCreator.CreateANewClass">
+	<summary>
+ Routine inserts A New Class object into 
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.ImpDataSerializer.DataSerialize(System.Collections.Generic.List{WeLearnLMS.c_SmallQuestion}@)">
+	<summary>
+ Use this to Serialize the Data
+ </summary>
+	<param name="myList">C_Quiz to serialize</param>
+	<returns>XML String ready for being saved to the database</returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmOfficialExamsCreator.#ctor(WeLearnLMS.c_Exam@)">
+	<summary>
+	</summary>
+	<param name="EXAM"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmOfficialExamsCreator.DumpForEdit(WeLearnLMS.c_Exam@)">
+	<summary>
+ Dump This Exam to Textboxes
+ </summary>
+	<param name="Exam"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmOfficialExamsCreator.ForEachStuff(System.Collections.Generic.List{WeLearnLMS.c_SmallQuestion})">
+	<summary>
+ Use this to parse the lists to the Datagridview
+ AKA
+ Setup the datagridview
+ </summary>
+	<param name="ThisType">List of C_SmallQuestion</param>
+	<remarks></remarks>
+</member><member name="P:WeLearnLMS.frmOfficialExamsCreator.GetOfficialExam">
+	<summary>
+ Return The generated Exam
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmOfficialExamsCreator.CreateList">
+	<summary>
+ Create a list of questions from the Datagridview
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmExamsCreator.DataSerialize(System.Collections.Generic.List{WeLearnLMS.c_SmallQuestion})">
+	<summary>
+ Use this to Serialize the Data
+ </summary>
+	<param name="myList">C_Exam to serialize</param>
+	<returns>XML String ready for being saved to the database</returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmExamsCreator.DataDeserialize(System.String)">
+	<summary>
+ Use this to Deserialize the data
+ </summary>
+	<param name="data">XML String to return</param>
+	<returns>c_ShortQuiz</returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.IVerifyTextInput.Verify(System.String)">
+	<summary>
+	</summary>
+	<param name="Subject">String to be validate</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:WeLearnLMS.IVerifyTextInput">
+	<summary>
+ Interface to verify textbox input
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.StrategyVerifyUsername.Verify(System.String)">
+	<summary>
+ Verifies if string is an Acceptable USERNAME 
+ </summary>
+	<param name="Subject">Keypress Events</param>
+	<remarks></remarks>
+</member><member name="T:WeLearnLMS.StrategyVerifyUsername">
+	<summary>
+ Strategy to verify a USERNAME
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

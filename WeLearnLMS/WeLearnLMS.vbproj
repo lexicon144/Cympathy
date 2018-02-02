@@ -692,7 +692,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\MySql.Data.dll" />
-    <Content Include="bin\Debug\MySql.Data.xml" />
     <Content Include="bin\Debug\WeLearnLMS.exe" />
     <Content Include="bin\Debug\WeLearnLMS.pdb" />
     <Content Include="bin\Debug\WeLearnLMS.vshost.exe" />
