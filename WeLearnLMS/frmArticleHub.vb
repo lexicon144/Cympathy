@@ -148,11 +148,14 @@
     End Sub
 
     Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
-        Dim ContextualArticle As New c_Article
-        ParseFromTextbox(ContextualArticle)
-        Dim ArticleViewer As New frmArticleViewer(ContextualArticle)
-        ArticleViewer.Show()
-
+        Try
+            Dim ContextualArticle As New c_Article
+            ParseFromTextbox(ContextualArticle)
+            Dim ArticleViewer As New frmArticleViewer(ContextualArticle)
+            ArticleViewer.Show()
+        Catch xxx As Exception
+            DisplayGeneralException(xxx)
+        End Try
     End Sub
 
     Private Sub ParseFromTextbox()
