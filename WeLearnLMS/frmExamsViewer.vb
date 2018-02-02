@@ -7,7 +7,7 @@ Public Class frmExamsViewer
     Private _exam As New c_Exam
     Private _PreGrade As New c_PreGrade
     Private UserID As String
-
+    Private ClassroomID As String
     Public Sub New()
 
         ' This call is required by the designer.
@@ -16,6 +16,7 @@ Public Class frmExamsViewer
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub
+
 
     Public Sub New(ByRef ThisExam As c_Exam)
         InitializeComponent()

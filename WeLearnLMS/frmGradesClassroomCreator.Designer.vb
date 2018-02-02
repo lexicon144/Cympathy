@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmGradesFinalCreator
+Partial Class frmGradesClassroomCreator
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -172,7 +172,7 @@ Partial Class frmGradesFinalCreator
         '
         Me.btnToggleRO.Appearance = System.Windows.Forms.Appearance.Button
         Me.btnToggleRO.AutoSize = True
-        Me.btnToggleRO.Location = New System.Drawing.Point(305, 226)
+        Me.btnToggleRO.Location = New System.Drawing.Point(284, 169)
         Me.btnToggleRO.Name = "btnToggleRO"
         Me.btnToggleRO.Size = New System.Drawing.Size(84, 23)
         Me.btnToggleRO.TabIndex = 5
@@ -216,7 +216,7 @@ Partial Class frmGradesFinalCreator
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 0
         '
-        'frmGradesFinalCreator
+        'frmGradesClassroomCreator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -226,8 +226,8 @@ Partial Class frmGradesFinalCreator
         Me.Controls.Add(Me.grpUser)
         Me.Controls.Add(Me.grpClassroom)
         Me.Controls.Add(Me.btnFinalizeGrades)
-        Me.Name = "frmGradesFinalCreator"
-        Me.Text = "`"
+        Me.Name = "frmGradesClassroomCreator"
+        Me.Text = "frmGradesClassroomCreator"
         Me.grpClassroom.ResumeLayout(False)
         Me.grpClassroom.PerformLayout()
         Me.grpUser.ResumeLayout(False)

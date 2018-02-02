@@ -10,14 +10,15 @@ Friend Module mod_ExceptionMessage
         With NewMessage
             .Append("Linking Transaction Failed!")
             .Append(vbNewLine)
+            .Append(vbNewLine)
             .Append("Reasons: ")
             .Append(XXX.Message)
             .Append(vbNewLine)
-
+            .Append(vbNewLine)
             .Append("Source: ")
             .Append(XXX.Source)
             .Append(vbNewLine)
-
+            .Append(vbNewLine)
             .Append("Stack Trace: ")
             .Append(XXX.StackTrace)
         End With
@@ -30,14 +31,15 @@ Friend Module mod_ExceptionMessage
         With NewMessage
             .Append("General Exception Caught!")
             .Append(vbNewLine)
+            .Append(vbNewLine)
             .Append("Reasons: ")
             .Append(XXX.Message)
             .Append(vbNewLine)
-
+            .Append(vbNewLine)
             .Append("Source: ")
             .Append(XXX.Source)
             .Append(vbNewLine)
-
+            .Append(vbNewLine)
             .Append("Stack Trace: ")
             .Append(XXX.StackTrace)
         End With

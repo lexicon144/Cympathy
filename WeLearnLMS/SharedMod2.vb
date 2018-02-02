@@ -1,7 +1,8 @@
 ﻿Public Module SharedMod2
     Friend _SharedUserID As String
-    Friend _MainCredentials As New c_MainCredentials
-    Friend _AdvancedCredentials As New c_AdvancedCredentials
+    Friend _SharedClassroomID As String
+    Friend _SharedMainCredentials As New c_MainCredentials
+    Friend _SharedAdvancedCredentials As New c_AdvancedCredentials
 
     Friend Enum UserType
         ADM = 0

@@ -159,12 +159,6 @@
     <Compile Include="frmDayDialog.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGradeFinal.Designer.vb">
-      <DependentUpon>frmGradeFinal.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmGradeFinal.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmGradesComputer.Designer.vb">
       <DependentUpon>frmGradesComputer.vb</DependentUpon>
     </Compile>
@@ -177,10 +171,10 @@
     <Compile Include="frmGradesExamPreCreator.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGradesFinalCreator.Designer.vb">
-      <DependentUpon>frmGradesFinalCreator.vb</DependentUpon>
+    <Compile Include="frmGradesClassroomCreator.Designer.vb">
+      <DependentUpon>frmGradesClassroomCreator.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmGradesFinalCreator.vb">
+    <Compile Include="frmGradesClassroomCreator.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmGradesHub.Designer.vb">
@@ -492,17 +486,14 @@
     <EmbeddedResource Include="frmDayDialog.resx">
       <DependentUpon>frmDayDialog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGradeFinal.resx">
-      <DependentUpon>frmGradeFinal.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmGradesComputer.resx">
       <DependentUpon>frmGradesComputer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGradesExamPreCreator.resx">
       <DependentUpon>frmGradesExamPreCreator.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGradesFinalCreator.resx">
-      <DependentUpon>frmGradesFinalCreator.vb</DependentUpon>
+    <EmbeddedResource Include="frmGradesClassroomCreator.resx">
+      <DependentUpon>frmGradesClassroomCreator.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGradesHub.resx">
       <DependentUpon>frmGradesHub.vb</DependentUpon>

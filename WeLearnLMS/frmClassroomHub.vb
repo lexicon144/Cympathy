@@ -16,6 +16,7 @@
             txtClassId.Text = _Classroom.ClassroomId
             txtClassName.Text = _Classroom.ClassroomName
             txtClassType.Text = _Classroom.ClassType
+            _SharedClassroomID = _Classroom.ClassroomId
         End With
     End Sub
 
@@ -25,7 +26,6 @@
 
         If NewClassroomDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
             Me._Classroom = NewClassroomDialog.GetClassroom
-
             REView()
         End If
     End Sub

@@ -2,7 +2,7 @@
 
     Private _MainCredentials As New c_MainCredentials
 
-    Private _QuizID, _UserID As String
+    Private _QuizID, _UserID, _QuizName As String
 
     Private _PreGrade As New c_PreGrade
 
@@ -29,17 +29,33 @@
         End With
     End Sub
 
+    Public Sub New(ByRef QuizID As String, ByRef QuizName As String, ByRef UserID As String, ByRef PreGrade As c_PreGrade)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        With Me
+            ._QuizID = QuizID
+            ._UserID = UserID
+            ._PreGrade = PreGrade
+            ._QuizName = QuizName
+        End With
+    End Sub
+
     Private Sub frmGradesPre_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Procure()
     End Sub
 
     Private Sub RefreshText()
         With Me
-            .txtGrade.Text = ._PreGrade.ReturnFullScore
+            .txtGradeFullScore.Text = ._PreGrade.ReturnFullScore
             .txtGradeNumber.Text = ._PreGrade.ReturnFullAverage
             .txtQuizID.Text = ._QuizID
+            .txtQuizName.Text = ._QuizName
         End With
     End Sub
+
     Private Sub Procure()
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection

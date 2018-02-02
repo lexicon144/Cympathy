@@ -1,6 +1,9 @@
-﻿Public Class frmGradesFinalCreator
+﻿Public Class frmGradesClassroomCreator
 
     Private _Grades As New c_Grades
+    Private _UserID As String
+    Private _ClassID As String
+    Private _GradeValue As Double
 
     Public Sub New()
 
@@ -21,33 +24,7 @@
     End Sub
 
     Private Sub frmGradesFinalCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
-            With Connection
-                If .State = ConnectionState.Closed Then
-                    .Open()
-                End If
-            End With
-            Try
-                Using GradeTransaction As MySqlTransaction = Connection.BeginTransaction
-                    Using Command As New MySqlCommand
-                        With Command
-                            .Connection = Connection
-                            .Transaction = GradeTransaction
-                            .CommandType = CommandType.StoredProcedure
-                            .CommandText = "CountVotes"
-                            With .Parameters
-                                .AddWithValue("CandidateID", "")
-                                .AddWithValue("", "")
-                            End With
-                            .ExecuteNonQuery()
-                            GradeTransaction.Commit()
-                        End With
-                    End Using
-                End Using
-            Catch xxx As Exception
-            End Try
-
-        End Using
+        
     End Sub
 
     Private Sub btnUserBrowser_Click(sender As Object, e As EventArgs) Handles btnUserBrowser.Click
@@ -70,4 +47,38 @@
         End If
     End Sub
 
+    Private Sub PerformTransaction(ByRef UserID As String, ByRef ClassID As String, ByRef GradeValue As Double)
+        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
+            With Connection
+                If .State = ConnectionState.Closed Then
+                    .Open()
+                End If
+            End With
+            Try
+                Using GradeTransaction As MySqlTransaction = Connection.BeginTransaction
+                    Using Command As New MySqlCommand
+                        With Command
+                            .Connection = Connection
+                            .Transaction = GradeTransaction
+                            .CommandType = CommandType.StoredProcedure
+                            .CommandText = "InsertClassroomGrade"
+                            With .Parameters
+                                .AddWithValue("UserID", UserID)
+                                .AddWithValue("ClassID", ClassID)
+                                .AddWithValue("GradeValue", GradeValue)
+                            End With
+                            .ExecuteNonQuery()
+                            GradeTransaction.Commit()
+                        End With
+                    End Using
+                End Using
+            Catch xxx As Exception
+            End Try
+
+        End Using
+    End Sub
+
+    Private Sub btnFinalizeGrades_Click(sender As Object, e As EventArgs) Handles btnFinalizeGrades.Click
+
+    End Sub
 End Class

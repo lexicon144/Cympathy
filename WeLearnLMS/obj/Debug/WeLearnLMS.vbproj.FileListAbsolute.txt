@@ -48,7 +48,7 @@ C:\Users\genocideDaemon\documents\visual studio 2012\Projects\Cympathy\WeLearnLM
 C:\Users\genocideDaemon\documents\visual studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmQuestSecurity.resources
 C:\Users\genocideDaemon\documents\visual studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmExamsViewer.resources
 C:\Users\genocideDaemon\Documents\Visual Studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmUserLogin.resources
-C:\Users\genocideDaemon\documents\visual studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmGradeFinal.resources
+C:\Users\genocideDaemon\documents\visual studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmGradesClassroomCreator.resources
 C:\Users\genocideDaemon\documents\visual studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmGradesHub.resources
 C:\Users\genocideDaemon\documents\visual studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmRankingHub.resources
 C:\Users\genocideDaemon\documents\visual studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmRankingProfessors.resources
@@ -75,7 +75,6 @@ C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.fr
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmClassroomHub.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmClassroomLinker.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmDayDialog.resources
-C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmGradeFinal.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmGradesExamPreCreator.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmGradesHub.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmGradesQuizPreCreator.resources
@@ -122,4 +121,4 @@ C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.xm
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.pdb
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmArticleMaker.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmGradesComputer.resources
-C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmGradesFinalCreator.resources
+C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmGradesClassroomCreator.resources
