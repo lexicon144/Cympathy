@@ -28,7 +28,7 @@ Partial Class frmGradesPreCompiler
         '
         'btnCompilePreQuizGrades
         '
-        Me.btnCompilePreQuizGrades.Location = New System.Drawing.Point(12, 12)
+        Me.btnCompilePreQuizGrades.Location = New System.Drawing.Point(92, 96)
         Me.btnCompilePreQuizGrades.Name = "btnCompilePreQuizGrades"
         Me.btnCompilePreQuizGrades.Size = New System.Drawing.Size(104, 23)
         Me.btnCompilePreQuizGrades.TabIndex = 0
@@ -37,7 +37,7 @@ Partial Class frmGradesPreCompiler
         '
         'btnCompilePreGradeExams
         '
-        Me.btnCompilePreGradeExams.Location = New System.Drawing.Point(12, 61)
+        Me.btnCompilePreGradeExams.Location = New System.Drawing.Point(92, 125)
         Me.btnCompilePreGradeExams.Name = "btnCompilePreGradeExams"
         Me.btnCompilePreGradeExams.Size = New System.Drawing.Size(104, 23)
         Me.btnCompilePreGradeExams.TabIndex = 1

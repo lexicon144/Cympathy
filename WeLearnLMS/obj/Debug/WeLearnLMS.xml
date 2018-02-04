@@ -6,17 +6,7 @@ WeLearnLMS
 </name>
 </assembly>
 <members>
-<member name="M:WeLearnLMS.frmGradesClassroomViewer.#ctor">
-	<summary>
- Calculate All pregrades from Quiz and Exams
- </summary>
-	<remarks></remarks>
-</member><member name="T:WeLearnLMS.frmGradesClassroomViewer">
-	<summary>
- Grades computer 
- </summary>
-	<remarks></remarks>
-</member><member name="M:WeLearnLMS.ImpConStringBuilder.ConnString">
+<member name="M:WeLearnLMS.ImpConStringBuilder.ConnString">
 	<summary>
  Return Current Implementation of ConStringBuilder
  Use this Implementation as TESTING PURPOSES ONLY FOR LOCALHOST
@@ -73,6 +63,16 @@ WeLearnLMS
  Non Modal Constructor
  </summary>
 	<param name="ClassroomID"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmGradesClassroomViewer.#ctor">
+	<summary>
+ Calculate All pregrades from Quiz and Exams
+ </summary>
+	<remarks></remarks>
+</member><member name="T:WeLearnLMS.frmGradesClassroomViewer">
+	<summary>
+ Grades computer 
+ </summary>
 	<remarks></remarks>
 </member><member name="M:WeLearnLMS.IDataDeserializer.DataDeserialize(System.String)">
 	<summary>
@@ -367,17 +367,34 @@ WeLearnLMS
  Inserts Feedback into the database
  </summary>
 	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuestionnaireCreator.#ctor">
+	<summary>
+ Blank Constructor
+ </summary>
+	<remarks></remarks>
 </member><member name="M:WeLearnLMS.frmQuestionnaireCreator.#ctor(WeLearnLMS.c_Quiz@)">
 	<summary>
- Editor Constructor VIA QUIZ
+ Constructor for editing a QUIZ
  </summary>
 	<param name="QUIZ"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuestionnaireCreator.#ctor(WeLearnLMS.c_Exam@)">
+	<summary>
+ Constructor for editing an EXAM
+ </summary>
+	<param name="EXAM"></param>
 	<remarks></remarks>
 </member><member name="M:WeLearnLMS.frmQuestionnaireCreator.DumpForEdit(WeLearnLMS.c_Quiz@)">
 	<summary>
  Dump This Quiz to Textboxes
  </summary>
 	<param name="Quiz"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuestionnaireCreator.DumpForEdit(System.Collections.Generic.List{WeLearnLMS.c_SmallQuestion}@)">
+	<summary>
+ Dump This Question Base to Textboxes
+ </summary>
+	<param name="BASE"></param>
 	<remarks></remarks>
 </member><member name="M:WeLearnLMS.frmQuestionnaireCreator.ForEachStuff(System.Collections.Generic.List{WeLearnLMS.c_SmallQuestion})">
 	<summary>
@@ -393,9 +410,21 @@ WeLearnLMS
  </summary>
 	<returns></returns>
 	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuestionnaireCreator.AddNewRow">
+	<summary>
+ ADd new row to datagridview
+ </summary>
+	<remarks></remarks>
 </member><member name="M:WeLearnLMS.frmQuestionnaireCreator.btnSerialize_Click(System.Object,System.EventArgs)">
 	<summary>
- Create a Questionnaire Object (METHOD IS FULL SERIALIZATION)
+ Create a Questionnaire Object (METHOD IS PARTIAL SERIALIZATION (only the question base is serialized))
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmQuestionnaireCreator.btnFillUpQuiz_Click(System.Object,System.EventArgs)">
+	<summary>
+ Cheating Purposes only
  </summary>
 	<param name="sender"></param>
 	<param name="e"></param>
@@ -535,20 +564,6 @@ WeLearnLMS
  Create a list of questions from the Datagridview
  </summary>
 	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:WeLearnLMS.frmExamsCreator.DataSerialize(System.Collections.Generic.List{WeLearnLMS.c_SmallQuestion})">
-	<summary>
- Use this to Serialize the Data
- </summary>
-	<param name="myList">C_Exam to serialize</param>
-	<returns>XML String ready for being saved to the database</returns>
-	<remarks></remarks>
-</member><member name="M:WeLearnLMS.frmExamsCreator.DataDeserialize(System.String)">
-	<summary>
- Use this to Deserialize the data
- </summary>
-	<param name="data">XML String to return</param>
-	<returns>c_ShortQuiz</returns>
 	<remarks></remarks>
 </member><member name="M:WeLearnLMS.IVerifyTextInput.Verify(System.String)">
 	<summary>

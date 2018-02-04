@@ -22,6 +22,7 @@ Partial Class frmExamsCreator
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnEditor = New System.Windows.Forms.Button()
         Me.grpXmlPreview = New System.Windows.Forms.GroupBox()
         Me.rtbXMLPreview = New System.Windows.Forms.RichTextBox()
@@ -32,7 +33,9 @@ Partial Class frmExamsCreator
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtQType = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.grpXmlPreview.SuspendLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnEditor
@@ -77,7 +80,6 @@ Partial Class frmExamsCreator
         '
         Me.txtExamPIN.Location = New System.Drawing.Point(96, 47)
         Me.txtExamPIN.Name = "txtExamPIN"
-        Me.txtExamPIN.ReadOnly = True
         Me.txtExamPIN.Size = New System.Drawing.Size(100, 20)
         Me.txtExamPIN.TabIndex = 7
         '
@@ -85,7 +87,6 @@ Partial Class frmExamsCreator
         '
         Me.txtExamName.Location = New System.Drawing.Point(96, 21)
         Me.txtExamName.Name = "txtExamName"
-        Me.txtExamName.ReadOnly = True
         Me.txtExamName.Size = New System.Drawing.Size(100, 20)
         Me.txtExamName.TabIndex = 8
         '
@@ -124,6 +125,10 @@ Partial Class frmExamsCreator
         Me.Label3.TabIndex = 12
         Me.Label3.Text = "QType"
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'frmExamsCreator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -141,6 +146,7 @@ Partial Class frmExamsCreator
         Me.Name = "frmExamsCreator"
         Me.Text = "frmExamsCreator"
         Me.grpXmlPreview.ResumeLayout(False)
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -155,4 +161,5 @@ Partial Class frmExamsCreator
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtQType As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class

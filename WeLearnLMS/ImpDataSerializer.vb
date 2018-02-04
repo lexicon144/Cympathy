@@ -14,7 +14,7 @@ Public Class ImpDataSerializer
     ''' <param name="myList">C_Quiz to serialize</param>
     ''' <returns>XML String ready for being saved to the database</returns>
     ''' <remarks></remarks>
-    Public Function DataSerialize(ByRef myList As List(Of c_SmallQuestion)) As String Implements IDataSerializer.DataSerialize
+    Private Function DataSerialize(ByRef myList As List(Of c_SmallQuestion)) As String Implements IDataSerializer.DataSerialize
 
         Dim sw As New StringWriter
         Dim s As New XmlSerializer(myList.GetType())

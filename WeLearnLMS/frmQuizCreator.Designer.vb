@@ -75,7 +75,6 @@ Partial Class frmQuizCreator
         '
         Me.txtQuizName.Location = New System.Drawing.Point(79, 12)
         Me.txtQuizName.Name = "txtQuizName"
-        Me.txtQuizName.ReadOnly = True
         Me.txtQuizName.Size = New System.Drawing.Size(100, 20)
         Me.txtQuizName.TabIndex = 4
         '

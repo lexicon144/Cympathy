@@ -40,8 +40,6 @@ Partial Class frmQuestionnaireCreator
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtTitle = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.btnSerialize = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
@@ -49,6 +47,7 @@ Partial Class frmQuestionnaireCreator
         Me.rdPEXAM = New System.Windows.Forms.RadioButton()
         Me.btnFillUpQuiz = New System.Windows.Forms.Button()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.rdOEXAM = New System.Windows.Forms.RadioButton()
         CType(Me.Datagridview1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -198,22 +197,6 @@ Partial Class frmQuestionnaireCreator
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Mod"
         '
-        'txtTitle
-        '
-        Me.txtTitle.Location = New System.Drawing.Point(113, 75)
-        Me.txtTitle.Name = "txtTitle"
-        Me.txtTitle.Size = New System.Drawing.Size(100, 20)
-        Me.txtTitle.TabIndex = 12
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(80, 78)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(27, 13)
-        Me.Label6.TabIndex = 13
-        Me.Label6.Text = "Title"
-        '
         'btnSerialize
         '
         Me.btnSerialize.Location = New System.Drawing.Point(697, 335)
@@ -243,7 +226,7 @@ Partial Class frmQuestionnaireCreator
         'rdSQUIZ
         '
         Me.rdSQUIZ.AutoSize = True
-        Me.rdSQUIZ.Location = New System.Drawing.Point(686, 28)
+        Me.rdSQUIZ.Location = New System.Drawing.Point(697, 12)
         Me.rdSQUIZ.Name = "rdSQUIZ"
         Me.rdSQUIZ.Size = New System.Drawing.Size(74, 17)
         Me.rdSQUIZ.TabIndex = 17
@@ -254,7 +237,7 @@ Partial Class frmQuestionnaireCreator
         'rdPEXAM
         '
         Me.rdPEXAM.AutoSize = True
-        Me.rdPEXAM.Location = New System.Drawing.Point(686, 51)
+        Me.rdPEXAM.Location = New System.Drawing.Point(697, 35)
         Me.rdPEXAM.Name = "rdPEXAM"
         Me.rdPEXAM.Size = New System.Drawing.Size(70, 17)
         Me.rdPEXAM.TabIndex = 18
@@ -275,19 +258,29 @@ Partial Class frmQuestionnaireCreator
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'rdOEXAM
+        '
+        Me.rdOEXAM.AutoSize = True
+        Me.rdOEXAM.Location = New System.Drawing.Point(697, 58)
+        Me.rdOEXAM.Name = "rdOEXAM"
+        Me.rdOEXAM.Size = New System.Drawing.Size(62, 17)
+        Me.rdOEXAM.TabIndex = 20
+        Me.rdOEXAM.TabStop = True
+        Me.rdOEXAM.Text = "O Exam"
+        Me.rdOEXAM.UseVisualStyleBackColor = True
+        '
         'frmQuestionnaireCreator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(784, 366)
+        Me.Controls.Add(Me.rdOEXAM)
         Me.Controls.Add(Me.btnFillUpQuiz)
         Me.Controls.Add(Me.rdPEXAM)
         Me.Controls.Add(Me.rdSQUIZ)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.btnSerialize)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.txtTitle)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Datagridview1)
         Me.Name = "frmQuestionnaireCreator"
@@ -317,8 +310,6 @@ Partial Class frmQuestionnaireCreator
     Friend WithEvents tttDistractor2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents tttDistractor3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents tttDistractor4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents txtTitle As System.Windows.Forms.TextBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents btnSerialize As System.Windows.Forms.Button
     Friend WithEvents btnAdd As System.Windows.Forms.Button
     Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
@@ -326,4 +317,5 @@ Partial Class frmQuestionnaireCreator
     Friend WithEvents rdPEXAM As System.Windows.Forms.RadioButton
     Friend WithEvents btnFillUpQuiz As System.Windows.Forms.Button
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents rdOEXAM As System.Windows.Forms.RadioButton
 End Class

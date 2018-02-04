@@ -66,7 +66,7 @@ Public Class frmOfficialExamsCreator
     ''' <remarks></remarks>
     Friend ReadOnly Property GetOfficialExam As c_Exam
         Get
-            Return _Questionnaire
+            Return Me._Questionnaire
         End Get
     End Property
 
