@@ -88,7 +88,7 @@
                                 .AddWithValue("@QuizGrade", Me._PreGrade.ReturnFullScore)
                                 .AddWithValue("@Hits", Me._PreGrade.Hits)
                                 .AddWithValue("@Questions", Me._PreGrade.TotalQuestions)
-                                .AddWithValue("@ClassroomID", _SharedClassroomID)
+                                .AddWithValue("@ClassroomID", _SharedClassroom.ClassroomId)
 
                             End With
                             .ExecuteNonQuery()

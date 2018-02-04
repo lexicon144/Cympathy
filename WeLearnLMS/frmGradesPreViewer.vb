@@ -43,12 +43,12 @@
 
     Friend Sub DisplayQuizGrades()
         Dim Displayer As New frmGradesQuizComputer()
-        _MyDatatable = Displayer.GetAnsweredQuizes(_SharedUserID, _SharedClassroomID)
+        _MyDatatable = Displayer.GetAnsweredQuizes(_SharedUserID, _SharedClassroom.ClassroomId)
     End Sub
 
     Friend Sub DisplayExamGrades()
         Dim Displayer As New frmGradeExamComputer()
-        _MyDatatable = Displayer.GetAnsweredQuizes(_SharedUserID, _SharedClassroomID)
+        _MyDatatable = Displayer.GetAnsweredQuizes(_SharedUserID, _SharedClassroom.ClassroomId)
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick

@@ -16,7 +16,7 @@
             txtClassId.Text = _Classroom.ClassroomId
             txtClassName.Text = _Classroom.ClassroomName
             txtClassType.Text = _Classroom.ClassType
-            _SharedClassroomID = _Classroom.ClassroomId
+            _SharedClassroom.ClassroomId = _Classroom.ClassroomId
         End With
     End Sub
 
@@ -28,7 +28,7 @@
             Me._Classroom = NewClassroomDialog.GetClassroom
             REView()
         End If
-        _SharedClassroomID = Me._Classroom.ClassroomId
+        _SharedClassroom.ClassroomId = Me._Classroom.ClassroomId
     End Sub
 
     Private Sub btnOpenQuestionnaire_Click(sender As Object, e As EventArgs) Handles btnOpenQuestionnaire.Click

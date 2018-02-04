@@ -38,8 +38,10 @@ Partial Class frmGradesClassroomCreator
         Me.btnToggleRO = New System.Windows.Forms.CheckBox()
         Me.grpGrades = New System.Windows.Forms.GroupBox()
         Me.btnMakeGrades = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtAverage = New System.Windows.Forms.TextBox()
+        Me.txtLetter = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.grpClassroom.SuspendLayout()
         Me.grpUser.SuspendLayout()
         Me.grpGrades.SuspendLayout()
@@ -181,9 +183,11 @@ Partial Class frmGradesClassroomCreator
         '
         'grpGrades
         '
+        Me.grpGrades.Controls.Add(Me.Label6)
+        Me.grpGrades.Controls.Add(Me.Label5)
         Me.grpGrades.Controls.Add(Me.btnMakeGrades)
-        Me.grpGrades.Controls.Add(Me.TextBox2)
-        Me.grpGrades.Controls.Add(Me.TextBox1)
+        Me.grpGrades.Controls.Add(Me.txtAverage)
+        Me.grpGrades.Controls.Add(Me.txtLetter)
         Me.grpGrades.Location = New System.Drawing.Point(424, 12)
         Me.grpGrades.Name = "grpGrades"
         Me.grpGrades.Size = New System.Drawing.Size(203, 151)
@@ -200,21 +204,39 @@ Partial Class frmGradesClassroomCreator
         Me.btnMakeGrades.Text = "Compute"
         Me.btnMakeGrades.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'txtAverage
         '
-        Me.TextBox2.Location = New System.Drawing.Point(94, 80)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 1
+        Me.txtAverage.Location = New System.Drawing.Point(94, 80)
+        Me.txtAverage.Name = "txtAverage"
+        Me.txtAverage.ReadOnly = True
+        Me.txtAverage.Size = New System.Drawing.Size(100, 20)
+        Me.txtAverage.TabIndex = 1
         '
-        'TextBox1
+        'txtLetter
         '
-        Me.TextBox1.Location = New System.Drawing.Point(94, 54)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.txtLetter.Location = New System.Drawing.Point(94, 54)
+        Me.txtLetter.Name = "txtLetter"
+        Me.txtLetter.ReadOnly = True
+        Me.txtLetter.Size = New System.Drawing.Size(100, 20)
+        Me.txtLetter.TabIndex = 0
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(41, 84)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(47, 13)
+        Me.Label5.TabIndex = 3
+        Me.Label5.Text = "Average"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(49, 57)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(31, 13)
+        Me.Label6.TabIndex = 4
+        Me.Label6.Text = "Mark"
         '
         'frmGradesClassroomCreator
         '
@@ -249,11 +271,13 @@ Partial Class frmGradesClassroomCreator
     Friend WithEvents txtUserName As System.Windows.Forms.TextBox
     Friend WithEvents btnToggleRO As System.Windows.Forms.CheckBox
     Friend WithEvents grpGrades As System.Windows.Forms.GroupBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtAverage As System.Windows.Forms.TextBox
+    Friend WithEvents txtLetter As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents btnMakeGrades As System.Windows.Forms.Button
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

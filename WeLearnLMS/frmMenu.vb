@@ -20,6 +20,10 @@
     Private Sub btnClassroomHub_Click(sender As Object, e As EventArgs) Handles btnClassroomHub.Click
         Dim ClassroomHub As New frmClassroomHub
         ClassroomHub.ShowDialog()
+        With Me.StatusStrip1
+            toolstripCLASSNAME.Text = _SharedClassroom.ClassroomName
+            toolstripCLASSROOMID.Text = _SharedClassroom.ClassroomId
+        End With
     End Sub
 
     Private Sub btnTimeManagement_Click(sender As Object, e As EventArgs) Handles btnTimeManagement.Click
@@ -68,4 +72,5 @@
         Dim viewer As New frmGradesClassroomHub
         viewer.ShowDialog()
     End Sub
+
 End Class

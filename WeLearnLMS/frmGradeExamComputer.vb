@@ -165,9 +165,9 @@
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-        Me._AverageDatatable = GetAnsweredQuizes(_SharedUserID, _SharedClassroomID)
+        Me._AverageDatatable = GetAnsweredQuizes(_SharedUserID, _SharedClassroom.ClassroomId)
         GetRecordedCount(_RecordedCount)
-        GetCountQuizesInClassroom(_SharedClassroomID)
+        GetCountQuizesInClassroom(_SharedClassroom.ClassroomId)
         GetSumationOfQuizes()
         Me._FullAverage = GetNewAverage(Me._GradeSummation, Me._RecordedCount)
     End Sub

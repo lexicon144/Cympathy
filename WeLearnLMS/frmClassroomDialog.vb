@@ -151,6 +151,7 @@
 
     Private Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
         Me._Classroom = ParseFromTextbox()
+        _SharedClassroom = ParseFromTextbox()
         Me.DialogResult = Windows.Forms.DialogResult.OK
     End Sub
 

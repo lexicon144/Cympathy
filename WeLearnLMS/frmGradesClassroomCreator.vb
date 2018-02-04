@@ -83,6 +83,12 @@
     End Sub
 
     Private Sub btnMakeGrades_Click(sender As Object, e As EventArgs) Handles btnMakeGrades.Click
-        
+        Dim GradeComputer As New frmGradesPreCompiler()
+        If GradeComputer.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            With Me
+                .txtAverage.Text = GradeComputer.CompileAllGrades().ToString
+                .txtLetter.Text = "XXX"
+            End With
+        End If
     End Sub
 End Class
