@@ -126,10 +126,10 @@ Public Class frmQuestionnaireViewer
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub Counter()
-        Dim AllQuestions As UInt16 = 0
+        Dim AllQuestions As UInt16 = DataGridView1.Rows.Count
         Dim Hits As UInt16 = 0
+
         For Each row As DataGridViewRow In DataGridView1.Rows
-            AllQuestions += 1
             If row.Cells("tttANS").Value = row.Cells("tttDistractor4").Value Then
                 Hits += 1
             End If
@@ -138,6 +138,7 @@ Public Class frmQuestionnaireViewer
         With Me._PreGrades
             .Hits = Hits
             .TotalQuestions = AllQuestions
+
         End With
     End Sub
 
@@ -161,4 +162,22 @@ Public Class frmQuestionnaireViewer
     Private Sub frmQuestionnaireViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub DevAutoFill(ByVal Limit As UInt32)
+        Dim Count As UInt32 = 1
+        For Each row As DataGridViewRow In DataGridView1.Rows
+            row.Cells("tttANS").Value = row.Cells("tttDistractor4").Value
+            If Count >= Limit Then Exit For
+            Count += 1
+        Next
+    End Sub
+
+    Private Sub btnDevAuto13_Click(sender As Object, e As EventArgs) Handles btnDevAuto13.Click
+        Try
+            DevAutoFill(CInt(TextBox1.Text))
+        Catch XXX As Exception
+            MessageBox.Show("Really bruh?")
+        End Try
+    End Sub
+
 End Class

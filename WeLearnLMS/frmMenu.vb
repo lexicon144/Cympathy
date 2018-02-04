@@ -65,7 +65,7 @@
     End Sub
 
     Private Sub btnGrades_Click(sender As Object, e As EventArgs) Handles btnGrades.Click
-        Dim viewer As New frmGradesHub
+        Dim viewer As New frmGradesClassroomHub
         viewer.ShowDialog()
     End Sub
 End Class

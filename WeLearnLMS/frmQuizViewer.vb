@@ -66,7 +66,7 @@
                             .CommandType = CommandType.StoredProcedure
                             .CommandText = "MarkThisQuiz"
                             With .Parameters
-                                .AddWithValue("UserID", Me._UserID)
+                                .AddWithValue("UserID", _SharedUserID)
                                 .AddWithValue("QuizID", Me._Quiz.QuestionnaireID)
                             End With
                             .ExecuteNonQuery()

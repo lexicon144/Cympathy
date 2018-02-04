@@ -28,6 +28,7 @@
             Me._Classroom = NewClassroomDialog.GetClassroom
             REView()
         End If
+        _SharedClassroomID = Me._Classroom.ClassroomId
     End Sub
 
     Private Sub btnOpenQuestionnaire_Click(sender As Object, e As EventArgs) Handles btnOpenQuestionnaire.Click
@@ -106,4 +107,20 @@
         ViewExams.ShowDialog()
     End Sub
 #End Region
+
+    Private Sub frmViewGrades_Click(sender As Object, e As EventArgs) Handles frmViewGrades.Click
+        Dim previewer As New frmGradesPreViewer()
+        With previewer
+            .DisplayQuizGrades()
+            .ShowDialog()
+        End With
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnViewExamGrades.Click
+        Dim previewer As New frmGradesPreViewer()
+        With previewer
+            .DisplayExamGrades()
+            .ShowDialog()
+        End With
+    End Sub
 End Class

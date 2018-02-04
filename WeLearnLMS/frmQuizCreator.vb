@@ -73,7 +73,7 @@ Public Class frmQuizCreator
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If Me.rtbXMLPreview.Text = "" Then Exit Sub
+        If Me.rtbXMLPreview.Text = "" Or Me.txtQuizName.Text = "" Then Exit Sub
         InsertQuiz()
     End Sub
 End Class

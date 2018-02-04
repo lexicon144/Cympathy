@@ -3,7 +3,7 @@
     Friend _SharedClassroomID As String
     Friend _SharedMainCredentials As New c_MainCredentials
     Friend _SharedAdvancedCredentials As New c_AdvancedCredentials
-
+    Friend _SharedValidator As New ContextVerification
     Friend Enum UserType
         ADM = 0
         PRO = 1

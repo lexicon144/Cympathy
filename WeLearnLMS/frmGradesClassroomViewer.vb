@@ -1,9 +1,12 @@
-﻿Public Class frmGradesComputer
+﻿''' <summary>
+''' Grades computer 
+''' </summary>
+''' <remarks></remarks>
+Public Class frmGradesClassroomViewer
 
-    Private _QuizesDatatable As New DataTable
+    Private _ClassroomGradesDatatable As New DataTable
     Private _UserID As String
     Private _ClassroomID As String
-    Private _ListQuizPregrades As List(Of c_PreGrade)
     ''' <summary>
     ''' Calculate All pregrades from Quiz and Exams
     ''' </summary>
@@ -17,8 +20,26 @@
 
     End Sub
 
-    Private Sub frmGradesComputer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub frmGradesClassroomViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub ViewDatatable()
+        Dim btn As New DataGridViewButtonColumn()
+
+        With btn
+            .HeaderText = "Action"
+            .Text = "Open"
+            .Name = "btn"
+            .UseColumnTextForButtonValue = True
+        End With
+
+        With DataGridView1
+            .DataSource = _ClassroomGradesDatatable
+            .Columns.Add(btn)
+
+            .Columns("xml_base").Visible = False
+        End With
     End Sub
 
     Private Sub GetAllClassroomGrades()
@@ -41,17 +62,11 @@
                 Using Adapter As New MySqlDataAdapter
                     With Adapter
                         .SelectCommand = Command
-                        .Fill(_QuizesDatatable)
+                        .Fill(_ClassroomGradesDatatable)
                     End With
                 End Using
             End Using
         End Using
     End Sub
-
-    Private Sub GetAverageOfQuizes()
-
-    End Sub
-
-
 
 End Class

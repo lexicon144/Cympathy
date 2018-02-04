@@ -51,15 +51,9 @@
         End Using
     End Sub
 
-    ''' <summary>
-    ''' When validated, Set ArticleName as ThisTextbox
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
     Private Sub toolstripFILENAME_Validated(sender As Object, e As EventArgs) Handles txtArticleName.Validated
         With Me
-            ._NewArticle.ArticleName = DirectCast(sender, ToolStripTextBox).Text
+            ._NewArticle.ArticleName = DirectCast(sender, TextBox).Text
         End With
     End Sub
 
@@ -70,6 +64,7 @@
     End Sub
 
     Private Sub toolstripSAVE_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        If Me.txtArticleName.Text = "" Or Me.RichTextBox1.Text = Nothing Then Exit Sub
         SaveToBytes()
         WriteBlob()
     End Sub

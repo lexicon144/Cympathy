@@ -163,4 +163,31 @@ Public Class frmOfficialExamsCreator
         Return sb
     End Function
 
+    Private Sub txtTitle_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtTitle.Validating
+        If Not _SharedValidator.Verify(VMethodology.Username, DirectCast(sender, TextBox).Text) Then
+            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid Title")
+            e.Cancel = True
+            DirectCast(sender, TextBox).SelectAll()
+            Exit Sub
+        End If
+        ErrorProvider1.SetError(DirectCast(sender, TextBox), "")
+    End Sub
+
+    Private Sub txtPIN_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtPIN.Validating
+        If Not _SharedValidator.Verify(VMethodology.Numbers, DirectCast(sender, TextBox).Text) Then
+            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid PIN")
+            e.Cancel = True
+            DirectCast(sender, TextBox).SelectAll()
+            Exit Sub
+        End If
+        ErrorProvider1.SetError(DirectCast(sender, TextBox), "")
+    End Sub
+
+    Private Sub txtTitle_Validated(sender As Object, e As EventArgs) Handles txtTitle.Validated
+        Me._Questionnaire.QuestionnaireName = DirectCast(sender, TextBox).Text
+    End Sub
+
+    Private Sub txtPIN_Validated(sender As Object, e As EventArgs) Handles txtPIN.Validated
+        Me._Questionnaire.PIN = DirectCast(sender, TextBox).Text
+    End Sub
 End Class

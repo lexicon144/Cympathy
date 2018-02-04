@@ -33,8 +33,10 @@ Partial Class frmGradesPreViewer
         Me.Label5 = New System.Windows.Forms.Label()
         Me.grpRawData = New System.Windows.Forms.GroupBox()
         Me.grpProcessedData = New System.Windows.Forms.GroupBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.grpRawData.SuspendLayout()
         Me.grpProcessedData.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtHits
@@ -121,7 +123,7 @@ Partial Class frmGradesPreViewer
         Me.grpRawData.Controls.Add(Me.Label3)
         Me.grpRawData.Controls.Add(Me.Label1)
         Me.grpRawData.Controls.Add(Me.Label2)
-        Me.grpRawData.Location = New System.Drawing.Point(12, 12)
+        Me.grpRawData.Location = New System.Drawing.Point(12, 227)
         Me.grpRawData.Name = "grpRawData"
         Me.grpRawData.Size = New System.Drawing.Size(200, 85)
         Me.grpRawData.TabIndex = 9
@@ -134,26 +136,36 @@ Partial Class frmGradesPreViewer
         Me.grpProcessedData.Controls.Add(Me.Label4)
         Me.grpProcessedData.Controls.Add(Me.Label5)
         Me.grpProcessedData.Controls.Add(Me.txtScore)
-        Me.grpProcessedData.Location = New System.Drawing.Point(12, 103)
+        Me.grpProcessedData.Location = New System.Drawing.Point(218, 227)
         Me.grpProcessedData.Name = "grpProcessedData"
-        Me.grpProcessedData.Size = New System.Drawing.Size(200, 74)
+        Me.grpProcessedData.Size = New System.Drawing.Size(200, 85)
         Me.grpProcessedData.TabIndex = 10
         Me.grpProcessedData.TabStop = False
         Me.grpProcessedData.Text = "Processed Data"
         '
-        'frmPreGrades
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(406, 209)
+        Me.DataGridView1.TabIndex = 11
+        '
+        'frmGradesPreViewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(225, 193)
+        Me.ClientSize = New System.Drawing.Size(430, 324)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.grpProcessedData)
         Me.Controls.Add(Me.grpRawData)
-        Me.Name = "frmPreGrades"
+        Me.Name = "frmGradesPreViewer"
         Me.Text = "frmPreGrades"
         Me.grpRawData.ResumeLayout(False)
         Me.grpRawData.PerformLayout()
         Me.grpProcessedData.ResumeLayout(False)
         Me.grpProcessedData.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -168,4 +180,5 @@ Partial Class frmGradesPreViewer
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents grpRawData As System.Windows.Forms.GroupBox
     Friend WithEvents grpProcessedData As System.Windows.Forms.GroupBox
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
 End Class

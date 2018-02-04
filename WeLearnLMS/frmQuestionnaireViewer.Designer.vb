@@ -38,6 +38,8 @@ Partial Class frmQuestionnaireViewer
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnDevAuto13 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -154,11 +156,29 @@ Partial Class frmQuestionnaireViewer
         Me.RadioButton4.Text = "RadioButton4"
         Me.RadioButton4.UseVisualStyleBackColor = True
         '
+        'btnDevAuto13
+        '
+        Me.btnDevAuto13.Location = New System.Drawing.Point(863, 74)
+        Me.btnDevAuto13.Name = "btnDevAuto13"
+        Me.btnDevAuto13.Size = New System.Drawing.Size(75, 23)
+        Me.btnDevAuto13.TabIndex = 6
+        Me.btnDevAuto13.Text = "DevAuto13"
+        Me.btnDevAuto13.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(863, 103)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(75, 20)
+        Me.TextBox1.TabIndex = 7
+        '
         'frmQuestionnaireViewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(778, 227)
+        Me.ClientSize = New System.Drawing.Size(1048, 227)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btnDevAuto13)
         Me.Controls.Add(Me.RadioButton4)
         Me.Controls.Add(Me.RadioButton3)
         Me.Controls.Add(Me.RadioButton2)
@@ -187,4 +207,6 @@ Partial Class frmQuestionnaireViewer
     Friend WithEvents tttDistractor4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents tttAns As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents tttActionButton As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents btnDevAuto13 As System.Windows.Forms.Button
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class

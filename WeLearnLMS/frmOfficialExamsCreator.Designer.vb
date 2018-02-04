@@ -22,6 +22,7 @@ Partial Class frmOfficialExamsCreator
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnSerialize = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -46,8 +47,10 @@ Partial Class frmOfficialExamsCreator
         Me.txtPIN = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnFillUpQuiz = New System.Windows.Forms.Button()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox1.SuspendLayout()
         CType(Me.Datagridview1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnAdd
@@ -253,6 +256,10 @@ Partial Class frmOfficialExamsCreator
         Me.btnFillUpQuiz.Text = "DevAutoFill"
         Me.btnFillUpQuiz.UseVisualStyleBackColor = True
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'frmOfficialExamsCreator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -272,6 +279,7 @@ Partial Class frmOfficialExamsCreator
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.Datagridview1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -300,4 +308,5 @@ Partial Class frmOfficialExamsCreator
     Friend WithEvents txtPIN As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents btnFillUpQuiz As System.Windows.Forms.Button
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class

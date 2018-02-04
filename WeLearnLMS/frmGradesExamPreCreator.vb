@@ -21,7 +21,7 @@
             ._PreGrade = PreGrade
 
             .txtExamID.Text = ExamID
-            .txtGrade.Text = _PreGrade.ReturnFullScore
+            .txtGradeFullScore.Text = _PreGrade.ReturnFullScore
         End With
     End Sub
 
@@ -33,7 +33,7 @@
             ._PreGrade = PreGrade
 
             .txtExamID.Text = ExamID
-            .txtGrade.Text = _PreGrade.ReturnFullScore
+            .txtGradeFullScore.Text = _PreGrade.ReturnFullScore
         End With
     End Sub
 
@@ -79,7 +79,21 @@
         End Using
     End Sub
 
+    Private Sub RefreshText()
+        With Me
+            .txtGradeFullScore.Text = ._PreGrade.ReturnFullScore
+            .txtGradeNumber.Text = ._PreGrade.ReturnFullAverage
+            .txtExamID.Text = ._ExamID
+            .txtExamName.Text = ._ExamName
+        End With
+    End Sub
+
     Private Sub frmGradesExamPreCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Procure()
+        Try
+            RefreshText()
+            Procure()
+        Catch XXX As Exception
+            DisplayGeneralException(XXX)
+        End Try
     End Sub
 End Class

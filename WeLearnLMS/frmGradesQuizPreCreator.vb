@@ -44,7 +44,13 @@
     End Sub
 
     Private Sub frmGradesPre_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Procure()
+        Try
+            Procure()
+            RefreshText()
+        Catch XXX As Exception
+            DisplayGeneralException(XXX)
+        End Try
+
     End Sub
 
     Private Sub RefreshText()
@@ -57,6 +63,10 @@
     End Sub
 
     Private Sub Procure()
+        Dim ViewString As String
+        ViewString = "UID: " & _UserID & " QuizID : " & _QuizID & " Grade : " & Me._PreGrade.ReturnFullScore & " HITS : " & _PreGrade.Hits & "QUESTIONS : " & _PreGrade.TotalQuestions
+        Console.WriteLine(ViewString)
+
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
                 If .State = ConnectionState.Closed Then
@@ -70,16 +80,15 @@
                             .Connection = Connection
                             .Transaction = MarkingTransaction
                             .CommandType = CommandType.StoredProcedure
-                            .CommandText = "InsertGradesPreQuiz"
-                            Dim ViewString As String
-                            ViewString = "UID: " & _UserID & " QuizID : " & _QuizID & " Grade : " & Me._PreGrade.ReturnFullScore & " HITS : " & _PreGrade.Hits & "QUESTIONS : " & _PreGrade.TotalQuestions
-                            Console.WriteLine(ViewString)
+                            .CommandText = "InsertGradesQuiz"
+
                             With .Parameters
                                 .AddWithValue("@UserID", Me._UserID)
                                 .AddWithValue("@QuizID", Me._QuizID)
                                 .AddWithValue("@QuizGrade", Me._PreGrade.ReturnFullScore)
                                 .AddWithValue("@Hits", Me._PreGrade.Hits)
                                 .AddWithValue("@Questions", Me._PreGrade.TotalQuestions)
+                                .AddWithValue("@ClassroomID", _SharedClassroomID)
 
                             End With
                             .ExecuteNonQuery()

@@ -176,4 +176,18 @@ Public Class frmQuestionnaireCreator
     Private Sub frmQuestionnaireCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub txtTitle_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtTitle.Validating
+        If Not _SharedValidator.Verify(VMethodology.Username, DirectCast(sender, TextBox).Text) Then
+            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid Text")
+            e.Cancel = True
+            DirectCast(sender, TextBox).SelectAll()
+            Exit Sub
+        End If
+        ErrorProvider1.SetError(DirectCast(sender, TextBox), "")
+    End Sub
+
+    Private Sub txtTitle_Validated(sender As Object, e As EventArgs) Handles txtTitle.Validated
+        Me._Questionnaire.QuestionnaireName = DirectCast(sender, TextBox).Text
+    End Sub
 End Class

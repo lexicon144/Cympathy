@@ -41,12 +41,23 @@ Partial Class frmClassroomHub
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnViewLessonlist = New System.Windows.Forms.Button()
         Me.btnViewExams = New System.Windows.Forms.Button()
+        Me.frmViewGrades = New System.Windows.Forms.Button()
+        Me.btnViewExamGrades = New System.Windows.Forms.Button()
+        Me.grpLinking = New System.Windows.Forms.GroupBox()
+        Me.grpViewing = New System.Windows.Forms.GroupBox()
+        Me.grpMisc = New System.Windows.Forms.GroupBox()
+        Me.btnViewClassGrades = New System.Windows.Forms.Button()
+        Me.grpGrades = New System.Windows.Forms.GroupBox()
         Me.Panel1.SuspendLayout()
+        Me.grpLinking.SuspendLayout()
+        Me.grpViewing.SuspendLayout()
+        Me.grpMisc.SuspendLayout()
+        Me.grpGrades.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnLinkExamHere
         '
-        Me.btnLinkExamHere.Location = New System.Drawing.Point(394, 231)
+        Me.btnLinkExamHere.Location = New System.Drawing.Point(6, 138)
         Me.btnLinkExamHere.Name = "btnLinkExamHere"
         Me.btnLinkExamHere.Size = New System.Drawing.Size(138, 23)
         Me.btnLinkExamHere.TabIndex = 21
@@ -55,7 +66,7 @@ Partial Class frmClassroomHub
         '
         'btnLinkQuizHere
         '
-        Me.btnLinkQuizHere.Location = New System.Drawing.Point(394, 201)
+        Me.btnLinkQuizHere.Location = New System.Drawing.Point(6, 108)
         Me.btnLinkQuizHere.Name = "btnLinkQuizHere"
         Me.btnLinkQuizHere.Size = New System.Drawing.Size(138, 23)
         Me.btnLinkQuizHere.TabIndex = 20
@@ -64,7 +75,7 @@ Partial Class frmClassroomHub
         '
         'btnLinkMaterialHere
         '
-        Me.btnLinkMaterialHere.Location = New System.Drawing.Point(394, 171)
+        Me.btnLinkMaterialHere.Location = New System.Drawing.Point(6, 78)
         Me.btnLinkMaterialHere.Name = "btnLinkMaterialHere"
         Me.btnLinkMaterialHere.Size = New System.Drawing.Size(138, 23)
         Me.btnLinkMaterialHere.TabIndex = 19
@@ -73,7 +84,7 @@ Partial Class frmClassroomHub
         '
         'btnLinkArticleHere
         '
-        Me.btnLinkArticleHere.Location = New System.Drawing.Point(394, 142)
+        Me.btnLinkArticleHere.Location = New System.Drawing.Point(6, 49)
         Me.btnLinkArticleHere.Name = "btnLinkArticleHere"
         Me.btnLinkArticleHere.Size = New System.Drawing.Size(138, 23)
         Me.btnLinkArticleHere.TabIndex = 18
@@ -82,7 +93,7 @@ Partial Class frmClassroomHub
         '
         'btnLinkStudentToClassroom
         '
-        Me.btnLinkStudentToClassroom.Location = New System.Drawing.Point(394, 112)
+        Me.btnLinkStudentToClassroom.Location = New System.Drawing.Point(6, 19)
         Me.btnLinkStudentToClassroom.Name = "btnLinkStudentToClassroom"
         Me.btnLinkStudentToClassroom.Size = New System.Drawing.Size(138, 23)
         Me.btnLinkStudentToClassroom.TabIndex = 17
@@ -91,7 +102,7 @@ Partial Class frmClassroomHub
         '
         'btnViewMaterials
         '
-        Me.btnViewMaterials.Location = New System.Drawing.Point(189, 141)
+        Me.btnViewMaterials.Location = New System.Drawing.Point(6, 48)
         Me.btnViewMaterials.Name = "btnViewMaterials"
         Me.btnViewMaterials.Size = New System.Drawing.Size(138, 23)
         Me.btnViewMaterials.TabIndex = 15
@@ -100,7 +111,7 @@ Partial Class frmClassroomHub
         '
         'btnViewArticles
         '
-        Me.btnViewArticles.Location = New System.Drawing.Point(189, 112)
+        Me.btnViewArticles.Location = New System.Drawing.Point(6, 19)
         Me.btnViewArticles.Name = "btnViewArticles"
         Me.btnViewArticles.Size = New System.Drawing.Size(138, 23)
         Me.btnViewArticles.TabIndex = 13
@@ -109,9 +120,9 @@ Partial Class frmClassroomHub
         '
         'btnOpenQuestionnaire
         '
-        Me.btnOpenQuestionnaire.Location = New System.Drawing.Point(12, 112)
+        Me.btnOpenQuestionnaire.Location = New System.Drawing.Point(6, 40)
         Me.btnOpenQuestionnaire.Name = "btnOpenQuestionnaire"
-        Me.btnOpenQuestionnaire.Size = New System.Drawing.Size(138, 23)
+        Me.btnOpenQuestionnaire.Size = New System.Drawing.Size(130, 23)
         Me.btnOpenQuestionnaire.TabIndex = 11
         Me.btnOpenQuestionnaire.Text = "View Quizes"
         Me.btnOpenQuestionnaire.UseVisualStyleBackColor = True
@@ -213,7 +224,7 @@ Partial Class frmClassroomHub
         '
         'btnViewLessonlist
         '
-        Me.btnViewLessonlist.Location = New System.Drawing.Point(189, 170)
+        Me.btnViewLessonlist.Location = New System.Drawing.Point(6, 77)
         Me.btnViewLessonlist.Name = "btnViewLessonlist"
         Me.btnViewLessonlist.Size = New System.Drawing.Size(138, 23)
         Me.btnViewLessonlist.TabIndex = 28
@@ -222,33 +233,107 @@ Partial Class frmClassroomHub
         '
         'btnViewExams
         '
-        Me.btnViewExams.Location = New System.Drawing.Point(12, 141)
+        Me.btnViewExams.Location = New System.Drawing.Point(6, 69)
         Me.btnViewExams.Name = "btnViewExams"
-        Me.btnViewExams.Size = New System.Drawing.Size(138, 23)
+        Me.btnViewExams.Size = New System.Drawing.Size(130, 23)
         Me.btnViewExams.TabIndex = 29
         Me.btnViewExams.Text = "View Exams"
         Me.btnViewExams.UseVisualStyleBackColor = True
+        '
+        'frmViewGrades
+        '
+        Me.frmViewGrades.Location = New System.Drawing.Point(6, 19)
+        Me.frmViewGrades.Name = "frmViewGrades"
+        Me.frmViewGrades.Size = New System.Drawing.Size(138, 23)
+        Me.frmViewGrades.TabIndex = 30
+        Me.frmViewGrades.Text = "View Quiz Grades"
+        Me.frmViewGrades.UseVisualStyleBackColor = True
+        '
+        'btnViewExamGrades
+        '
+        Me.btnViewExamGrades.Location = New System.Drawing.Point(6, 48)
+        Me.btnViewExamGrades.Name = "btnViewExamGrades"
+        Me.btnViewExamGrades.Size = New System.Drawing.Size(138, 23)
+        Me.btnViewExamGrades.TabIndex = 31
+        Me.btnViewExamGrades.Text = "View Exam Grades"
+        Me.btnViewExamGrades.UseVisualStyleBackColor = True
+        '
+        'grpLinking
+        '
+        Me.grpLinking.Controls.Add(Me.btnLinkStudentToClassroom)
+        Me.grpLinking.Controls.Add(Me.btnLinkArticleHere)
+        Me.grpLinking.Controls.Add(Me.btnLinkMaterialHere)
+        Me.grpLinking.Controls.Add(Me.btnLinkQuizHere)
+        Me.grpLinking.Controls.Add(Me.btnLinkExamHere)
+        Me.grpLinking.Location = New System.Drawing.Point(4, 284)
+        Me.grpLinking.Name = "grpLinking"
+        Me.grpLinking.Size = New System.Drawing.Size(152, 171)
+        Me.grpLinking.TabIndex = 32
+        Me.grpLinking.TabStop = False
+        Me.grpLinking.Text = "Linking"
+        '
+        'grpViewing
+        '
+        Me.grpViewing.Controls.Add(Me.btnOpenQuestionnaire)
+        Me.grpViewing.Controls.Add(Me.btnViewExams)
+        Me.grpViewing.Location = New System.Drawing.Point(12, 118)
+        Me.grpViewing.Name = "grpViewing"
+        Me.grpViewing.Size = New System.Drawing.Size(144, 160)
+        Me.grpViewing.TabIndex = 33
+        Me.grpViewing.TabStop = False
+        Me.grpViewing.Text = "Viewing"
+        '
+        'grpMisc
+        '
+        Me.grpMisc.Controls.Add(Me.btnViewArticles)
+        Me.grpMisc.Controls.Add(Me.btnViewMaterials)
+        Me.grpMisc.Controls.Add(Me.btnViewLessonlist)
+        Me.grpMisc.Location = New System.Drawing.Point(162, 118)
+        Me.grpMisc.Name = "grpMisc"
+        Me.grpMisc.Size = New System.Drawing.Size(156, 112)
+        Me.grpMisc.TabIndex = 34
+        Me.grpMisc.TabStop = False
+        Me.grpMisc.Text = "Misc"
+        '
+        'btnViewClassGrades
+        '
+        Me.btnViewClassGrades.Location = New System.Drawing.Point(6, 77)
+        Me.btnViewClassGrades.Name = "btnViewClassGrades"
+        Me.btnViewClassGrades.Size = New System.Drawing.Size(138, 23)
+        Me.btnViewClassGrades.TabIndex = 34
+        Me.btnViewClassGrades.Text = "View Class Grades"
+        Me.btnViewClassGrades.UseVisualStyleBackColor = True
+        '
+        'grpGrades
+        '
+        Me.grpGrades.Controls.Add(Me.frmViewGrades)
+        Me.grpGrades.Controls.Add(Me.btnViewClassGrades)
+        Me.grpGrades.Controls.Add(Me.btnViewExamGrades)
+        Me.grpGrades.Location = New System.Drawing.Point(162, 284)
+        Me.grpGrades.Name = "grpGrades"
+        Me.grpGrades.Size = New System.Drawing.Size(156, 131)
+        Me.grpGrades.TabIndex = 35
+        Me.grpGrades.TabStop = False
+        Me.grpGrades.Text = "View Grades"
         '
         'frmClassroomHub
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(561, 265)
-        Me.Controls.Add(Me.btnViewExams)
-        Me.Controls.Add(Me.btnViewLessonlist)
+        Me.ClientSize = New System.Drawing.Size(331, 474)
+        Me.Controls.Add(Me.grpMisc)
+        Me.Controls.Add(Me.grpGrades)
+        Me.Controls.Add(Me.grpViewing)
+        Me.Controls.Add(Me.grpLinking)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.btnLinkExamHere)
-        Me.Controls.Add(Me.btnLinkQuizHere)
-        Me.Controls.Add(Me.btnLinkMaterialHere)
-        Me.Controls.Add(Me.btnLinkArticleHere)
-        Me.Controls.Add(Me.btnLinkStudentToClassroom)
-        Me.Controls.Add(Me.btnViewMaterials)
-        Me.Controls.Add(Me.btnViewArticles)
-        Me.Controls.Add(Me.btnOpenQuestionnaire)
         Me.Name = "frmClassroomHub"
         Me.Text = "frmClassroomHub"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.grpLinking.ResumeLayout(False)
+        Me.grpViewing.ResumeLayout(False)
+        Me.grpMisc.ResumeLayout(False)
+        Me.grpGrades.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -271,4 +356,11 @@ Partial Class frmClassroomHub
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents btnViewLessonlist As System.Windows.Forms.Button
     Friend WithEvents btnViewExams As System.Windows.Forms.Button
+    Friend WithEvents frmViewGrades As System.Windows.Forms.Button
+    Friend WithEvents btnViewExamGrades As System.Windows.Forms.Button
+    Friend WithEvents grpLinking As System.Windows.Forms.GroupBox
+    Friend WithEvents grpViewing As System.Windows.Forms.GroupBox
+    Friend WithEvents grpMisc As System.Windows.Forms.GroupBox
+    Friend WithEvents btnViewClassGrades As System.Windows.Forms.Button
+    Friend WithEvents grpGrades As System.Windows.Forms.GroupBox
 End Class

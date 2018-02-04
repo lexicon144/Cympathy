@@ -6,7 +6,17 @@ WeLearnLMS
 </name>
 </assembly>
 <members>
-<member name="M:WeLearnLMS.ImpConStringBuilder.ConnString">
+<member name="M:WeLearnLMS.frmGradesClassroomViewer.#ctor">
+	<summary>
+ Calculate All pregrades from Quiz and Exams
+ </summary>
+	<remarks></remarks>
+</member><member name="T:WeLearnLMS.frmGradesClassroomViewer">
+	<summary>
+ Grades computer 
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.ImpConStringBuilder.ConnString">
 	<summary>
  Return Current Implementation of ConStringBuilder
  Use this Implementation as TESTING PURPOSES ONLY FOR LOCALHOST
@@ -63,11 +73,6 @@ WeLearnLMS
  Non Modal Constructor
  </summary>
 	<param name="ClassroomID"></param>
-	<remarks></remarks>
-</member><member name="M:WeLearnLMS.frmGradesComputer.#ctor">
-	<summary>
- Calculate All pregrades from Quiz and Exams
- </summary>
 	<remarks></remarks>
 </member><member name="M:WeLearnLMS.IDataDeserializer.DataDeserialize(System.String)">
 	<summary>
@@ -172,6 +177,50 @@ WeLearnLMS
 	<param name="Q"></param>
 	<returns></returns>
 	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmGradeExamComputer.GetCountQuizesInClassroom(System.String@)">
+	<summary>
+ Find the count of all registered Quizes in ThisClassroom
+ </summary>
+	<param name="ClassroomID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmGradeExamComputer.GetSumationOfQuizes">
+	<summary>
+ Summate all the quiz grades
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmGradeExamComputer.GetRecordedCount(System.UInt32)">
+	<summary>
+ Return the Count of AverageDatatable
+ This could also be known as the 
+ Count of all the Quizes the Studen Answered
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmGradeExamComputer.GetAnsweredQuizes(System.String@,System.String@)">
+	<summary>
+ Get The Datatable containing all the quizes
+ </summary>
+	<param name="UserID"></param>
+	<param name="ClassID"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmGradeExamComputer.GetNewAverage(System.Double,System.UInt32)">
+	<summary>
+ Get Full average of all quizes
+ </summary>
+	<param name="Summation">The Summated grade of all quizes</param>
+	<param name="Count">The Count of all existing quizes</param>
+	<returns>a Double</returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmGradeExamComputer.DisplayOnDatagridview">
+	<summary>
+ Display all necessary data outside to the GUI
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmGradeExamComputer.DisplayOnTextboxes">
+	<summary>
+ Display all necessary data outside to the GUI
+ </summary>
+	<remarks></remarks>
 </member><member name="M:WeLearnLMS.c_Article.#ctor">
 	<summary>
  Constructor for new me
@@ -208,6 +257,57 @@ WeLearnLMS
 </member><member name="M:WeLearnLMS.c_Material.#ctor">
 	<summary>
  Me Constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmGradesQuizComputer.frmGradesQuizComputer_Load(System.Object,System.EventArgs)">
+	<summary>
+ Loading Event
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmGradesQuizComputer.GetCountQuizesInClassroom(System.String@)">
+	<summary>
+ Find the count of all registered Quizes in ThisClassroom
+ </summary>
+	<param name="ClassroomID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmGradesQuizComputer.GetSumationOfQuizes">
+	<summary>
+ Summate all the quiz grades
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmGradesQuizComputer.GetRecordedCount(System.UInt32)">
+	<summary>
+ Return the Count of AverageDatatable
+ This could also be known as the 
+ Count of all the Quizes the Studen Answered
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmGradesQuizComputer.GetAnsweredQuizes(System.String@,System.String@)">
+	<summary>
+ Get The Datatable containing all the quizes
+ </summary>
+	<param name="UserID"></param>
+	<param name="ClassID"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmGradesQuizComputer.GetNewAverage(System.Double,System.UInt32)">
+	<summary>
+ Get Full average of all quizes
+ </summary>
+	<param name="Summation">The Summated grade of all quizes</param>
+	<param name="Count">The Count of all existing quizes</param>
+	<returns>a Double</returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmGradesQuizComputer.DisplayOnDatagridview">
+	<summary>
+ Display all necessary data outside to the GUI
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmGradesQuizComputer.DisplayOnTextboxes">
+	<summary>
+ Display all necessary data outside to the GUI
  </summary>
 	<remarks></remarks>
 </member><member name="M:WeLearnLMS.frmStudyMaterialsHub.#ctor">
@@ -255,13 +355,6 @@ WeLearnLMS
 	<summary>
  Write the Blob
  </summary>
-	<remarks></remarks>
-</member><member name="M:WeLearnLMS.frmArticleMaker.toolstripFILENAME_Validated(System.Object,System.EventArgs)">
-	<summary>
- When validated, Set ArticleName as ThisTextbox
- </summary>
-	<param name="sender"></param>
-	<param name="e"></param>
 	<remarks></remarks>
 </member><member name="M:WeLearnLMS.frmMessageCreator.#ctor(WeLearnLMS.c_MainCredentials@)">
 	<summary>

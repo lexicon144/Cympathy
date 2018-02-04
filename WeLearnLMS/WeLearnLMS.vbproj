@@ -123,6 +123,12 @@
     <Compile Include="frmArticleMaker.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmAttendance.Designer.vb">
+      <DependentUpon>frmAttendance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAttendance.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmClassroomCreator.Designer.vb">
       <DependentUpon>frmClassroomCreator.vb</DependentUpon>
     </Compile>
@@ -159,10 +165,22 @@
     <Compile Include="frmDayDialog.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGradesComputer.Designer.vb">
-      <DependentUpon>frmGradesComputer.vb</DependentUpon>
+    <Compile Include="frmGradeExamComputer.Designer.vb">
+      <DependentUpon>frmGradeExamComputer.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmGradesComputer.vb">
+    <Compile Include="frmGradeExamComputer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGradesClassroomViewer.Designer.vb">
+      <DependentUpon>frmGradesClassroomViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGradesClassroomViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGradesClassroomHub.Designer.vb">
+      <DependentUpon>frmGradesClassroomHub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGradesClassroomHub.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmGradesExamPreCreator.Designer.vb">
@@ -177,10 +195,16 @@
     <Compile Include="frmGradesClassroomCreator.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGradesHub.Designer.vb">
-      <DependentUpon>frmGradesHub.vb</DependentUpon>
+    <Compile Include="frmGradesPreCompiler.Designer.vb">
+      <DependentUpon>frmGradesPreCompiler.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmGradesHub.vb">
+    <Compile Include="frmGradesPreCompiler.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGradesQuizComputer.Designer.vb">
+      <DependentUpon>frmGradesQuizComputer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGradesQuizComputer.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmGradesQuizPreCreator.Designer.vb">
@@ -471,6 +495,9 @@
     <EmbeddedResource Include="frmArticleViewer.resx">
       <DependentUpon>frmArticleViewer.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAttendance.resx">
+      <DependentUpon>frmAttendance.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmClassroomCreator.resx">
       <DependentUpon>frmClassroomCreator.vb</DependentUpon>
     </EmbeddedResource>
@@ -486,8 +513,14 @@
     <EmbeddedResource Include="frmDayDialog.resx">
       <DependentUpon>frmDayDialog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGradesComputer.resx">
-      <DependentUpon>frmGradesComputer.vb</DependentUpon>
+    <EmbeddedResource Include="frmGradeExamComputer.resx">
+      <DependentUpon>frmGradeExamComputer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGradesClassroomViewer.resx">
+      <DependentUpon>frmGradesClassroomViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGradesClassroomHub.resx">
+      <DependentUpon>frmGradesClassroomHub.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGradesExamPreCreator.resx">
       <DependentUpon>frmGradesExamPreCreator.vb</DependentUpon>
@@ -495,8 +528,11 @@
     <EmbeddedResource Include="frmGradesClassroomCreator.resx">
       <DependentUpon>frmGradesClassroomCreator.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGradesHub.resx">
-      <DependentUpon>frmGradesHub.vb</DependentUpon>
+    <EmbeddedResource Include="frmGradesPreCompiler.resx">
+      <DependentUpon>frmGradesPreCompiler.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGradesQuizComputer.resx">
+      <DependentUpon>frmGradesQuizComputer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGradesQuizPreCreator.resx">
       <DependentUpon>frmGradesQuizPreCreator.vb</DependentUpon>
@@ -631,7 +667,6 @@
     <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmExamsViewer.resources" />
     <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmGradeFinal.resources" />
     <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmGradesExamPreCreator.resources" />
-    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmGradesHub.resources" />
     <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmGradesPreViewer.resources" />
     <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmGradesQuizPreCreator.resources" />
     <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmLessonListHub.resources" />

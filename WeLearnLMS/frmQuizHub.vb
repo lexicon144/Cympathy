@@ -111,9 +111,11 @@
                 If DataGridView1.Columns(e.ColumnIndex).Name = "btn" Then
 
                     With DataGridView1.Rows(e.RowIndex)
-                        txtQuizID.Text = .Cells(0).Value.ToString()
-                        txtQuizName.Text = .Cells(1).Value.ToString()
-                        _XmlBase = .Cells(2).Value.ToString()
+
+
+                        txtQuizID.Text = .Cells("id").Value.ToString()
+                        txtQuizName.Text = .Cells("quest_name").Value.ToString()
+                        _XmlBase = .Cells("xml_base").Value.ToString()
                     End With
 
                 End If
@@ -151,10 +153,14 @@
     End Sub
 
     Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
-        Me._Quiz.QuestionBase = _Deserializer.DataDeserialize(_XmlBase)
-        ParseTextbox()
+        Try
+            Me._Quiz.QuestionBase = _Deserializer.DataDeserialize(_XmlBase)
+            ParseTextbox()
 
-        Dim viewer As New frmQuizViewer(Me._Quiz)
-        viewer.ShowDialog()
+            Dim viewer As New frmQuizViewer(Me._Quiz)
+            viewer.ShowDialog()
+        Catch XXX As Exception
+            DisplayGeneralException(XXX)
+        End Try
     End Sub
 End Class
