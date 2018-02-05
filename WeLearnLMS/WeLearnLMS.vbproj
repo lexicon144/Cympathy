@@ -690,7 +690,6 @@
     <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmQuizLinker.resources" />
     <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmQuizViewer.resources" />
     <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmRankingHub.resources" />
-    <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmRankingProfessors.resources" />
     <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmRankingViewer.resources" />
     <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmRegistration.resources" />
     <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmScheduleCreator.resources" />
