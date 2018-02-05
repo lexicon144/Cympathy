@@ -13,7 +13,8 @@
 
     End Sub
 
-    Private Sub btnProfessors_Click(sender As Object, e As EventArgs) Handles btnProfessors.Click
-
+    Private Sub btnVote_Click(sender As Object, e As EventArgs) Handles btnVote.Click
+        Dim voter As New frmRankingCreator(_SharedMainCredentials)
+        voter.ShowDialog()
     End Sub
 End Class

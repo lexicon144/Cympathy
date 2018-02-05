@@ -1,4 +1,5 @@
-﻿Public Class frmRankingProfessors
+﻿
+Public Class frmRankingCreator
 
     Private _MainCredentials As New c_MainCredentials
     Private _CandidateCredentials As New c_MainCredentials
@@ -30,7 +31,13 @@
         Me._MainCredentials = User
     End Sub
 
-    Private Function CountVotes(ByRef CandidateID As String) As UInt32
+    ''' <summary>
+    ''' Count validated Votes of thisUserID
+    ''' </summary>
+    ''' <param name="CandidateID"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Friend Function CountVotes(ByRef CandidateID As String) As UInt32
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
                 If .State = ConnectionState.Closed Then
@@ -50,7 +57,15 @@
             End Using
         End Using
     End Function
-    Private Sub SaveVote(ByRef CandidateID As String, ByRef VoterID As String, ByVal State As Boolean)
+
+    ''' <summary>
+    ''' Save Votes of ThisCandidate ID
+    ''' </summary>
+    ''' <param name="CandidateID"></param>
+    ''' <param name="VoterID"></param>
+    ''' <param name="State"></param>
+    ''' <remarks></remarks>
+    Friend Sub SaveVote(ByRef CandidateID As String, ByRef VoterID As String, ByVal State As Boolean)
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
                 If .State = ConnectionState.Closed Then
@@ -78,7 +93,7 @@
                 Catch Exx As Exception
                     MarkingTransaction.Rollback()
                     Console.WriteLine("Cannot save your vote!")
-                    MessageBox.Show("Cympathy cannot save your vote!", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                    MessageBox.Show("Cympathy cannot save your vote! Reason:: " & Exx.Message, "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
                 End Try
             End Using
         End Using
@@ -96,14 +111,26 @@
     End Sub
 
     Private Sub btnBrowseUser_Click(sender As Object, e As EventArgs) Handles btnBrowseUser.Click
-        SaveVote(Me._CandidateCredentials.UserID, Me._MainCredentials.UserID, Me.chkVote.Checked)
+
         Dim browser As New frmUsersViewer()
         If browser.ShowDialog() = Windows.Forms.DialogResult.OK Then
             Me._CandidateCredentials = browser.GetSmallCredentials
         End If
 
         Me.txtVote.Text = CountVotes(Me._CandidateCredentials.UserID)
-
+        DirectCast(sender, CheckBox).Enabled = True
     End Sub
 
+    Private Sub chkVote_CheckedChanged(sender As Object, e As EventArgs) Handles chkVote.CheckedChanged
+        SaveVote(Me._CandidateCredentials.UserID, Me._MainCredentials.UserID, DirectCast(sender, CheckBox).Checked)
+        DirectCast(sender, CheckBox).Enabled = False
+    End Sub
+
+    Private Sub Label4_MouseHover(sender As Object, e As EventArgs) Handles Label4.MouseHover
+        DirectCast(sender, Label).Text = "(You)"
+    End Sub
+
+    Private Sub Label4_MouseLeave(sender As Object, e As EventArgs) Handles Label4.MouseLeave
+        DirectCast(sender, Label).Text = "(You) are voting for..."
+    End Sub
 End Class

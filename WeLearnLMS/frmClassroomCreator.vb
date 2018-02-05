@@ -74,6 +74,7 @@ Public Class frmClassroomCreator
                     With Command
                         .Connection = Connection
                         .Transaction = ClassCreationTransaction
+                        .CommandType = CommandType.StoredProcedure
                         .CommandText = "InsertNewClassroom"
                         With .Parameters
                             .AddWithValue("@ClassRoomName", _Classroom.ClassroomName)

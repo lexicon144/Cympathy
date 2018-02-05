@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmRankingProfessors
+Partial Class frmRankingCreator
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -31,12 +31,13 @@ Partial Class frmRankingProfessors
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtVote = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnBrowseUser
         '
-        Me.btnBrowseUser.Location = New System.Drawing.Point(12, 12)
+        Me.btnBrowseUser.Location = New System.Drawing.Point(145, 33)
         Me.btnBrowseUser.Name = "btnBrowseUser"
         Me.btnBrowseUser.Size = New System.Drawing.Size(75, 23)
         Me.btnBrowseUser.TabIndex = 0
@@ -45,10 +46,11 @@ Partial Class frmRankingProfessors
         '
         'chkVote
         '
+        Me.chkVote.Appearance = System.Windows.Forms.Appearance.Button
         Me.chkVote.AutoSize = True
-        Me.chkVote.Location = New System.Drawing.Point(106, 204)
+        Me.chkVote.Location = New System.Drawing.Point(106, 219)
         Me.chkVote.Name = "chkVote"
-        Me.chkVote.Size = New System.Drawing.Size(38, 17)
+        Me.chkVote.Size = New System.Drawing.Size(29, 23)
         Me.chkVote.TabIndex = 2
         Me.chkVote.Text = "+1"
         Me.chkVote.UseVisualStyleBackColor = True
@@ -119,15 +121,25 @@ Partial Class frmRankingProfessors
         Me.txtVote.Size = New System.Drawing.Size(100, 20)
         Me.txtVote.TabIndex = 11
         '
-        'frmRankingProfessors
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(9, 38)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(106, 13)
+        Me.Label4.TabIndex = 11
+        Me.Label4.Text = "(You) are voting for..."
+        '
+        'frmRankingCreator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(232, 250)
+        Me.ClientSize = New System.Drawing.Size(232, 278)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.chkVote)
         Me.Controls.Add(Me.btnBrowseUser)
-        Me.Name = "frmRankingProfessors"
+        Me.Name = "frmRankingCreator"
         Me.Text = "frmRankingProfessors"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -144,4 +156,5 @@ Partial Class frmRankingProfessors
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtVote As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

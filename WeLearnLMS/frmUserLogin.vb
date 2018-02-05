@@ -112,6 +112,7 @@ Public Class frmUserLogin
             PreInfoToCredentialsParser()
 
             BackgroundWorker1.RunWorkerAsync(ValidateLogin())
+            Me.LinkLabel2.Enabled = True
         Catch XXX As Exception
             MessageBox.Show("Something wrong happened when (You) tried to login. Reason: " & XXX.Message, "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
