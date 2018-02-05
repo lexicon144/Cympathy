@@ -22,9 +22,12 @@ Partial Class frmArticleMaker
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.txtArticleName = New System.Windows.Forms.TextBox()
         Me.btnSave = New System.Windows.Forms.Button()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RichTextBox1
@@ -51,6 +54,10 @@ Partial Class frmArticleMaker
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'frmArticleMaker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -61,6 +68,7 @@ Partial Class frmArticleMaker
         Me.Controls.Add(Me.RichTextBox1)
         Me.Name = "frmArticleMaker"
         Me.Text = "frmArticleMaker"
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -68,4 +76,5 @@ Partial Class frmArticleMaker
     Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
     Friend WithEvents txtArticleName As System.Windows.Forms.TextBox
     Friend WithEvents btnSave As System.Windows.Forms.Button
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class

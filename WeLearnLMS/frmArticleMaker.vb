@@ -72,4 +72,14 @@
     Private Sub frmArticleCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub txtArticleName_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtArticleName.Validating
+        If Not _SharedValidator.Verify(VMethodology.Username, DirectCast(sender, TextBox).Text) Then
+            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid Name")
+            e.Cancel = True
+            DirectCast(sender, TextBox).SelectAll()
+            Exit Sub
+        End If
+        ErrorProvider1.SetError(DirectCast(sender, TextBox), "")
+    End Sub
 End Class
