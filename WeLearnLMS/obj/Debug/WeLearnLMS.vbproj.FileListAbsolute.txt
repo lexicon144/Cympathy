@@ -125,3 +125,4 @@ C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\bin\Debug\WeLearnLMS.pd
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\bin\Debug\WeLearnLMS.xml
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.exe
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.xml
+C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmWALLOP.resources

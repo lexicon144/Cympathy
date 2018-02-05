@@ -15,6 +15,8 @@ Public Class frmQuestionnaireViewer
 
     Private _Shuffler As IAnswerArrayShuffler = New ImpAnswerArrayShuffler
 
+    Private _MyStopwatch As New Stopwatch
+    Private _Countdown As UInt16 = 3
     Friend ReadOnly Property GetPregrade As c_PreGrade
         Get
             Return _PreGrades
@@ -100,7 +102,9 @@ Public Class frmQuestionnaireViewer
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
         If TypeOf DataGridView1.Columns(e.ColumnIndex) Is DataGridViewButtonColumn Then
+
             With DataGridView1.Rows(e.RowIndex)
                 Me._Index = e.RowIndex
                 RichTextBox1.Text = .Cells("tttQuestionBase").Value.ToString()
@@ -160,6 +164,23 @@ Public Class frmQuestionnaireViewer
     End Sub
 
     Private Sub frmQuestionnaireViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        
+        With Me
+            With .DataGridView1
+                .Columns("tttANS").Visible = False
+                .Columns("tttDistractor1").Visible = False
+                .Columns("tttDistractor2").Visible = False
+                .Columns("tttDistractor3").Visible = False
+                .Columns("tttDistractor4").Visible = False
+                .Columns("tttANS").Visible = False
+                .Columns("tttANS").Visible = False
+
+            End With
+        End With
+
+        Dim wallop As New frmWALLOP
+        wallop.ShowDialog()
+        Me.WALLOP()
 
     End Sub
 
@@ -178,6 +199,19 @@ Public Class frmQuestionnaireViewer
         Catch XXX As Exception
             MessageBox.Show("Really bruh?")
         End Try
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        With Me
+            .lblHours.Text = ._MyStopwatch.Elapsed.Hours
+            .lblMinutes.Text = ._MyStopwatch.Elapsed.Minutes
+            .lblSeconds.Text = ._MyStopwatch.Elapsed.Seconds
+        End With
+    End Sub
+
+    Private Sub WALLOP()
+        Me._MyStopwatch.Start()
+        Me.Timer1.Start()
     End Sub
 
 End Class

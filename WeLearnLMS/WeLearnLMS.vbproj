@@ -431,6 +431,12 @@
     <Compile Include="frmUsersViewer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmWALLOP.Designer.vb">
+      <DependentUpon>frmWALLOP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWALLOP.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IAnswerArrayShuffler.vb" />
     <Compile Include="IConStringBuilder.vb" />
     <Compile Include="ICreateQuestionnaire.vb" />
@@ -645,6 +651,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsersViewer.resx">
       <DependentUpon>frmUsersViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWALLOP.resx">
+      <DependentUpon>frmWALLOP.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MonikaLovesYou.resx">
       <DependentUpon>MonikaLovesYou.vb</DependentUpon>

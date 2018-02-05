@@ -22,6 +22,7 @@ Partial Class frmRankingCreator
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnBrowseUser = New System.Windows.Forms.Button()
         Me.chkVote = New System.Windows.Forms.CheckBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -32,12 +33,13 @@ Partial Class frmRankingCreator
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtVote = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnBrowseUser
         '
-        Me.btnBrowseUser.Location = New System.Drawing.Point(145, 33)
+        Me.btnBrowseUser.Location = New System.Drawing.Point(145, 12)
         Me.btnBrowseUser.Name = "btnBrowseUser"
         Me.btnBrowseUser.Size = New System.Drawing.Size(75, 23)
         Me.btnBrowseUser.TabIndex = 0
@@ -48,7 +50,7 @@ Partial Class frmRankingCreator
         '
         Me.chkVote.Appearance = System.Windows.Forms.Appearance.Button
         Me.chkVote.AutoSize = True
-        Me.chkVote.Location = New System.Drawing.Point(106, 219)
+        Me.chkVote.Location = New System.Drawing.Point(106, 189)
         Me.chkVote.Name = "chkVote"
         Me.chkVote.Size = New System.Drawing.Size(29, 23)
         Me.chkVote.TabIndex = 2
@@ -102,7 +104,6 @@ Partial Class frmRankingCreator
         Me.GroupBox1.Size = New System.Drawing.Size(208, 100)
         Me.GroupBox1.TabIndex = 10
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "User"
         '
         'Label3
         '
@@ -124,17 +125,21 @@ Partial Class frmRankingCreator
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(9, 38)
+        Me.Label4.Location = New System.Drawing.Point(12, 67)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(106, 13)
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "(You) are voting for..."
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 800
+        '
         'frmRankingCreator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(232, 278)
+        Me.ClientSize = New System.Drawing.Size(232, 224)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.chkVote)
@@ -157,4 +162,5 @@ Partial Class frmRankingCreator
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtVote As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class
