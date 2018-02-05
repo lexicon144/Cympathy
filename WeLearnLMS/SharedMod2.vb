@@ -8,8 +8,7 @@ Public Module SharedMod2
     Friend _SharedMainCredentials As New c_MainCredentials
     Friend _SharedAdvancedCredentials As New c_AdvancedCredentials
     Friend _SharedValidator As New ContextVerification
-
-
+    Friend WeLearnAC As New ContextAntiCheatEngine
     Friend Enum UserType
         ADM = 0
         PRO = 1

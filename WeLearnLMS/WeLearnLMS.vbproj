@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="a_Article.vb" />
+    <Compile Include="ContextAntiCheatEngine.vb" />
     <Compile Include="ContextCreateQuestionnaire.vb" />
     <Compile Include="ContextValidateInput.vb" />
     <Compile Include="ContextVerification.vb" />
@@ -444,11 +445,14 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IAnswerArrayShuffler.vb" />
+    <Compile Include="ICheaterExists.vb" />
     <Compile Include="IConStringBuilder.vb" />
     <Compile Include="ICreateQuestionnaire.vb" />
     <Compile Include="IDataDeserializer.vb" />
     <Compile Include="IHashing.vb" />
     <Compile Include="ImpAnswerArrayShuffler.vb" />
+    <Compile Include="ImpCheaterExistsAMD64CheatEngine.vb" />
+    <Compile Include="ImpCheaterExistsI386CheatEngine.vb" />
     <Compile Include="ImpConStringBuilder.vb" />
     <Compile Include="ImpCreateQuestionnaireSQUIZ.vb" />
     <Compile Include="ImpDataDeserializer.vb" />
@@ -525,6 +529,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmClassroomLinker.resx">
       <DependentUpon>frmClassroomLinker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClassStanding.resx">
+      <DependentUpon>frmClassStanding.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDayDialog.resx">
       <DependentUpon>frmDayDialog.vb</DependentUpon>

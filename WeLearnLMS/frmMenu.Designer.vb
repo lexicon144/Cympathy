@@ -22,7 +22,8 @@ Partial Class frmMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.components = New System.ComponentModel.Container()
+        Me.mainpanel = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnClassroomHub = New System.Windows.Forms.Button()
         Me.btnTimeManagement = New System.Windows.Forms.Button()
@@ -31,7 +32,7 @@ Partial Class frmMenu
         Me.btnGrades = New System.Windows.Forms.Button()
         Me.btnFeedback = New System.Windows.Forms.Button()
         Me.btnRanking = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.tablePanelCreators = New System.Windows.Forms.TableLayoutPanel()
         Me.btnCreateArticles = New System.Windows.Forms.Button()
         Me.btnCreateMaterials = New System.Windows.Forms.Button()
         Me.btnCreateExam = New System.Windows.Forms.Button()
@@ -40,29 +41,35 @@ Partial Class frmMenu
         Me.lblPrevClass = New System.Windows.Forms.ToolStripStatusLabel()
         Me.toolstripCLASSROOMID = New System.Windows.Forms.ToolStripStatusLabel()
         Me.toolstripCLASSNAME = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.TableLayoutPanel4.SuspendLayout()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.tlstrpSECONDS = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.tlstrpMINUTES = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.tlstrpHOURS = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.timerSession = New System.Windows.Forms.Timer(Me.components)
+        Me.lblCheatDetector = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.mainpanel.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
+        Me.tablePanelCreators.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TableLayoutPanel4
+        'mainpanel
         '
-        Me.TableLayoutPanel4.ColumnCount = 3
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.90291!))
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.09709!))
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 201.0!))
-        Me.TableLayoutPanel4.Controls.Add(Me.TableLayoutPanel1, 0, 0)
-        Me.TableLayoutPanel4.Controls.Add(Me.TableLayoutPanel3, 1, 0)
-        Me.TableLayoutPanel4.Controls.Add(Me.TableLayoutPanel2, 0, 1)
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(12, 12)
-        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
-        Me.TableLayoutPanel4.RowCount = 2
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(697, 311)
-        Me.TableLayoutPanel4.TabIndex = 33
+        Me.mainpanel.ColumnCount = 3
+        Me.mainpanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.90291!))
+        Me.mainpanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.09709!))
+        Me.mainpanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 204.0!))
+        Me.mainpanel.Controls.Add(Me.TableLayoutPanel1, 0, 0)
+        Me.mainpanel.Controls.Add(Me.TableLayoutPanel3, 1, 0)
+        Me.mainpanel.Controls.Add(Me.tablePanelCreators, 0, 1)
+        Me.mainpanel.Location = New System.Drawing.Point(12, 12)
+        Me.mainpanel.Name = "mainpanel"
+        Me.mainpanel.RowCount = 2
+        Me.mainpanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.mainpanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.mainpanel.Size = New System.Drawing.Size(697, 311)
+        Me.mainpanel.TabIndex = 33
         '
         'TableLayoutPanel1
         '
@@ -77,7 +84,7 @@ Partial Class frmMenu
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(241, 70)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(240, 70)
         Me.TableLayoutPanel1.TabIndex = 31
         '
         'btnClassroomHub
@@ -115,7 +122,7 @@ Partial Class frmMenu
         Me.TableLayoutPanel3.Controls.Add(Me.btnGrades, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnFeedback, 1, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnRanking, 0, 1)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(250, 3)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(249, 3)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 2
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -150,22 +157,22 @@ Partial Class frmMenu
         Me.btnRanking.Text = "Ranking"
         Me.btnRanking.UseVisualStyleBackColor = True
         '
-        'TableLayoutPanel2
+        'tablePanelCreators
         '
-        Me.TableLayoutPanel2.ColumnCount = 2
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.btnCreateArticles, 1, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.btnCreateMaterials, 0, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.btnCreateExam, 1, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.btnCreateQuestionnaire, 0, 0)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 158)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(200, 71)
-        Me.TableLayoutPanel2.TabIndex = 0
+        Me.tablePanelCreators.ColumnCount = 2
+        Me.tablePanelCreators.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tablePanelCreators.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tablePanelCreators.Controls.Add(Me.btnCreateArticles, 1, 0)
+        Me.tablePanelCreators.Controls.Add(Me.btnCreateMaterials, 0, 1)
+        Me.tablePanelCreators.Controls.Add(Me.btnCreateExam, 1, 1)
+        Me.tablePanelCreators.Controls.Add(Me.btnCreateQuestionnaire, 0, 0)
+        Me.tablePanelCreators.Location = New System.Drawing.Point(3, 158)
+        Me.tablePanelCreators.Name = "tablePanelCreators"
+        Me.tablePanelCreators.RowCount = 2
+        Me.tablePanelCreators.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tablePanelCreators.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tablePanelCreators.Size = New System.Drawing.Size(200, 71)
+        Me.tablePanelCreators.TabIndex = 0
         '
         'btnCreateArticles
         '
@@ -205,7 +212,7 @@ Partial Class frmMenu
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblPrevClass, Me.toolstripCLASSROOMID, Me.toolstripCLASSNAME})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblPrevClass, Me.toolstripCLASSROOMID, Me.toolstripCLASSNAME, Me.ToolStripStatusLabel1, Me.tlstrpSECONDS, Me.tlstrpMINUTES, Me.tlstrpHOURS, Me.lblCheatDetector})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 346)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(721, 22)
@@ -230,26 +237,60 @@ Partial Class frmMenu
         Me.toolstripCLASSNAME.Size = New System.Drawing.Size(15, 17)
         Me.toolstripCLASSNAME.Text = "[]"
         '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(73, 17)
+        Me.ToolStripStatusLabel1.Text = "Your Session"
+        '
+        'tlstrpSECONDS
+        '
+        Me.tlstrpSECONDS.Name = "tlstrpSECONDS"
+        Me.tlstrpSECONDS.Size = New System.Drawing.Size(15, 17)
+        Me.tlstrpSECONDS.Text = "[]"
+        '
+        'tlstrpMINUTES
+        '
+        Me.tlstrpMINUTES.Name = "tlstrpMINUTES"
+        Me.tlstrpMINUTES.Size = New System.Drawing.Size(15, 17)
+        Me.tlstrpMINUTES.Text = "[]"
+        '
+        'tlstrpHOURS
+        '
+        Me.tlstrpHOURS.Name = "tlstrpHOURS"
+        Me.tlstrpHOURS.Size = New System.Drawing.Size(15, 17)
+        Me.tlstrpHOURS.Text = "[]"
+        '
+        'timerSession
+        '
+        Me.timerSession.Interval = 50
+        '
+        'lblCheatDetector
+        '
+        Me.lblCheatDetector.Name = "lblCheatDetector"
+        Me.lblCheatDetector.Size = New System.Drawing.Size(15, 17)
+        Me.lblCheatDetector.Text = "{}"
+        '
         'frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(721, 368)
         Me.Controls.Add(Me.StatusStrip1)
-        Me.Controls.Add(Me.TableLayoutPanel4)
+        Me.Controls.Add(Me.mainpanel)
         Me.Name = "frmMenu"
         Me.Text = "frmMenu"
-        Me.TableLayoutPanel4.ResumeLayout(False)
+        Me.mainpanel.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel3.ResumeLayout(False)
-        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.tablePanelCreators.ResumeLayout(False)
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TableLayoutPanel4 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents mainpanel As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents btnClassroomHub As System.Windows.Forms.Button
     Friend WithEvents btnTimeManagement As System.Windows.Forms.Button
@@ -258,7 +299,7 @@ Partial Class frmMenu
     Friend WithEvents btnGrades As System.Windows.Forms.Button
     Friend WithEvents btnFeedback As System.Windows.Forms.Button
     Friend WithEvents btnRanking As System.Windows.Forms.Button
-    Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents tablePanelCreators As System.Windows.Forms.TableLayoutPanel
     Private WithEvents btnCreateArticles As System.Windows.Forms.Button
     Private WithEvents btnCreateMaterials As System.Windows.Forms.Button
     Friend WithEvents btnCreateExam As System.Windows.Forms.Button
@@ -267,4 +308,10 @@ Partial Class frmMenu
     Friend WithEvents lblPrevClass As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents toolstripCLASSROOMID As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents toolstripCLASSNAME As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents tlstrpSECONDS As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents timerSession As System.Windows.Forms.Timer
+    Friend WithEvents tlstrpMINUTES As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents tlstrpHOURS As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents lblCheatDetector As System.Windows.Forms.ToolStripStatusLabel
 End Class

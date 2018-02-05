@@ -1,7 +1,7 @@
 ﻿Public Class frmMenu
 
     Private _AdvancedCredentials As New c_AdvancedCredentials
-
+    Private _Stopwatch As New Stopwatch
     Public Sub New(ByRef AdvancedCredentials As c_AdvancedCredentials)
 
         ' This call is required by the designer.
@@ -14,6 +14,11 @@
     End Sub
 
     Private Sub frmMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If _SharedAdvancedCredentials.MyUserType = c_MainCredentials.UserType.STU Then
+            Me.tablePanelCreators.Enabled = False
+        End If
+        _Stopwatch.Start()
+        timerSession.Start()
 
     End Sub
 
@@ -21,6 +26,7 @@
         Dim ClassroomHub As New frmClassroomHub
         ClassroomHub.ShowDialog()
         With Me.StatusStrip1
+
             toolstripCLASSNAME.Text = _SharedClassroom.ClassroomName
             toolstripCLASSROOMID.Text = _SharedClassroom.ClassroomId
         End With
@@ -71,6 +77,29 @@
     Private Sub btnGrades_Click(sender As Object, e As EventArgs) Handles btnGrades.Click
         Dim viewer As New frmGradesClassroomHub
         viewer.ShowDialog()
+    End Sub
+
+    Private Sub timerSession_Tick(sender As Object, e As EventArgs) Handles timerSession.Tick
+        Me.tlstrpSECONDS.Text = _Stopwatch.Elapsed.Seconds
+        Me.tlstrpMINUTES.Text = _Stopwatch.Elapsed.Minutes
+        Me.tlstrpHOURS.Text = _Stopwatch.Elapsed.Hours
+        CheatDetector()
+    End Sub
+
+    Private Sub CheatDetector()
+        If WeLearnAC.AntiCheat() Then
+            With Me.lblCheatDetector
+                .ForeColor = Color.Red
+                .Text = "CHEAT_ENGINE DETECTED!"
+            End With
+            mainpanel.Enabled = False
+            Exit Sub
+        End If
+        With Me.lblCheatDetector
+            .ForeColor = Color.Green
+            .Text = "Safe"
+        End With
+        mainpanel.Enabled = True
     End Sub
 
 End Class
