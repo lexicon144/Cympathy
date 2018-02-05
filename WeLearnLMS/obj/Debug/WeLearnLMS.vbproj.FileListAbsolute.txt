@@ -51,7 +51,7 @@ C:\Users\genocideDaemon\Documents\Visual Studio 2012\Projects\Cympathy\WeLearnLM
 C:\Users\genocideDaemon\documents\visual studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmGradesClassroomCreator.resources
 C:\Users\genocideDaemon\documents\visual studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmGradesHub.resources
 C:\Users\genocideDaemon\documents\visual studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmRankingHub.resources
-C:\Users\genocideDaemon\documents\visual studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmRankingProfessors.resources
+C:\Users\genocideDaemon\documents\visual studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmRankingCreator.resources
 C:\Users\genocideDaemon\documents\visual studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmRankingViewer.resources
 C:\Users\genocideDaemon\documents\visual studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmGradesPreViewer.resources
 C:\Users\genocideDaemon\Documents\Visual Studio 2012\Projects\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmGradesExamPreCreator.resources
@@ -118,3 +118,4 @@ C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.Mo
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.Resources.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.vbproj.GenerateResource.Cache
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.pdb
+C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\bin\Debug\WeLearnLMS.exe.config
