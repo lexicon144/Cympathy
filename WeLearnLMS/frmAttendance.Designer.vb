@@ -66,6 +66,7 @@ Partial Class frmAttendance
         Me.ClientSize = New System.Drawing.Size(284, 261)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmAttendance"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmAttendance"
         Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)

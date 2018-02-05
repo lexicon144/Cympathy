@@ -191,6 +191,7 @@ Partial Class frmClassroomLinker
         Me.Controls.Add(Me.grpClassDetails)
         Me.Controls.Add(Me.btnEnroll)
         Me.Name = "frmClassroomLinker"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmClassroomLinker"
         Me.grpEnrollment.ResumeLayout(False)
         Me.grpEnrollment.PerformLayout()

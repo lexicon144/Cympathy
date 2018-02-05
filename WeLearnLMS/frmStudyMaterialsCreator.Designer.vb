@@ -89,6 +89,7 @@ Partial Class frmStudyMaterialsCreator
         Me.Controls.Add(Me.txtMaterialDescription)
         Me.Controls.Add(Me.txtMaterialName)
         Me.Name = "frmStudyMaterialsCreator"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmStudyMaterialsCreator"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

@@ -137,6 +137,7 @@ Partial Class frmScheduleCreator
         Me.Controls.Add(Me.txtDay)
         Me.Controls.Add(Me.btnCreateSchedule)
         Me.Name = "frmScheduleCreator"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmScheduleCreator"
         Me.ResumeLayout(False)
         Me.PerformLayout()

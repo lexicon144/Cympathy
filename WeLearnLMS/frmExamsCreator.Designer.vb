@@ -144,6 +144,7 @@ Partial Class frmExamsCreator
         Me.Controls.Add(Me.grpXmlPreview)
         Me.Controls.Add(Me.btnSave)
         Me.Name = "frmExamsCreator"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmExamsCreator"
         Me.grpXmlPreview.ResumeLayout(False)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()

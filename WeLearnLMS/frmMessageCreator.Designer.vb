@@ -172,6 +172,7 @@ Partial Class frmMessageCreator
         Me.Controls.Add(Me.txtReceiverNAME)
         Me.Controls.Add(Me.txtSenderNAME)
         Me.Name = "frmMessageCreator"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmFeedbackCreator"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

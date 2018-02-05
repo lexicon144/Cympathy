@@ -50,6 +50,7 @@ Partial Class frmSQLPinger
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmSQLPinger"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Unless you click the text, This form will close in 5 seconds"
         Me.ResumeLayout(False)
 

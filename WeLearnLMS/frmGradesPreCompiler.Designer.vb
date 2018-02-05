@@ -26,12 +26,12 @@ Partial Class frmGradesPreCompiler
         Me.btnCompilePreQuizGrades = New System.Windows.Forms.Button()
         Me.btnCompilePreGradeExams = New System.Windows.Forms.Button()
         Me.grpCompiler = New System.Windows.Forms.GroupBox()
-        Me.txtQuizesAverage = New System.Windows.Forms.TextBox()
-        Me.txtExamsAverage = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.txtAttendance = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtExamsAverage = New System.Windows.Forms.TextBox()
+        Me.txtQuizesAverage = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.grpCompiler.SuspendLayout()
@@ -71,39 +71,12 @@ Partial Class frmGradesPreCompiler
         Me.grpCompiler.TabStop = False
         Me.grpCompiler.Text = "Compilation"
         '
-        'txtQuizesAverage
+        'txtAttendance
         '
-        Me.txtQuizesAverage.Location = New System.Drawing.Point(94, 19)
-        Me.txtQuizesAverage.Name = "txtQuizesAverage"
-        Me.txtQuizesAverage.ReadOnly = True
-        Me.txtQuizesAverage.Size = New System.Drawing.Size(100, 20)
-        Me.txtQuizesAverage.TabIndex = 0
-        '
-        'txtExamsAverage
-        '
-        Me.txtExamsAverage.Location = New System.Drawing.Point(94, 45)
-        Me.txtExamsAverage.Name = "txtExamsAverage"
-        Me.txtExamsAverage.ReadOnly = True
-        Me.txtExamsAverage.Size = New System.Drawing.Size(100, 20)
-        Me.txtExamsAverage.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(49, 22)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Quizes"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(50, 48)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(38, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Exams"
+        Me.txtAttendance.Location = New System.Drawing.Point(94, 71)
+        Me.txtAttendance.Name = "txtAttendance"
+        Me.txtAttendance.Size = New System.Drawing.Size(100, 20)
+        Me.txtAttendance.TabIndex = 5
         '
         'Label3
         '
@@ -114,12 +87,39 @@ Partial Class frmGradesPreCompiler
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Attendance"
         '
-        'txtAttendance
+        'Label2
         '
-        Me.txtAttendance.Location = New System.Drawing.Point(94, 71)
-        Me.txtAttendance.Name = "txtAttendance"
-        Me.txtAttendance.Size = New System.Drawing.Size(100, 20)
-        Me.txtAttendance.TabIndex = 5
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(50, 48)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(38, 13)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Exams"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(49, 22)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Quizes"
+        '
+        'txtExamsAverage
+        '
+        Me.txtExamsAverage.Location = New System.Drawing.Point(94, 45)
+        Me.txtExamsAverage.Name = "txtExamsAverage"
+        Me.txtExamsAverage.ReadOnly = True
+        Me.txtExamsAverage.Size = New System.Drawing.Size(100, 20)
+        Me.txtExamsAverage.TabIndex = 1
+        '
+        'txtQuizesAverage
+        '
+        Me.txtQuizesAverage.Location = New System.Drawing.Point(94, 19)
+        Me.txtQuizesAverage.Name = "txtQuizesAverage"
+        Me.txtQuizesAverage.ReadOnly = True
+        Me.txtQuizesAverage.Size = New System.Drawing.Size(100, 20)
+        Me.txtQuizesAverage.TabIndex = 0
         '
         'Button1
         '
@@ -144,6 +144,7 @@ Partial Class frmGradesPreCompiler
         Me.Controls.Add(Me.btnCompilePreGradeExams)
         Me.Controls.Add(Me.btnCompilePreQuizGrades)
         Me.Name = "frmGradesPreCompiler"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmGradesPreCompiler"
         Me.grpCompiler.ResumeLayout(False)
         Me.grpCompiler.PerformLayout()

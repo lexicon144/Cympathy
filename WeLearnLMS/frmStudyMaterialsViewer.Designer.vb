@@ -94,6 +94,7 @@ Partial Class frmStudyMaterialsViewer
         Me.Controls.Add(Me.txtMaterialDescription)
         Me.Controls.Add(Me.txtMaterialName)
         Me.Name = "frmStudyMaterialsViewer"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmStudyMaterialsViewer"
         Me.ResumeLayout(False)
         Me.PerformLayout()

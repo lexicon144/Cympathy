@@ -121,6 +121,7 @@ Partial Class frmExamsHub
         Me.Controls.Add(Me.btnView)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmExamsHub"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmExamHub"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpExamDisplay.ResumeLayout(False)

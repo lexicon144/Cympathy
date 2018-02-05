@@ -9,7 +9,7 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-
+        Me.StartPosition = FormStartPosition.CenterScreen
     End Sub
 
     Friend ReadOnly Property GetDay

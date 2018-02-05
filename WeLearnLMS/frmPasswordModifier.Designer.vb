@@ -59,6 +59,7 @@ Partial Class frmPasswordModifier
         Me.Controls.Add(Me.txtPassword2)
         Me.Controls.Add(Me.txtPassword1)
         Me.Name = "frmPasswordModifier"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmPasswordModifier"
         Me.ResumeLayout(False)
         Me.PerformLayout()

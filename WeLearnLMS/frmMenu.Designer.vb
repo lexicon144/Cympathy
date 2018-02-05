@@ -45,8 +45,8 @@ Partial Class frmMenu
         Me.tlstrpSECONDS = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tlstrpMINUTES = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tlstrpHOURS = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.timerSession = New System.Windows.Forms.Timer(Me.components)
         Me.lblCheatDetector = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.timerSession = New System.Windows.Forms.Timer(Me.components)
         Me.mainpanel.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -59,7 +59,7 @@ Partial Class frmMenu
         Me.mainpanel.ColumnCount = 3
         Me.mainpanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.90291!))
         Me.mainpanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.09709!))
-        Me.mainpanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 204.0!))
+        Me.mainpanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 206.0!))
         Me.mainpanel.Controls.Add(Me.TableLayoutPanel1, 0, 0)
         Me.mainpanel.Controls.Add(Me.TableLayoutPanel3, 1, 0)
         Me.mainpanel.Controls.Add(Me.tablePanelCreators, 0, 1)
@@ -84,14 +84,14 @@ Partial Class frmMenu
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(240, 70)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(239, 70)
         Me.TableLayoutPanel1.TabIndex = 31
         '
         'btnClassroomHub
         '
         Me.btnClassroomHub.Location = New System.Drawing.Point(3, 3)
         Me.btnClassroomHub.Name = "btnClassroomHub"
-        Me.btnClassroomHub.Size = New System.Drawing.Size(114, 23)
+        Me.btnClassroomHub.Size = New System.Drawing.Size(113, 23)
         Me.btnClassroomHub.TabIndex = 0
         Me.btnClassroomHub.Text = "Classroom"
         Me.btnClassroomHub.UseVisualStyleBackColor = True
@@ -100,14 +100,14 @@ Partial Class frmMenu
         '
         Me.btnTimeManagement.Location = New System.Drawing.Point(3, 38)
         Me.btnTimeManagement.Name = "btnTimeManagement"
-        Me.btnTimeManagement.Size = New System.Drawing.Size(114, 23)
+        Me.btnTimeManagement.Size = New System.Drawing.Size(113, 23)
         Me.btnTimeManagement.TabIndex = 1
         Me.btnTimeManagement.Text = "Time Management"
         Me.btnTimeManagement.UseVisualStyleBackColor = True
         '
         'btnLessonList
         '
-        Me.btnLessonList.Location = New System.Drawing.Point(123, 3)
+        Me.btnLessonList.Location = New System.Drawing.Point(122, 3)
         Me.btnLessonList.Name = "btnLessonList"
         Me.btnLessonList.Size = New System.Drawing.Size(94, 23)
         Me.btnLessonList.TabIndex = 27
@@ -122,7 +122,7 @@ Partial Class frmMenu
         Me.TableLayoutPanel3.Controls.Add(Me.btnGrades, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnFeedback, 1, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnRanking, 0, 1)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(249, 3)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(248, 3)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 2
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -261,15 +261,18 @@ Partial Class frmMenu
         Me.tlstrpHOURS.Size = New System.Drawing.Size(15, 17)
         Me.tlstrpHOURS.Text = "[]"
         '
-        'timerSession
-        '
-        Me.timerSession.Interval = 50
-        '
         'lblCheatDetector
         '
         Me.lblCheatDetector.Name = "lblCheatDetector"
         Me.lblCheatDetector.Size = New System.Drawing.Size(15, 17)
         Me.lblCheatDetector.Text = "{}"
+        Me.lblCheatDetector.ToolTipText = "You are given one of, if not, the simplest methods of studying... and yet you cho" & _
+    "ose to do this." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Really now?" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "R E A L L Y ?" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ＣＡＮ　ＹＯＵ　ＤＯＮ＇Ｔ　隠づ英" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "That's just not " & _
+    "cool man."
+        '
+        'timerSession
+        '
+        Me.timerSession.Interval = 50
         '
         'frmMenu
         '
@@ -279,6 +282,7 @@ Partial Class frmMenu
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.mainpanel)
         Me.Name = "frmMenu"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmMenu"
         Me.mainpanel.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)

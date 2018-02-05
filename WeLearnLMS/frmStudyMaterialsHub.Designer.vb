@@ -130,6 +130,7 @@ Partial Class frmStudyMaterialsHub
         Me.Controls.Add(Me.txtMaterialID)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmStudyMaterialsHub"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmStudyMaterialHub"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

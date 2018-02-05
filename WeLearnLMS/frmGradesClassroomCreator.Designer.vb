@@ -37,11 +37,11 @@ Partial Class frmGradesClassroomCreator
         Me.txtUserName = New System.Windows.Forms.TextBox()
         Me.btnToggleRO = New System.Windows.Forms.CheckBox()
         Me.grpGrades = New System.Windows.Forms.GroupBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.btnMakeGrades = New System.Windows.Forms.Button()
         Me.txtAverage = New System.Windows.Forms.TextBox()
         Me.txtLetter = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.grpClassroom.SuspendLayout()
         Me.grpUser.SuspendLayout()
         Me.grpGrades.SuspendLayout()
@@ -195,6 +195,24 @@ Partial Class frmGradesClassroomCreator
         Me.grpGrades.TabStop = False
         Me.grpGrades.Text = "Grades"
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(49, 57)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(31, 13)
+        Me.Label6.TabIndex = 4
+        Me.Label6.Text = "Mark"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(41, 84)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(47, 13)
+        Me.Label5.TabIndex = 3
+        Me.Label5.Text = "Average"
+        '
         'btnMakeGrades
         '
         Me.btnMakeGrades.Location = New System.Drawing.Point(6, 19)
@@ -220,24 +238,6 @@ Partial Class frmGradesClassroomCreator
         Me.txtLetter.Size = New System.Drawing.Size(100, 20)
         Me.txtLetter.TabIndex = 0
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(41, 84)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(47, 13)
-        Me.Label5.TabIndex = 3
-        Me.Label5.Text = "Average"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(49, 57)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(31, 13)
-        Me.Label6.TabIndex = 4
-        Me.Label6.Text = "Mark"
-        '
         'frmGradesClassroomCreator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -249,6 +249,7 @@ Partial Class frmGradesClassroomCreator
         Me.Controls.Add(Me.grpClassroom)
         Me.Controls.Add(Me.btnFinalizeGrades)
         Me.Name = "frmGradesClassroomCreator"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmGradesClassroomCreator"
         Me.grpClassroom.ResumeLayout(False)
         Me.grpClassroom.PerformLayout()

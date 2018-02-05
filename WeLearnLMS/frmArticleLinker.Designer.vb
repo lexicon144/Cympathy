@@ -25,14 +25,14 @@ Partial Class frmArticleLinker
         Me.txtArticleID = New System.Windows.Forms.TextBox()
         Me.txtArticleName = New System.Windows.Forms.TextBox()
         Me.grpArtilceDisplay = New System.Windows.Forms.GroupBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnLink = New System.Windows.Forms.Button()
         Me.grpClassroom = New System.Windows.Forms.GroupBox()
-        Me.txtClassroomID = New System.Windows.Forms.TextBox()
-        Me.txtClassroomName = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtClassroomName = New System.Windows.Forms.TextBox()
+        Me.txtClassroomID = New System.Windows.Forms.TextBox()
         Me.grpArtilceDisplay.SuspendLayout()
         Me.grpClassroom.SuspendLayout()
         Me.SuspendLayout()
@@ -66,6 +66,24 @@ Partial Class frmArticleLinker
         Me.grpArtilceDisplay.TabStop = False
         Me.grpArtilceDisplay.Text = "Article"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(21, 48)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(67, 13)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Article Name"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(38, 22)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(50, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Article ID"
+        '
         'btnLink
         '
         Me.btnLink.Location = New System.Drawing.Point(204, 130)
@@ -88,39 +106,14 @@ Partial Class frmArticleLinker
         Me.grpClassroom.TabStop = False
         Me.grpClassroom.Text = "Classroom"
         '
-        'txtClassroomID
+        'Label4
         '
-        Me.txtClassroomID.Location = New System.Drawing.Point(94, 15)
-        Me.txtClassroomID.Name = "txtClassroomID"
-        Me.txtClassroomID.ReadOnly = True
-        Me.txtClassroomID.Size = New System.Drawing.Size(100, 20)
-        Me.txtClassroomID.TabIndex = 0
-        '
-        'txtClassroomName
-        '
-        Me.txtClassroomName.Location = New System.Drawing.Point(94, 42)
-        Me.txtClassroomName.Name = "txtClassroomName"
-        Me.txtClassroomName.ReadOnly = True
-        Me.txtClassroomName.Size = New System.Drawing.Size(100, 20)
-        Me.txtClassroomName.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(38, 22)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Article ID"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(21, 48)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Article Name"
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(2, 45)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(86, 13)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Classroom Name"
         '
         'Label3
         '
@@ -131,14 +124,21 @@ Partial Class frmArticleLinker
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Classroom ID"
         '
-        'Label4
+        'txtClassroomName
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(2, 45)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(86, 13)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Classroom Name"
+        Me.txtClassroomName.Location = New System.Drawing.Point(94, 42)
+        Me.txtClassroomName.Name = "txtClassroomName"
+        Me.txtClassroomName.ReadOnly = True
+        Me.txtClassroomName.Size = New System.Drawing.Size(100, 20)
+        Me.txtClassroomName.TabIndex = 1
+        '
+        'txtClassroomID
+        '
+        Me.txtClassroomID.Location = New System.Drawing.Point(94, 15)
+        Me.txtClassroomID.Name = "txtClassroomID"
+        Me.txtClassroomID.ReadOnly = True
+        Me.txtClassroomID.Size = New System.Drawing.Size(100, 20)
+        Me.txtClassroomID.TabIndex = 0
         '
         'frmArticleLinker
         '
@@ -149,6 +149,7 @@ Partial Class frmArticleLinker
         Me.Controls.Add(Me.btnLink)
         Me.Controls.Add(Me.grpArtilceDisplay)
         Me.Name = "frmArticleLinker"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmArticleLinker"
         Me.grpArtilceDisplay.ResumeLayout(False)
         Me.grpArtilceDisplay.PerformLayout()

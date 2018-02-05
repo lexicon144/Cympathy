@@ -287,6 +287,7 @@ Partial Class frmScheduleViewer
         Me.Controls.Add(Me.grpClassroom)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmScheduleViewer"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmScheduleViewer"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpTimeslot.ResumeLayout(False)

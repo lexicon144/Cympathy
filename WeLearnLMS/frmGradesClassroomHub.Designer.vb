@@ -52,6 +52,7 @@ Partial Class frmGradesClassroomHub
         Me.Controls.Add(Me.btnCreateGrades)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmGradesClassroomHub"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmGradesClassroomHub"
         Me.ResumeLayout(False)
 

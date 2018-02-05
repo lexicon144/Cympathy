@@ -104,6 +104,7 @@ Partial Class frmQuestSecurity
         Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "frmQuestSecurity"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmExamSecurity"
         Me.grpExamDisplay.ResumeLayout(False)
         Me.grpExamDisplay.PerformLayout()

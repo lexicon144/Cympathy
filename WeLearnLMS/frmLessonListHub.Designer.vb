@@ -49,6 +49,7 @@ Partial Class frmLessonListHub
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.TreeView1)
         Me.Name = "frmLessonListHub"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmLessonList"
         Me.ResumeLayout(False)
 

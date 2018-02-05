@@ -36,9 +36,6 @@ Partial Class frmArticleViewer
         Me.RichTextBox1.TabIndex = 5
         Me.RichTextBox1.Text = ""
         '
-        'backgroundLoader
-        '
-        '
         'frmArticleViewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -46,6 +43,7 @@ Partial Class frmArticleViewer
         Me.ClientSize = New System.Drawing.Size(424, 342)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Name = "frmArticleViewer"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmArticleViewer"
         Me.ResumeLayout(False)
 

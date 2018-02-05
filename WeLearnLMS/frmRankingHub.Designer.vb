@@ -52,6 +52,7 @@ Partial Class frmRankingHub
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnVote)
         Me.Name = "frmRankingHub"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmRankingHub"
         Me.ResumeLayout(False)
 

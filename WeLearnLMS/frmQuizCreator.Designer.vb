@@ -117,6 +117,7 @@ Partial Class frmQuizCreator
         Me.Controls.Add(Me.grpXmlPreview)
         Me.Controls.Add(Me.btnSave)
         Me.Name = "frmQuizCreator"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmQuizCreator"
         Me.grpXmlPreview.ResumeLayout(False)
         Me.ResumeLayout(False)

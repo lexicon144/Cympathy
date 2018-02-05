@@ -275,6 +275,7 @@ Partial Class frmOfficialExamsCreator
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Datagridview1)
         Me.Name = "frmOfficialExamsCreator"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmOfficialExamCreator"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

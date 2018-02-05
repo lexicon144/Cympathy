@@ -83,6 +83,7 @@ Partial Class frmPasswordChallenge
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtAnswer)
         Me.Name = "frmPasswordChallenge"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmPasswordChallenge"
         Me.ResumeLayout(False)
         Me.PerformLayout()

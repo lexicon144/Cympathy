@@ -160,6 +160,7 @@ Partial Class frmGradesPreViewer
         Me.Controls.Add(Me.grpProcessedData)
         Me.Controls.Add(Me.grpRawData)
         Me.Name = "frmGradesPreViewer"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmPreGrades"
         Me.grpRawData.ResumeLayout(False)
         Me.grpRawData.PerformLayout()

@@ -284,6 +284,7 @@ Partial Class frmQuestionnaireCreator
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Datagridview1)
         Me.Name = "frmQuestionnaireCreator"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmQuestionnaireCreator"
         CType(Me.Datagridview1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)

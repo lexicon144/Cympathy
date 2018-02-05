@@ -149,6 +149,7 @@ Partial Class frmQuizLinker
         Me.Controls.Add(Me.btnLink)
         Me.Controls.Add(Me.grpQuizDisplay)
         Me.Name = "frmQuizLinker"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmQuizLinker"
         Me.grpClassroom.ResumeLayout(False)
         Me.grpClassroom.PerformLayout()

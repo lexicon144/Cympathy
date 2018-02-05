@@ -145,6 +145,7 @@ Partial Class frmRankingCreator
         Me.Controls.Add(Me.chkVote)
         Me.Controls.Add(Me.btnBrowseUser)
         Me.Name = "frmRankingCreator"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmRankingProfessors"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

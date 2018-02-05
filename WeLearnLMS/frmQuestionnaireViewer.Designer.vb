@@ -43,16 +43,16 @@ Partial Class frmQuestionnaireViewer
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.lblHours = New System.Windows.Forms.Label()
         Me.lblMinutes = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.lblSeconds = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.RdButtonPanel = New System.Windows.Forms.TableLayoutPanel()
+        Me.mainpanel = New System.Windows.Forms.Panel()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
-        Me.Panel1.SuspendLayout()
+        Me.RdButtonPanel.SuspendLayout()
+        Me.mainpanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -171,7 +171,7 @@ Partial Class frmQuestionnaireViewer
         '
         'Timer1
         '
-        Me.Timer1.Interval = 1000
+        Me.Timer1.Interval = 50
         '
         'btnDevAuto13
         '
@@ -233,23 +233,6 @@ Partial Class frmQuestionnaireViewer
         Me.lblMinutes.Text = "00"
         Me.lblMinutes.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.ColumnCount = 2
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.RadioButton1, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.RadioButton2, 1, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.RadioButton3, 0, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.RadioButton4, 1, 1)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(5, 154)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(426, 100)
-        Me.TableLayoutPanel2.TabIndex = 9
-        '
         'lblSeconds
         '
         Me.lblSeconds.AutoSize = True
@@ -288,33 +271,51 @@ Partial Class frmQuestionnaireViewer
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "SS"
         '
-        'Panel1
+        'RdButtonPanel
         '
-        Me.Panel1.Controls.Add(Me.RichTextBox1)
-        Me.Panel1.Controls.Add(Me.TableLayoutPanel2)
-        Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Controls.Add(Me.TableLayoutPanel1)
-        Me.Panel1.Location = New System.Drawing.Point(12, 14)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(437, 436)
-        Me.Panel1.TabIndex = 10
+        Me.RdButtonPanel.ColumnCount = 2
+        Me.RdButtonPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.RdButtonPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.RdButtonPanel.Controls.Add(Me.RadioButton1, 0, 0)
+        Me.RdButtonPanel.Controls.Add(Me.RadioButton2, 1, 0)
+        Me.RdButtonPanel.Controls.Add(Me.RadioButton3, 0, 1)
+        Me.RdButtonPanel.Controls.Add(Me.RadioButton4, 1, 1)
+        Me.RdButtonPanel.Location = New System.Drawing.Point(5, 154)
+        Me.RdButtonPanel.Name = "RdButtonPanel"
+        Me.RdButtonPanel.RowCount = 2
+        Me.RdButtonPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.RdButtonPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.RdButtonPanel.Size = New System.Drawing.Size(426, 100)
+        Me.RdButtonPanel.TabIndex = 9
+        '
+        'mainpanel
+        '
+        Me.mainpanel.Controls.Add(Me.RichTextBox1)
+        Me.mainpanel.Controls.Add(Me.RdButtonPanel)
+        Me.mainpanel.Controls.Add(Me.DataGridView1)
+        Me.mainpanel.Controls.Add(Me.TableLayoutPanel1)
+        Me.mainpanel.Location = New System.Drawing.Point(12, 14)
+        Me.mainpanel.Name = "mainpanel"
+        Me.mainpanel.Size = New System.Drawing.Size(437, 436)
+        Me.mainpanel.TabIndex = 10
         '
         'frmQuestionnaireViewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(459, 462)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.mainpanel)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.btnDevAuto13)
         Me.Name = "frmQuestionnaireViewer"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmQuestionnaireViewer"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
-        Me.TableLayoutPanel2.ResumeLayout(False)
-        Me.TableLayoutPanel2.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
+        Me.RdButtonPanel.ResumeLayout(False)
+        Me.RdButtonPanel.PerformLayout()
+        Me.mainpanel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -339,10 +340,10 @@ Partial Class frmQuestionnaireViewer
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents lblHours As System.Windows.Forms.Label
     Friend WithEvents lblMinutes As System.Windows.Forms.Label
-    Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents RdButtonPanel As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents lblSeconds As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents mainpanel As System.Windows.Forms.Panel
 End Class

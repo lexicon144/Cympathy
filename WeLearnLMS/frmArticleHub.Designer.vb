@@ -142,6 +142,7 @@ Partial Class frmArticleHub
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnView)
         Me.Name = "frmArticleHub"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmArticleHub"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)

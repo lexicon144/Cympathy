@@ -63,6 +63,7 @@ Partial Class frmWALLOP
         Me.Controls.Add(Me.lblcount)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmWALLOP"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmWALLOP"
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -149,6 +149,7 @@ Partial Class frmGradesExamPreCreator
         Me.Controls.Add(Me.grpQuiz)
         Me.Controls.Add(Me.Label5)
         Me.Name = "frmGradesExamPreCreator"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmGradesExamFinalizer"
         Me.grpGrade.ResumeLayout(False)
         Me.grpGrade.PerformLayout()

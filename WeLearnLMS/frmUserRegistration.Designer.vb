@@ -443,6 +443,7 @@ Partial Class frmUserRegistration
         Me.Controls.Add(Me.grpCredentials)
         Me.Controls.Add(Me.btn_save)
         Me.Name = "frmUserRegistration"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "formRegistration"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpPersonal.ResumeLayout(False)

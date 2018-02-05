@@ -149,6 +149,7 @@ Partial Class frmStudyMaterialsLinker
         Me.Controls.Add(Me.btnLink)
         Me.Controls.Add(Me.grpMaterialDisplay)
         Me.Name = "frmStudyMaterialsLinker"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmStudyMaterialsLinker"
         Me.grpClassroom.ResumeLayout(False)
         Me.grpClassroom.PerformLayout()

@@ -67,6 +67,7 @@ Partial Class frmArticleMaker
         Me.Controls.Add(Me.txtArticleName)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Name = "frmArticleMaker"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmArticleMaker"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
