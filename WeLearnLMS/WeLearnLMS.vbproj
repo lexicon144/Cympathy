@@ -160,6 +160,12 @@
     <Compile Include="frmClassroomDialog.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmClassStanding.Designer.vb">
+      <DependentUpon>frmClassStanding.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClassStanding.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmDayDialog.Designer.vb">
       <DependentUpon>frmDayDialog.vb</DependentUpon>
     </Compile>
