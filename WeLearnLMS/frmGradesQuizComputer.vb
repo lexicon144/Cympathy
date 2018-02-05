@@ -15,7 +15,7 @@
 
 
     End Sub
-
+#Region "properties"
     Friend ReadOnly Property QuizCount As UInt32
         Get
             Return _QuestionnaireCount
@@ -39,6 +39,7 @@
             Return _FullAverage
         End Get
     End Property
+#End Region
 
     ''' <summary>
     ''' Loading Event

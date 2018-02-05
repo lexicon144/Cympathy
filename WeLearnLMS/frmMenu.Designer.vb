@@ -52,7 +52,7 @@ Partial Class frmMenu
         Me.TableLayoutPanel4.ColumnCount = 3
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.90291!))
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.09709!))
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200.0!))
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 201.0!))
         Me.TableLayoutPanel4.Controls.Add(Me.TableLayoutPanel1, 0, 0)
         Me.TableLayoutPanel4.Controls.Add(Me.TableLayoutPanel3, 1, 0)
         Me.TableLayoutPanel4.Controls.Add(Me.TableLayoutPanel2, 0, 1)
@@ -77,14 +77,14 @@ Partial Class frmMenu
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(242, 70)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(241, 70)
         Me.TableLayoutPanel1.TabIndex = 31
         '
         'btnClassroomHub
         '
         Me.btnClassroomHub.Location = New System.Drawing.Point(3, 3)
         Me.btnClassroomHub.Name = "btnClassroomHub"
-        Me.btnClassroomHub.Size = New System.Drawing.Size(115, 23)
+        Me.btnClassroomHub.Size = New System.Drawing.Size(114, 23)
         Me.btnClassroomHub.TabIndex = 0
         Me.btnClassroomHub.Text = "Classroom"
         Me.btnClassroomHub.UseVisualStyleBackColor = True
@@ -93,14 +93,14 @@ Partial Class frmMenu
         '
         Me.btnTimeManagement.Location = New System.Drawing.Point(3, 38)
         Me.btnTimeManagement.Name = "btnTimeManagement"
-        Me.btnTimeManagement.Size = New System.Drawing.Size(115, 23)
+        Me.btnTimeManagement.Size = New System.Drawing.Size(114, 23)
         Me.btnTimeManagement.TabIndex = 1
         Me.btnTimeManagement.Text = "Time Management"
         Me.btnTimeManagement.UseVisualStyleBackColor = True
         '
         'btnLessonList
         '
-        Me.btnLessonList.Location = New System.Drawing.Point(124, 3)
+        Me.btnLessonList.Location = New System.Drawing.Point(123, 3)
         Me.btnLessonList.Name = "btnLessonList"
         Me.btnLessonList.Size = New System.Drawing.Size(94, 23)
         Me.btnLessonList.TabIndex = 27
@@ -115,7 +115,7 @@ Partial Class frmMenu
         Me.TableLayoutPanel3.Controls.Add(Me.btnGrades, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnFeedback, 1, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnRanking, 0, 1)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(251, 3)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(250, 3)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 2
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))

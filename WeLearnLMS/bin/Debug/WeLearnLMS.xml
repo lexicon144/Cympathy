@@ -6,7 +6,33 @@ WeLearnLMS
 </name>
 </assembly>
 <members>
-<member name="M:WeLearnLMS.ImpConStringBuilder.ConnString">
+<member name="M:WeLearnLMS.frmRankingCreator.#ctor">
+	<summary>
+ Admin Constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmRankingCreator.#ctor(WeLearnLMS.c_MainCredentials@)">
+	<summary>
+ Non admin constructor
+ </summary>
+	<param name="User"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmRankingCreator.CountVotes(System.String@)">
+	<summary>
+ Count validated Votes of thisUserID
+ </summary>
+	<param name="CandidateID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.frmRankingCreator.SaveVote(System.String@,System.String@,System.Boolean)">
+	<summary>
+ Save Votes of ThisCandidate ID
+ </summary>
+	<param name="CandidateID"></param>
+	<param name="VoterID"></param>
+	<param name="State"></param>
+	<remarks></remarks>
+</member><member name="M:WeLearnLMS.ImpConStringBuilder.ConnString">
 	<summary>
  Return Current Implementation of ConStringBuilder
  Use this Implementation as TESTING PURPOSES ONLY FOR LOCALHOST
@@ -144,17 +170,6 @@ WeLearnLMS
  </summary>
 	<value>eClassType</value>
 	<returns>eClassType</returns>
-	<remarks></remarks>
-</member><member name="M:WeLearnLMS.frmRankingProfessors.#ctor">
-	<summary>
- Admin Constructor
- </summary>
-	<remarks></remarks>
-</member><member name="M:WeLearnLMS.frmRankingProfessors.#ctor(WeLearnLMS.c_MainCredentials@)">
-	<summary>
- Non admin constructor
- </summary>
-	<param name="User"></param>
 	<remarks></remarks>
 </member><member name="M:WeLearnLMS.StrategyHashingSHA512.HashThis(System.String@,System.String@)">
 	<summary>

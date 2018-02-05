@@ -4,4 +4,8 @@
         Dim creator As New frmGradesClassroomCreator()
         creator.ShowDialog()
     End Sub
+
+    Private Sub frmGradesClassroomHub_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

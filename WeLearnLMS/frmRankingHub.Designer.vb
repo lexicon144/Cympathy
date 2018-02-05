@@ -28,7 +28,7 @@ Partial Class frmRankingHub
         '
         'btnVote
         '
-        Me.btnVote.Location = New System.Drawing.Point(325, 318)
+        Me.btnVote.Location = New System.Drawing.Point(325, 314)
         Me.btnVote.Name = "btnVote"
         Me.btnVote.Size = New System.Drawing.Size(117, 23)
         Me.btnVote.TabIndex = 1
@@ -37,7 +37,7 @@ Partial Class frmRankingHub
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(0, 0)
+        Me.Button1.Location = New System.Drawing.Point(12, 314)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 2
