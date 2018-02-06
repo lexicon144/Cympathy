@@ -1,7 +1,7 @@
 ﻿Public Class frmArticleHub
 
     Private _Datatable As New DataTable
-    Private _ConnString As IConStringBuilder = New ImpConStringBuilder
+
     Private _ThisClassroomID As String
 
     Private _IsModal As Boolean = False
@@ -92,10 +92,9 @@
 
     Friend Sub LoadAllArticles()
         Console.WriteLine("Load all Articles")
-        Using Connection As New MySqlConnection
+        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
-                .ConnectionString = _ConnString.ConnString
-                If .State = ConnectionState.Open Then
+                If .State = ConnectionState.Closed Then
                     .Open()
                 End If
             End With
@@ -119,10 +118,9 @@
     End Sub
     Friend Sub LoadAllArticles(ByRef ClassroomID As String)
         Console.WriteLine("Load most Articles")
-        Using Connection As New MySqlConnection
+        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
-                .ConnectionString = _ConnString.ConnString
-                If .State = ConnectionState.Open Then
+                If .State = ConnectionState.Closed Then
                     .Open()
                 End If
             End With

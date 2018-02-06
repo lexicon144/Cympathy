@@ -38,6 +38,7 @@ Public Module SharedMod2
         Email
         Address
         VerySimple
+        IPAddress
     End Enum
 
 

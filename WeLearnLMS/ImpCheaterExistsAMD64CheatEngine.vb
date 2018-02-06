@@ -10,8 +10,7 @@
     ''' <returns></returns>
     ''' <remarks></remarks>
     Public Function CheaterExists() As Boolean Implements ICheaterExists.CheaterExists
-        Dim p As Process()
-        p = Process.GetProcessesByName("cheatengine-x86_64")
+        Dim p As Process() = Process.GetProcessesByName("cheatengine-x86_64")
         Return (p.Count > 0)
     End Function
 End Class

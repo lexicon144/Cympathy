@@ -41,7 +41,7 @@ Partial Class frmRankingHub
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "View Ranks"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'frmRankingHub

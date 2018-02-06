@@ -127,3 +127,5 @@ C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.ex
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.xml
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmWALLOP.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmClassStanding.resources
+C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmTimeSlotHub.resources
+C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmServerEditor.resources

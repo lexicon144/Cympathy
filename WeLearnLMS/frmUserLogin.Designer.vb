@@ -30,13 +30,14 @@ Partial Class frmUserLogin
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.lblChangeServer = New System.Windows.Forms.LinkLabel()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(45, 118)
+        Me.LinkLabel1.Location = New System.Drawing.Point(45, 117)
         Me.LinkLabel1.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(123, 13)
@@ -86,18 +87,29 @@ Partial Class frmUserLogin
         '
         Me.LinkLabel2.AutoSize = True
         Me.LinkLabel2.Enabled = False
-        Me.LinkLabel2.Location = New System.Drawing.Point(52, 163)
+        Me.LinkLabel2.Location = New System.Drawing.Point(54, 145)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(114, 13)
         Me.LinkLabel2.TabIndex = 8
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "Forgot your password?"
         '
+        'lblChangeServer
+        '
+        Me.lblChangeServer.AutoSize = True
+        Me.lblChangeServer.Location = New System.Drawing.Point(90, 174)
+        Me.lblChangeServer.Name = "lblChangeServer"
+        Me.lblChangeServer.Size = New System.Drawing.Size(76, 13)
+        Me.lblChangeServer.TabIndex = 9
+        Me.lblChangeServer.TabStop = True
+        Me.lblChangeServer.Text = "Specify Server"
+        '
         'frmUserLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(178, 185)
+        Me.ClientSize = New System.Drawing.Size(178, 197)
+        Me.Controls.Add(Me.lblChangeServer)
         Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.btnLogin)
@@ -118,5 +130,6 @@ Partial Class frmUserLogin
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
     Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
+    Friend WithEvents lblChangeServer As System.Windows.Forms.LinkLabel
 
 End Class

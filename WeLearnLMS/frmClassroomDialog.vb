@@ -1,6 +1,5 @@
 ﻿Public Class frmClassroomDialog
 
-    Private _ConnString As IConStringBuilder = New ImpConStringBuilder
     Private _Datatable As New DataTable
 
     Private _MainCredentials As New c_MainCredentials
@@ -78,10 +77,9 @@
     End Sub
 
     Friend Sub ReturnAdminedClasses()
-        Using Connection As New MySqlConnection
+        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
 
             With Connection
-                .ConnectionString = _ConnString.ConnString
                 If .State = ConnectionState.Closed Then
                     .Open()
                 End If
@@ -106,9 +104,8 @@
     End Sub
 
     Friend Sub ReturnEnrolledClasses()
-        Using Connection As New MySqlConnection
+        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
-                .ConnectionString = _ConnString.ConnString
                 If .State = ConnectionState.Closed Then
                     .Open()
                 End If

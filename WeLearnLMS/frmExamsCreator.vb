@@ -27,9 +27,8 @@ Public Class frmExamsCreator
     End Sub
 
     Private Sub InsertQuiz()
-        Using Connection As New MySqlConnection
+        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
-                .ConnectionString = _SharedConnString.ConnString
                 If .State = ConnectionState.Closed Then
                     .Open()
                 End If

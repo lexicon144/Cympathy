@@ -1,6 +1,6 @@
 ﻿Module SharedMod
 
-    Friend _SharedConnString As IConStringBuilder = New ImpConStringBuilder
+    Friend _SharedConnString As IConStringBuilder = New ImpConStringBuilderDeployment
 
 
 End Module

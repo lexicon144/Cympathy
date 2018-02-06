@@ -14,6 +14,7 @@
         _Strategy.Add(VMethodology.Cellular, New StrategyVerifyCellularNumber)
         _Strategy.Add(VMethodology.VerySimple, New StrategyVerifyVerySimiple)
         _Strategy.Add(VMethodology.Address, New StrategyVerifyUsername)
+
     End Sub
     ''' <summary>
     ''' Use the verification method implied with accordance to the designated ENUMERATION chosen

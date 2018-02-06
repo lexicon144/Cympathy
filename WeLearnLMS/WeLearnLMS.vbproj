@@ -173,6 +173,12 @@
     <Compile Include="frmDayDialog.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmServerEditor.Designer.vb">
+      <DependentUpon>frmServerEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmServerEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmGradeExamComputer.Designer.vb">
       <DependentUpon>frmGradeExamComputer.vb</DependentUpon>
     </Compile>
@@ -454,6 +460,7 @@
     <Compile Include="ImpCheaterExistsAMD64CheatEngine.vb" />
     <Compile Include="ImpCheaterExistsI386CheatEngine.vb" />
     <Compile Include="ImpConStringBuilder.vb" />
+    <Compile Include="ImpConStringBuilderDeployment.vb" />
     <Compile Include="ImpCreateQuestionnaireSQUIZ.vb" />
     <Compile Include="ImpDataDeserializer.vb" />
     <Compile Include="ImpQuestionAmount_PEXAM.vb" />
@@ -493,6 +500,7 @@
     <Compile Include="SharedMod.vb" />
     <Compile Include="StrategyHashingSHA512.vb" />
     <Compile Include="StrategyVerifyCellularNumber.vb" />
+    <Compile Include="StrategyVerifyIPv4.vb" />
     <Compile Include="StrategyVerifyLandline.vb" />
     <Compile Include="StrategyVerifyNumbers.vb" />
     <Compile Include="StrategyVerifyUsername.vb" />
@@ -598,6 +606,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRankingViewer.resx">
       <DependentUpon>frmRankingViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServerEditor.resx">
+      <DependentUpon>frmServerEditor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTimeSlotHub.resx">
       <DependentUpon>frmTimeSlotHub.vb</DependentUpon>

@@ -1,6 +1,5 @@
 ﻿Public Class frmArticleMaker
     Private _NewArticle As New c_Article
-    Private _ConnString As IConStringBuilder = New ImpConStringBuilder
 
     Public Sub New()
 
@@ -16,9 +15,8 @@
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub WriteBlob()
-        Using Connection As New MySqlConnection
+        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
-                .ConnectionString = _ConnString.ConnString
                 If .State = ConnectionState.Closed Then
                     .Open()
                 End If

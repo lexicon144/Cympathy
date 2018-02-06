@@ -4,7 +4,6 @@ Public Class frmClassroomCreator
 #Region "Fields"
     Private _Classroom As New c_Classroom
     Private Verify As New ContextValidateInput
-    Private _ConnString As IConStringBuilder = New ImpConStringBuilder
 #End Region
 
 #Region "Constructors"
@@ -61,9 +60,8 @@ Public Class frmClassroomCreator
     ''' <remarks></remarks>
     Private Sub CreateANewClass()
 
-        Using Connection As New MySqlConnection()
+        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
-                .ConnectionString = _ConnString.ConnString
                 If .State = ConnectionState.Closed Then
                     .Open()
                 End If

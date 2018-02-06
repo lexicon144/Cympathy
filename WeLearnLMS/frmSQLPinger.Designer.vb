@@ -32,6 +32,7 @@ Partial Class frmSQLPinger
         Me.rtb.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtb.Location = New System.Drawing.Point(0, 0)
         Me.rtb.Name = "rtb"
+        Me.rtb.ReadOnly = True
         Me.rtb.Size = New System.Drawing.Size(469, 124)
         Me.rtb.TabIndex = 0
         Me.rtb.Text = ""
