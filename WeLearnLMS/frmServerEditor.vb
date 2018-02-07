@@ -4,6 +4,7 @@
 
     Private Sub ChangeHostName()
         My.Settings("city85") = IPHost
+        MessageBox.Show("Saved", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
@@ -18,6 +19,7 @@
         If Not _SharedValidator.Verify(VMethodology.IPAddress, DirectCast(sender, TextBox).Text) Then
             ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid IP / Hostname")
             e.Cancel = True
+            btnSave.Enabled = False
             DirectCast(sender, TextBox).SelectAll()
             Exit Sub
         End If
@@ -25,6 +27,10 @@
     End Sub
 
     Private Sub TextBox1_Validated(sender As Object, e As EventArgs) Handles TextBox1.Validated
-        Me.IPHost = DirectCast(sender, TextBox).Text
+        TextBox1.Enabled = True
+    End Sub
+
+    Private Sub txtTypeOK_TextChanged(sender As Object, e As EventArgs) Handles txtTypeOK.TextChanged
+        If txtTypeOK.Text = "OK" Then btnSave.Enabled = True Else btnSave.Enabled = False
     End Sub
 End Class

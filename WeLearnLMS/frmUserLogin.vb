@@ -100,6 +100,11 @@ Public Class frmUserLogin
         End With
     End Sub
 
+    Private Sub ShareMe()
+        _SharedAdvancedCredentials = Me._UserAdvancedCredentials
+        _SharedMainCredentials = Me._UserMainCredentials
+    End Sub
+
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Try
             Me._PreInfo.Clear()
@@ -124,12 +129,19 @@ Public Class frmUserLogin
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-        'Dim Access As New frmAccess(e.Result)
-        'Access.Show()
+        
         If e.Result Then
+            ShareMe()
+
             Dim MainMenu As New frmMenu(Me._UserAdvancedCredentials)
+
             MainMenu.ShowDialog()
+            _SharedAdvancedCredentials = Nothing
+            _SharedMainCredentials = Nothing
+
+            Exit Sub
         End If
+        MessageBox.Show("Your password or username was incorrect", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Warning)
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
@@ -157,5 +169,10 @@ Public Class frmUserLogin
 
         Dim passwordchallenge As New frmPasswordModifier(_PreInfo.Rows(0)("user_id").ToString())
         passwordchallenge.ShowDialog()
+    End Sub
+
+    Private Sub lblChangeServer_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblChangeServer.LinkClicked
+        Dim editor As New frmServerEditor()
+        editor.ShowDialog()
     End Sub
 End Class

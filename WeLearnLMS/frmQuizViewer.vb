@@ -33,9 +33,7 @@
         Dim viewer As New frmQuestionnaireViewer(_Quiz)
         
         If viewer.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
-
             Me._Pregrade = viewer.GetPregrade
-
         End If
 
         MarkQuiz()

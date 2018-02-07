@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmRankingHub
+Partial Class frmNetworkPinger
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,41 +22,45 @@ Partial Class frmRankingHub
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnVote = New System.Windows.Forms.Button()
+        Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
-        '
-        'btnVote
-        '
-        Me.btnVote.Location = New System.Drawing.Point(12, 41)
-        Me.btnVote.Name = "btnVote"
-        Me.btnVote.Size = New System.Drawing.Size(117, 23)
-        Me.btnVote.TabIndex = 1
-        Me.btnVote.Text = "Vote Now"
-        Me.btnVote.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 12)
+        Me.Button1.Location = New System.Drawing.Point(74, 99)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(117, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "View Ranks"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'frmRankingHub
+        'Timer1
+        '
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(49, 128)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 1
+        '
+        'frmNetworkPinger
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(200, 79)
+        Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.btnVote)
-        Me.Name = "frmRankingHub"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmRankingHub"
+        Me.Name = "frmNetworkPinger"
+        Me.Text = "frmNetworkPinger"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btnVote As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class

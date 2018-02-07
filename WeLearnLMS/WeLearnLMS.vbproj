@@ -173,6 +173,12 @@
     <Compile Include="frmDayDialog.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmNetworkPinger.Designer.vb">
+      <DependentUpon>frmNetworkPinger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNetworkPinger.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmServerEditor.Designer.vb">
       <DependentUpon>frmServerEditor.vb</DependentUpon>
     </Compile>
@@ -570,6 +576,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLessonListHub.resx">
       <DependentUpon>frmLessonListHub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNetworkPinger.resx">
+      <DependentUpon>frmNetworkPinger.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmOfficialExamsCreator.resx">
       <DependentUpon>frmOfficialExamsCreator.vb</DependentUpon>

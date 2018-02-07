@@ -20,6 +20,7 @@
         End With
     End Sub
 
+
 #Region "Loader"
     Private Sub frmClassroomHub_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim NewClassroomDialog As New frmClassroomDialog(TryCast(_AdvancedCredentials, c_MainCredentials))
@@ -28,6 +29,11 @@
             Me._Classroom = NewClassroomDialog.GetClassroom
             REView()
         End If
+
+        If _SharedMainCredentials.MyUserType = c_MainCredentials.UserType.STU Then
+            grpLinking.Enabled = False
+        End If
+
         _SharedClassroom.ClassroomId = Me._Classroom.ClassroomId
     End Sub
 

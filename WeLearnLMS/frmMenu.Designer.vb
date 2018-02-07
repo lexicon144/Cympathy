@@ -47,6 +47,7 @@ Partial Class frmMenu
         Me.tlstrpHOURS = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblCheatDetector = New System.Windows.Forms.ToolStripStatusLabel()
         Me.timerSession = New System.Windows.Forms.Timer(Me.components)
+        Me.btnCreateClassroom = New System.Windows.Forms.Button()
         Me.mainpanel.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -59,7 +60,7 @@ Partial Class frmMenu
         Me.mainpanel.ColumnCount = 3
         Me.mainpanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.90291!))
         Me.mainpanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.09709!))
-        Me.mainpanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 206.0!))
+        Me.mainpanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207.0!))
         Me.mainpanel.Controls.Add(Me.TableLayoutPanel1, 0, 0)
         Me.mainpanel.Controls.Add(Me.TableLayoutPanel3, 1, 0)
         Me.mainpanel.Controls.Add(Me.tablePanelCreators, 0, 1)
@@ -84,7 +85,7 @@ Partial Class frmMenu
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(239, 70)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(238, 70)
         Me.TableLayoutPanel1.TabIndex = 31
         '
         'btnClassroomHub
@@ -122,7 +123,7 @@ Partial Class frmMenu
         Me.TableLayoutPanel3.Controls.Add(Me.btnGrades, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnFeedback, 1, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnRanking, 0, 1)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(248, 3)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(247, 3)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 2
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -166,17 +167,19 @@ Partial Class frmMenu
         Me.tablePanelCreators.Controls.Add(Me.btnCreateMaterials, 0, 1)
         Me.tablePanelCreators.Controls.Add(Me.btnCreateExam, 1, 1)
         Me.tablePanelCreators.Controls.Add(Me.btnCreateQuestionnaire, 0, 0)
+        Me.tablePanelCreators.Controls.Add(Me.btnCreateClassroom, 0, 2)
         Me.tablePanelCreators.Location = New System.Drawing.Point(3, 158)
         Me.tablePanelCreators.Name = "tablePanelCreators"
-        Me.tablePanelCreators.RowCount = 2
-        Me.tablePanelCreators.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tablePanelCreators.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tablePanelCreators.Size = New System.Drawing.Size(200, 71)
+        Me.tablePanelCreators.RowCount = 3
+        Me.tablePanelCreators.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.tablePanelCreators.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.tablePanelCreators.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.tablePanelCreators.Size = New System.Drawing.Size(238, 150)
         Me.tablePanelCreators.TabIndex = 0
         '
         'btnCreateArticles
         '
-        Me.btnCreateArticles.Location = New System.Drawing.Point(103, 3)
+        Me.btnCreateArticles.Location = New System.Drawing.Point(122, 3)
         Me.btnCreateArticles.Name = "btnCreateArticles"
         Me.btnCreateArticles.Size = New System.Drawing.Size(94, 23)
         Me.btnCreateArticles.TabIndex = 24
@@ -185,16 +188,16 @@ Partial Class frmMenu
         '
         'btnCreateMaterials
         '
-        Me.btnCreateMaterials.Location = New System.Drawing.Point(3, 38)
+        Me.btnCreateMaterials.Location = New System.Drawing.Point(3, 52)
         Me.btnCreateMaterials.Name = "btnCreateMaterials"
-        Me.btnCreateMaterials.Size = New System.Drawing.Size(94, 23)
+        Me.btnCreateMaterials.Size = New System.Drawing.Size(113, 23)
         Me.btnCreateMaterials.TabIndex = 25
         Me.btnCreateMaterials.Text = "Create Materials"
         Me.btnCreateMaterials.UseVisualStyleBackColor = True
         '
         'btnCreateExam
         '
-        Me.btnCreateExam.Location = New System.Drawing.Point(103, 38)
+        Me.btnCreateExam.Location = New System.Drawing.Point(122, 52)
         Me.btnCreateExam.Name = "btnCreateExam"
         Me.btnCreateExam.Size = New System.Drawing.Size(94, 23)
         Me.btnCreateExam.TabIndex = 26
@@ -205,7 +208,7 @@ Partial Class frmMenu
         '
         Me.btnCreateQuestionnaire.Location = New System.Drawing.Point(3, 3)
         Me.btnCreateQuestionnaire.Name = "btnCreateQuestionnaire"
-        Me.btnCreateQuestionnaire.Size = New System.Drawing.Size(94, 23)
+        Me.btnCreateQuestionnaire.Size = New System.Drawing.Size(113, 23)
         Me.btnCreateQuestionnaire.TabIndex = 23
         Me.btnCreateQuestionnaire.Text = "Create Quiz"
         Me.btnCreateQuestionnaire.UseVisualStyleBackColor = True
@@ -274,6 +277,15 @@ Partial Class frmMenu
         '
         Me.timerSession.Interval = 50
         '
+        'btnCreateClassroom
+        '
+        Me.btnCreateClassroom.Location = New System.Drawing.Point(3, 101)
+        Me.btnCreateClassroom.Name = "btnCreateClassroom"
+        Me.btnCreateClassroom.Size = New System.Drawing.Size(113, 23)
+        Me.btnCreateClassroom.TabIndex = 27
+        Me.btnCreateClassroom.Text = "Create Classroom"
+        Me.btnCreateClassroom.UseVisualStyleBackColor = True
+        '
         'frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -318,4 +330,5 @@ Partial Class frmMenu
     Friend WithEvents tlstrpMINUTES As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents tlstrpHOURS As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents lblCheatDetector As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents btnCreateClassroom As System.Windows.Forms.Button
 End Class

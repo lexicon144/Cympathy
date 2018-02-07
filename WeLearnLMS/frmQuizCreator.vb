@@ -8,15 +8,18 @@ Public Class frmQuizCreator
     Private _Deserializer As IDataDeserializer = New ImpDataDeserializer
 
     Private Sub frmQuizCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            Dim Creator As New frmQuestionnaireCreator
 
-        Dim Creator As New frmQuestionnaireCreator
+            If Creator.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
 
-        If Creator.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
-
-            Me._NewQuiz.QuestionBase = Creator.GetBASE
-            Me._NewQuiz.QuestionnaireType = Creator.GetQType
-        End If
-        ParseToTextbox()
+                Me._NewQuiz.QuestionBase = Creator.GetBASE
+                Me._NewQuiz.QuestionnaireType = Creator.GetQType
+            End If
+            ParseToTextbox()
+        Catch XXX As Exception
+            DisplayGeneralException(XXX)
+        End Try
     End Sub
 
     Private Sub InsertQuiz()

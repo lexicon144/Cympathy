@@ -129,3 +129,4 @@ C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.fr
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmClassStanding.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmTimeSlotHub.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmServerEditor.resources
+C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmNetworkPinger.resources

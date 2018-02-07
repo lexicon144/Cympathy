@@ -102,4 +102,8 @@
         mainpanel.Enabled = True
     End Sub
 
+    Private Sub btnCreateClassroom_Click(sender As Object, e As EventArgs) Handles btnCreateClassroom.Click
+        Dim creator As New frmClassroomCreator()
+        creator.ShowDialog()
+    End Sub
 End Class

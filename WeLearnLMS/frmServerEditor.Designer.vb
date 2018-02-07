@@ -27,6 +27,8 @@ Partial Class frmServerEditor
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.txtTypeOK = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -39,7 +41,8 @@ Partial Class frmServerEditor
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(96, 75)
+        Me.btnSave.Enabled = False
+        Me.btnSave.Location = New System.Drawing.Point(96, 132)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 23)
         Me.btnSave.TabIndex = 1
@@ -59,11 +62,29 @@ Partial Class frmServerEditor
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'txtTypeOK
+        '
+        Me.txtTypeOK.Location = New System.Drawing.Point(34, 90)
+        Me.txtTypeOK.Name = "txtTypeOK"
+        Me.txtTypeOK.Size = New System.Drawing.Size(137, 20)
+        Me.txtTypeOK.TabIndex = 3
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(31, 74)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(94, 13)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "type OK to confirm"
+        '
         'frmServerEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(219, 136)
+        Me.ClientSize = New System.Drawing.Size(219, 167)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.txtTypeOK)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.TextBox1)
@@ -79,4 +100,6 @@ Partial Class frmServerEditor
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents txtTypeOK As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

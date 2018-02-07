@@ -7,14 +7,18 @@
     ''' <remarks></remarks>
     Public Sub New()
         Console.WriteLine("Instantiated " & Me.ToString)
-        _Strategy.Add(vmethodology.Numbers, New StrategyVerifyNumbers)
-        _Strategy.Add(VMethodology.Text, New StrategyVerifyNumbers)
-        _Strategy.Add(VMethodology.Username, New StrategyVerifyUsername)
-        _Strategy.Add(VMethodology.Landline, New StrategyVerifyLandline)
-        _Strategy.Add(VMethodology.Cellular, New StrategyVerifyCellularNumber)
-        _Strategy.Add(VMethodology.VerySimple, New StrategyVerifyVerySimiple)
-        _Strategy.Add(VMethodology.Address, New StrategyVerifyUsername)
+        With _Strategy
 
+            .Add(VMethodology.Numbers, New StrategyVerifyNumbers)
+            .Add(VMethodology.Text, New StrategyVerifyNumbers)
+            .Add(VMethodology.Username, New StrategyVerifyUsername)
+            .Add(VMethodology.Landline, New StrategyVerifyLandline)
+            .Add(VMethodology.Cellular, New StrategyVerifyCellularNumber)
+            .Add(VMethodology.VerySimple, New StrategyVerifyVerySimiple)
+            .Add(VMethodology.Address, New StrategyVerifyUsername)
+            .Add(VMethodology.IPAddress, New StrategyVerifyIPv4)
+
+        End With
     End Sub
     ''' <summary>
     ''' Use the verification method implied with accordance to the designated ENUMERATION chosen
