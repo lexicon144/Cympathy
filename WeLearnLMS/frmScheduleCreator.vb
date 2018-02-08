@@ -12,7 +12,9 @@
     End Sub
 
     Private Sub frmScheduleCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        If _SharedAdvancedCredentials.MyUserType = c_MainCredentials.UserType.STU Then
+            Panel1.Enabled = False
+        End If
     End Sub
 
     Private Sub PerformLink()
@@ -77,7 +79,14 @@
         End If
     End Sub
 
+    Private Function Evaluated()
+        Return (txtClassroom.Text IsNot "") AndAlso (txtDay.Text IsNot "") AndAlso (txtTime.Text IsNot "")
+    End Function
+
     Private Sub btnCreateSchedule_Click(sender As Object, e As EventArgs) Handles btnCreateSchedule.Click
-        PerformLink()
+        If Evaluated() Then
+
+            PerformLink()
+        End If
     End Sub
 End Class

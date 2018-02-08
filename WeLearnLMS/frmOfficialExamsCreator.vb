@@ -59,14 +59,14 @@ Public Class frmOfficialExamsCreator
     End Sub
 
     ''' <summary>
-    ''' Return This Exam
+    ''' Return The generated Exam
     ''' </summary>
     ''' <value></value>
     ''' <returns></returns>
     ''' <remarks></remarks>
     Friend ReadOnly Property GetOfficialExam As c_Exam
         Get
-            Return _Questionnaire
+            Return Me._Questionnaire
         End Get
     End Property
 
@@ -141,7 +141,7 @@ Public Class frmOfficialExamsCreator
     End Sub
 
     Private Sub btnFillUpQuiz_Click(sender As Object, e As EventArgs) Handles btnFillUpQuiz.Click
-        For I As UInt32 = 0 To 99
+        For I As UInt32 = 1 To 100
             txtQuestion.Text = "correct answer is : " & I
             txtDisc1.Text = Randomizer.ToString
             txtDisc2.Text = Randomizer.ToString
@@ -163,4 +163,31 @@ Public Class frmOfficialExamsCreator
         Return sb
     End Function
 
+    Private Sub txtTitle_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtTitle.Validating
+        If Not _SharedValidator.Verify(VMethodology.Username, DirectCast(sender, TextBox).Text) Then
+            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid Title")
+            e.Cancel = True
+            DirectCast(sender, TextBox).SelectAll()
+            Exit Sub
+        End If
+        ErrorProvider1.SetError(DirectCast(sender, TextBox), "")
+    End Sub
+
+    Private Sub txtPIN_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtPIN.Validating
+        If Not _SharedValidator.Verify(VMethodology.Numbers, DirectCast(sender, TextBox).Text) Then
+            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid PIN")
+            e.Cancel = True
+            DirectCast(sender, TextBox).SelectAll()
+            Exit Sub
+        End If
+        ErrorProvider1.SetError(DirectCast(sender, TextBox), "")
+    End Sub
+
+    Private Sub txtTitle_Validated(sender As Object, e As EventArgs) Handles txtTitle.Validated
+        Me._Questionnaire.QuestionnaireName = DirectCast(sender, TextBox).Text
+    End Sub
+
+    Private Sub txtPIN_Validated(sender As Object, e As EventArgs) Handles txtPIN.Validated
+        Me._Questionnaire.PIN = DirectCast(sender, TextBox).Text
+    End Sub
 End Class

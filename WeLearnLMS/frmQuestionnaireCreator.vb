@@ -6,15 +6,12 @@ Imports System.Text
 Public Class frmQuestionnaireCreator
 
     Private _QuizType As QType
-    'Private _Questionnaire As New c_Questionnaire
-    Private _Questionnaire As New c_Quiz
+    Private _QuestionnaireBase As New c_Questionnaire
 
-    Friend ReadOnly Property GetQuiz As c_Quiz
-        Get
-            Return Me._Questionnaire
-        End Get
-    End Property
-
+    ''' <summary>
+    ''' Blank Constructor
+    ''' </summary>
+    ''' <remarks></remarks>
     Public Sub New()
 
         ' This call is required by the designer.
@@ -25,7 +22,7 @@ Public Class frmQuestionnaireCreator
     End Sub
 
     ''' <summary>
-    ''' Editor Constructor VIA QUIZ
+    ''' Constructor for editing a QUIZ
     ''' </summary>
     ''' <param name="QUIZ"></param>
     ''' <remarks></remarks>
@@ -35,14 +32,47 @@ Public Class frmQuestionnaireCreator
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-
-        DumpForEdit(QUIZ)
-        With Me
-            .txtTitle.Text = QUIZ.QuestionnaireName
-
-        End With
+        Me._QuestionnaireBase = DirectCast(QUIZ, c_Questionnaire)
+        Me.rdOEXAM.Enabled = False
     End Sub
 
+    ''' <summary>
+    ''' Constructor for editing an EXAM
+    ''' </summary>
+    ''' <param name="EXAM"></param>
+    ''' <remarks></remarks>
+    Public Sub New(ByRef EXAM As c_Exam)
+        InitializeComponent()
+        Me._QuestionnaireBase = DirectCast(EXAM, c_Questionnaire)
+        Me.rdPEXAM.Enabled = False
+        Me.rdSQUIZ.Enabled = False
+    End Sub
+
+    Public Sub New(ByRef LIST As List(Of c_SmallQuestion), ByVal OpenedAsExam As Boolean)
+        InitializeComponent()
+        DumpForEdit(LIST)
+        Me.rdOEXAM.Enabled = OpenedAsExam
+        Me.rdPEXAM.Enabled = Not OpenedAsExam
+        Me.rdSQUIZ.Enabled = Not OpenedAsExam
+    End Sub
+
+    Friend ReadOnly Property GetBASE As List(Of c_SmallQuestion)
+        Get
+            Return _QuestionnaireBase.QuestionBase
+        End Get
+    End Property
+
+    Friend ReadOnly Property GetFULL As c_Questionnaire
+        Get
+            Return Me._QuestionnaireBase
+        End Get
+    End Property
+
+    Friend ReadOnly Property GetQType As QType
+        Get
+            Return Me._QuizType
+        End Get
+    End Property
     ''' <summary>
     ''' Dump This Quiz to Textboxes
     ''' </summary>
@@ -50,6 +80,15 @@ Public Class frmQuestionnaireCreator
     ''' <remarks></remarks>
     Private Sub DumpForEdit(ByRef Quiz As c_Quiz)
         ForEachStuff(Quiz.QuestionBase)
+    End Sub
+
+    ''' <summary>
+    ''' Dump This Question Base to Textboxes
+    ''' </summary>
+    ''' <param name="BASE"></param>
+    ''' <remarks></remarks>
+    Private Sub DumpForEdit(ByRef BASE As List(Of c_SmallQuestion))
+        ForEachStuff(BASE)
     End Sub
 
     ''' <summary>
@@ -94,10 +133,10 @@ Public Class frmQuestionnaireCreator
         Return QuestionList
     End Function
 
-    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        AddNewRow()
-    End Sub
-
+    ''' <summary>
+    ''' ADd new row to datagridview
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub AddNewRow()
         Dim NewRow As String() = New String() {txtQuestion.Text, txtDisc1.Text, txtDisc2.Text, txtDisc3.Text, txtDisc4.Text}
         Datagridview1.Rows.Add(NewRow)
@@ -110,29 +149,21 @@ Public Class frmQuestionnaireCreator
     End Sub
 
     ''' <summary>
-    ''' Create a Questionnaire Object (METHOD IS FULL SERIALIZATION)
+    ''' Create a Questionnaire Object (METHOD IS PARTIAL SERIALIZATION (only the question base is serialized))
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub btnSerialize_Click(sender As Object, e As EventArgs) Handles btnSerialize.Click
 
-        With Me._Questionnaire
+        With Me._QuestionnaireBase
             .QuestionBase = CreateList()
-            .QuestionnaireName = txtTitle.Text
             .QuestionnaireType = _QuizType
         End With
 
         Me.DialogResult = Windows.Forms.DialogResult.OK
     End Sub
 
-    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles rdSQUIZ.CheckedChanged
-        Me._QuizType = QType.SQUIZ
-    End Sub
-
-    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles rdPEXAM.CheckedChanged
-        Me._QuizType = QType.PEXAM
-    End Sub
 
     Private Sub Datagridview1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Datagridview1.CellContentClick
 
@@ -146,6 +177,12 @@ Public Class frmQuestionnaireCreator
 
     End Sub
 
+    ''' <summary>
+    ''' Cheating Purposes only
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub btnFillUpQuiz_Click(sender As Object, e As EventArgs) Handles btnFillUpQuiz.Click
         For I As UInt32 = 0 To 99
             txtQuestion.Text = "correct answer is : " & I
@@ -158,22 +195,39 @@ Public Class frmQuestionnaireCreator
         Next
     End Sub
 
-    Private Function Randomizer() As StringBuilder
-        Dim s As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        Dim r As New Random
-        Dim sb As New StringBuilder
-        For i As Integer = 1 To 8
-            Dim idx As Integer = r.Next(0, 35)
-            sb.Append(s.Substring(idx, 1))
-        Next
-        Return sb
-    End Function
-
     Private Sub frmQuestionnaireCreator_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Me.DialogResult = Windows.Forms.DialogResult.OK
     End Sub
 
     Private Sub frmQuestionnaireCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        AddNewRow()
+    End Sub
+
+    Private Sub txtTitle_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs)
+        If Not _SharedValidator.Verify(VMethodology.Username, DirectCast(sender, TextBox).Text) Then
+            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid Text")
+            e.Cancel = True
+            DirectCast(sender, TextBox).SelectAll()
+            Exit Sub
+        End If
+        ErrorProvider1.SetError(DirectCast(sender, TextBox), "")
+    End Sub
+    Private Sub txtTitle_Validated(sender As Object, e As EventArgs)
+        Me._QuestionnaireBase.QuestionnaireName = DirectCast(sender, TextBox).Text
+    End Sub
+
+    Private Sub rdSQUIZ_CheckedChanged(sender As Object, e As EventArgs) Handles rdSQUIZ.CheckedChanged
+        Me._QuestionnaireBase.QuestionnaireType = QType.SQUIZ
+    End Sub
+    Private Sub rdPEXAM_CheckedChanged(sender As Object, e As EventArgs) Handles rdPEXAM.CheckedChanged
+        Me._QuestionnaireBase.QuestionnaireType = QType.PEXAM
+    End Sub
+
+    Private Sub rdOEXAM_CheckedChanged(sender As Object, e As EventArgs) Handles rdOEXAM.CheckedChanged
+        Me._QuestionnaireBase.QuestionnaireType = QType.OEXAM
     End Sub
 End Class

@@ -21,4 +21,10 @@
         Dim creator As New frmScheduleCreator()
         creator.ShowDialog()
     End Sub
+
+    Private Sub frmTimeManagementHub_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If _SharedAdvancedCredentials.MyUserType = c_MainCredentials.UserType.STU Then
+            btnScheduleCreator.Enabled = False
+        End If
+    End Sub
 End Class

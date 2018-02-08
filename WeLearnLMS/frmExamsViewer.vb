@@ -7,7 +7,7 @@ Public Class frmExamsViewer
     Private _exam As New c_Exam
     Private _PreGrade As New c_PreGrade
     Private UserID As String
-
+    Private ClassroomID As String
     Public Sub New()
 
         ' This call is required by the designer.
@@ -17,13 +17,14 @@ Public Class frmExamsViewer
 
     End Sub
 
+
     Public Sub New(ByRef ThisExam As c_Exam)
         InitializeComponent()
         Me._exam = ThisExam
     End Sub
 
     Private Sub frmExamViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim Security As New frmQuestSecurity()
+        Dim Security As New frmQuestSecurity(_SharedMainCredentials.UserID, Me._exam)
         If Security.DialogResult = Windows.Forms.DialogResult.OK Then
             If Not Security.PassState Then
                 Me.Close()

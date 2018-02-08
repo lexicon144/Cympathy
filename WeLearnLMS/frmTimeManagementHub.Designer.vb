@@ -52,6 +52,7 @@ Partial Class frmTimeManagementHub
         Me.Controls.Add(Me.btnScheduleCreator)
         Me.Controls.Add(Me.btnScheduleViewer)
         Me.Name = "frmTimeManagementHub"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmTimeManagementHub"
         Me.ResumeLayout(False)
 

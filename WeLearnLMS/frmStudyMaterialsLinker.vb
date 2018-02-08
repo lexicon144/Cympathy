@@ -65,23 +65,23 @@
                 Using Command As New MySqlCommand
 
                     With Command
-                        .CommandText = "InsertLinkArticlesToClass"
+                        .CommandText = "InsertLinkMaterialToClass"
                         .CommandType = CommandType.StoredProcedure
                         .Connection = Connection
                         With .Parameters
                             .AddWithValue("ClassroomID", _Classroom.ClassroomId)
-                            .AddWithValue("ArticleID", _Material.MaterialID)
+                            .AddWithValue("MaterialID", _Material.MaterialID)
                         End With
                         .ExecuteNonQuery()
                     End With
                     ArticleLinkingTransaction.Commit()
-                    MessageBox.Show("Article Linking from " & _Classroom.ClassroomName & " ON " & _Material.MaterialName & " has been committed successfully", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("Material Linking from " & _Classroom.ClassroomName & " ON " & _Material.MaterialName & " has been committed successfully", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                 End Using
             Catch Exx As Exception
                 ArticleLinkingTransaction.Rollback()
-                MessageBox.Show("Article Linking from " & _Classroom.ClassroomName & " ON " & _Material.MaterialName & " has been performed unsuccessfully. Rolledback automaticaly", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
+                'MessageBox.Show("Article Linking from " & _Classroom.ClassroomName & " ON " & _Material.MaterialName & " has been performed unsuccessfully. Rolledback automaticaly", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                DisplayLinkingTransactionFailed(Exx)
             End Try
         End Using
     End Sub

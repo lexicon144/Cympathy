@@ -4,7 +4,6 @@ Public Class frmClassroomCreator
 #Region "Fields"
     Private _Classroom As New c_Classroom
     Private Verify As New ContextValidateInput
-    Private _ConnString As IConStringBuilder = New ImpConStringBuilder
 #End Region
 
 #Region "Constructors"
@@ -36,8 +35,11 @@ Public Class frmClassroomCreator
 #Region "Sub Routines and Functions"
 
     Private Sub diaClassCreation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If _SharedAdvancedCredentials.MyUserType = c_MainCredentials.UserType.STU Then
+            PanelProfessorsOnly.Enabled = False
+        End If
         ''TODO - ERROR IN PARSING ENUMS
-        Me.Panel1.Enabled = False
+        Me.PanelProfessorsOnly.Enabled = False
         Me.OK_Button.Enabled = False
         cmbClassroomType.Items.AddRange(eClassType.GetNames(GetType(eClassType)))
     End Sub
@@ -61,9 +63,8 @@ Public Class frmClassroomCreator
     ''' <remarks></remarks>
     Private Sub CreateANewClass()
 
-        Using Connection As New MySqlConnection()
+        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
-                .ConnectionString = _ConnString.ConnString
                 If .State = ConnectionState.Closed Then
                     .Open()
                 End If
@@ -74,6 +75,7 @@ Public Class frmClassroomCreator
                     With Command
                         .Connection = Connection
                         .Transaction = ClassCreationTransaction
+                        .CommandType = CommandType.StoredProcedure
                         .CommandText = "InsertNewClassroom"
                         With .Parameters
                             .AddWithValue("@ClassRoomName", _Classroom.ClassroomName)
@@ -146,7 +148,7 @@ Public Class frmClassroomCreator
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.OK_Button.Enabled = True
-        Me.Panel1.Enabled = True
+        Me.PanelProfessorsOnly.Enabled = True
     End Sub
 
     Private Sub cmbClassroomType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbClassroomType.SelectedIndexChanged

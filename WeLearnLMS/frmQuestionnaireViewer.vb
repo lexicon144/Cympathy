@@ -15,6 +15,12 @@ Public Class frmQuestionnaireViewer
 
     Private _Shuffler As IAnswerArrayShuffler = New ImpAnswerArrayShuffler
 
+    Private _MyStopwatch As New Stopwatch
+    Private _Countdown As UInt16 = 3
+
+    Private newFont As New Font("Microsoft Sans Serif", 36, FontStyle.Bold)
+    Private _HappyAlreadyRan As Boolean = True
+
     Friend ReadOnly Property GetPregrade As c_PreGrade
         Get
             Return _PreGrades
@@ -100,7 +106,10 @@ Public Class frmQuestionnaireViewer
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
         If TypeOf DataGridView1.Columns(e.ColumnIndex) Is DataGridViewButtonColumn Then
+            _HappyAlreadyRan = True
+            
             With DataGridView1.Rows(e.RowIndex)
                 Me._Index = e.RowIndex
                 RichTextBox1.Text = .Cells("tttQuestionBase").Value.ToString()
@@ -126,10 +135,10 @@ Public Class frmQuestionnaireViewer
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub Counter()
-        Dim AllQuestions As UInt16 = 0
+        Dim AllQuestions As UInt16 = DataGridView1.Rows.Count
         Dim Hits As UInt16 = 0
+
         For Each row As DataGridViewRow In DataGridView1.Rows
-            AllQuestions += 1
             If row.Cells("tttANS").Value = row.Cells("tttDistractor4").Value Then
                 Hits += 1
             End If
@@ -138,6 +147,7 @@ Public Class frmQuestionnaireViewer
         With Me._PreGrades
             .Hits = Hits
             .TotalQuestions = AllQuestions
+
         End With
     End Sub
 
@@ -159,6 +169,101 @@ Public Class frmQuestionnaireViewer
     End Sub
 
     Private Sub frmQuestionnaireViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        
+        With Me
+            With .DataGridView1
+                .Columns("tttANS").Visible = False
+                .Columns("tttDistractor1").Visible = False
+                .Columns("tttDistractor2").Visible = False
+                .Columns("tttDistractor3").Visible = False
+                .Columns("tttDistractor4").Visible = False
+                .Columns("tttANS").Visible = False
+                .Columns("tttANS").Visible = False
+
+            End With
+        End With
+
+        Dim wallop As New frmWALLOP
+        wallop.ShowDialog()
+        Me.WALLOP()
 
     End Sub
+
+    Private Sub DevAutoFill(ByVal Limit As UInt32)
+        Dim Count As UInt32 = 1
+        For Each row As DataGridViewRow In DataGridView1.Rows
+            row.Cells("tttANS").Value = row.Cells("tttDistractor4").Value
+            If Count >= Limit Then Exit For
+            Count += 1
+        Next
+    End Sub
+
+    Private Sub btnDevAuto13_Click(sender As Object, e As EventArgs) Handles btnDevAuto13.Click
+        Try
+            DevAutoFill(CInt(TextBox1.Text))
+        Catch XXX As Exception
+            MessageBox.Show("Really bruh?")
+        End Try
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        With Me
+            .lblHours.Text = ._MyStopwatch.Elapsed.Hours
+            .lblMinutes.Text = ._MyStopwatch.Elapsed.Minutes
+            .lblSeconds.Text = ._MyStopwatch.Elapsed.Seconds
+        End With
+        CheatDetector()
+    End Sub
+
+    Private Sub WALLOP()
+        Me._MyStopwatch.Start()
+        Me.Timer1.Start()
+    End Sub
+
+    Private Sub CheatDetector()
+        If WeLearnAC.AntiCheat() Then
+            With Me
+                .BackColor = Color.Red
+                .TableLayoutPanel1.BackColor = Color.Red
+                .RdButtonPanel.BackColor = Color.Red
+                .mainpanel.Enabled = False
+                With .RichTextBox1
+                    .Text = "I trusted you..."
+                    .SelectAll()
+                    .SelectionFont = newFont
+                    .BackColor = Color.Red
+                End With
+                .Text = RichTextBox1.Text
+                .RadioButton1.Text = "I thought we were friends"
+                .RadioButton2.Text = "Why would you do that?"
+                .RadioButton3.Text = "Please... don't do this"
+                .RadioButton4.Text = "There is still hope... reconsider!"
+            End With
+            _HappyAlreadyRan = False
+            Exit Sub
+        End If
+        With Me
+            With .RichTextBox1
+                .BackColor = Control.DefaultBackColor
+            End With
+            .BackColor = Control.DefaultBackColor
+            .RdButtonPanel.BackColor = Control.DefaultBackColor
+            .TableLayoutPanel1.BackColor = Control.DefaultBackColor
+            .Text = Me.Name
+            .mainpanel.Enabled = True
+            SetRadioButtons()
+        End With
+    End Sub
+
+    Private Sub SetRadioButtons()
+        If _HappyAlreadyRan Then Exit Sub
+        With Me
+            .RichTextBox1.Clear()
+            .RadioButton1.Text = "Thank you"
+            .RadioButton2.Text = "> salutes you"
+            .RadioButton3.Text = "You can do it!! I know you can!"
+            .RadioButton4.Text = "Thank you so much <3"
+        End With
+    End Sub
+
 End Class

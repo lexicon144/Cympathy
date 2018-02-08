@@ -171,6 +171,7 @@ Partial Class frmClassroomDialog
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnOk)
         Me.Name = "frmClassroomDialog"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmClassroomDialog"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

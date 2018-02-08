@@ -75,17 +75,6 @@
         End Using
     End Sub
 
-    Private Sub ViewThisArticle()
-
-        MessageBox.Show("Article ID: " & _Quiz.QuestionnaireID & vbNewLine & "Article Name: " & _Quiz.QuestionnaireName & vbNewLine, "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-    End Sub
-
-    Private Sub ViewThisClassroom()
-
-        MessageBox.Show("Classroom ID: " & _Classroom.ClassroomId & vbNewLine & "Classroom Name: " & _Classroom.ClassroomName & vbNewLine, "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-    End Sub
 
     Private Sub frmQuizLinker_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 

@@ -30,7 +30,6 @@
         ' Add any initialization after the InitializeComponent() call.
         Me._IsModal = True
         Me.btnOK.Enabled = True
-        Me.btnCreate.Enabled = False
         Me.btnView.Enabled = False
 
         LoadAllMaterials()
@@ -160,7 +159,7 @@
         Viewer.ShowDialog()
     End Sub
 
-    Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
+    Private Sub btnCreate_Click(sender As Object, e As EventArgs)
         Dim creator As New frmStudyMaterialsCreator()
         creator.ShowDialog()
     End Sub

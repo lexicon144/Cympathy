@@ -2,7 +2,7 @@
 
     Private _MainCredentials As New c_MainCredentials
 
-    Private _QuizID, _UserID As String
+    Private _QuizID, _UserID, _QuizName As String
 
     Private _PreGrade As New c_PreGrade
 
@@ -29,18 +29,44 @@
         End With
     End Sub
 
+    Public Sub New(ByRef QuizID As String, ByRef QuizName As String, ByRef UserID As String, ByRef PreGrade As c_PreGrade)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        With Me
+            ._QuizID = QuizID
+            ._UserID = UserID
+            ._PreGrade = PreGrade
+            ._QuizName = QuizName
+        End With
+    End Sub
+
     Private Sub frmGradesPre_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Procure()
+        Try
+            Procure()
+            RefreshText()
+        Catch XXX As Exception
+            DisplayGeneralException(XXX)
+        End Try
+
     End Sub
 
     Private Sub RefreshText()
         With Me
-            .txtGrade.Text = ._PreGrade.ReturnFullScore
+            .txtGradeFullScore.Text = ._PreGrade.ReturnFullScore
             .txtGradeNumber.Text = ._PreGrade.ReturnFullAverage
             .txtQuizID.Text = ._QuizID
+            .txtQuizName.Text = ._QuizName
         End With
     End Sub
+
     Private Sub Procure()
+        Dim ViewString As String
+        ViewString = "UID: " & _UserID & " QuizID : " & _QuizID & " Grade : " & Me._PreGrade.ReturnFullScore & " HITS : " & _PreGrade.Hits & "QUESTIONS : " & _PreGrade.TotalQuestions
+        Console.WriteLine(ViewString)
+
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
                 If .State = ConnectionState.Closed Then
@@ -54,16 +80,15 @@
                             .Connection = Connection
                             .Transaction = MarkingTransaction
                             .CommandType = CommandType.StoredProcedure
-                            .CommandText = "InsertGradesPreQuiz"
-                            Dim ViewString As String
-                            ViewString = "UID: " & _UserID & " QuizID : " & _QuizID & " Grade : " & Me._PreGrade.ReturnFullScore & " HITS : " & _PreGrade.Hits & "QUESTIONS : " & _PreGrade.TotalQuestions
-                            Console.WriteLine(ViewString)
+                            .CommandText = "InsertGradesQuiz"
+
                             With .Parameters
                                 .AddWithValue("@UserID", Me._UserID)
                                 .AddWithValue("@QuizID", Me._QuizID)
                                 .AddWithValue("@QuizGrade", Me._PreGrade.ReturnFullScore)
                                 .AddWithValue("@Hits", Me._PreGrade.Hits)
                                 .AddWithValue("@Questions", Me._PreGrade.TotalQuestions)
+                                .AddWithValue("@ClassroomID", _SharedClassroom.ClassroomId)
 
                             End With
                             .ExecuteNonQuery()

@@ -161,6 +161,7 @@ Partial Class frmMessageViewer
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtReceiverID)
         Me.Name = "frmMessageViewer"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmFeedbackViewer"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

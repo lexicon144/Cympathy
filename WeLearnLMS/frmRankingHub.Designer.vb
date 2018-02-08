@@ -22,40 +22,41 @@ Partial Class frmRankingHub
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnProfessors = New System.Windows.Forms.Button()
-        Me.btnStudent = New System.Windows.Forms.Button()
+        Me.btnVote = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'btnProfessors
+        'btnVote
         '
-        Me.btnProfessors.Location = New System.Drawing.Point(184, 12)
-        Me.btnProfessors.Name = "btnProfessors"
-        Me.btnProfessors.Size = New System.Drawing.Size(75, 23)
-        Me.btnProfessors.TabIndex = 0
-        Me.btnProfessors.Text = "Professors"
-        Me.btnProfessors.UseVisualStyleBackColor = True
+        Me.btnVote.Location = New System.Drawing.Point(12, 41)
+        Me.btnVote.Name = "btnVote"
+        Me.btnVote.Size = New System.Drawing.Size(117, 23)
+        Me.btnVote.TabIndex = 1
+        Me.btnVote.Text = "Vote Now"
+        Me.btnVote.UseVisualStyleBackColor = True
         '
-        'btnStudent
+        'Button1
         '
-        Me.btnStudent.Location = New System.Drawing.Point(184, 41)
-        Me.btnStudent.Name = "btnStudent"
-        Me.btnStudent.Size = New System.Drawing.Size(75, 23)
-        Me.btnStudent.TabIndex = 1
-        Me.btnStudent.Text = "Students"
-        Me.btnStudent.UseVisualStyleBackColor = True
+        Me.Button1.Location = New System.Drawing.Point(12, 12)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(117, 23)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "View Ranks"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'frmRankingHub
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(271, 80)
-        Me.Controls.Add(Me.btnStudent)
-        Me.Controls.Add(Me.btnProfessors)
+        Me.ClientSize = New System.Drawing.Size(200, 79)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnVote)
         Me.Name = "frmRankingHub"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmRankingHub"
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents btnProfessors As System.Windows.Forms.Button
-    Friend WithEvents btnStudent As System.Windows.Forms.Button
+    Friend WithEvents btnVote As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

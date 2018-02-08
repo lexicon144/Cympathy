@@ -8,7 +8,6 @@ Public Class c_Exam
 
     Public Sub New()
         MyBase.New()
-        MyBase._Safe = False
     End Sub
 
     <XmlElementAttribute("Salt")>

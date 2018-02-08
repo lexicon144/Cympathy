@@ -24,10 +24,10 @@ Partial Class frmGradesExamPreCreator
     Private Sub InitializeComponent()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.grpGrade = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.txtGrade = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtGradeFullScore = New System.Windows.Forms.TextBox()
+        Me.txtGradeNumber = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.grpQuiz = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -48,50 +48,50 @@ Partial Class frmGradesExamPreCreator
         '
         'grpGrade
         '
-        Me.grpGrade.Controls.Add(Me.TextBox1)
-        Me.grpGrade.Controls.Add(Me.txtGrade)
-        Me.grpGrade.Controls.Add(Me.Label4)
         Me.grpGrade.Controls.Add(Me.Label3)
+        Me.grpGrade.Controls.Add(Me.txtGradeFullScore)
+        Me.grpGrade.Controls.Add(Me.txtGradeNumber)
+        Me.grpGrade.Controls.Add(Me.Label4)
         Me.grpGrade.Location = New System.Drawing.Point(218, 12)
         Me.grpGrade.Name = "grpGrade"
         Me.grpGrade.Size = New System.Drawing.Size(200, 75)
-        Me.grpGrade.TabIndex = 5
+        Me.grpGrade.TabIndex = 8
         Me.grpGrade.TabStop = False
         Me.grpGrade.Text = "Grade"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(94, 45)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 3
-        '
-        'txtGrade
-        '
-        Me.txtGrade.Location = New System.Drawing.Point(94, 19)
-        Me.txtGrade.Name = "txtGrade"
-        Me.txtGrade.ReadOnly = True
-        Me.txtGrade.Size = New System.Drawing.Size(100, 20)
-        Me.txtGrade.TabIndex = 2
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 48)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(76, 13)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Grade Number"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(52, 22)
+        Me.Label3.Location = New System.Drawing.Point(34, 22)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(36, 13)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Grade"
+        Me.Label3.Size = New System.Drawing.Size(54, 13)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Full Score"
+        '
+        'txtGradeFullScore
+        '
+        Me.txtGradeFullScore.Location = New System.Drawing.Point(94, 19)
+        Me.txtGradeFullScore.Name = "txtGradeFullScore"
+        Me.txtGradeFullScore.ReadOnly = True
+        Me.txtGradeFullScore.Size = New System.Drawing.Size(100, 20)
+        Me.txtGradeFullScore.TabIndex = 4
+        '
+        'txtGradeNumber
+        '
+        Me.txtGradeNumber.Location = New System.Drawing.Point(94, 45)
+        Me.txtGradeNumber.Name = "txtGradeNumber"
+        Me.txtGradeNumber.ReadOnly = True
+        Me.txtGradeNumber.Size = New System.Drawing.Size(100, 20)
+        Me.txtGradeNumber.TabIndex = 3
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(1, 48)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(87, 13)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Average Number"
         '
         'grpQuiz
         '
@@ -102,7 +102,7 @@ Partial Class frmGradesExamPreCreator
         Me.grpQuiz.Location = New System.Drawing.Point(12, 12)
         Me.grpQuiz.Name = "grpQuiz"
         Me.grpQuiz.Size = New System.Drawing.Size(200, 75)
-        Me.grpQuiz.TabIndex = 4
+        Me.grpQuiz.TabIndex = 7
         Me.grpQuiz.TabStop = False
         Me.grpQuiz.Text = "Exam"
         '
@@ -145,10 +145,11 @@ Partial Class frmGradesExamPreCreator
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(430, 143)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.grpGrade)
         Me.Controls.Add(Me.grpQuiz)
+        Me.Controls.Add(Me.Label5)
         Me.Name = "frmGradesExamPreCreator"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmGradesExamFinalizer"
         Me.grpGrade.ResumeLayout(False)
         Me.grpGrade.PerformLayout()
@@ -160,10 +161,10 @@ Partial Class frmGradesExamPreCreator
     End Sub
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents grpGrade As System.Windows.Forms.GroupBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents txtGrade As System.Windows.Forms.TextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents txtGradeFullScore As System.Windows.Forms.TextBox
+    Friend WithEvents txtGradeNumber As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents grpQuiz As System.Windows.Forms.GroupBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label

@@ -1,9 +1,10 @@
 ﻿Public Class frmGradesExamPreCreator
 
     Private _ExamID As String
+    Private _ExamName As String
     Private _UserID As String
     Private _PreGrade As New c_PreGrade
-
+    Private _ClassroomID As String
     Public Sub New()
 
         ' This call is required by the designer.
@@ -18,6 +19,21 @@
             ._ExamID = ExamID
             ._UserID = UserID
             ._PreGrade = PreGrade
+
+            .txtExamID.Text = ExamID
+            .txtGradeFullScore.Text = _PreGrade.ReturnFullScore
+        End With
+    End Sub
+
+    Public Sub New(ByRef ExamID As String, ByRef UserID As String, ByRef PreGrade As c_PreGrade, ByRef ClassroomID As String)
+        InitializeComponent()
+        With Me
+            ._ExamID = ExamID
+            ._UserID = UserID
+            ._PreGrade = PreGrade
+
+            .txtExamID.Text = ExamID
+            .txtGradeFullScore.Text = _PreGrade.ReturnFullScore
         End With
     End Sub
 
@@ -42,6 +58,7 @@
                                 .AddWithValue("ExamGrade", Me._PreGrade.ReturnFullScore)
                                 .AddWithValue("ExamHits", Me._PreGrade.Hits)
                                 .AddWithValue("ExamQuestions", Me._PreGrade.TotalQuestions)
+                                .AddWithValue("ClassroomID", Me._ClassroomID)
                             End With
                             .ExecuteNonQuery()
                             MarkingTransaction.Commit()
@@ -55,14 +72,28 @@
                     MarkingTransaction.Rollback()
                     With Label5
                         .ForeColor = Color.Red
-                        .Text = "An error occurred when committing your Progress"
+                        .Text = "An error occurred when committing your Progress: REason " & XXX.Message
                     End With
                 End Try
             End Using
         End Using
     End Sub
 
-    Private Sub frmGradesExamPreCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub RefreshText()
+        With Me
+            .txtGradeFullScore.Text = ._PreGrade.ReturnFullScore
+            .txtGradeNumber.Text = ._PreGrade.ReturnFullAverage
+            .txtExamID.Text = ._ExamID
+            .txtExamName.Text = ._ExamName
+        End With
+    End Sub
 
+    Private Sub frmGradesExamPreCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            RefreshText()
+            Procure()
+        Catch XXX As Exception
+            DisplayGeneralException(XXX)
+        End Try
     End Sub
 End Class

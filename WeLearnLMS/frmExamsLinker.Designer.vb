@@ -149,6 +149,7 @@ Partial Class frmExamsLinker
         Me.Controls.Add(Me.btnLink)
         Me.Controls.Add(Me.grpExamDisplay)
         Me.Name = "frmExamsLinker"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmExamsLinker"
         Me.grpClassroom.ResumeLayout(False)
         Me.grpClassroom.PerformLayout()

@@ -10,12 +10,9 @@
         Dim abc As New MySqlConnectionStringBuilder
 
         With abc
-            '.UserID = "cympathy"
-            '.Password = "wJLmL8Xu1cFQIXhc"
-            '.Server = "192.168.0.10"
             .UserID = "root"
             .Password = ""
-            .Server = "127.0.0.1"
+            .Server = My.Settings("city85")
             .Database = "we_learndb"
         End With
 

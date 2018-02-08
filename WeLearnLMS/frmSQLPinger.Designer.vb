@@ -32,6 +32,7 @@ Partial Class frmSQLPinger
         Me.rtb.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtb.Location = New System.Drawing.Point(0, 0)
         Me.rtb.Name = "rtb"
+        Me.rtb.ReadOnly = True
         Me.rtb.Size = New System.Drawing.Size(469, 124)
         Me.rtb.TabIndex = 0
         Me.rtb.Text = ""
@@ -50,6 +51,7 @@ Partial Class frmSQLPinger
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmSQLPinger"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Unless you click the text, This form will close in 5 seconds"
         Me.ResumeLayout(False)
 

@@ -16,8 +16,10 @@
             txtClassId.Text = _Classroom.ClassroomId
             txtClassName.Text = _Classroom.ClassroomName
             txtClassType.Text = _Classroom.ClassType
+            _SharedClassroom.ClassroomId = _Classroom.ClassroomId
         End With
     End Sub
+
 
 #Region "Loader"
     Private Sub frmClassroomHub_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -25,9 +27,10 @@
 
         If NewClassroomDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
             Me._Classroom = NewClassroomDialog.GetClassroom
-
             REView()
         End If
+
+        _SharedClassroom.ClassroomId = Me._Classroom.ClassroomId
     End Sub
 
     Private Sub btnOpenQuestionnaire_Click(sender As Object, e As EventArgs) Handles btnOpenQuestionnaire.Click
@@ -64,7 +67,7 @@
     End Sub
 
     Private Sub btnCreateArticles_Click(sender As Object, e As EventArgs)
-        Dim CreateArticle As New frmArticleCreator()
+        Dim CreateArticle As New frmArticleMaker()
         CreateArticle.ShowDialog()
     End Sub
 #End Region
@@ -95,10 +98,31 @@
         Dim ExamLinker As New frmExamsLinker(Me._Classroom)
         ExamLinker.ShowDialog()
     End Sub
-#End Region
 
     Private Sub btnViewLessonlist_Click(sender As Object, e As EventArgs) Handles btnViewLessonlist.Click
         Dim ViewLessonList As New frmLessonListHub()
         ViewLessonList.ShowDialog()
+    End Sub
+
+    Private Sub btnViewExams_Click(sender As Object, e As EventArgs) Handles btnViewExams.Click
+        Dim ViewExams As New frmExamsHub()
+        ViewExams.ShowDialog()
+    End Sub
+#End Region
+
+    Private Sub frmViewGrades_Click(sender As Object, e As EventArgs) Handles frmViewGrades.Click
+        Dim previewer As New frmGradesPreViewer()
+        With previewer
+            .DisplayQuizGrades()
+            .ShowDialog()
+        End With
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnViewExamGrades.Click
+        Dim previewer As New frmGradesPreViewer()
+        With previewer
+            .DisplayExamGrades()
+            .ShowDialog()
+        End With
     End Sub
 End Class

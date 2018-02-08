@@ -30,14 +30,17 @@ Partial Class frmQuizCreator
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtQuizType = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.grpXmlPreview.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(404, 288)
+        Me.btnSave.Location = New System.Drawing.Point(529, 343)
+        Me.btnSave.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(75, 23)
+        Me.btnSave.Size = New System.Drawing.Size(100, 28)
         Me.btnSave.TabIndex = 0
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
@@ -45,83 +48,101 @@ Partial Class frmQuizCreator
         'rtbXMLPreview
         '
         Me.rtbXMLPreview.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.rtbXMLPreview.Location = New System.Drawing.Point(3, 16)
+        Me.rtbXMLPreview.Location = New System.Drawing.Point(4, 19)
+        Me.rtbXMLPreview.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.rtbXMLPreview.Name = "rtbXMLPreview"
         Me.rtbXMLPreview.ReadOnly = True
-        Me.rtbXMLPreview.Size = New System.Drawing.Size(381, 219)
+        Me.rtbXMLPreview.Size = New System.Drawing.Size(508, 270)
         Me.rtbXMLPreview.TabIndex = 1
         Me.rtbXMLPreview.Text = ""
         '
         'grpXmlPreview
         '
         Me.grpXmlPreview.Controls.Add(Me.rtbXMLPreview)
-        Me.grpXmlPreview.Location = New System.Drawing.Point(11, 73)
+        Me.grpXmlPreview.Location = New System.Drawing.Point(5, 79)
+        Me.grpXmlPreview.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.grpXmlPreview.Name = "grpXmlPreview"
-        Me.grpXmlPreview.Size = New System.Drawing.Size(387, 238)
+        Me.grpXmlPreview.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpXmlPreview.Size = New System.Drawing.Size(516, 293)
         Me.grpXmlPreview.TabIndex = 2
         Me.grpXmlPreview.TabStop = False
         Me.grpXmlPreview.Text = "XML Preview"
         '
         'btnEditor
         '
-        Me.btnEditor.Location = New System.Drawing.Point(404, 259)
+        Me.btnEditor.Location = New System.Drawing.Point(529, 308)
+        Me.btnEditor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnEditor.Name = "btnEditor"
-        Me.btnEditor.Size = New System.Drawing.Size(75, 23)
+        Me.btnEditor.Size = New System.Drawing.Size(100, 28)
         Me.btnEditor.TabIndex = 3
         Me.btnEditor.Text = "Edit"
         Me.btnEditor.UseVisualStyleBackColor = True
         '
         'txtQuizName
         '
-        Me.txtQuizName.Location = New System.Drawing.Point(79, 12)
+        Me.txtQuizName.Location = New System.Drawing.Point(95, 4)
+        Me.txtQuizName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtQuizName.Name = "txtQuizName"
-        Me.txtQuizName.ReadOnly = True
-        Me.txtQuizName.Size = New System.Drawing.Size(100, 20)
+        Me.txtQuizName.Size = New System.Drawing.Size(132, 22)
         Me.txtQuizName.TabIndex = 4
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(14, 15)
+        Me.Label1.Location = New System.Drawing.Point(9, 7)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 13)
+        Me.Label1.Size = New System.Drawing.Size(78, 17)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Quiz Name"
         '
         'txtQuizType
         '
-        Me.txtQuizType.Location = New System.Drawing.Point(79, 38)
+        Me.txtQuizType.Location = New System.Drawing.Point(95, 36)
+        Me.txtQuizType.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtQuizType.Name = "txtQuizType"
         Me.txtQuizType.ReadOnly = True
-        Me.txtQuizType.Size = New System.Drawing.Size(100, 20)
+        Me.txtQuizType.Size = New System.Drawing.Size(132, 22)
         Me.txtQuizType.TabIndex = 6
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(17, 44)
+        Me.Label2.Location = New System.Drawing.Point(13, 43)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(55, 13)
+        Me.Label2.Size = New System.Drawing.Size(73, 17)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Quiz Type"
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.btnSave)
+        Me.Panel1.Controls.Add(Me.txtQuizType)
+        Me.Panel1.Controls.Add(Me.grpXmlPreview)
+        Me.Panel1.Controls.Add(Me.btnEditor)
+        Me.Panel1.Controls.Add(Me.txtQuizName)
+        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(642, 380)
+        Me.Panel1.TabIndex = 8
+        '
         'frmQuizCreator
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(491, 323)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txtQuizType)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtQuizName)
-        Me.Controls.Add(Me.btnEditor)
-        Me.Controls.Add(Me.grpXmlPreview)
-        Me.Controls.Add(Me.btnSave)
+        Me.ClientSize = New System.Drawing.Size(666, 404)
+        Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmQuizCreator"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmQuizCreator"
         Me.grpXmlPreview.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents btnSave As System.Windows.Forms.Button
@@ -132,4 +153,5 @@ Partial Class frmQuizCreator
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtQuizType As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 End Class

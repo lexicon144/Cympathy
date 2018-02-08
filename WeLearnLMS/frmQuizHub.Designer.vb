@@ -121,7 +121,8 @@ Partial Class frmQuizHub
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.grpQuizDisplay)
         Me.Name = "frmQuizHub"
-        Me.Text = "frmStudyHub"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "frmQuizHub"
         Me.grpQuizDisplay.ResumeLayout(False)
         Me.grpQuizDisplay.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

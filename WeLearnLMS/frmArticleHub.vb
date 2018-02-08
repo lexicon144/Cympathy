@@ -1,7 +1,7 @@
 ﻿Public Class frmArticleHub
 
     Private _Datatable As New DataTable
-    Private _ConnString As IConStringBuilder = New ImpConStringBuilder
+
     Private _ThisClassroomID As String
 
     Private _IsModal As Boolean = False
@@ -92,10 +92,9 @@
 
     Friend Sub LoadAllArticles()
         Console.WriteLine("Load all Articles")
-        Using Connection As New MySqlConnection
+        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
-                .ConnectionString = _ConnString.ConnString
-                If .State = ConnectionState.Open Then
+                If .State = ConnectionState.Closed Then
                     .Open()
                 End If
             End With
@@ -119,10 +118,9 @@
     End Sub
     Friend Sub LoadAllArticles(ByRef ClassroomID As String)
         Console.WriteLine("Load most Articles")
-        Using Connection As New MySqlConnection
+        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
-                .ConnectionString = _ConnString.ConnString
-                If .State = ConnectionState.Open Then
+                If .State = ConnectionState.Closed Then
                     .Open()
                 End If
             End With
@@ -148,23 +146,27 @@
     End Sub
 
     Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
-        Dim ContextualArticle As New c_Article
-        ParseFromTextbox(ContextualArticle)
-        Dim ArticleViewer As New frmArticleViewer(ContextualArticle)
-        ArticleViewer.Show()
-
+        Try
+            Dim ContextualArticle As New c_Article
+            ParseFromTextbox(ContextualArticle)
+            Dim ArticleViewer As New frmArticleViewer(ContextualArticle)
+            ArticleViewer.Show()
+        Catch xxx As Exception
+            DisplayGeneralException(xxx)
+        End Try
     End Sub
 
     Private Sub ParseFromTextbox()
         With Me._ThisArticle
-            .ArticleID = txtArticleID.Text
+            .ArticleID = Convert.ToUInt32(txtArticleID.Text)
             .ArticleName = txtArticleName.Text
             .ArticleBase = System.Text.Encoding.ASCII.GetBytes(txtArticleBase.Text)
         End With
     End Sub
+
     Private Sub ParseFromTextbox(ByRef DimArticle As c_Article)
         With DimArticle
-            .ArticleID = txtArticleID.Text
+            .ArticleID = Convert.ToUInt32(txtArticleID.Text)
             .ArticleName = txtArticleName.Text
             .ArticleBase = System.Text.Encoding.ASCII.GetBytes(txtArticleBase.Text)
         End With
@@ -174,4 +176,5 @@
         ParseFromTextbox()
         Me.DialogResult = Windows.Forms.DialogResult.OK
     End Sub
+
 End Class

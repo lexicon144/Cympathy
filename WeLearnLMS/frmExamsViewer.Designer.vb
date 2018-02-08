@@ -24,12 +24,13 @@ Partial Class frmExamsViewer
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'frmExamViewer
+        'frmExamsViewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
-        Me.Name = "frmExamViewer"
+        Me.Name = "frmExamsViewer"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmExamViewer"
         Me.ResumeLayout(False)
 

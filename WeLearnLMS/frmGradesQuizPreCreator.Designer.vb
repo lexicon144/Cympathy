@@ -28,10 +28,10 @@ Partial Class frmGradesQuizPreCreator
         Me.txtQuizName = New System.Windows.Forms.TextBox()
         Me.txtQuizID = New System.Windows.Forms.TextBox()
         Me.grpGrade = New System.Windows.Forms.GroupBox()
-        Me.txtGradeNumber = New System.Windows.Forms.TextBox()
-        Me.txtGrade = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtGradeFullScore = New System.Windows.Forms.TextBox()
+        Me.txtGradeNumber = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.grpQuiz.SuspendLayout()
         Me.grpGrade.SuspendLayout()
@@ -86,16 +86,33 @@ Partial Class frmGradesQuizPreCreator
         '
         'grpGrade
         '
-        Me.grpGrade.Controls.Add(Me.txtGradeNumber)
-        Me.grpGrade.Controls.Add(Me.txtGrade)
-        Me.grpGrade.Controls.Add(Me.Label4)
         Me.grpGrade.Controls.Add(Me.Label3)
+        Me.grpGrade.Controls.Add(Me.txtGradeFullScore)
+        Me.grpGrade.Controls.Add(Me.txtGradeNumber)
+        Me.grpGrade.Controls.Add(Me.Label4)
         Me.grpGrade.Location = New System.Drawing.Point(218, 12)
         Me.grpGrade.Name = "grpGrade"
         Me.grpGrade.Size = New System.Drawing.Size(200, 75)
         Me.grpGrade.TabIndex = 2
         Me.grpGrade.TabStop = False
         Me.grpGrade.Text = "Grade"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(34, 22)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(54, 13)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Full Score"
+        '
+        'txtGradeFullScore
+        '
+        Me.txtGradeFullScore.Location = New System.Drawing.Point(94, 19)
+        Me.txtGradeFullScore.Name = "txtGradeFullScore"
+        Me.txtGradeFullScore.ReadOnly = True
+        Me.txtGradeFullScore.Size = New System.Drawing.Size(100, 20)
+        Me.txtGradeFullScore.TabIndex = 4
         '
         'txtGradeNumber
         '
@@ -105,31 +122,14 @@ Partial Class frmGradesQuizPreCreator
         Me.txtGradeNumber.Size = New System.Drawing.Size(100, 20)
         Me.txtGradeNumber.TabIndex = 3
         '
-        'txtGrade
-        '
-        Me.txtGrade.Location = New System.Drawing.Point(94, 19)
-        Me.txtGrade.Name = "txtGrade"
-        Me.txtGrade.ReadOnly = True
-        Me.txtGrade.Size = New System.Drawing.Size(100, 20)
-        Me.txtGrade.TabIndex = 2
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 48)
+        Me.Label4.Location = New System.Drawing.Point(1, 48)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(76, 13)
+        Me.Label4.Size = New System.Drawing.Size(87, 13)
         Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Grade Number"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(52, 22)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(36, 13)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Grade"
+        Me.Label4.Text = "Average Number"
         '
         'Label5
         '
@@ -149,7 +149,8 @@ Partial Class frmGradesQuizPreCreator
         Me.Controls.Add(Me.grpGrade)
         Me.Controls.Add(Me.grpQuiz)
         Me.Name = "frmGradesQuizPreCreator"
-        Me.Text = "frmGradesPre"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "frmGradesQuizPreCreator"
         Me.grpQuiz.ResumeLayout(False)
         Me.grpQuiz.PerformLayout()
         Me.grpGrade.ResumeLayout(False)
@@ -165,8 +166,8 @@ Partial Class frmGradesQuizPreCreator
     Friend WithEvents txtQuizID As System.Windows.Forms.TextBox
     Friend WithEvents grpGrade As System.Windows.Forms.GroupBox
     Friend WithEvents txtGradeNumber As System.Windows.Forms.TextBox
-    Friend WithEvents txtGrade As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents txtGradeFullScore As System.Windows.Forms.TextBox
 End Class

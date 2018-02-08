@@ -49,6 +49,7 @@ Partial Class frmPasswordChallenge
         '
         Me.RichTextBox1.Location = New System.Drawing.Point(68, 22)
         Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
         Me.RichTextBox1.Size = New System.Drawing.Size(100, 74)
         Me.RichTextBox1.TabIndex = 2
         Me.RichTextBox1.Text = ""
@@ -82,6 +83,7 @@ Partial Class frmPasswordChallenge
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtAnswer)
         Me.Name = "frmPasswordChallenge"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmPasswordChallenge"
         Me.ResumeLayout(False)
         Me.PerformLayout()

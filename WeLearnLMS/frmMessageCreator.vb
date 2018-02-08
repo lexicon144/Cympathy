@@ -44,9 +44,8 @@
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub SaveFeedback()
-        Using Connection As New MySqlConnection
+        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
-                .ConnectionString = _ConnString.ConnString
                 If .State = ConnectionState.Closed Then
                     .Open()
                 End If

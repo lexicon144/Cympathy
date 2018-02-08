@@ -104,6 +104,7 @@ Partial Class frmTimeDialog
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmTimeDialog"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmTimeViewer"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

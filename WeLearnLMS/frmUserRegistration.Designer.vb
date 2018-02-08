@@ -193,7 +193,7 @@ Partial Class frmUserRegistration
         Me.grpPersonal.Margin = New System.Windows.Forms.Padding(1)
         Me.grpPersonal.Name = "grpPersonal"
         Me.grpPersonal.Padding = New System.Windows.Forms.Padding(1)
-        Me.grpPersonal.Size = New System.Drawing.Size(292, 274)
+        Me.grpPersonal.Size = New System.Drawing.Size(317, 274)
         Me.grpPersonal.TabIndex = 5
         Me.grpPersonal.TabStop = False
         Me.grpPersonal.Text = "Personal Info"
@@ -377,7 +377,7 @@ Partial Class frmUserRegistration
         Me.grpCredentials.Margin = New System.Windows.Forms.Padding(1)
         Me.grpCredentials.Name = "grpCredentials"
         Me.grpCredentials.Padding = New System.Windows.Forms.Padding(1)
-        Me.grpCredentials.Size = New System.Drawing.Size(292, 111)
+        Me.grpCredentials.Size = New System.Drawing.Size(317, 111)
         Me.grpCredentials.TabIndex = 4
         Me.grpCredentials.TabStop = False
         Me.grpCredentials.Text = "Credentials"
@@ -426,7 +426,7 @@ Partial Class frmUserRegistration
         '
         'btn_save
         '
-        Me.btn_save.Location = New System.Drawing.Point(234, 413)
+        Me.btn_save.Location = New System.Drawing.Point(259, 413)
         Me.btn_save.Margin = New System.Windows.Forms.Padding(1)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(68, 28)
@@ -438,11 +438,12 @@ Partial Class frmUserRegistration
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(313, 451)
+        Me.ClientSize = New System.Drawing.Size(337, 451)
         Me.Controls.Add(Me.grpPersonal)
         Me.Controls.Add(Me.grpCredentials)
         Me.Controls.Add(Me.btn_save)
         Me.Name = "frmUserRegistration"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "formRegistration"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpPersonal.ResumeLayout(False)

@@ -88,6 +88,14 @@ Public Class frmUserLogin
             End With
         End With
         With Me._UserAdvancedCredentials
+
+            .QuestionIndex = _PreInfo.Rows(0)("questionIndex").ToString()
+            .SaltedAnswer = _PreInfo.Rows(0)("sec_ans").ToString()
+            .UserID = _PreInfo.Rows(0)("user_id").ToString()
+            .MyUserType = _PreInfo.Rows(0)("user_type").ToString()
+            .UserName = _PreInfo.Rows(0)("user_name").ToString()
+            .UserSalt = _PreInfo.Rows(0)("user_leagueoflegends").ToString()
+            .UserSaltedPassword = _PreInfo.Rows(0)("user_password").ToString()
             .UserFirstName = _PreInfo.Rows(0)("user_fname").ToString()
             .UserMiddleName = _PreInfo.Rows(0)("user_mi").ToString()
             .UserLastName = _PreInfo.Rows(0)("user_lname").ToString()
@@ -98,6 +106,11 @@ Public Class frmUserLogin
             .UserAddress = _PreInfo.Rows(0)("address").ToString()
             .UserEmail = _PreInfo.Rows(0)("email").ToString()
         End With
+    End Sub
+
+    Private Sub ShareMe()
+        _SharedAdvancedCredentials = Me._UserAdvancedCredentials
+        _SharedMainCredentials = Me._UserMainCredentials
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -112,25 +125,33 @@ Public Class frmUserLogin
             PreInfoToCredentialsParser()
 
             BackgroundWorker1.RunWorkerAsync(ValidateLogin())
+            Me.LinkLabel2.Enabled = True
+            Me.txtPassword.Text = ""
+            Me.txtUsername.Text = ""
         Catch XXX As Exception
             MessageBox.Show("Something wrong happened when (You) tried to login. Reason: " & XXX.Message, "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-
         Dim value As Boolean = e.Argument
-
         e.Result = value
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-        Dim Access As New frmAccess(e.Result)
-        Access.Show()
-        If e.Result = True Then
+        
+        If e.Result Then
+            ShareMe()
+
             Dim MainMenu As New frmMenu(Me._UserAdvancedCredentials)
+
             MainMenu.ShowDialog()
+            _SharedAdvancedCredentials = Nothing
+            _SharedMainCredentials = Nothing
+
+            Exit Sub
         End If
+        MessageBox.Show("Your password or username was incorrect", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Warning)
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
@@ -150,5 +171,18 @@ Public Class frmUserLogin
             Exit Sub
         End If
         ErrorProvider1.SetError(DirectCast(sender, TextBox), "")
+    End Sub
+
+    Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+        'check if this user id exists
+        If Me._PreInfo.Rows(0)("user_id").ToString() Is Nothing Then Exit Sub
+
+        Dim passwordchallenge As New frmPasswordModifier(_PreInfo.Rows(0)("user_id").ToString())
+        passwordchallenge.ShowDialog()
+    End Sub
+
+    Private Sub lblChangeServer_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblChangeServer.LinkClicked
+        Dim editor As New frmServerEditor()
+        editor.ShowDialog()
     End Sub
 End Class

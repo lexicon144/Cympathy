@@ -8,12 +8,18 @@ Public Class frmQuizCreator
     Private _Deserializer As IDataDeserializer = New ImpDataDeserializer
 
     Private Sub frmQuizCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            Dim Creator As New frmQuestionnaireCreator
 
-        Dim Creator As New frmQuestionnaireCreator
+            If Creator.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
 
-        If Creator.ShowDialog = Windows.Forms.DialogResult.OK Then Me._NewQuiz = Creator.GetQuiz
-        If Me._NewQuiz.QuestionBase Is Nothing Then Exit Sub
-        ParseToTextbox()
+                Me._NewQuiz.QuestionBase = Creator.GetBASE
+                Me._NewQuiz.QuestionnaireType = Creator.GetQType
+            End If
+            ParseToTextbox()
+        Catch XXX As Exception
+            DisplayGeneralException(XXX)
+        End Try
     End Sub
 
     Private Sub InsertQuiz()
@@ -51,9 +57,9 @@ Public Class frmQuizCreator
         If Me.rtbXMLPreview.Text = "" Then Exit Sub
 
         ParseFromTextbox()
-        Dim Editor As New frmQuestionnaireCreator(_NewQuiz)
+        Dim Editor As New frmQuestionnaireCreator(_NewQuiz.QuestionBase, False)
         Editor.ShowDialog()
-        Me._NewQuiz = Editor.GetQuiz
+        Me._NewQuiz.QuestionBase = Editor.GetBASE
         ParseToTextbox()
     End Sub
 
@@ -66,13 +72,16 @@ Public Class frmQuizCreator
     End Sub
 
     Private Sub ParseToTextbox()
+
+        Me.txtQuizType.Text = [Enum].GetName(GetType(QType), Me._NewQuiz.QuestionnaireType)
         Me.txtQuizName.Text = Me._NewQuiz.QuestionnaireName
         Me.txtQuizType.Text = Me._NewQuiz.QuestionnaireType
         Me.rtbXMLPreview.Text = _Serializer.DataSerialize(Me._NewQuiz.QuestionBase)
+        Me.txtQuizName.Focus()
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If Me.rtbXMLPreview.Text = "" Then Exit Sub
+        If Me.rtbXMLPreview.Text = "" Or Me.txtQuizName.Text = "" Then Exit Sub
         InsertQuiz()
     End Sub
 End Class

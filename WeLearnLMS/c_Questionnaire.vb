@@ -5,7 +5,6 @@ Public Class c_Questionnaire
     Protected _QuestionsName As String
     Protected _QuestionID As String
     Protected _QType As QType
-    Protected _Safe As Boolean = True
 
     Public Sub New()
         With Me
@@ -28,10 +27,7 @@ Public Class c_Questionnaire
     <XmlElementAttribute("QuestionBase")>
     Public Property QuestionBase As List(Of c_SmallQuestion)
         Get
-            If _Safe Then
                 Return _QuestionBase
-                Exit Property
-            End If
             Return Nothing
         End Get
         Set(value As List(Of c_SmallQuestion))
@@ -42,11 +38,7 @@ Public Class c_Questionnaire
     <XmlElementAttribute("QuestionnaireName")>
     Public Property QuestionnaireName As String
         Get
-            If _Safe Then
                 Return _QuestionsName
-                Exit Property
-            End If
-            Return "NOTSAFE"
         End Get
         Set(value As String)
             _QuestionsName = value
@@ -57,11 +49,7 @@ Public Class c_Questionnaire
     Public Property QuestionnaireID As String
         Get
 
-            If _Safe Then
                 Return _QuestionID
-                Exit Property
-            End If
-            Return "NOTSAFE"
         End Get
         Set(value As String)
             _QuestionID = value

@@ -4,6 +4,10 @@
     Private _Pregrade As New c_PreGrade
     Private _UserID As String
 
+    ''' <summary>
+    '''  Null constructor
+    ''' </summary>
+    ''' <remarks></remarks>
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
@@ -11,6 +15,11 @@
         ' Add any initialization after the InitializeComponent() call.
     End Sub
 
+    ''' <summary>
+    ''' Constructor for making QuizRelated
+    ''' </summary>
+    ''' <param name="ThisQuiz"></param>
+    ''' <remarks></remarks>
     Public Sub New(ByRef ThisQuiz As c_Quiz)
         ' This call is required by the designer.
         InitializeComponent()
@@ -23,10 +32,8 @@
 
         Dim viewer As New frmQuestionnaireViewer(_Quiz)
         
-        If viewer.ShowDialog = Windows.Forms.DialogResult.OK Then
-
+        If viewer.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
             Me._Pregrade = viewer.GetPregrade
-
         End If
 
         MarkQuiz()
@@ -57,7 +64,7 @@
                             .CommandType = CommandType.StoredProcedure
                             .CommandText = "MarkThisQuiz"
                             With .Parameters
-                                .AddWithValue("UserID", Me._UserID)
+                                .AddWithValue("UserID", _SharedUserID)
                                 .AddWithValue("QuizID", Me._Quiz.QuestionnaireID)
                             End With
                             .ExecuteNonQuery()
@@ -67,7 +74,7 @@
                     End Using
                 Catch XXX As MySqlException
                     MarkingTransaction.Rollback()
-                    MessageBox.Show("This Quiz cannot be marked. Reason: " & XXX.Message, "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    DisplayLinkingTransactionFailed(XXX)
                 End Try
             End Using
         End Using

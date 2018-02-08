@@ -3,11 +3,9 @@ Imports System.Xml.Serialization
 
 Public Class frmExamsCreator
 
-    Private _NewExam As New c_Exam
-
-    Private _Deserializer As IDataDeserializer = New ImpDataDeserializer
+    Private _NewExam As New c_Exam()
     Private _Serializer As IDataSerializer = New ImpDataSerializer
-
+    Private _Deserializer As IDataDeserializer = New ImpDataDeserializer
     Public Sub New()
 
         ' This call is required by the designer.
@@ -18,48 +16,24 @@ Public Class frmExamsCreator
     End Sub
 
     Private Sub frmExamsCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        Dim Creator As New frmOfficialExamsCreator()
-        If Creator.ShowDialog = Windows.Forms.DialogResult.OK Then
-
-            Me._NewExam = Creator.GetOfficialExam
+        If _SharedAdvancedCredentials.MyUserType = c_MainCredentials.UserType.STU Then
+            PanelProfessorsOnly.Enabled = False
         End If
+
+        Dim Creator As New frmQuestionnaireCreator()
+
+        Creator.ShowDialog(Me)
+        Me._NewExam.QuestionBase = Creator.GetBASE
+        Me._NewExam.QuestionnaireType = QType.OEXAM
 
         ParseToTextbox()
 
     End Sub
 
-    ''' <summary>
-    ''' Use this to Serialize the Data
-    ''' </summary>
-    ''' <param name="myList">C_Exam to serialize</param>
-    ''' <returns>XML String ready for being saved to the database</returns>
-    ''' <remarks></remarks>
-    Private Function DataSerialize(ByVal myList As List(Of c_SmallQuestion)) As String
-        Dim sw As StringWriter = New StringWriter()
-        Dim s As New XmlSerializer(myList.GetType())
-        s.Serialize(sw, myList)
-        Return sw.ToString()
-    End Function
-
-    ''' <summary>
-    ''' Use this to Deserialize the data
-    ''' </summary>
-    ''' <param name="data">XML String to return</param>
-    ''' <returns>c_ShortQuiz</returns>
-    ''' <remarks></remarks>
-    Public Shared Function DataDeserialize(ByVal data As String) As List(Of c_SmallQuestion)
-        Dim xs As New XmlSerializer(GetType(c_Exam))
-        Dim newList As List(Of c_SmallQuestion) = CType(xs.Deserialize(New StringReader(data)), List(Of c_SmallQuestion))
-        Return newList
-    End Function
-
-
     Private Sub InsertQuiz()
-        Using Connection As New MySqlConnection
+        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
-                .ConnectionString = _SharedConnString.ConnString
-                If .State = ConnectionState.Open Then
+                If .State = ConnectionState.Closed Then
                     .Open()
                 End If
             End With
@@ -90,26 +64,54 @@ Public Class frmExamsCreator
 
         If Me._NewExam.QuestionBase Is Nothing Then Exit Sub
 
-        Dim Editor As New frmOfficialExamsCreator()
+        Dim Editor As New frmQuestionnaireCreator(Me._NewExam.QuestionBase, True)
         If Editor.ShowDialog() = Windows.Forms.DialogResult.OK Then
 
-            Me._NewExam = Editor.GetOfficialExam
+            Me._NewExam.QuestionBase = Editor.GetBASE
+            Me._NewExam.QuestionnaireType = QType.OEXAM
         End If
+
         ParseToTextbox()
     End Sub
 
     Private Sub ParseToTextbox()
-        Try
-            Me.rtbXMLPreview.Text = DataSerialize(Me._NewExam.QuestionBase)
-            Me.txtExamName.Text = _NewExam.QuestionnaireName
-            Me.txtExamPIN.Text = _NewExam.PIN
-        Catch XXX As Exception
-            MessageBox.Show("There was a problem in making an XML Form from the Exam. Reasons: " & XXX.Message, "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-        End Try
+        Me.txtQType.Text = [Enum].GetName(GetType(QType), Me._NewExam.QuestionnaireType)
+        Me.txtExamName.Text = Me._NewExam.QuestionnaireName
+        Me.txtQType.Text = Me._NewExam.QuestionnaireType
+        Me.rtbXMLPreview.Text = DataSerialize(Me._NewExam.QuestionBase)
+        Me.txtExamName.Focus()
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If Me.rtbXMLPreview.Text = "" Then Exit Sub
+        If Me.rtbXMLPreview.Text = "" Or txtExamName.Text = "" Or txtExamPIN.Text = "" Then Exit Sub
         InsertQuiz()
+    End Sub
+
+    Private Sub txtExamName_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtExamName.Validating
+        If Not _SharedValidator.Verify(VMethodology.Username, DirectCast(sender, TextBox).Text) Then
+            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid Username")
+            e.Cancel = True
+            DirectCast(sender, TextBox).SelectAll()
+            Exit Sub
+        End If
+        ErrorProvider1.SetError(DirectCast(sender, TextBox), "")
+    End Sub
+
+    Private Sub txtExamName_Validated(sender As Object, e As EventArgs) Handles txtExamName.Validated
+        Me._NewExam.QuestionnaireName = DirectCast(sender, TextBox).Text
+    End Sub
+
+    Private Sub txtExamPIN_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtExamPIN.Validating
+        If Not _SharedValidator.Verify(VMethodology.Username, DirectCast(sender, TextBox).Text) Then
+            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid Username")
+            e.Cancel = True
+            DirectCast(sender, TextBox).SelectAll()
+            Exit Sub
+        End If
+        ErrorProvider1.SetError(DirectCast(sender, TextBox), "")
+    End Sub
+
+    Private Sub txtExamPIN_Validated(sender As Object, e As EventArgs) Handles txtExamPIN.Validated
+        Me._NewExam.PIN = DirectCast(sender, TextBox).Text
     End Sub
 End Class
