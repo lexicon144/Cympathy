@@ -42,8 +42,8 @@
 
     Private Sub LoadAll()
         LoadClassroomNode(Me._Classroom.ClassroomId)
-        'LoadArticlesNode(Me._Classroom.ClassroomId)
-        'LoadMaterialsNode(Me._Classroom.ClassroomId)
+        LoadArticlesNode(Me._Classroom.ClassroomId)
+        LoadMaterialsNode(Me._Classroom.ClassroomId)
         'LoadQuizNode(Me._Classroom.ClassroomId)
         'LoadExamsNode(Me._Classroom.ClassroomId)
     End Sub
@@ -57,7 +57,7 @@
 
         Using ClassroomHUB As New frmClassroomDialog
             With ClassroomHUB
-                .ReturnAdminedClasses()
+                .ReturnClasses()
                 Me._ClassroomDT = .ThrowMainDatatable()
             End With
         End Using
@@ -110,7 +110,7 @@
             End With
         End Using
 
-        If Me._MaterialsDT Is Nothing Then Exit Sub
+        If Me._MaterialsDT.Rows("m_name") Is Nothing Then Exit Sub
 
         For Each row As DataRow In Me._MaterialsDT.Rows
             'Classroom => [1st Layer] => [2ndLayerHere]

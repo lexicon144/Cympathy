@@ -64,7 +64,6 @@
                 End Using
             Catch Exx As Exception
                 LinkingTransaction.Rollback()
-                'MessageBox.Show("Student Linking from " & _Classroom.ClassroomName & " ON " & _User.UserName & " has been performed unsuccessfully. Rolledback automatically: " & vbNewLine & Exx.Message, "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 DisplayLinkingTransactionFailed(Exx)
             End Try
         End Using

@@ -3,7 +3,6 @@ Public Class frmRankingCreator
 
     Private _MainCredentials As New c_MainCredentials
     Private _CandidateCredentials As New c_MainCredentials
-    Private _Blinked As Boolean
     Private _Count As UInt32
 
     ''' <summary>
@@ -110,7 +109,7 @@ Public Class frmRankingCreator
     End Sub
 
     Private Sub frmRankingProfessors_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Timer1.Start()
+
         Dim browser As New frmUsersViewer()
         If browser.ShowDialog() = Windows.Forms.DialogResult.OK Then
             Me._CandidateCredentials = browser.GetSmallCredentials
@@ -133,9 +132,9 @@ Public Class frmRankingCreator
     End Sub
 
     Private Sub chkVote_CheckedChanged(sender As Object, e As EventArgs) Handles chkVote.CheckedChanged
-        Timer1.Stop()
+
         SaveVote(Me._CandidateCredentials.UserID, Me._MainCredentials.UserID, DirectCast(sender, CheckBox).Checked)
-        DirectCast(sender, CheckBox).Enabled = False
+
         Me.chkVote.BackColor = Me.BackColor
     End Sub
 
@@ -147,12 +146,4 @@ Public Class frmRankingCreator
         DirectCast(sender, Label).Text = "(You) are voting for..."
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        If _Blinked Then
-            Me.chkVote.BackColor = Color.Red
-        Else
-            Me.chkVote.BackColor = Me.BackColor
-        End If
-        _Blinked = Not _Blinked
-    End Sub
 End Class

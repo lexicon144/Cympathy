@@ -3,7 +3,6 @@
     Private _Datatable As New DataTable
 
     Private _MainCredentials As New c_MainCredentials
-    Private _AdvCredentials As New c_AdvancedCredentials
 
     Private _Classroom As New c_Classroom
 
@@ -28,16 +27,20 @@
         With Me
             ._MainCredentials = MainCrednetials
             If ._MainCredentials.MyUserType = c_MainCredentials.UserType.ADM Then
-                ReturnAdminedClasses()
+                ReturnClasses()
             Else
-                ReturnEnrolledClasses()
+                ReturnClasses(Me._MainCredentials.UserID)
             End If
         End With
     End Sub
 
     Public Sub New()
         InitializeComponent()
-        ReturnAdminedClasses()
+        If _SharedAdvancedCredentials.MyUserType = c_MainCredentials.UserType.ADM Then
+            ReturnClasses()
+            Exit Sub
+        End If
+        ReturnClasses(_SharedAdvancedCredentials.UserID)
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
@@ -76,7 +79,7 @@
         End With
     End Sub
 
-    Friend Sub ReturnAdminedClasses()
+    Friend Sub ReturnClasses()
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
 
             With Connection
@@ -103,7 +106,7 @@
         End Using
     End Sub
 
-    Friend Sub ReturnEnrolledClasses()
+    Friend Sub ReturnClasses(ByRef StudentID As String)
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
                 If .State = ConnectionState.Closed Then
@@ -118,7 +121,7 @@
                     .CommandType = CommandType.StoredProcedure
 
                     With .Parameters
-                        .AddWithValue("StudentID", _MainCredentials.UserID)
+                        .AddWithValue("StudentID", StudentID)
                     End With
 
                 End With

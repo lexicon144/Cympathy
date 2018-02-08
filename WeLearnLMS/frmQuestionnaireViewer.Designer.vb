@@ -62,11 +62,12 @@ Partial Class frmQuestionnaireViewer
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.tttIndex, Me.tttQuestionBase, Me.tttDistractor1, Me.tttDistractor2, Me.tttDistractor3, Me.tttDistractor4, Me.tttAns, Me.tttActionButton})
-        Me.DataGridView1.Location = New System.Drawing.Point(5, 260)
+        Me.DataGridView1.Location = New System.Drawing.Point(7, 320)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(426, 173)
+        Me.DataGridView1.Size = New System.Drawing.Size(568, 213)
         Me.DataGridView1.TabIndex = 0
         '
         'tttIndex
@@ -119,54 +120,55 @@ Partial Class frmQuestionnaireViewer
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(5, 52)
+        Me.RichTextBox1.Location = New System.Drawing.Point(7, 64)
+        Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(426, 96)
+        Me.RichTextBox1.Size = New System.Drawing.Size(567, 117)
         Me.RichTextBox1.TabIndex = 1
         Me.RichTextBox1.Text = ""
         '
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton1.Location = New System.Drawing.Point(4, 4)
+        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButton1.Size = New System.Drawing.Size(17, 16)
         Me.RadioButton1.TabIndex = 2
         Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "RadioButton1"
         Me.RadioButton1.UseVisualStyleBackColor = True
         '
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(216, 3)
+        Me.RadioButton2.Location = New System.Drawing.Point(288, 4)
+        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButton2.Size = New System.Drawing.Size(17, 16)
         Me.RadioButton2.TabIndex = 3
         Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "RadioButton2"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(3, 53)
+        Me.RadioButton3.Location = New System.Drawing.Point(4, 65)
+        Me.RadioButton3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButton3.Size = New System.Drawing.Size(17, 16)
         Me.RadioButton3.TabIndex = 4
         Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "RadioButton3"
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
         'RadioButton4
         '
         Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(216, 53)
+        Me.RadioButton4.Location = New System.Drawing.Point(288, 65)
+        Me.RadioButton4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButton4.Size = New System.Drawing.Size(17, 16)
         Me.RadioButton4.TabIndex = 5
         Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "RadioButton4"
         Me.RadioButton4.UseVisualStyleBackColor = True
         '
         'Timer1
@@ -175,18 +177,20 @@ Partial Class frmQuestionnaireViewer
         '
         'btnDevAuto13
         '
-        Me.btnDevAuto13.Location = New System.Drawing.Point(857, 10)
+        Me.btnDevAuto13.Location = New System.Drawing.Point(1143, 12)
+        Me.btnDevAuto13.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnDevAuto13.Name = "btnDevAuto13"
-        Me.btnDevAuto13.Size = New System.Drawing.Size(75, 23)
+        Me.btnDevAuto13.Size = New System.Drawing.Size(100, 28)
         Me.btnDevAuto13.TabIndex = 6
         Me.btnDevAuto13.Text = "DevAuto13"
         Me.btnDevAuto13.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(857, 39)
+        Me.TextBox1.Location = New System.Drawing.Point(1143, 48)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(75, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(99, 22)
         Me.TextBox1.TabIndex = 7
         '
         'TableLayoutPanel1
@@ -201,12 +205,13 @@ Partial Class frmQuestionnaireViewer
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label4, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label5, 2, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(167, 3)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(223, 4)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(110, 43)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(147, 53)
         Me.TableLayoutPanel1.TabIndex = 8
         '
         'lblHours
@@ -214,9 +219,10 @@ Partial Class frmQuestionnaireViewer
         Me.lblHours.AutoSize = True
         Me.lblHours.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHours.ForeColor = System.Drawing.Color.Red
-        Me.lblHours.Location = New System.Drawing.Point(3, 23)
+        Me.lblHours.Location = New System.Drawing.Point(4, 28)
+        Me.lblHours.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblHours.Name = "lblHours"
-        Me.lblHours.Size = New System.Drawing.Size(21, 13)
+        Me.lblHours.Size = New System.Drawing.Size(26, 17)
         Me.lblHours.TabIndex = 0
         Me.lblHours.Text = "00"
         Me.lblHours.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -226,9 +232,10 @@ Partial Class frmQuestionnaireViewer
         Me.lblMinutes.AutoSize = True
         Me.lblMinutes.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMinutes.ForeColor = System.Drawing.Color.Red
-        Me.lblMinutes.Location = New System.Drawing.Point(39, 23)
+        Me.lblMinutes.Location = New System.Drawing.Point(52, 28)
+        Me.lblMinutes.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMinutes.Name = "lblMinutes"
-        Me.lblMinutes.Size = New System.Drawing.Size(21, 13)
+        Me.lblMinutes.Size = New System.Drawing.Size(26, 17)
         Me.lblMinutes.TabIndex = 1
         Me.lblMinutes.Text = "00"
         Me.lblMinutes.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -238,36 +245,40 @@ Partial Class frmQuestionnaireViewer
         Me.lblSeconds.AutoSize = True
         Me.lblSeconds.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSeconds.ForeColor = System.Drawing.Color.Red
-        Me.lblSeconds.Location = New System.Drawing.Point(75, 23)
+        Me.lblSeconds.Location = New System.Drawing.Point(101, 28)
+        Me.lblSeconds.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSeconds.Name = "lblSeconds"
-        Me.lblSeconds.Size = New System.Drawing.Size(21, 13)
+        Me.lblSeconds.Size = New System.Drawing.Size(26, 17)
         Me.lblSeconds.TabIndex = 2
         Me.lblSeconds.Text = "00"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(3, 0)
+        Me.Label3.Location = New System.Drawing.Point(4, 0)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(23, 13)
+        Me.Label3.Size = New System.Drawing.Size(28, 17)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "HH"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(39, 0)
+        Me.Label4.Location = New System.Drawing.Point(52, 0)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(25, 13)
+        Me.Label4.Size = New System.Drawing.Size(30, 17)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "MM"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(75, 0)
+        Me.Label5.Location = New System.Drawing.Point(101, 0)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(21, 13)
+        Me.Label5.Size = New System.Drawing.Size(26, 17)
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "SS"
         '
@@ -280,12 +291,13 @@ Partial Class frmQuestionnaireViewer
         Me.RdButtonPanel.Controls.Add(Me.RadioButton2, 1, 0)
         Me.RdButtonPanel.Controls.Add(Me.RadioButton3, 0, 1)
         Me.RdButtonPanel.Controls.Add(Me.RadioButton4, 1, 1)
-        Me.RdButtonPanel.Location = New System.Drawing.Point(5, 154)
+        Me.RdButtonPanel.Location = New System.Drawing.Point(7, 190)
+        Me.RdButtonPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RdButtonPanel.Name = "RdButtonPanel"
         Me.RdButtonPanel.RowCount = 2
         Me.RdButtonPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.RdButtonPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.RdButtonPanel.Size = New System.Drawing.Size(426, 100)
+        Me.RdButtonPanel.Size = New System.Drawing.Size(568, 123)
         Me.RdButtonPanel.TabIndex = 9
         '
         'mainpanel
@@ -294,19 +306,21 @@ Partial Class frmQuestionnaireViewer
         Me.mainpanel.Controls.Add(Me.RdButtonPanel)
         Me.mainpanel.Controls.Add(Me.DataGridView1)
         Me.mainpanel.Controls.Add(Me.TableLayoutPanel1)
-        Me.mainpanel.Location = New System.Drawing.Point(12, 14)
+        Me.mainpanel.Location = New System.Drawing.Point(16, 17)
+        Me.mainpanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.mainpanel.Name = "mainpanel"
-        Me.mainpanel.Size = New System.Drawing.Size(437, 436)
+        Me.mainpanel.Size = New System.Drawing.Size(583, 537)
         Me.mainpanel.TabIndex = 10
         '
         'frmQuestionnaireViewer
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(459, 462)
+        Me.ClientSize = New System.Drawing.Size(612, 569)
         Me.Controls.Add(Me.mainpanel)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.btnDevAuto13)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmQuestionnaireViewer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmQuestionnaireViewer"

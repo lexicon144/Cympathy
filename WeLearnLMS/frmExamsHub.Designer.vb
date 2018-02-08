@@ -39,11 +39,12 @@ Partial Class frmExamsHub
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
+        Me.DataGridView1.Location = New System.Drawing.Point(16, 15)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(346, 245)
+        Me.DataGridView1.Size = New System.Drawing.Size(461, 302)
         Me.DataGridView1.TabIndex = 8
         '
         'grpExamDisplay
@@ -52,9 +53,11 @@ Partial Class frmExamsHub
         Me.grpExamDisplay.Controls.Add(Me.Label1)
         Me.grpExamDisplay.Controls.Add(Me.txtExamID)
         Me.grpExamDisplay.Controls.Add(Me.txtExamName)
-        Me.grpExamDisplay.Location = New System.Drawing.Point(12, 263)
+        Me.grpExamDisplay.Location = New System.Drawing.Point(16, 324)
+        Me.grpExamDisplay.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.grpExamDisplay.Name = "grpExamDisplay"
-        Me.grpExamDisplay.Size = New System.Drawing.Size(184, 100)
+        Me.grpExamDisplay.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpExamDisplay.Size = New System.Drawing.Size(245, 123)
         Me.grpExamDisplay.TabIndex = 9
         Me.grpExamDisplay.TabStop = False
         Me.grpExamDisplay.Text = "Exam"
@@ -62,64 +65,71 @@ Partial Class frmExamsHub
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 48)
+        Me.Label2.Location = New System.Drawing.Point(8, 59)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 13)
+        Me.Label2.Size = New System.Drawing.Size(83, 17)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Exam Name"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(23, 22)
+        Me.Label1.Location = New System.Drawing.Point(31, 27)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(47, 13)
+        Me.Label1.Size = New System.Drawing.Size(59, 17)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Exam ID"
         '
         'txtExamID
         '
-        Me.txtExamID.Location = New System.Drawing.Point(79, 19)
+        Me.txtExamID.Location = New System.Drawing.Point(105, 23)
+        Me.txtExamID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtExamID.Name = "txtExamID"
         Me.txtExamID.ReadOnly = True
-        Me.txtExamID.Size = New System.Drawing.Size(100, 20)
+        Me.txtExamID.Size = New System.Drawing.Size(132, 22)
         Me.txtExamID.TabIndex = 0
         '
         'txtExamName
         '
-        Me.txtExamName.Location = New System.Drawing.Point(79, 45)
+        Me.txtExamName.Location = New System.Drawing.Point(105, 55)
+        Me.txtExamName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtExamName.Name = "txtExamName"
         Me.txtExamName.ReadOnly = True
-        Me.txtExamName.Size = New System.Drawing.Size(100, 20)
+        Me.txtExamName.Size = New System.Drawing.Size(132, 22)
         Me.txtExamName.TabIndex = 1
         '
         'btnOK
         '
-        Me.btnOK.Location = New System.Drawing.Point(283, 311)
+        Me.btnOK.Location = New System.Drawing.Point(377, 381)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(75, 23)
+        Me.btnOK.Size = New System.Drawing.Size(100, 28)
         Me.btnOK.TabIndex = 11
         Me.btnOK.Text = "O K"
         Me.btnOK.UseVisualStyleBackColor = True
         '
         'btnView
         '
-        Me.btnView.Location = New System.Drawing.Point(283, 342)
+        Me.btnView.Location = New System.Drawing.Point(377, 419)
+        Me.btnView.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnView.Name = "btnView"
-        Me.btnView.Size = New System.Drawing.Size(75, 23)
+        Me.btnView.Size = New System.Drawing.Size(100, 28)
         Me.btnView.TabIndex = 9
         Me.btnView.Text = "View"
         Me.btnView.UseVisualStyleBackColor = True
         '
         'frmExamsHub
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(373, 377)
+        Me.ClientSize = New System.Drawing.Size(497, 464)
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.grpExamDisplay)
         Me.Controls.Add(Me.btnView)
         Me.Controls.Add(Me.DataGridView1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmExamsHub"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmExamHub"

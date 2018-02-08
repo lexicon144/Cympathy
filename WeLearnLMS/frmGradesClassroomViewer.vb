@@ -42,6 +42,10 @@ Public Class frmGradesClassroomViewer
         End With
     End Sub
 
+    Private Sub DisplayOutside()
+
+    End Sub
+
     Private Sub GetAllClassroomGrades()
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection

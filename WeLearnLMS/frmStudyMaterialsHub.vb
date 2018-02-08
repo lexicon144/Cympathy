@@ -154,7 +154,7 @@
     End Sub
 
     Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
-
+        ParseFromTextbox()
         Dim Viewer As New frmStudyMaterialsViewer(Me._StudyMaterial)
         Viewer.ShowDialog()
     End Sub

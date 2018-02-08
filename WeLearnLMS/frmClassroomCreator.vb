@@ -35,11 +35,6 @@ Public Class frmClassroomCreator
 #Region "Sub Routines and Functions"
 
     Private Sub diaClassCreation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If _SharedAdvancedCredentials.MyUserType = c_MainCredentials.UserType.STU Then
-            PanelProfessorsOnly.Enabled = False
-        End If
-        ''TODO - ERROR IN PARSING ENUMS
-        Me.PanelProfessorsOnly.Enabled = False
         Me.OK_Button.Enabled = False
         cmbClassroomType.Items.AddRange(eClassType.GetNames(GetType(eClassType)))
     End Sub

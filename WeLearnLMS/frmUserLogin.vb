@@ -148,6 +148,7 @@ Public Class frmUserLogin
             MainMenu.ShowDialog()
             _SharedAdvancedCredentials = Nothing
             _SharedMainCredentials = Nothing
+            LinkLabel2.Enabled = False
 
             Exit Sub
         End If
@@ -175,7 +176,7 @@ Public Class frmUserLogin
 
     Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
         'check if this user id exists
-        If Me._PreInfo.Rows(0)("user_id").ToString() Is Nothing Then Exit Sub
+        If Me._PreInfo.Rows(0)("user_id").ToString() Is "" Then Exit Sub
 
         Dim passwordchallenge As New frmPasswordModifier(_PreInfo.Rows(0)("user_id").ToString())
         passwordchallenge.ShowDialog()

@@ -27,6 +27,9 @@
         With DataGridView1
             .DataSource = _Datatable
             .Columns.Add(btn)
+            .Columns("receiver_id").Visible = False
+            .Columns("payload").Visible = False
+            .Columns("id").Visible = False
         End With
 
     End Sub

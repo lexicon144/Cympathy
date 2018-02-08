@@ -37,6 +37,7 @@ Partial Class frmClassroomLinker
         Me.txtClassDesc = New System.Windows.Forms.TextBox()
         Me.txtClassID = New System.Windows.Forms.TextBox()
         Me.grpClassDetails = New System.Windows.Forms.GroupBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.grpEnrollment.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpClassDetails.SuspendLayout()
@@ -48,11 +49,11 @@ Partial Class frmClassroomLinker
         Me.grpEnrollment.Controls.Add(Me.txtStudentName)
         Me.grpEnrollment.Controls.Add(Me.txtStudentID)
         Me.grpEnrollment.Controls.Add(Me.Label1)
-        Me.grpEnrollment.Location = New System.Drawing.Point(11, 11)
-        Me.grpEnrollment.Margin = New System.Windows.Forms.Padding(2)
+        Me.grpEnrollment.Location = New System.Drawing.Point(15, 14)
+        Me.grpEnrollment.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.grpEnrollment.Name = "grpEnrollment"
-        Me.grpEnrollment.Padding = New System.Windows.Forms.Padding(2)
-        Me.grpEnrollment.Size = New System.Drawing.Size(201, 124)
+        Me.grpEnrollment.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.grpEnrollment.Size = New System.Drawing.Size(268, 153)
         Me.grpEnrollment.TabIndex = 14
         Me.grpEnrollment.TabStop = False
         Me.grpEnrollment.Text = "Enrollment"
@@ -60,45 +61,46 @@ Partial Class frmClassroomLinker
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(16, 45)
+        Me.Label5.Location = New System.Drawing.Point(21, 55)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(75, 13)
+        Me.Label5.Size = New System.Drawing.Size(98, 17)
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "Student Name"
         '
         'txtStudentName
         '
-        Me.txtStudentName.Location = New System.Drawing.Point(97, 44)
+        Me.txtStudentName.Location = New System.Drawing.Point(129, 54)
+        Me.txtStudentName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtStudentName.Name = "txtStudentName"
         Me.txtStudentName.ReadOnly = True
-        Me.txtStudentName.Size = New System.Drawing.Size(100, 20)
+        Me.txtStudentName.Size = New System.Drawing.Size(132, 22)
         Me.txtStudentName.TabIndex = 4
         '
         'txtStudentID
         '
-        Me.txtStudentID.Location = New System.Drawing.Point(97, 19)
-        Me.txtStudentID.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtStudentID.Location = New System.Drawing.Point(129, 23)
+        Me.txtStudentID.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtStudentID.Name = "txtStudentID"
         Me.txtStudentID.ReadOnly = True
-        Me.txtStudentID.Size = New System.Drawing.Size(100, 20)
+        Me.txtStudentID.Size = New System.Drawing.Size(132, 22)
         Me.txtStudentID.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(35, 22)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(47, 27)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 13)
+        Me.Label1.Size = New System.Drawing.Size(74, 17)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Student ID"
         '
         'btnEnroll
         '
-        Me.btnEnroll.Location = New System.Drawing.Point(205, 151)
-        Me.btnEnroll.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnEnroll.Location = New System.Drawing.Point(273, 186)
+        Me.btnEnroll.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnEnroll.Name = "btnEnroll"
-        Me.btnEnroll.Size = New System.Drawing.Size(97, 22)
+        Me.btnEnroll.Size = New System.Drawing.Size(129, 27)
         Me.btnEnroll.TabIndex = 6
         Me.btnEnroll.Text = "Enroll"
         Me.btnEnroll.UseVisualStyleBackColor = True
@@ -106,20 +108,19 @@ Partial Class frmClassroomLinker
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(39, 19)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(52, 23)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(18, 13)
+        Me.Label4.Size = New System.Drawing.Size(21, 17)
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "ID"
         '
         'txtClassName
         '
-        Me.txtClassName.Location = New System.Drawing.Point(57, 41)
-        Me.txtClassName.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtClassName.Location = New System.Drawing.Point(76, 50)
+        Me.txtClassName.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtClassName.Name = "txtClassName"
         Me.txtClassName.ReadOnly = True
-        Me.txtClassName.Size = New System.Drawing.Size(129, 20)
+        Me.txtClassName.Size = New System.Drawing.Size(171, 22)
         Me.txtClassName.TabIndex = 4
         '
         'ErrorProvider1
@@ -129,40 +130,38 @@ Partial Class frmClassroomLinker
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(23, 67)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(31, 82)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(32, 13)
+        Me.Label3.Size = New System.Drawing.Size(40, 17)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Desc"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(17, 44)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(23, 54)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(35, 13)
+        Me.Label2.Size = New System.Drawing.Size(45, 17)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Name"
         '
         'txtClassDesc
         '
-        Me.txtClassDesc.Location = New System.Drawing.Point(57, 65)
-        Me.txtClassDesc.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtClassDesc.Location = New System.Drawing.Point(76, 80)
+        Me.txtClassDesc.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtClassDesc.Multiline = True
         Me.txtClassDesc.Name = "txtClassDesc"
         Me.txtClassDesc.ReadOnly = True
-        Me.txtClassDesc.Size = New System.Drawing.Size(129, 41)
+        Me.txtClassDesc.Size = New System.Drawing.Size(171, 50)
         Me.txtClassDesc.TabIndex = 1
         '
         'txtClassID
         '
-        Me.txtClassID.Location = New System.Drawing.Point(57, 17)
-        Me.txtClassID.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtClassID.Location = New System.Drawing.Point(76, 21)
+        Me.txtClassID.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtClassID.Name = "txtClassID"
         Me.txtClassID.ReadOnly = True
-        Me.txtClassID.Size = New System.Drawing.Size(129, 20)
+        Me.txtClassID.Size = New System.Drawing.Size(171, 22)
         Me.txtClassID.TabIndex = 0
         '
         'grpClassDetails
@@ -173,23 +172,34 @@ Partial Class frmClassroomLinker
         Me.grpClassDetails.Controls.Add(Me.Label2)
         Me.grpClassDetails.Controls.Add(Me.txtClassDesc)
         Me.grpClassDetails.Controls.Add(Me.txtClassID)
-        Me.grpClassDetails.Location = New System.Drawing.Point(297, 11)
-        Me.grpClassDetails.Margin = New System.Windows.Forms.Padding(2)
+        Me.grpClassDetails.Location = New System.Drawing.Point(396, 14)
+        Me.grpClassDetails.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.grpClassDetails.Name = "grpClassDetails"
-        Me.grpClassDetails.Padding = New System.Windows.Forms.Padding(2)
-        Me.grpClassDetails.Size = New System.Drawing.Size(188, 124)
+        Me.grpClassDetails.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.grpClassDetails.Size = New System.Drawing.Size(251, 153)
         Me.grpClassDetails.TabIndex = 12
         Me.grpClassDetails.TabStop = False
         Me.grpClassDetails.Text = "Class Details"
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(312, 94)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(42, 17)
+        Me.Label6.TabIndex = 15
+        Me.Label6.Text = "To ->"
+        '
         'frmClassroomLinker
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(494, 184)
+        Me.ClientSize = New System.Drawing.Size(659, 226)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.grpEnrollment)
         Me.Controls.Add(Me.grpClassDetails)
         Me.Controls.Add(Me.btnEnroll)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmClassroomLinker"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmClassroomLinker"
@@ -199,6 +209,7 @@ Partial Class frmClassroomLinker
         Me.grpClassDetails.ResumeLayout(False)
         Me.grpClassDetails.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents grpEnrollment As System.Windows.Forms.GroupBox
@@ -215,4 +226,5 @@ Partial Class frmClassroomLinker
     Friend WithEvents txtClassID As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtStudentName As System.Windows.Forms.TextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

@@ -38,9 +38,10 @@ Partial Class frmArticleHub
         '
         'btnView
         '
-        Me.btnView.Location = New System.Drawing.Point(335, 214)
+        Me.btnView.Location = New System.Drawing.Point(447, 263)
+        Me.btnView.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnView.Name = "btnView"
-        Me.btnView.Size = New System.Drawing.Size(75, 23)
+        Me.btnView.Size = New System.Drawing.Size(100, 28)
         Me.btnView.TabIndex = 0
         Me.btnView.Text = "View"
         Me.btnView.UseVisualStyleBackColor = True
@@ -50,70 +51,78 @@ Partial Class frmArticleHub
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
+        Me.DataGridView1.Location = New System.Drawing.Point(16, 15)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(398, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(531, 185)
         Me.DataGridView1.TabIndex = 2
         '
         'txtArticleID
         '
-        Me.txtArticleID.Location = New System.Drawing.Point(94, 19)
+        Me.txtArticleID.Location = New System.Drawing.Point(125, 23)
+        Me.txtArticleID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtArticleID.Name = "txtArticleID"
         Me.txtArticleID.ReadOnly = True
-        Me.txtArticleID.Size = New System.Drawing.Size(100, 20)
+        Me.txtArticleID.Size = New System.Drawing.Size(132, 22)
         Me.txtArticleID.TabIndex = 3
         '
         'txtArticleName
         '
-        Me.txtArticleName.Location = New System.Drawing.Point(94, 46)
+        Me.txtArticleName.Location = New System.Drawing.Point(125, 57)
+        Me.txtArticleName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtArticleName.Name = "txtArticleName"
         Me.txtArticleName.ReadOnly = True
-        Me.txtArticleName.Size = New System.Drawing.Size(100, 20)
+        Me.txtArticleName.Size = New System.Drawing.Size(132, 22)
         Me.txtArticleName.TabIndex = 4
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(70, 22)
+        Me.Label1.Location = New System.Drawing.Point(93, 27)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(18, 13)
+        Me.Label1.Size = New System.Drawing.Size(21, 17)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "ID"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(53, 49)
+        Me.Label2.Location = New System.Drawing.Point(71, 60)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(35, 13)
+        Me.Label2.Size = New System.Drawing.Size(45, 17)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Name"
         '
         'btnOK
         '
-        Me.btnOK.Location = New System.Drawing.Point(335, 185)
+        Me.btnOK.Location = New System.Drawing.Point(447, 228)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(75, 23)
+        Me.btnOK.Size = New System.Drawing.Size(100, 28)
         Me.btnOK.TabIndex = 8
         Me.btnOK.Text = "O K"
         Me.btnOK.UseVisualStyleBackColor = True
         '
         'txtArticleBase
         '
-        Me.txtArticleBase.Location = New System.Drawing.Point(94, 72)
+        Me.txtArticleBase.Location = New System.Drawing.Point(125, 89)
+        Me.txtArticleBase.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtArticleBase.Name = "txtArticleBase"
         Me.txtArticleBase.ReadOnly = True
-        Me.txtArticleBase.Size = New System.Drawing.Size(100, 20)
+        Me.txtArticleBase.Size = New System.Drawing.Size(132, 22)
         Me.txtArticleBase.TabIndex = 9
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(57, 75)
+        Me.Label3.Location = New System.Drawing.Point(76, 92)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(31, 13)
+        Me.Label3.Size = New System.Drawing.Size(40, 17)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Base"
         '
@@ -125,22 +134,25 @@ Partial Class frmArticleHub
         Me.GroupBox1.Controls.Add(Me.txtArticleBase)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 168)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 207)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(200, 100)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(267, 123)
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Article"
         '
         'frmArticleHub
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(422, 278)
+        Me.ClientSize = New System.Drawing.Size(563, 347)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnView)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmArticleHub"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmArticleHub"
