@@ -14,12 +14,45 @@
     End Sub
 
     Private Sub frmMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If _SharedAdvancedCredentials.MyUserType = c_MainCredentials.UserType.STU Then
-            Me.tablePanelCreators.Enabled = False
-        End If
+        FlagThisUser(True)
+
+        FrmUAC.DisableAllMe(_SharedAdvancedCredentials.MyUserType, mainpanel)
+
         _Stopwatch.Start()
         timerSession.Start()
 
+    End Sub
+
+    Private Sub FlagThisUser(ByVal State As Boolean)
+        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
+            With Connection
+                If .State = ConnectionState.Closed Then
+                    .Open()
+
+                End If
+            End With
+            Dim transaction As MySqlTransaction = Connection.BeginTransaction
+            Try
+                Using Command As New MySqlCommand
+                    With Command
+                        .Connection = Connection
+                        .CommandText = "SetUserOnline"
+                        With .Parameters
+                            .AddWithValue("UserID", _SharedUserID)
+                            .AddWithValue("UserState", State)
+                        End With
+                        .ExecuteNonQuery()
+                    End With
+                End Using
+
+            Catch XXX As MySqlException
+                transaction.Rollback()
+            Catch ex As Exception
+                DisplayGeneralException(ex)
+            End Try
+
+
+        End Using
     End Sub
 
     Private Sub btnClassroomHub_Click(sender As Object, e As EventArgs) Handles btnClassroomHub.Click
@@ -105,5 +138,22 @@
     Private Sub btnCreateClassroom_Click(sender As Object, e As EventArgs) Handles btnCreateClassroom.Click
         Dim creator As New frmClassroomCreator()
         creator.ShowDialog()
+    End Sub
+
+    Private Sub StatusStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles StatusStrip1.ItemClicked
+
+    End Sub
+
+    Private Sub frmMenu_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If MessageBox.Show("Are you sure you want to log out?", "WeLearnLMS", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then
+
+            FlagThisUser(False)
+
+            e.Cancel = False
+            Exit Sub
+        End If
+
+        e.Cancel = True
+
     End Sub
 End Class

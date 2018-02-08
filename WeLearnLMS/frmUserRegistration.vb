@@ -135,7 +135,7 @@
 
     Private Sub cellNumber_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles cellNumber.Validating
         If Not _Validator.Verify(VMethodology.Cellular, DirectCast(sender, TextBox).Text) Then
-            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid Username")
+            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid Cellnumber")
             e.Cancel = True
             DirectCast(sender, TextBox).SelectAll()
             Exit Sub
@@ -145,7 +145,7 @@
 
     Private Sub txtLandlineNumber_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtLandlineNumber.Validating
         If Not _Validator.Verify(VMethodology.Landline, DirectCast(sender, TextBox).Text) Then
-            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid Username")
+            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid Landline Number")
             e.Cancel = True
             DirectCast(sender, TextBox).SelectAll()
             Exit Sub
@@ -155,7 +155,7 @@
 
     Private Sub txtAddress_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtAddress.Validating
         If Not _Validator.Verify(VMethodology.Username, DirectCast(sender, TextBox).Text) Then
-            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid Username")
+            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid Address")
             e.Cancel = True
             DirectCast(sender, TextBox).SelectAll()
             Exit Sub

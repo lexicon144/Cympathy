@@ -48,81 +48,91 @@ Partial Class frmClassroomHub
         Me.grpMisc = New System.Windows.Forms.GroupBox()
         Me.btnViewClassGrades = New System.Windows.Forms.Button()
         Me.grpGrades = New System.Windows.Forms.GroupBox()
+        Me.PanelProfessorsOnly = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.grpLinking.SuspendLayout()
         Me.grpViewing.SuspendLayout()
         Me.grpMisc.SuspendLayout()
         Me.grpGrades.SuspendLayout()
+        Me.PanelProfessorsOnly.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnLinkExamHere
         '
-        Me.btnLinkExamHere.Location = New System.Drawing.Point(6, 138)
+        Me.btnLinkExamHere.Location = New System.Drawing.Point(8, 170)
+        Me.btnLinkExamHere.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLinkExamHere.Name = "btnLinkExamHere"
-        Me.btnLinkExamHere.Size = New System.Drawing.Size(138, 23)
+        Me.btnLinkExamHere.Size = New System.Drawing.Size(184, 28)
         Me.btnLinkExamHere.TabIndex = 21
         Me.btnLinkExamHere.Text = "Link Exam Here"
         Me.btnLinkExamHere.UseVisualStyleBackColor = True
         '
         'btnLinkQuizHere
         '
-        Me.btnLinkQuizHere.Location = New System.Drawing.Point(6, 108)
+        Me.btnLinkQuizHere.Location = New System.Drawing.Point(8, 133)
+        Me.btnLinkQuizHere.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLinkQuizHere.Name = "btnLinkQuizHere"
-        Me.btnLinkQuizHere.Size = New System.Drawing.Size(138, 23)
+        Me.btnLinkQuizHere.Size = New System.Drawing.Size(184, 28)
         Me.btnLinkQuizHere.TabIndex = 20
         Me.btnLinkQuizHere.Text = "Link Quiz Here"
         Me.btnLinkQuizHere.UseVisualStyleBackColor = True
         '
         'btnLinkMaterialHere
         '
-        Me.btnLinkMaterialHere.Location = New System.Drawing.Point(6, 78)
+        Me.btnLinkMaterialHere.Location = New System.Drawing.Point(8, 96)
+        Me.btnLinkMaterialHere.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLinkMaterialHere.Name = "btnLinkMaterialHere"
-        Me.btnLinkMaterialHere.Size = New System.Drawing.Size(138, 23)
+        Me.btnLinkMaterialHere.Size = New System.Drawing.Size(184, 28)
         Me.btnLinkMaterialHere.TabIndex = 19
         Me.btnLinkMaterialHere.Text = "Link Material Here"
         Me.btnLinkMaterialHere.UseVisualStyleBackColor = True
         '
         'btnLinkArticleHere
         '
-        Me.btnLinkArticleHere.Location = New System.Drawing.Point(6, 49)
+        Me.btnLinkArticleHere.Location = New System.Drawing.Point(8, 60)
+        Me.btnLinkArticleHere.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLinkArticleHere.Name = "btnLinkArticleHere"
-        Me.btnLinkArticleHere.Size = New System.Drawing.Size(138, 23)
+        Me.btnLinkArticleHere.Size = New System.Drawing.Size(184, 28)
         Me.btnLinkArticleHere.TabIndex = 18
         Me.btnLinkArticleHere.Text = "Link Article Here"
         Me.btnLinkArticleHere.UseVisualStyleBackColor = True
         '
         'btnLinkStudentToClassroom
         '
-        Me.btnLinkStudentToClassroom.Location = New System.Drawing.Point(6, 19)
+        Me.btnLinkStudentToClassroom.Location = New System.Drawing.Point(8, 23)
+        Me.btnLinkStudentToClassroom.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLinkStudentToClassroom.Name = "btnLinkStudentToClassroom"
-        Me.btnLinkStudentToClassroom.Size = New System.Drawing.Size(138, 23)
+        Me.btnLinkStudentToClassroom.Size = New System.Drawing.Size(184, 28)
         Me.btnLinkStudentToClassroom.TabIndex = 17
         Me.btnLinkStudentToClassroom.Text = "Link Student Here"
         Me.btnLinkStudentToClassroom.UseVisualStyleBackColor = True
         '
         'btnViewMaterials
         '
-        Me.btnViewMaterials.Location = New System.Drawing.Point(6, 48)
+        Me.btnViewMaterials.Location = New System.Drawing.Point(8, 59)
+        Me.btnViewMaterials.Margin = New System.Windows.Forms.Padding(4)
         Me.btnViewMaterials.Name = "btnViewMaterials"
-        Me.btnViewMaterials.Size = New System.Drawing.Size(138, 23)
+        Me.btnViewMaterials.Size = New System.Drawing.Size(184, 28)
         Me.btnViewMaterials.TabIndex = 15
         Me.btnViewMaterials.Text = "View Materials"
         Me.btnViewMaterials.UseVisualStyleBackColor = True
         '
         'btnViewArticles
         '
-        Me.btnViewArticles.Location = New System.Drawing.Point(6, 19)
+        Me.btnViewArticles.Location = New System.Drawing.Point(8, 23)
+        Me.btnViewArticles.Margin = New System.Windows.Forms.Padding(4)
         Me.btnViewArticles.Name = "btnViewArticles"
-        Me.btnViewArticles.Size = New System.Drawing.Size(138, 23)
+        Me.btnViewArticles.Size = New System.Drawing.Size(184, 28)
         Me.btnViewArticles.TabIndex = 13
         Me.btnViewArticles.Text = "View Articles"
         Me.btnViewArticles.UseVisualStyleBackColor = True
         '
         'btnOpenQuestionnaire
         '
-        Me.btnOpenQuestionnaire.Location = New System.Drawing.Point(6, 40)
+        Me.btnOpenQuestionnaire.Location = New System.Drawing.Point(8, 49)
+        Me.btnOpenQuestionnaire.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOpenQuestionnaire.Name = "btnOpenQuestionnaire"
-        Me.btnOpenQuestionnaire.Size = New System.Drawing.Size(130, 23)
+        Me.btnOpenQuestionnaire.Size = New System.Drawing.Size(173, 28)
         Me.btnOpenQuestionnaire.TabIndex = 11
         Me.btnOpenQuestionnaire.Text = "View Quizes"
         Me.btnOpenQuestionnaire.UseVisualStyleBackColor = True
@@ -137,65 +147,65 @@ Partial Class frmClassroomHub
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Location = New System.Drawing.Point(12, 10)
+        Me.Panel1.Location = New System.Drawing.Point(16, 12)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(315, 98)
+        Me.Panel1.Size = New System.Drawing.Size(420, 121)
         Me.Panel1.TabIndex = 27
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(57, 71)
+        Me.Label2.Location = New System.Drawing.Point(76, 87)
         Me.Label2.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(59, 13)
+        Me.Label2.Size = New System.Drawing.Size(78, 17)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "Class Type"
         '
         'txtClassType
         '
-        Me.txtClassType.Location = New System.Drawing.Point(125, 70)
+        Me.txtClassType.Location = New System.Drawing.Point(167, 86)
         Me.txtClassType.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassType.Name = "txtClassType"
         Me.txtClassType.ReadOnly = True
-        Me.txtClassType.Size = New System.Drawing.Size(177, 20)
+        Me.txtClassType.Size = New System.Drawing.Size(235, 22)
         Me.txtClassType.TabIndex = 10
         '
         'txtClassId
         '
-        Me.txtClassId.Location = New System.Drawing.Point(125, 1)
+        Me.txtClassId.Location = New System.Drawing.Point(167, 1)
         Me.txtClassId.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassId.Name = "txtClassId"
         Me.txtClassId.ReadOnly = True
-        Me.txtClassId.Size = New System.Drawing.Size(177, 20)
+        Me.txtClassId.Size = New System.Drawing.Size(235, 22)
         Me.txtClassId.TabIndex = 7
         '
         'txtClassDescription
         '
-        Me.txtClassDescription.Location = New System.Drawing.Point(125, 47)
+        Me.txtClassDescription.Location = New System.Drawing.Point(167, 58)
         Me.txtClassDescription.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassDescription.Name = "txtClassDescription"
         Me.txtClassDescription.ReadOnly = True
-        Me.txtClassDescription.Size = New System.Drawing.Size(177, 20)
+        Me.txtClassDescription.Size = New System.Drawing.Size(235, 22)
         Me.txtClassDescription.TabIndex = 6
         '
         'txtClassName
         '
-        Me.txtClassName.Location = New System.Drawing.Point(125, 24)
+        Me.txtClassName.Location = New System.Drawing.Point(167, 30)
         Me.txtClassName.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassName.Name = "txtClassName"
         Me.txtClassName.ReadOnly = True
-        Me.txtClassName.Size = New System.Drawing.Size(177, 20)
+        Me.txtClassName.Size = New System.Drawing.Size(235, 22)
         Me.txtClassName.TabIndex = 5
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(73, 4)
+        Me.Label5.Location = New System.Drawing.Point(97, 5)
         Me.Label5.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(46, 13)
+        Me.Label5.Size = New System.Drawing.Size(59, 17)
         Me.Label5.TabIndex = 2
         Me.Label5.Text = "Class ID"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -203,10 +213,10 @@ Partial Class frmClassroomHub
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(20, 48)
+        Me.Label4.Location = New System.Drawing.Point(27, 59)
         Me.Label4.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(88, 13)
+        Me.Label4.Size = New System.Drawing.Size(117, 17)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Class Description"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -214,46 +224,50 @@ Partial Class frmClassroomHub
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(34, 25)
+        Me.Label3.Location = New System.Drawing.Point(45, 31)
         Me.Label3.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(76, 13)
+        Me.Label3.Size = New System.Drawing.Size(99, 17)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Selected class"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'btnViewLessonlist
         '
-        Me.btnViewLessonlist.Location = New System.Drawing.Point(6, 77)
+        Me.btnViewLessonlist.Location = New System.Drawing.Point(8, 95)
+        Me.btnViewLessonlist.Margin = New System.Windows.Forms.Padding(4)
         Me.btnViewLessonlist.Name = "btnViewLessonlist"
-        Me.btnViewLessonlist.Size = New System.Drawing.Size(138, 23)
+        Me.btnViewLessonlist.Size = New System.Drawing.Size(184, 28)
         Me.btnViewLessonlist.TabIndex = 28
         Me.btnViewLessonlist.Text = "View Lesson List"
         Me.btnViewLessonlist.UseVisualStyleBackColor = True
         '
         'btnViewExams
         '
-        Me.btnViewExams.Location = New System.Drawing.Point(6, 69)
+        Me.btnViewExams.Location = New System.Drawing.Point(8, 85)
+        Me.btnViewExams.Margin = New System.Windows.Forms.Padding(4)
         Me.btnViewExams.Name = "btnViewExams"
-        Me.btnViewExams.Size = New System.Drawing.Size(130, 23)
+        Me.btnViewExams.Size = New System.Drawing.Size(173, 28)
         Me.btnViewExams.TabIndex = 29
         Me.btnViewExams.Text = "View Exams"
         Me.btnViewExams.UseVisualStyleBackColor = True
         '
         'frmViewGrades
         '
-        Me.frmViewGrades.Location = New System.Drawing.Point(6, 19)
+        Me.frmViewGrades.Location = New System.Drawing.Point(8, 23)
+        Me.frmViewGrades.Margin = New System.Windows.Forms.Padding(4)
         Me.frmViewGrades.Name = "frmViewGrades"
-        Me.frmViewGrades.Size = New System.Drawing.Size(138, 23)
+        Me.frmViewGrades.Size = New System.Drawing.Size(184, 28)
         Me.frmViewGrades.TabIndex = 30
         Me.frmViewGrades.Text = "View Quiz Grades"
         Me.frmViewGrades.UseVisualStyleBackColor = True
         '
         'btnViewExamGrades
         '
-        Me.btnViewExamGrades.Location = New System.Drawing.Point(6, 48)
+        Me.btnViewExamGrades.Location = New System.Drawing.Point(8, 59)
+        Me.btnViewExamGrades.Margin = New System.Windows.Forms.Padding(4)
         Me.btnViewExamGrades.Name = "btnViewExamGrades"
-        Me.btnViewExamGrades.Size = New System.Drawing.Size(138, 23)
+        Me.btnViewExamGrades.Size = New System.Drawing.Size(184, 28)
         Me.btnViewExamGrades.TabIndex = 31
         Me.btnViewExamGrades.Text = "View Exam Grades"
         Me.btnViewExamGrades.UseVisualStyleBackColor = True
@@ -265,9 +279,11 @@ Partial Class frmClassroomHub
         Me.grpLinking.Controls.Add(Me.btnLinkMaterialHere)
         Me.grpLinking.Controls.Add(Me.btnLinkQuizHere)
         Me.grpLinking.Controls.Add(Me.btnLinkExamHere)
-        Me.grpLinking.Location = New System.Drawing.Point(4, 284)
+        Me.grpLinking.Location = New System.Drawing.Point(4, 4)
+        Me.grpLinking.Margin = New System.Windows.Forms.Padding(4)
         Me.grpLinking.Name = "grpLinking"
-        Me.grpLinking.Size = New System.Drawing.Size(152, 171)
+        Me.grpLinking.Padding = New System.Windows.Forms.Padding(4)
+        Me.grpLinking.Size = New System.Drawing.Size(197, 210)
         Me.grpLinking.TabIndex = 32
         Me.grpLinking.TabStop = False
         Me.grpLinking.Text = "Linking"
@@ -276,9 +292,11 @@ Partial Class frmClassroomHub
         '
         Me.grpViewing.Controls.Add(Me.btnOpenQuestionnaire)
         Me.grpViewing.Controls.Add(Me.btnViewExams)
-        Me.grpViewing.Location = New System.Drawing.Point(12, 118)
+        Me.grpViewing.Location = New System.Drawing.Point(16, 145)
+        Me.grpViewing.Margin = New System.Windows.Forms.Padding(4)
         Me.grpViewing.Name = "grpViewing"
-        Me.grpViewing.Size = New System.Drawing.Size(144, 160)
+        Me.grpViewing.Padding = New System.Windows.Forms.Padding(4)
+        Me.grpViewing.Size = New System.Drawing.Size(201, 138)
         Me.grpViewing.TabIndex = 33
         Me.grpViewing.TabStop = False
         Me.grpViewing.Text = "Viewing"
@@ -288,18 +306,21 @@ Partial Class frmClassroomHub
         Me.grpMisc.Controls.Add(Me.btnViewArticles)
         Me.grpMisc.Controls.Add(Me.btnViewMaterials)
         Me.grpMisc.Controls.Add(Me.btnViewLessonlist)
-        Me.grpMisc.Location = New System.Drawing.Point(162, 118)
+        Me.grpMisc.Location = New System.Drawing.Point(228, 145)
+        Me.grpMisc.Margin = New System.Windows.Forms.Padding(4)
         Me.grpMisc.Name = "grpMisc"
-        Me.grpMisc.Size = New System.Drawing.Size(156, 112)
+        Me.grpMisc.Padding = New System.Windows.Forms.Padding(4)
+        Me.grpMisc.Size = New System.Drawing.Size(208, 138)
         Me.grpMisc.TabIndex = 34
         Me.grpMisc.TabStop = False
         Me.grpMisc.Text = "Misc"
         '
         'btnViewClassGrades
         '
-        Me.btnViewClassGrades.Location = New System.Drawing.Point(6, 77)
+        Me.btnViewClassGrades.Location = New System.Drawing.Point(8, 95)
+        Me.btnViewClassGrades.Margin = New System.Windows.Forms.Padding(4)
         Me.btnViewClassGrades.Name = "btnViewClassGrades"
-        Me.btnViewClassGrades.Size = New System.Drawing.Size(138, 23)
+        Me.btnViewClassGrades.Size = New System.Drawing.Size(184, 28)
         Me.btnViewClassGrades.TabIndex = 34
         Me.btnViewClassGrades.Text = "View Class Grades"
         Me.btnViewClassGrades.UseVisualStyleBackColor = True
@@ -309,23 +330,34 @@ Partial Class frmClassroomHub
         Me.grpGrades.Controls.Add(Me.frmViewGrades)
         Me.grpGrades.Controls.Add(Me.btnViewClassGrades)
         Me.grpGrades.Controls.Add(Me.btnViewExamGrades)
-        Me.grpGrades.Location = New System.Drawing.Point(162, 284)
+        Me.grpGrades.Location = New System.Drawing.Point(228, 353)
+        Me.grpGrades.Margin = New System.Windows.Forms.Padding(4)
         Me.grpGrades.Name = "grpGrades"
-        Me.grpGrades.Size = New System.Drawing.Size(156, 131)
+        Me.grpGrades.Padding = New System.Windows.Forms.Padding(4)
+        Me.grpGrades.Size = New System.Drawing.Size(208, 161)
         Me.grpGrades.TabIndex = 35
         Me.grpGrades.TabStop = False
         Me.grpGrades.Text = "View Grades"
         '
+        'PanelProfessorsOnly
+        '
+        Me.PanelProfessorsOnly.Controls.Add(Me.grpLinking)
+        Me.PanelProfessorsOnly.Location = New System.Drawing.Point(12, 349)
+        Me.PanelProfessorsOnly.Name = "PanelProfessorsOnly"
+        Me.PanelProfessorsOnly.Size = New System.Drawing.Size(205, 221)
+        Me.PanelProfessorsOnly.TabIndex = 36
+        '
         'frmClassroomHub
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(331, 474)
+        Me.ClientSize = New System.Drawing.Size(452, 583)
+        Me.Controls.Add(Me.PanelProfessorsOnly)
         Me.Controls.Add(Me.grpMisc)
         Me.Controls.Add(Me.grpGrades)
         Me.Controls.Add(Me.grpViewing)
-        Me.Controls.Add(Me.grpLinking)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmClassroomHub"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmClassroomHub"
@@ -335,6 +367,7 @@ Partial Class frmClassroomHub
         Me.grpViewing.ResumeLayout(False)
         Me.grpMisc.ResumeLayout(False)
         Me.grpGrades.ResumeLayout(False)
+        Me.PanelProfessorsOnly.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -364,4 +397,5 @@ Partial Class frmClassroomHub
     Friend WithEvents grpMisc As System.Windows.Forms.GroupBox
     Friend WithEvents btnViewClassGrades As System.Windows.Forms.Button
     Friend WithEvents grpGrades As System.Windows.Forms.GroupBox
+    Friend WithEvents PanelProfessorsOnly As System.Windows.Forms.Panel
 End Class

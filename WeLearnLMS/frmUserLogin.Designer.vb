@@ -37,42 +37,42 @@ Partial Class frmUserLogin
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(45, 117)
+        Me.LinkLabel1.Location = New System.Drawing.Point(61, 141)
         Me.LinkLabel1.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(123, 13)
+        Me.LinkLabel1.Size = New System.Drawing.Size(159, 17)
         Me.LinkLabel1.TabIndex = 7
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Register a New Account"
         '
         'btnLogin
         '
-        Me.btnLogin.Location = New System.Drawing.Point(82, 54)
+        Me.btnLogin.Location = New System.Drawing.Point(109, 66)
         Me.btnLogin.Margin = New System.Windows.Forms.Padding(1)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(86, 23)
+        Me.btnLogin.Size = New System.Drawing.Size(115, 28)
         Me.btnLogin.TabIndex = 6
         Me.btnLogin.Text = "Log In"
         Me.btnLogin.UseVisualStyleBackColor = True
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(17, 32)
+        Me.txtPassword.Location = New System.Drawing.Point(23, 39)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(1)
         Me.txtPassword.MaxLength = 18
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(10084)
-        Me.txtPassword.Size = New System.Drawing.Size(151, 20)
+        Me.txtPassword.Size = New System.Drawing.Size(200, 22)
         Me.txtPassword.TabIndex = 5
         Me.txtPassword.Text = "Password"
         '
         'txtUsername
         '
-        Me.txtUsername.Location = New System.Drawing.Point(17, 10)
+        Me.txtUsername.Location = New System.Drawing.Point(23, 12)
         Me.txtUsername.Margin = New System.Windows.Forms.Padding(1)
         Me.txtUsername.MaxLength = 50
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(151, 20)
+        Me.txtUsername.Size = New System.Drawing.Size(200, 22)
         Me.txtUsername.TabIndex = 4
         Me.txtUsername.Text = "Username"
         '
@@ -87,9 +87,10 @@ Partial Class frmUserLogin
         '
         Me.LinkLabel2.AutoSize = True
         Me.LinkLabel2.Enabled = False
-        Me.LinkLabel2.Location = New System.Drawing.Point(54, 145)
+        Me.LinkLabel2.Location = New System.Drawing.Point(72, 178)
+        Me.LinkLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(114, 13)
+        Me.LinkLabel2.Size = New System.Drawing.Size(153, 17)
         Me.LinkLabel2.TabIndex = 8
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "Forgot your password?"
@@ -97,24 +98,26 @@ Partial Class frmUserLogin
         'lblChangeServer
         '
         Me.lblChangeServer.AutoSize = True
-        Me.lblChangeServer.Location = New System.Drawing.Point(90, 174)
+        Me.lblChangeServer.Location = New System.Drawing.Point(120, 214)
+        Me.lblChangeServer.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblChangeServer.Name = "lblChangeServer"
-        Me.lblChangeServer.Size = New System.Drawing.Size(76, 13)
+        Me.lblChangeServer.Size = New System.Drawing.Size(100, 17)
         Me.lblChangeServer.TabIndex = 9
         Me.lblChangeServer.TabStop = True
         Me.lblChangeServer.Text = "Specify Server"
         '
         'frmUserLogin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(178, 197)
+        Me.ClientSize = New System.Drawing.Size(237, 242)
         Me.Controls.Add(Me.lblChangeServer)
         Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtUsername)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmUserLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmLogin"

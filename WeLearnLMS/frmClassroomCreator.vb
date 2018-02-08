@@ -35,8 +35,11 @@ Public Class frmClassroomCreator
 #Region "Sub Routines and Functions"
 
     Private Sub diaClassCreation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If _SharedAdvancedCredentials.MyUserType = c_MainCredentials.UserType.STU Then
+            PanelProfessorsOnly.Enabled = False
+        End If
         ''TODO - ERROR IN PARSING ENUMS
-        Me.Panel1.Enabled = False
+        Me.PanelProfessorsOnly.Enabled = False
         Me.OK_Button.Enabled = False
         cmbClassroomType.Items.AddRange(eClassType.GetNames(GetType(eClassType)))
     End Sub
@@ -145,7 +148,7 @@ Public Class frmClassroomCreator
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.OK_Button.Enabled = True
-        Me.Panel1.Enabled = True
+        Me.PanelProfessorsOnly.Enabled = True
     End Sub
 
     Private Sub cmbClassroomType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbClassroomType.SelectedIndexChanged

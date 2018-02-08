@@ -54,7 +54,7 @@ Public Class frmPasswordModifier
                         .CommandText = "UpdateUserPassword"
                         .Transaction = PasswordModifierTransaction
                         With .Parameters
-                            .AddWithValue("UserID", Me._MainCredentials.UserID)
+                            .AddWithValue("UserID", _SharedUserID)
                             .AddWithValue("Salt", Me._Salt)
                             .AddWithValue("SaltedPassword", Me._Salter)
                         End With
@@ -86,8 +86,32 @@ Public Class frmPasswordModifier
     End Sub
 
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
-        If Me.txtPassword1.Text IsNot Me.txtPassword2.Text Then Exit Sub
 
+        GenerateSalt()
+        Hasher()
         PasswordModifier()
+    End Sub
+
+    Private Sub Checker_TextChanged(sender As Object, e As EventArgs) Handles txtPassword2.TextChanged, txtPassword2.TextChanged
+
+        If (txtPassword1.Text = txtPassword2.Text) Then
+            btnOK.Enabled = True
+            Exit Sub
+        End If
+        btnOK.Enabled = False
+    End Sub
+
+    Private Sub Button1_MouseDown(sender As Object, e As MouseEventArgs) Handles Button1.MouseDown
+        With Me
+            .txtPassword1.UseSystemPasswordChar = False
+            .txtPassword2.UseSystemPasswordChar = False
+        End With
+    End Sub
+
+    Private Sub Button1_MouseUp(sender As Object, e As MouseEventArgs) Handles Button1.MouseUp
+        With Me
+            .txtPassword1.UseSystemPasswordChar = True
+            .txtPassword2.UseSystemPasswordChar = True
+        End With
     End Sub
 End Class

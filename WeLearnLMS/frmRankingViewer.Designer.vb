@@ -64,6 +64,7 @@ Partial Class frmRankingViewer
         '
         'BackgroundWorker1
         '
+        Me.BackgroundWorker1.WorkerReportsProgress = True
         '
         'StatusStrip1
         '

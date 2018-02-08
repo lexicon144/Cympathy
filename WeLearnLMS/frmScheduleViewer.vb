@@ -29,6 +29,21 @@
         LoadSchedules(ClassroomID)
     End Sub
 
+    Private Sub SimpleView(ByVal State As Boolean)
+        With Me
+            .Label1.Visible = State
+            .Label10.Visible = State
+            .Label9.Visible = State
+            .Label5.Visible = State
+            .Label7.Visible = State
+            .txtClassroomID.Visible = State
+            .txtDayID.Visible = State
+            .txtTimeID.Visible = State
+            .txtTimeslotID.Visible = State
+            .txtTimestart.Visible = State
+        End With
+    End Sub
+
     Private Sub frmScheduleViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim btn As New DataGridViewButtonColumn()
         btn.HeaderText = "Action"
@@ -139,5 +154,9 @@
         Catch EXX As Exception
             DisplayGeneralException(EXX)
         End Try
+    End Sub
+
+    Private Sub chkVisible_Click(sender As Object, e As EventArgs) Handles chkVisible.Click
+        SimpleView(chkVisible.Checked)
     End Sub
 End Class

@@ -30,10 +30,6 @@
             REView()
         End If
 
-        If _SharedMainCredentials.MyUserType = c_MainCredentials.UserType.STU Then
-            grpLinking.Enabled = False
-        End If
-
         _SharedClassroom.ClassroomId = Me._Classroom.ClassroomId
     End Sub
 

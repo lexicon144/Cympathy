@@ -42,9 +42,9 @@
 
     Private Sub LoadAll()
         LoadClassroomNode(Me._Classroom.ClassroomId)
-        LoadArticlesNode(Me._Classroom.ClassroomId)
-        LoadMaterialsNode(Me._Classroom.ClassroomId)
-        LoadQuizNode(Me._Classroom.ClassroomId)
+        'LoadArticlesNode(Me._Classroom.ClassroomId)
+        'LoadMaterialsNode(Me._Classroom.ClassroomId)
+        'LoadQuizNode(Me._Classroom.ClassroomId)
         'LoadExamsNode(Me._Classroom.ClassroomId)
     End Sub
 

@@ -42,34 +42,39 @@ Partial Class frmGradesClassroomCreator
         Me.btnMakeGrades = New System.Windows.Forms.Button()
         Me.txtAverage = New System.Windows.Forms.TextBox()
         Me.txtLetter = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.grpClassroom.SuspendLayout()
         Me.grpUser.SuspendLayout()
         Me.grpGrades.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnClassroomBrowser
         '
-        Me.btnClassroomBrowser.Location = New System.Drawing.Point(6, 19)
+        Me.btnClassroomBrowser.Location = New System.Drawing.Point(8, 23)
+        Me.btnClassroomBrowser.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnClassroomBrowser.Name = "btnClassroomBrowser"
-        Me.btnClassroomBrowser.Size = New System.Drawing.Size(75, 23)
+        Me.btnClassroomBrowser.Size = New System.Drawing.Size(100, 28)
         Me.btnClassroomBrowser.TabIndex = 0
         Me.btnClassroomBrowser.Text = "Browse"
         Me.btnClassroomBrowser.UseVisualStyleBackColor = True
         '
         'btnUserBrowser
         '
-        Me.btnUserBrowser.Location = New System.Drawing.Point(6, 19)
+        Me.btnUserBrowser.Location = New System.Drawing.Point(8, 23)
+        Me.btnUserBrowser.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnUserBrowser.Name = "btnUserBrowser"
-        Me.btnUserBrowser.Size = New System.Drawing.Size(75, 23)
+        Me.btnUserBrowser.Size = New System.Drawing.Size(100, 28)
         Me.btnUserBrowser.TabIndex = 1
         Me.btnUserBrowser.Text = "Browser"
         Me.btnUserBrowser.UseVisualStyleBackColor = True
         '
         'btnFinalizeGrades
         '
-        Me.btnFinalizeGrades.Location = New System.Drawing.Point(552, 226)
+        Me.btnFinalizeGrades.Location = New System.Drawing.Point(724, 198)
+        Me.btnFinalizeGrades.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnFinalizeGrades.Name = "btnFinalizeGrades"
-        Me.btnFinalizeGrades.Size = New System.Drawing.Size(75, 23)
+        Me.btnFinalizeGrades.Size = New System.Drawing.Size(100, 28)
         Me.btnFinalizeGrades.TabIndex = 2
         Me.btnFinalizeGrades.Text = "Finalize"
         Me.btnFinalizeGrades.UseVisualStyleBackColor = True
@@ -81,9 +86,11 @@ Partial Class frmGradesClassroomCreator
         Me.grpClassroom.Controls.Add(Me.txtClassroomID)
         Me.grpClassroom.Controls.Add(Me.txtClassroomName)
         Me.grpClassroom.Controls.Add(Me.btnClassroomBrowser)
-        Me.grpClassroom.Location = New System.Drawing.Point(12, 12)
+        Me.grpClassroom.Location = New System.Drawing.Point(4, 4)
+        Me.grpClassroom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.grpClassroom.Name = "grpClassroom"
-        Me.grpClassroom.Size = New System.Drawing.Size(200, 151)
+        Me.grpClassroom.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpClassroom.Size = New System.Drawing.Size(267, 186)
         Me.grpClassroom.TabIndex = 3
         Me.grpClassroom.TabStop = False
         Me.grpClassroom.Text = "Classroom"
@@ -91,35 +98,39 @@ Partial Class frmGradesClassroomCreator
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(53, 85)
+        Me.Label2.Location = New System.Drawing.Point(71, 105)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(35, 13)
+        Me.Label2.Size = New System.Drawing.Size(45, 17)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Name"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(70, 58)
+        Me.Label1.Location = New System.Drawing.Point(93, 71)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(18, 13)
+        Me.Label1.Size = New System.Drawing.Size(21, 17)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "ID"
         '
         'txtClassroomID
         '
-        Me.txtClassroomID.Location = New System.Drawing.Point(94, 55)
+        Me.txtClassroomID.Location = New System.Drawing.Point(125, 68)
+        Me.txtClassroomID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtClassroomID.Name = "txtClassroomID"
         Me.txtClassroomID.ReadOnly = True
-        Me.txtClassroomID.Size = New System.Drawing.Size(100, 20)
+        Me.txtClassroomID.Size = New System.Drawing.Size(132, 22)
         Me.txtClassroomID.TabIndex = 2
         '
         'txtClassroomName
         '
-        Me.txtClassroomName.Location = New System.Drawing.Point(94, 82)
+        Me.txtClassroomName.Location = New System.Drawing.Point(125, 101)
+        Me.txtClassroomName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtClassroomName.Name = "txtClassroomName"
         Me.txtClassroomName.ReadOnly = True
-        Me.txtClassroomName.Size = New System.Drawing.Size(100, 20)
+        Me.txtClassroomName.Size = New System.Drawing.Size(132, 22)
         Me.txtClassroomName.TabIndex = 1
         '
         'grpUser
@@ -129,9 +140,11 @@ Partial Class frmGradesClassroomCreator
         Me.grpUser.Controls.Add(Me.txtUserID)
         Me.grpUser.Controls.Add(Me.txtUserName)
         Me.grpUser.Controls.Add(Me.btnUserBrowser)
-        Me.grpUser.Location = New System.Drawing.Point(218, 12)
+        Me.grpUser.Location = New System.Drawing.Point(279, 4)
+        Me.grpUser.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.grpUser.Name = "grpUser"
-        Me.grpUser.Size = New System.Drawing.Size(200, 151)
+        Me.grpUser.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpUser.Size = New System.Drawing.Size(267, 186)
         Me.grpUser.TabIndex = 4
         Me.grpUser.TabStop = False
         Me.grpUser.Text = "User"
@@ -139,44 +152,49 @@ Partial Class frmGradesClassroomCreator
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(46, 84)
+        Me.Label4.Location = New System.Drawing.Point(61, 103)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(35, 13)
+        Me.Label4.Size = New System.Drawing.Size(45, 17)
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Name"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(63, 57)
+        Me.Label3.Location = New System.Drawing.Point(84, 70)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(18, 13)
+        Me.Label3.Size = New System.Drawing.Size(21, 17)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "ID"
         '
         'txtUserID
         '
-        Me.txtUserID.Location = New System.Drawing.Point(87, 55)
+        Me.txtUserID.Location = New System.Drawing.Point(116, 68)
+        Me.txtUserID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtUserID.Name = "txtUserID"
         Me.txtUserID.ReadOnly = True
-        Me.txtUserID.Size = New System.Drawing.Size(107, 20)
+        Me.txtUserID.Size = New System.Drawing.Size(141, 22)
         Me.txtUserID.TabIndex = 3
         '
         'txtUserName
         '
-        Me.txtUserName.Location = New System.Drawing.Point(87, 81)
+        Me.txtUserName.Location = New System.Drawing.Point(116, 100)
+        Me.txtUserName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtUserName.Name = "txtUserName"
         Me.txtUserName.ReadOnly = True
-        Me.txtUserName.Size = New System.Drawing.Size(107, 20)
+        Me.txtUserName.Size = New System.Drawing.Size(141, 22)
         Me.txtUserName.TabIndex = 2
         '
         'btnToggleRO
         '
         Me.btnToggleRO.Appearance = System.Windows.Forms.Appearance.Button
         Me.btnToggleRO.AutoSize = True
-        Me.btnToggleRO.Location = New System.Drawing.Point(284, 169)
+        Me.btnToggleRO.Location = New System.Drawing.Point(367, 197)
+        Me.btnToggleRO.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnToggleRO.Name = "btnToggleRO"
-        Me.btnToggleRO.Size = New System.Drawing.Size(84, 23)
+        Me.btnToggleRO.Size = New System.Drawing.Size(109, 27)
         Me.btnToggleRO.TabIndex = 5
         Me.btnToggleRO.Text = "Freeze Editing"
         Me.btnToggleRO.UseVisualStyleBackColor = True
@@ -188,9 +206,11 @@ Partial Class frmGradesClassroomCreator
         Me.grpGrades.Controls.Add(Me.btnMakeGrades)
         Me.grpGrades.Controls.Add(Me.txtAverage)
         Me.grpGrades.Controls.Add(Me.txtLetter)
-        Me.grpGrades.Location = New System.Drawing.Point(424, 12)
+        Me.grpGrades.Location = New System.Drawing.Point(553, 4)
+        Me.grpGrades.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.grpGrades.Name = "grpGrades"
-        Me.grpGrades.Size = New System.Drawing.Size(203, 151)
+        Me.grpGrades.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpGrades.Size = New System.Drawing.Size(271, 186)
         Me.grpGrades.TabIndex = 6
         Me.grpGrades.TabStop = False
         Me.grpGrades.Text = "Grades"
@@ -198,56 +218,70 @@ Partial Class frmGradesClassroomCreator
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(49, 57)
+        Me.Label6.Location = New System.Drawing.Point(65, 70)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(31, 13)
+        Me.Label6.Size = New System.Drawing.Size(39, 17)
         Me.Label6.TabIndex = 4
         Me.Label6.Text = "Mark"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(41, 84)
+        Me.Label5.Location = New System.Drawing.Point(55, 103)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(47, 13)
+        Me.Label5.Size = New System.Drawing.Size(61, 17)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "Average"
         '
         'btnMakeGrades
         '
-        Me.btnMakeGrades.Location = New System.Drawing.Point(6, 19)
+        Me.btnMakeGrades.Location = New System.Drawing.Point(8, 23)
+        Me.btnMakeGrades.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnMakeGrades.Name = "btnMakeGrades"
-        Me.btnMakeGrades.Size = New System.Drawing.Size(75, 23)
+        Me.btnMakeGrades.Size = New System.Drawing.Size(100, 28)
         Me.btnMakeGrades.TabIndex = 2
         Me.btnMakeGrades.Text = "Compute"
         Me.btnMakeGrades.UseVisualStyleBackColor = True
         '
         'txtAverage
         '
-        Me.txtAverage.Location = New System.Drawing.Point(94, 80)
+        Me.txtAverage.Location = New System.Drawing.Point(125, 98)
+        Me.txtAverage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtAverage.Name = "txtAverage"
         Me.txtAverage.ReadOnly = True
-        Me.txtAverage.Size = New System.Drawing.Size(100, 20)
+        Me.txtAverage.Size = New System.Drawing.Size(132, 22)
         Me.txtAverage.TabIndex = 1
         '
         'txtLetter
         '
-        Me.txtLetter.Location = New System.Drawing.Point(94, 54)
+        Me.txtLetter.Location = New System.Drawing.Point(125, 66)
+        Me.txtLetter.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtLetter.Name = "txtLetter"
         Me.txtLetter.ReadOnly = True
-        Me.txtLetter.Size = New System.Drawing.Size(100, 20)
+        Me.txtLetter.Size = New System.Drawing.Size(132, 22)
         Me.txtLetter.TabIndex = 0
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.grpClassroom)
+        Me.Panel1.Controls.Add(Me.btnFinalizeGrades)
+        Me.Panel1.Controls.Add(Me.grpGrades)
+        Me.Panel1.Controls.Add(Me.grpUser)
+        Me.Panel1.Controls.Add(Me.btnToggleRO)
+        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(830, 236)
+        Me.Panel1.TabIndex = 7
         '
         'frmGradesClassroomCreator
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(639, 261)
-        Me.Controls.Add(Me.grpGrades)
-        Me.Controls.Add(Me.btnToggleRO)
-        Me.Controls.Add(Me.grpUser)
-        Me.Controls.Add(Me.grpClassroom)
-        Me.Controls.Add(Me.btnFinalizeGrades)
+        Me.ClientSize = New System.Drawing.Size(851, 255)
+        Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmGradesClassroomCreator"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmGradesClassroomCreator"
@@ -257,8 +291,9 @@ Partial Class frmGradesClassroomCreator
         Me.grpUser.PerformLayout()
         Me.grpGrades.ResumeLayout(False)
         Me.grpGrades.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents btnClassroomBrowser As System.Windows.Forms.Button
@@ -281,4 +316,5 @@ Partial Class frmGradesClassroomCreator
     Friend WithEvents btnMakeGrades As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 End Class

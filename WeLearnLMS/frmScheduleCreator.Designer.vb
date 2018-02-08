@@ -32,57 +32,65 @@ Partial Class frmScheduleCreator
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtTime = New System.Windows.Forms.TextBox()
         Me.txtClassroom = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnCreateSchedule
         '
-        Me.btnCreateSchedule.Location = New System.Drawing.Point(138, 123)
+        Me.btnCreateSchedule.Location = New System.Drawing.Point(172, 130)
+        Me.btnCreateSchedule.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCreateSchedule.Name = "btnCreateSchedule"
-        Me.btnCreateSchedule.Size = New System.Drawing.Size(120, 23)
+        Me.btnCreateSchedule.Size = New System.Drawing.Size(160, 28)
         Me.btnCreateSchedule.TabIndex = 6
         Me.btnCreateSchedule.Text = "Create Schedule"
         Me.btnCreateSchedule.UseVisualStyleBackColor = True
         '
         'txtDay
         '
-        Me.txtDay.Location = New System.Drawing.Point(264, 57)
+        Me.txtDay.Location = New System.Drawing.Point(340, 59)
+        Me.txtDay.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDay.Name = "txtDay"
         Me.txtDay.ReadOnly = True
-        Me.txtDay.Size = New System.Drawing.Size(120, 20)
+        Me.txtDay.Size = New System.Drawing.Size(159, 22)
         Me.txtDay.TabIndex = 7
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(261, 41)
+        Me.Label3.Location = New System.Drawing.Point(336, 39)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(26, 13)
+        Me.Label3.Size = New System.Drawing.Size(33, 17)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Day"
         '
         'btnBrowseDays
         '
-        Me.btnBrowseDays.Location = New System.Drawing.Point(264, 12)
+        Me.btnBrowseDays.Location = New System.Drawing.Point(340, 4)
+        Me.btnBrowseDays.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBrowseDays.Name = "btnBrowseDays"
-        Me.btnBrowseDays.Size = New System.Drawing.Size(120, 23)
+        Me.btnBrowseDays.Size = New System.Drawing.Size(160, 28)
         Me.btnBrowseDays.TabIndex = 10
         Me.btnBrowseDays.Text = "Browse Days"
         Me.btnBrowseDays.UseVisualStyleBackColor = True
         '
         'btnBrowseTime
         '
-        Me.btnBrowseTime.Location = New System.Drawing.Point(138, 12)
+        Me.btnBrowseTime.Location = New System.Drawing.Point(172, 4)
+        Me.btnBrowseTime.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBrowseTime.Name = "btnBrowseTime"
-        Me.btnBrowseTime.Size = New System.Drawing.Size(120, 23)
+        Me.btnBrowseTime.Size = New System.Drawing.Size(160, 28)
         Me.btnBrowseTime.TabIndex = 16
         Me.btnBrowseTime.Text = "Browse Time"
         Me.btnBrowseTime.UseVisualStyleBackColor = True
         '
         'btnBrowseClassroom
         '
-        Me.btnBrowseClassroom.Location = New System.Drawing.Point(12, 12)
+        Me.btnBrowseClassroom.Location = New System.Drawing.Point(4, 4)
+        Me.btnBrowseClassroom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBrowseClassroom.Name = "btnBrowseClassroom"
-        Me.btnBrowseClassroom.Size = New System.Drawing.Size(120, 23)
+        Me.btnBrowseClassroom.Size = New System.Drawing.Size(160, 28)
         Me.btnBrowseClassroom.TabIndex = 15
         Me.btnBrowseClassroom.Text = "Browse Classroom"
         Me.btnBrowseClassroom.UseVisualStyleBackColor = True
@@ -90,57 +98,71 @@ Partial Class frmScheduleCreator
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(135, 38)
+        Me.Label4.Location = New System.Drawing.Point(168, 36)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(30, 13)
+        Me.Label4.Size = New System.Drawing.Size(39, 17)
         Me.Label4.TabIndex = 14
         Me.Label4.Text = "Time"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(9, 38)
+        Me.Label5.Location = New System.Drawing.Point(0, 36)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(55, 13)
+        Me.Label5.Size = New System.Drawing.Size(74, 17)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "Classroom"
         '
         'txtTime
         '
-        Me.txtTime.Location = New System.Drawing.Point(138, 57)
+        Me.txtTime.Location = New System.Drawing.Point(172, 59)
+        Me.txtTime.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtTime.Name = "txtTime"
         Me.txtTime.ReadOnly = True
-        Me.txtTime.Size = New System.Drawing.Size(120, 20)
+        Me.txtTime.Size = New System.Drawing.Size(159, 22)
         Me.txtTime.TabIndex = 12
         '
         'txtClassroom
         '
-        Me.txtClassroom.Location = New System.Drawing.Point(12, 57)
+        Me.txtClassroom.Location = New System.Drawing.Point(4, 59)
+        Me.txtClassroom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtClassroom.Name = "txtClassroom"
         Me.txtClassroom.ReadOnly = True
-        Me.txtClassroom.Size = New System.Drawing.Size(120, 20)
+        Me.txtClassroom.Size = New System.Drawing.Size(159, 22)
         Me.txtClassroom.TabIndex = 11
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.btnBrowseClassroom)
+        Me.Panel1.Controls.Add(Me.btnCreateSchedule)
+        Me.Panel1.Controls.Add(Me.btnBrowseTime)
+        Me.Panel1.Controls.Add(Me.txtDay)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.btnBrowseDays)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.txtClassroom)
+        Me.Panel1.Controls.Add(Me.txtTime)
+        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(500, 158)
+        Me.Panel1.TabIndex = 17
         '
         'frmScheduleCreator
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(393, 158)
-        Me.Controls.Add(Me.btnBrowseTime)
-        Me.Controls.Add(Me.btnBrowseClassroom)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.txtTime)
-        Me.Controls.Add(Me.txtClassroom)
-        Me.Controls.Add(Me.btnBrowseDays)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.txtDay)
-        Me.Controls.Add(Me.btnCreateSchedule)
+        Me.ClientSize = New System.Drawing.Size(524, 186)
+        Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmScheduleCreator"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmScheduleCreator"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents btnCreateSchedule As System.Windows.Forms.Button
@@ -153,4 +175,5 @@ Partial Class frmScheduleCreator
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtTime As System.Windows.Forms.TextBox
     Friend WithEvents txtClassroom As System.Windows.Forms.TextBox
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 End Class

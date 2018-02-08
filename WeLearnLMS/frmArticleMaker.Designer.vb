@@ -27,29 +27,34 @@ Partial Class frmArticleMaker
         Me.txtArticleName = New System.Windows.Forms.TextBox()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.PanelProfessorsOnly = New System.Windows.Forms.Panel()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelProfessorsOnly.SuspendLayout()
         Me.SuspendLayout()
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(12, 38)
+        Me.RichTextBox1.Location = New System.Drawing.Point(4, 36)
+        Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(260, 211)
+        Me.RichTextBox1.Size = New System.Drawing.Size(345, 259)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = ""
         '
         'txtArticleName
         '
-        Me.txtArticleName.Location = New System.Drawing.Point(12, 12)
+        Me.txtArticleName.Location = New System.Drawing.Point(4, 4)
+        Me.txtArticleName.Margin = New System.Windows.Forms.Padding(4)
         Me.txtArticleName.Name = "txtArticleName"
-        Me.txtArticleName.Size = New System.Drawing.Size(100, 20)
+        Me.txtArticleName.Size = New System.Drawing.Size(132, 22)
         Me.txtArticleName.TabIndex = 1
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(118, 10)
+        Me.btnSave.Location = New System.Drawing.Point(145, 1)
+        Me.btnSave.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(75, 23)
+        Me.btnSave.Size = New System.Drawing.Size(100, 28)
         Me.btnSave.TabIndex = 2
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
@@ -58,24 +63,35 @@ Partial Class frmArticleMaker
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'PanelProfessorsOnly
+        '
+        Me.PanelProfessorsOnly.Controls.Add(Me.txtArticleName)
+        Me.PanelProfessorsOnly.Controls.Add(Me.btnSave)
+        Me.PanelProfessorsOnly.Controls.Add(Me.RichTextBox1)
+        Me.PanelProfessorsOnly.Location = New System.Drawing.Point(12, 12)
+        Me.PanelProfessorsOnly.Name = "PanelProfessorsOnly"
+        Me.PanelProfessorsOnly.Size = New System.Drawing.Size(358, 297)
+        Me.PanelProfessorsOnly.TabIndex = 3
+        '
         'frmArticleMaker
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 261)
-        Me.Controls.Add(Me.btnSave)
-        Me.Controls.Add(Me.txtArticleName)
-        Me.Controls.Add(Me.RichTextBox1)
+        Me.ClientSize = New System.Drawing.Size(382, 321)
+        Me.Controls.Add(Me.PanelProfessorsOnly)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmArticleMaker"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmArticleMaker"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelProfessorsOnly.ResumeLayout(False)
+        Me.PanelProfessorsOnly.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
     Friend WithEvents txtArticleName As System.Windows.Forms.TextBox
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents PanelProfessorsOnly As System.Windows.Forms.Panel
 End Class

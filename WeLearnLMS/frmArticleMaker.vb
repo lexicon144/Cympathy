@@ -68,7 +68,7 @@
     End Sub
 
     Private Sub frmArticleCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        
     End Sub
 
     Private Sub txtArticleName_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtArticleName.Validating

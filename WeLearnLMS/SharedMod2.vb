@@ -9,6 +9,8 @@ Public Module SharedMod2
     Friend _SharedAdvancedCredentials As New c_AdvancedCredentials
     Friend _SharedValidator As New ContextVerification
     Friend WeLearnAC As New ContextAntiCheatEngine
+    Friend FrmUAC As New ContextDisableControls()
+
     Friend Enum UserType
         ADM = 0
         PRO = 1
@@ -52,6 +54,8 @@ Public Module SharedMod2
         Next
         Return sb
     End Function
+
+
 
     Public Function DataSerialize(ByRef myList As List(Of c_SmallQuestion)) As String
         Dim sw As New StringWriter

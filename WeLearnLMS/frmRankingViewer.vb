@@ -3,7 +3,11 @@
     Private _RankingDatatable As New DataTable
 
     Private Sub frmRankingViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Try
+            BackgroundWorker1.RunWorkerAsync()
+        Catch ex As Exception
+            DisplayGeneralException(ex)
+        End Try
     End Sub
 
     Private Sub DisplayData()
@@ -30,7 +34,7 @@
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             BackgroundWorker1.ReportProgress(20)
             With Connection
-                If .State = ConnectionState.Open Then .Open()
+                If .State = ConnectionState.Closed Then .Open()
             End With
             BackgroundWorker1.ReportProgress(50)
             Using Command As New MySqlCommand

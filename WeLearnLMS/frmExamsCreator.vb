@@ -16,6 +16,10 @@ Public Class frmExamsCreator
     End Sub
 
     Private Sub frmExamsCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If _SharedAdvancedCredentials.MyUserType = c_MainCredentials.UserType.STU Then
+            PanelProfessorsOnly.Enabled = False
+        End If
+
         Dim Creator As New frmQuestionnaireCreator()
 
         Creator.ShowDialog(Me)
