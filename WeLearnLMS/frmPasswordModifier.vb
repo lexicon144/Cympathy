@@ -4,6 +4,7 @@ Public Class frmPasswordModifier
 
     Private _MainCredentials As c_MainCredentials
     Private _NewPassword As String
+    Private _NewPlainPassword As String
     Private _HashedPassword As String
     Private _Salt As String
     Private _Hasher As IHashing = New StrategyHashingSHA512
@@ -35,7 +36,7 @@ Public Class frmPasswordModifier
     End Sub
 
     Private Sub Hasher()
-        Me._HashedPassword = Me._Hasher.HashThis(_NewPassword, _Salt)
+        Me._HashedPassword = Me._Hasher.HashThis(_NewPlainPassword, _Salt)
     End Sub
 
     Private Sub PasswordModifier()
@@ -51,12 +52,13 @@ Public Class frmPasswordModifier
                 Using Command As New MySqlCommand
                     With Command
                         .Connection = Connection
+                        .CommandType = CommandType.StoredProcedure
                         .CommandText = "UpdateUserPassword"
                         .Transaction = PasswordModifierTransaction
                         With .Parameters
-                            .AddWithValue("UserID", _SharedUserID)
+                            .AddWithValue("UserID", _UserID)
                             .AddWithValue("Salt", Me._Salt)
-                            .AddWithValue("SaltedPassword", Me._Salter)
+                            .AddWithValue("SaltedPassword", Me._HashedPassword)
                         End With
 
                         .ExecuteNonQuery()
@@ -72,7 +74,7 @@ Public Class frmPasswordModifier
     End Sub
 
     Private Sub txtPassword2_Validated(sender As Object, e As EventArgs) Handles txtPassword2.Validated
-        Me._NewPassword = DirectCast(sender, TextBox).Text
+        Me._NewPlainPassword = DirectCast(sender, TextBox).Text
     End Sub
 
     Private Sub txtPassword2_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtPassword2.Validating

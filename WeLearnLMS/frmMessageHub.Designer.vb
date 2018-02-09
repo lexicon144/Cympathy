@@ -32,42 +32,40 @@ Partial Class frmMessageHub
         '
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(16, 15)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(509, 185)
+        Me.DataGridView1.Size = New System.Drawing.Size(382, 150)
         Me.DataGridView1.TabIndex = 0
         '
         'btnCreateFeedback
         '
-        Me.btnCreateFeedback.Location = New System.Drawing.Point(375, 207)
-        Me.btnCreateFeedback.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCreateFeedback.Location = New System.Drawing.Point(281, 168)
         Me.btnCreateFeedback.Name = "btnCreateFeedback"
-        Me.btnCreateFeedback.Size = New System.Drawing.Size(151, 28)
+        Me.btnCreateFeedback.Size = New System.Drawing.Size(113, 23)
         Me.btnCreateFeedback.TabIndex = 1
         Me.btnCreateFeedback.Text = "Create Feedback"
         Me.btnCreateFeedback.UseVisualStyleBackColor = True
         '
         'btnViewFeedback
         '
-        Me.btnViewFeedback.Location = New System.Drawing.Point(375, 242)
-        Me.btnViewFeedback.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnViewFeedback.Location = New System.Drawing.Point(281, 197)
         Me.btnViewFeedback.Name = "btnViewFeedback"
-        Me.btnViewFeedback.Size = New System.Drawing.Size(151, 28)
+        Me.btnViewFeedback.Size = New System.Drawing.Size(113, 23)
         Me.btnViewFeedback.TabIndex = 2
         Me.btnViewFeedback.Text = "View Feedback"
         Me.btnViewFeedback.UseVisualStyleBackColor = True
         '
         'frmMessageHub
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(541, 293)
+        Me.ClientSize = New System.Drawing.Size(406, 238)
         Me.Controls.Add(Me.btnViewFeedback)
         Me.Controls.Add(Me.btnCreateFeedback)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
         Me.Name = "frmMessageHub"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmFeedbackHub"

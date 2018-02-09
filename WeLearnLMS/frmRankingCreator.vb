@@ -118,6 +118,7 @@ Public Class frmRankingCreator
         Me._Count = CountVotes(Me._CandidateCredentials.UserID)
 
         DisplayToText()
+        Button1.Enabled = True
     End Sub
 
     Private Sub btnBrowseUser_Click(sender As Object, e As EventArgs) Handles btnBrowseUser.Click
@@ -128,14 +129,6 @@ Public Class frmRankingCreator
         End If
 
         Me.txtVote.Text = CountVotes(Me._CandidateCredentials.UserID)
-        Me.chkVote.Enabled = True
-    End Sub
-
-    Private Sub chkVote_CheckedChanged(sender As Object, e As EventArgs) Handles chkVote.CheckedChanged
-
-        SaveVote(Me._CandidateCredentials.UserID, Me._MainCredentials.UserID, DirectCast(sender, CheckBox).Checked)
-
-        Me.chkVote.BackColor = Me.BackColor
     End Sub
 
     Private Sub Label4_MouseHover(sender As Object, e As EventArgs) Handles Label4.MouseHover
@@ -146,4 +139,15 @@ Public Class frmRankingCreator
         DirectCast(sender, Label).Text = "(You) are voting for..."
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        SaveVote(Me._CandidateCredentials.UserID, _SharedMainCredentials.UserID, Me.CheckBox1.Checked)
+        Button1.Enabled = False
+    End Sub
+
+    Private Sub CheckBox1_CheckStateChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckStateChanged
+        If CheckBox1.Checked Then CheckBox1.Text = "+1"
+        If Not CheckBox1.Checked Then CheckBox1.Text = "-1"
+
+    End Sub
 End Class

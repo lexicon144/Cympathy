@@ -59,10 +59,10 @@ Partial Class frmPasswordModifier
         'btnOK
         '
         Me.btnOK.Enabled = False
-        Me.btnOK.Location = New System.Drawing.Point(13, 256)
+        Me.btnOK.Location = New System.Drawing.Point(13, 248)
         Me.btnOK.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(128, 28)
+        Me.btnOK.Size = New System.Drawing.Size(128, 36)
         Me.btnOK.TabIndex = 2
         Me.btnOK.Text = "Confirm"
         Me.btnOK.UseVisualStyleBackColor = True

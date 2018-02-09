@@ -39,7 +39,7 @@ Partial Class frmScheduleCreator
         'btnCreateSchedule
         '
         Me.btnCreateSchedule.Location = New System.Drawing.Point(172, 130)
-        Me.btnCreateSchedule.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCreateSchedule.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCreateSchedule.Name = "btnCreateSchedule"
         Me.btnCreateSchedule.Size = New System.Drawing.Size(160, 28)
         Me.btnCreateSchedule.TabIndex = 6
@@ -49,7 +49,7 @@ Partial Class frmScheduleCreator
         'txtDay
         '
         Me.txtDay.Location = New System.Drawing.Point(340, 59)
-        Me.txtDay.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDay.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDay.Name = "txtDay"
         Me.txtDay.ReadOnly = True
         Me.txtDay.Size = New System.Drawing.Size(159, 22)
@@ -68,7 +68,7 @@ Partial Class frmScheduleCreator
         'btnBrowseDays
         '
         Me.btnBrowseDays.Location = New System.Drawing.Point(340, 4)
-        Me.btnBrowseDays.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBrowseDays.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBrowseDays.Name = "btnBrowseDays"
         Me.btnBrowseDays.Size = New System.Drawing.Size(160, 28)
         Me.btnBrowseDays.TabIndex = 10
@@ -78,7 +78,7 @@ Partial Class frmScheduleCreator
         'btnBrowseTime
         '
         Me.btnBrowseTime.Location = New System.Drawing.Point(172, 4)
-        Me.btnBrowseTime.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBrowseTime.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBrowseTime.Name = "btnBrowseTime"
         Me.btnBrowseTime.Size = New System.Drawing.Size(160, 28)
         Me.btnBrowseTime.TabIndex = 16
@@ -88,7 +88,7 @@ Partial Class frmScheduleCreator
         'btnBrowseClassroom
         '
         Me.btnBrowseClassroom.Location = New System.Drawing.Point(4, 4)
-        Me.btnBrowseClassroom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBrowseClassroom.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBrowseClassroom.Name = "btnBrowseClassroom"
         Me.btnBrowseClassroom.Size = New System.Drawing.Size(160, 28)
         Me.btnBrowseClassroom.TabIndex = 15
@@ -118,7 +118,7 @@ Partial Class frmScheduleCreator
         'txtTime
         '
         Me.txtTime.Location = New System.Drawing.Point(172, 59)
-        Me.txtTime.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTime.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTime.Name = "txtTime"
         Me.txtTime.ReadOnly = True
         Me.txtTime.Size = New System.Drawing.Size(159, 22)
@@ -127,7 +127,7 @@ Partial Class frmScheduleCreator
         'txtClassroom
         '
         Me.txtClassroom.Location = New System.Drawing.Point(4, 59)
-        Me.txtClassroom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtClassroom.Margin = New System.Windows.Forms.Padding(4)
         Me.txtClassroom.Name = "txtClassroom"
         Me.txtClassroom.ReadOnly = True
         Me.txtClassroom.Size = New System.Drawing.Size(159, 22)
@@ -156,7 +156,7 @@ Partial Class frmScheduleCreator
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(524, 186)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmScheduleCreator"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmScheduleCreator"

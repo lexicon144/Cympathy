@@ -8,6 +8,7 @@
     Private MainSalt As String
 
     Private Sub frmUserRegistration_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         MainSalt = _Salter.SaltThis()
         _Information.UserSalt = MainSalt
     End Sub

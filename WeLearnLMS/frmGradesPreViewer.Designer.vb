@@ -41,78 +41,87 @@ Partial Class frmGradesPreViewer
         '
         'txtHits
         '
-        Me.txtHits.Location = New System.Drawing.Point(121, 19)
+        Me.txtHits.Location = New System.Drawing.Point(161, 23)
+        Me.txtHits.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtHits.Name = "txtHits"
         Me.txtHits.ReadOnly = True
-        Me.txtHits.Size = New System.Drawing.Size(73, 20)
+        Me.txtHits.Size = New System.Drawing.Size(96, 22)
         Me.txtHits.TabIndex = 0
         '
         'txtTotalQuestions
         '
-        Me.txtTotalQuestions.Location = New System.Drawing.Point(121, 58)
+        Me.txtTotalQuestions.Location = New System.Drawing.Point(161, 71)
+        Me.txtTotalQuestions.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtTotalQuestions.Name = "txtTotalQuestions"
         Me.txtTotalQuestions.ReadOnly = True
-        Me.txtTotalQuestions.Size = New System.Drawing.Size(73, 20)
+        Me.txtTotalQuestions.Size = New System.Drawing.Size(96, 22)
         Me.txtTotalQuestions.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(34, 61)
+        Me.Label1.Location = New System.Drawing.Point(45, 75)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(81, 13)
+        Me.Label1.Size = New System.Drawing.Size(108, 17)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Total Questions"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(83, 19)
+        Me.Label2.Location = New System.Drawing.Point(111, 23)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(32, 13)
+        Me.Label2.Size = New System.Drawing.Size(39, 17)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "HITS"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(150, 42)
+        Me.Label3.Location = New System.Drawing.Point(200, 52)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(12, 13)
+        Me.Label3.Size = New System.Drawing.Size(12, 17)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "/"
         '
         'txtAverage
         '
-        Me.txtAverage.Location = New System.Drawing.Point(121, 19)
+        Me.txtAverage.Location = New System.Drawing.Point(161, 23)
+        Me.txtAverage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtAverage.Name = "txtAverage"
         Me.txtAverage.ReadOnly = True
-        Me.txtAverage.Size = New System.Drawing.Size(73, 20)
+        Me.txtAverage.Size = New System.Drawing.Size(96, 22)
         Me.txtAverage.TabIndex = 5
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(43, 22)
+        Me.Label4.Location = New System.Drawing.Point(57, 27)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(72, 13)
+        Me.Label4.Size = New System.Drawing.Size(95, 17)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Your Average"
         '
         'txtScore
         '
-        Me.txtScore.Location = New System.Drawing.Point(121, 46)
+        Me.txtScore.Location = New System.Drawing.Point(161, 57)
+        Me.txtScore.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtScore.Name = "txtScore"
         Me.txtScore.ReadOnly = True
-        Me.txtScore.Size = New System.Drawing.Size(73, 20)
+        Me.txtScore.Size = New System.Drawing.Size(96, 22)
         Me.txtScore.TabIndex = 7
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(55, 49)
+        Me.Label5.Location = New System.Drawing.Point(73, 60)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(60, 13)
+        Me.Label5.Size = New System.Drawing.Size(79, 17)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Your Score"
         '
@@ -123,9 +132,11 @@ Partial Class frmGradesPreViewer
         Me.grpRawData.Controls.Add(Me.Label3)
         Me.grpRawData.Controls.Add(Me.Label1)
         Me.grpRawData.Controls.Add(Me.Label2)
-        Me.grpRawData.Location = New System.Drawing.Point(12, 227)
+        Me.grpRawData.Location = New System.Drawing.Point(16, 279)
+        Me.grpRawData.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.grpRawData.Name = "grpRawData"
-        Me.grpRawData.Size = New System.Drawing.Size(200, 85)
+        Me.grpRawData.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpRawData.Size = New System.Drawing.Size(267, 105)
         Me.grpRawData.TabIndex = 9
         Me.grpRawData.TabStop = False
         Me.grpRawData.Text = "Raw Data"
@@ -136,29 +147,36 @@ Partial Class frmGradesPreViewer
         Me.grpProcessedData.Controls.Add(Me.Label4)
         Me.grpProcessedData.Controls.Add(Me.Label5)
         Me.grpProcessedData.Controls.Add(Me.txtScore)
-        Me.grpProcessedData.Location = New System.Drawing.Point(218, 227)
+        Me.grpProcessedData.Location = New System.Drawing.Point(291, 279)
+        Me.grpProcessedData.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.grpProcessedData.Name = "grpProcessedData"
-        Me.grpProcessedData.Size = New System.Drawing.Size(200, 85)
+        Me.grpProcessedData.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpProcessedData.Size = New System.Drawing.Size(267, 105)
         Me.grpProcessedData.TabIndex = 10
         Me.grpProcessedData.TabStop = False
         Me.grpProcessedData.Text = "Processed Data"
         '
         'DataGridView1
         '
+        Me.DataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
+        Me.DataGridView1.Location = New System.Drawing.Point(16, 15)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(406, 209)
+        Me.DataGridView1.Size = New System.Drawing.Size(541, 257)
         Me.DataGridView1.TabIndex = 11
         '
         'frmGradesPreViewer
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(430, 324)
+        Me.ClientSize = New System.Drawing.Size(573, 399)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.grpProcessedData)
         Me.Controls.Add(Me.grpRawData)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmGradesPreViewer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmPreGrades"

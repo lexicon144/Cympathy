@@ -23,7 +23,6 @@ Partial Class frmRankingCreator
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnBrowseUser = New System.Windows.Forms.Button()
-        Me.chkVote = New System.Windows.Forms.CheckBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtUserName = New System.Windows.Forms.TextBox()
@@ -32,30 +31,20 @@ Partial Class frmRankingCreator
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtVote = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnBrowseUser
         '
         Me.btnBrowseUser.Location = New System.Drawing.Point(193, 15)
-        Me.btnBrowseUser.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBrowseUser.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBrowseUser.Name = "btnBrowseUser"
         Me.btnBrowseUser.Size = New System.Drawing.Size(100, 28)
         Me.btnBrowseUser.TabIndex = 0
         Me.btnBrowseUser.Text = "Browse User"
         Me.btnBrowseUser.UseVisualStyleBackColor = True
-        '
-        'chkVote
-        '
-        Me.chkVote.Appearance = System.Windows.Forms.Appearance.Button
-        Me.chkVote.AutoSize = True
-        Me.chkVote.Location = New System.Drawing.Point(141, 233)
-        Me.chkVote.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.chkVote.Name = "chkVote"
-        Me.chkVote.Size = New System.Drawing.Size(34, 27)
-        Me.chkVote.TabIndex = 2
-        Me.chkVote.Text = "+1"
-        Me.chkVote.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -80,7 +69,7 @@ Partial Class frmRankingCreator
         'txtUserName
         '
         Me.txtUserName.Location = New System.Drawing.Point(125, 55)
-        Me.txtUserName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtUserName.Margin = New System.Windows.Forms.Padding(4)
         Me.txtUserName.Name = "txtUserName"
         Me.txtUserName.ReadOnly = True
         Me.txtUserName.Size = New System.Drawing.Size(132, 22)
@@ -89,7 +78,7 @@ Partial Class frmRankingCreator
         'txtUserID
         '
         Me.txtUserID.Location = New System.Drawing.Point(125, 23)
-        Me.txtUserID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtUserID.Margin = New System.Windows.Forms.Padding(4)
         Me.txtUserID.Name = "txtUserID"
         Me.txtUserID.ReadOnly = True
         Me.txtUserID.Size = New System.Drawing.Size(132, 22)
@@ -104,9 +93,9 @@ Partial Class frmRankingCreator
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtUserName)
         Me.GroupBox1.Location = New System.Drawing.Point(16, 102)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(277, 123)
         Me.GroupBox1.TabIndex = 10
         Me.GroupBox1.TabStop = False
@@ -124,7 +113,7 @@ Partial Class frmRankingCreator
         'txtVote
         '
         Me.txtVote.Location = New System.Drawing.Point(125, 87)
-        Me.txtVote.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtVote.Margin = New System.Windows.Forms.Padding(4)
         Me.txtVote.Name = "txtVote"
         Me.txtVote.ReadOnly = True
         Me.txtVote.Size = New System.Drawing.Size(132, 22)
@@ -140,16 +129,39 @@ Partial Class frmRankingCreator
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "(You) are voting for..."
         '
+        'Button1
+        '
+        Me.Button1.Enabled = False
+        Me.Button1.Location = New System.Drawing.Point(103, 300)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(112, 34)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "Vote Now!"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Checked = True
+        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox1.Location = New System.Drawing.Point(141, 232)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(46, 21)
+        Me.CheckBox1.TabIndex = 13
+        Me.CheckBox1.Text = "+1"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'frmRankingCreator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(309, 276)
+        Me.ClientSize = New System.Drawing.Size(309, 346)
+        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.chkVote)
         Me.Controls.Add(Me.btnBrowseUser)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmRankingCreator"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmRankingProfessors"
@@ -160,7 +172,6 @@ Partial Class frmRankingCreator
 
     End Sub
     Friend WithEvents btnBrowseUser As System.Windows.Forms.Button
-    Friend WithEvents chkVote As System.Windows.Forms.CheckBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtUserName As System.Windows.Forms.TextBox
@@ -169,4 +180,6 @@ Partial Class frmRankingCreator
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtVote As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
 End Class

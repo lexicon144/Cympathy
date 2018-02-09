@@ -125,9 +125,12 @@ Public Class frmUserLogin
             PreInfoToCredentialsParser()
 
             BackgroundWorker1.RunWorkerAsync(ValidateLogin())
-            Me.LinkLabel2.Enabled = True
-            Me.txtPassword.Text = ""
-            Me.txtUsername.Text = ""
+
+            With Me
+                .LinkLabel2.Enabled = True
+                .txtPassword.Text = ""
+                .txtUsername.Text = ""
+            End With
         Catch XXX As Exception
             MessageBox.Show("Something wrong happened when (You) tried to login. Reason: " & XXX.Message, "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
@@ -139,7 +142,7 @@ Public Class frmUserLogin
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-        
+        'if user login was correct!
         If e.Result Then
             ShareMe()
 

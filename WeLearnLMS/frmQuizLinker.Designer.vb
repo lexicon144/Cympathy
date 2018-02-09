@@ -44,11 +44,9 @@ Partial Class frmQuizLinker
         Me.grpClassroom.Controls.Add(Me.Label3)
         Me.grpClassroom.Controls.Add(Me.txtClassroomName)
         Me.grpClassroom.Controls.Add(Me.txtClassroomID)
-        Me.grpClassroom.Location = New System.Drawing.Point(355, 15)
-        Me.grpClassroom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpClassroom.Location = New System.Drawing.Point(266, 12)
         Me.grpClassroom.Name = "grpClassroom"
-        Me.grpClassroom.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.grpClassroom.Size = New System.Drawing.Size(267, 123)
+        Me.grpClassroom.Size = New System.Drawing.Size(200, 100)
         Me.grpClassroom.TabIndex = 7
         Me.grpClassroom.TabStop = False
         Me.grpClassroom.Text = "Classroom"
@@ -56,47 +54,42 @@ Partial Class frmQuizLinker
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(3, 55)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(2, 45)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(115, 17)
+        Me.Label4.Size = New System.Drawing.Size(86, 13)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Classroom Name"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(25, 22)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(19, 18)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(91, 17)
+        Me.Label3.Size = New System.Drawing.Size(69, 13)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Classroom ID"
         '
         'txtClassroomName
         '
-        Me.txtClassroomName.Location = New System.Drawing.Point(125, 52)
-        Me.txtClassroomName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtClassroomName.Location = New System.Drawing.Point(94, 42)
         Me.txtClassroomName.Name = "txtClassroomName"
         Me.txtClassroomName.ReadOnly = True
-        Me.txtClassroomName.Size = New System.Drawing.Size(132, 22)
+        Me.txtClassroomName.Size = New System.Drawing.Size(100, 20)
         Me.txtClassroomName.TabIndex = 1
         '
         'txtClassroomID
         '
-        Me.txtClassroomID.Location = New System.Drawing.Point(125, 18)
-        Me.txtClassroomID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtClassroomID.Location = New System.Drawing.Point(94, 15)
         Me.txtClassroomID.Name = "txtClassroomID"
         Me.txtClassroomID.ReadOnly = True
-        Me.txtClassroomID.Size = New System.Drawing.Size(132, 22)
+        Me.txtClassroomID.Size = New System.Drawing.Size(100, 20)
         Me.txtClassroomID.TabIndex = 0
         '
         'btnLink
         '
-        Me.btnLink.Location = New System.Drawing.Point(272, 160)
-        Me.btnLink.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnLink.Location = New System.Drawing.Point(204, 130)
         Me.btnLink.Name = "btnLink"
-        Me.btnLink.Size = New System.Drawing.Size(100, 28)
+        Me.btnLink.Size = New System.Drawing.Size(75, 23)
         Me.btnLink.TabIndex = 6
         Me.btnLink.Text = "Link ->"
         Me.btnLink.UseVisualStyleBackColor = True
@@ -107,11 +100,9 @@ Partial Class frmQuizLinker
         Me.grpQuizDisplay.Controls.Add(Me.Label1)
         Me.grpQuizDisplay.Controls.Add(Me.txtQuizID)
         Me.grpQuizDisplay.Controls.Add(Me.txtQuizName)
-        Me.grpQuizDisplay.Location = New System.Drawing.Point(16, 15)
-        Me.grpQuizDisplay.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpQuizDisplay.Location = New System.Drawing.Point(12, 12)
         Me.grpQuizDisplay.Name = "grpQuizDisplay"
-        Me.grpQuizDisplay.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.grpQuizDisplay.Size = New System.Drawing.Size(267, 123)
+        Me.grpQuizDisplay.Size = New System.Drawing.Size(200, 100)
         Me.grpQuizDisplay.TabIndex = 5
         Me.grpQuizDisplay.TabStop = False
         Me.grpQuizDisplay.Text = "Quiz"
@@ -119,60 +110,58 @@ Partial Class frmQuizLinker
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(28, 59)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(21, 48)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(78, 17)
+        Me.Label2.Size = New System.Drawing.Size(59, 13)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Quiz Name"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(51, 27)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(38, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(54, 17)
+        Me.Label1.Size = New System.Drawing.Size(42, 13)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Quiz ID"
         '
         'txtQuizID
         '
-        Me.txtQuizID.Location = New System.Drawing.Point(125, 23)
-        Me.txtQuizID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtQuizID.Location = New System.Drawing.Point(94, 19)
         Me.txtQuizID.Name = "txtQuizID"
         Me.txtQuizID.ReadOnly = True
-        Me.txtQuizID.Size = New System.Drawing.Size(132, 22)
+        Me.txtQuizID.Size = New System.Drawing.Size(100, 20)
         Me.txtQuizID.TabIndex = 0
         '
         'txtQuizName
         '
-        Me.txtQuizName.Location = New System.Drawing.Point(125, 55)
-        Me.txtQuizName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtQuizName.Location = New System.Drawing.Point(94, 45)
         Me.txtQuizName.Name = "txtQuizName"
         Me.txtQuizName.ReadOnly = True
-        Me.txtQuizName.Size = New System.Drawing.Size(132, 22)
+        Me.txtQuizName.Size = New System.Drawing.Size(100, 20)
         Me.txtQuizName.TabIndex = 1
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(306, 75)
+        Me.Label6.Location = New System.Drawing.Point(230, 61)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(42, 17)
+        Me.Label6.Size = New System.Drawing.Size(32, 13)
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "To ->"
         '
         'frmQuizLinker
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(639, 212)
+        Me.ClientSize = New System.Drawing.Size(479, 172)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.grpClassroom)
         Me.Controls.Add(Me.btnLink)
         Me.Controls.Add(Me.grpQuizDisplay)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
         Me.Name = "frmQuizLinker"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmQuizLinker"

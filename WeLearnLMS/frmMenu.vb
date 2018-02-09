@@ -13,6 +13,8 @@
         End With
     End Sub
 
+
+
     Private Sub frmMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FlagThisUser(True)
 
@@ -20,7 +22,7 @@
 
         _Stopwatch.Start()
         timerSession.Start()
-
+        startupsound()
     End Sub
 
     Private Sub FlagThisUser(ByVal State As Boolean)
@@ -146,7 +148,7 @@
 
     Private Sub frmMenu_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If MessageBox.Show("Are you sure you want to log out?", "WeLearnLMS", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then
-
+            logoutsound()
             FlagThisUser(False)
 
             e.Cancel = False
@@ -156,4 +158,27 @@
         e.Cancel = True
 
     End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs)
+        If ColorDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+            Me.BackColor = ColorDialog1.Color
+        End If
+    End Sub
+
+    Private Sub ChangeColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangeColorToolStripMenuItem.Click
+        If ColorDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+            Me.BackColor = ColorDialog1.Color
+        End If
+    End Sub
+
+    Private Sub RefreshToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RefreshToolStripMenuItem.Click
+        Me.Refresh()
+    End Sub
+
+    Private Sub MoreSettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MoreSettingsToolStripMenuItem.Click
+        Dim changeviews As New frmSomeSettings()
+        changeviews.ShowDialog()
+        Me.Refresh()
+    End Sub
+
 End Class

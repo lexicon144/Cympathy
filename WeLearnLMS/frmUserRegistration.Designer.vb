@@ -442,6 +442,8 @@ Partial Class frmUserRegistration
         Me.Controls.Add(Me.grpPersonal)
         Me.Controls.Add(Me.grpCredentials)
         Me.Controls.Add(Me.btn_save)
+        Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
         Me.Name = "frmUserRegistration"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "formRegistration"

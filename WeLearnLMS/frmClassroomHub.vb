@@ -137,4 +137,15 @@
         Dim linker As New frmClassroomLinker(_SharedClassroom)
         linker.ShowDialog()
     End Sub
+
+    Private Sub btnViewClassGrades_Click(sender As Object, e As EventArgs) Handles btnViewClassGrades.Click
+        Dim viewer As New frmGradesClassroomViewer
+        viewer.ShowDialog()
+    End Sub
+
+    Private Sub ChangeColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangeColorToolStripMenuItem.Click
+        If ColorDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+            Me.BackColor = ColorDialog1.Color
+        End If
+    End Sub
 End Class
