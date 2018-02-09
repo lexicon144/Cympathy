@@ -171,6 +171,8 @@ Partial Class frmMessageCreator
         Me.Controls.Add(Me.txtTimeStamp)
         Me.Controls.Add(Me.txtReceiverNAME)
         Me.Controls.Add(Me.txtSenderNAME)
+        Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
         Me.Name = "frmMessageCreator"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmFeedbackCreator"

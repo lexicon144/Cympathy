@@ -34,6 +34,9 @@ Partial Class frmPasswordModifier
         '
         'txtPassword1
         '
+        Me.txtPassword1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtPassword1.Location = New System.Drawing.Point(4, 51)
         Me.txtPassword1.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPassword1.Name = "txtPassword1"
@@ -43,6 +46,9 @@ Partial Class frmPasswordModifier
         '
         'txtPassword2
         '
+        Me.txtPassword2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtPassword2.Location = New System.Drawing.Point(4, 145)
         Me.txtPassword2.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPassword2.Name = "txtPassword2"
@@ -53,10 +59,10 @@ Partial Class frmPasswordModifier
         'btnOK
         '
         Me.btnOK.Enabled = False
-        Me.btnOK.Location = New System.Drawing.Point(13, 256)
+        Me.btnOK.Location = New System.Drawing.Point(13, 248)
         Me.btnOK.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(128, 28)
+        Me.btnOK.Size = New System.Drawing.Size(128, 36)
         Me.btnOK.TabIndex = 2
         Me.btnOK.Text = "Confirm"
         Me.btnOK.UseVisualStyleBackColor = True
@@ -99,7 +105,7 @@ Partial Class frmPasswordModifier
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(155, 207)
+        Me.Button1.Location = New System.Drawing.Point(159, 248)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(114, 36)
         Me.Button1.TabIndex = 5
@@ -110,7 +116,7 @@ Partial Class frmPasswordModifier
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(294, 297)
+        Me.ClientSize = New System.Drawing.Size(284, 298)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.Button1)

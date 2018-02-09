@@ -36,47 +36,42 @@ Partial Class frmStudyMaterialsCreator
         '
         'txtMaterialName
         '
-        Me.txtMaterialName.Location = New System.Drawing.Point(190, 4)
-        Me.txtMaterialName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtMaterialName.Location = New System.Drawing.Point(143, 3)
         Me.txtMaterialName.Name = "txtMaterialName"
-        Me.txtMaterialName.Size = New System.Drawing.Size(179, 22)
+        Me.txtMaterialName.Size = New System.Drawing.Size(134, 20)
         Me.txtMaterialName.TabIndex = 0
         '
         'txtMaterialDescription
         '
-        Me.txtMaterialDescription.Location = New System.Drawing.Point(190, 75)
-        Me.txtMaterialDescription.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtMaterialDescription.Location = New System.Drawing.Point(143, 60)
         Me.txtMaterialDescription.Multiline = True
         Me.txtMaterialDescription.Name = "txtMaterialDescription"
-        Me.txtMaterialDescription.Size = New System.Drawing.Size(179, 63)
+        Me.txtMaterialDescription.Size = New System.Drawing.Size(134, 52)
         Me.txtMaterialDescription.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(4, 0)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(99, 17)
+        Me.Label1.Size = New System.Drawing.Size(75, 13)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Material Name"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(4, 71)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(3, 57)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(133, 17)
+        Me.Label2.Size = New System.Drawing.Size(100, 13)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Material Description"
         '
         'btnAddMaterial
         '
-        Me.btnAddMaterial.Location = New System.Drawing.Point(281, 161)
-        Me.btnAddMaterial.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAddMaterial.Location = New System.Drawing.Point(211, 131)
         Me.btnAddMaterial.Name = "btnAddMaterial"
-        Me.btnAddMaterial.Size = New System.Drawing.Size(100, 28)
+        Me.btnAddMaterial.Size = New System.Drawing.Size(75, 23)
         Me.btnAddMaterial.TabIndex = 4
         Me.btnAddMaterial.Text = "Add"
         Me.btnAddMaterial.UseVisualStyleBackColor = True
@@ -94,22 +89,24 @@ Partial Class frmStudyMaterialsCreator
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.txtMaterialName, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txtMaterialDescription, 1, 1)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 12)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(9, 10)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(373, 142)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(280, 115)
         Me.TableLayoutPanel1.TabIndex = 5
         '
         'frmStudyMaterialsCreator
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(397, 209)
+        Me.ClientSize = New System.Drawing.Size(298, 170)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.btnAddMaterial)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
         Me.Name = "frmStudyMaterialsCreator"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmStudyMaterialsCreator"

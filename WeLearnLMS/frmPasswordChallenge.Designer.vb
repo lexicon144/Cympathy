@@ -31,57 +31,63 @@ Partial Class frmPasswordChallenge
         '
         'txtAnswer
         '
-        Me.txtAnswer.Location = New System.Drawing.Point(68, 102)
+        Me.txtAnswer.Location = New System.Drawing.Point(91, 126)
+        Me.txtAnswer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtAnswer.Name = "txtAnswer"
-        Me.txtAnswer.Size = New System.Drawing.Size(100, 20)
+        Me.txtAnswer.Size = New System.Drawing.Size(132, 22)
         Me.txtAnswer.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(16, 105)
+        Me.Label1.Location = New System.Drawing.Point(21, 129)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(42, 13)
+        Me.Label1.Size = New System.Drawing.Size(54, 17)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Answer"
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(68, 22)
+        Me.RichTextBox1.Location = New System.Drawing.Point(91, 27)
+        Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(100, 74)
+        Me.RichTextBox1.Size = New System.Drawing.Size(132, 90)
         Me.RichTextBox1.TabIndex = 2
         Me.RichTextBox1.Text = ""
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 25)
+        Me.Label2.Location = New System.Drawing.Point(16, 31)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(54, 13)
+        Me.Label2.Size = New System.Drawing.Size(71, 17)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Challenge"
         '
         'btnOK
         '
-        Me.btnOK.Location = New System.Drawing.Point(93, 128)
+        Me.btnOK.Location = New System.Drawing.Point(124, 158)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(75, 23)
+        Me.btnOK.Size = New System.Drawing.Size(100, 28)
         Me.btnOK.TabIndex = 4
         Me.btnOK.Text = "O K "
         Me.btnOK.UseVisualStyleBackColor = True
         '
         'frmPasswordChallenge
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(195, 171)
+        Me.ClientSize = New System.Drawing.Size(234, 210)
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtAnswer)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmPasswordChallenge"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmPasswordChallenge"

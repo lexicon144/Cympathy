@@ -33,6 +33,7 @@ Partial Class frmQuizLinker
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtQuizID = New System.Windows.Forms.TextBox()
         Me.txtQuizName = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.grpClassroom.SuspendLayout()
         Me.grpQuizDisplay.SuspendLayout()
         Me.SuspendLayout()
@@ -140,14 +141,27 @@ Partial Class frmQuizLinker
         Me.txtQuizName.Size = New System.Drawing.Size(100, 20)
         Me.txtQuizName.TabIndex = 1
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(230, 61)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(32, 13)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "To ->"
+        '
         'frmQuizLinker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(479, 172)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.grpClassroom)
         Me.Controls.Add(Me.btnLink)
         Me.Controls.Add(Me.grpQuizDisplay)
+        Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
         Me.Name = "frmQuizLinker"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmQuizLinker"
@@ -156,6 +170,7 @@ Partial Class frmQuizLinker
         Me.grpQuizDisplay.ResumeLayout(False)
         Me.grpQuizDisplay.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents grpClassroom As System.Windows.Forms.GroupBox
@@ -169,4 +184,5 @@ Partial Class frmQuizLinker
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtQuizID As System.Windows.Forms.TextBox
     Friend WithEvents txtQuizName As System.Windows.Forms.TextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

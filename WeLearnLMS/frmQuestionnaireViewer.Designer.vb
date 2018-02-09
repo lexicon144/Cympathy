@@ -49,10 +49,14 @@ Partial Class frmQuestionnaireViewer
         Me.Label5 = New System.Windows.Forms.Label()
         Me.RdButtonPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.mainpanel = New System.Windows.Forms.Panel()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ChangeColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.RdButtonPanel.SuspendLayout()
         Me.mainpanel.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -116,6 +120,7 @@ Partial Class frmQuestionnaireViewer
         Me.tttActionButton.HeaderText = "Select"
         Me.tttActionButton.Name = "tttActionButton"
         Me.tttActionButton.ReadOnly = True
+        Me.tttActionButton.Text = "<-"
         '
         'RichTextBox1
         '
@@ -130,10 +135,9 @@ Partial Class frmQuestionnaireViewer
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Location = New System.Drawing.Point(3, 3)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButton1.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton1.TabIndex = 2
         Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "RadioButton1"
         Me.RadioButton1.UseVisualStyleBackColor = True
         '
         'RadioButton2
@@ -141,10 +145,9 @@ Partial Class frmQuestionnaireViewer
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Location = New System.Drawing.Point(216, 3)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButton2.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton2.TabIndex = 3
         Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "RadioButton2"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'RadioButton3
@@ -152,10 +155,9 @@ Partial Class frmQuestionnaireViewer
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.Location = New System.Drawing.Point(3, 53)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButton3.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton3.TabIndex = 4
         Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "RadioButton3"
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
         'RadioButton4
@@ -163,10 +165,9 @@ Partial Class frmQuestionnaireViewer
         Me.RadioButton4.AutoSize = True
         Me.RadioButton4.Location = New System.Drawing.Point(216, 53)
         Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButton4.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton4.TabIndex = 5
         Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "RadioButton4"
         Me.RadioButton4.UseVisualStyleBackColor = True
         '
         'Timer1
@@ -273,6 +274,7 @@ Partial Class frmQuestionnaireViewer
         '
         'RdButtonPanel
         '
+        Me.RdButtonPanel.BackColor = System.Drawing.Color.Transparent
         Me.RdButtonPanel.ColumnCount = 2
         Me.RdButtonPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.RdButtonPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -290,23 +292,43 @@ Partial Class frmQuestionnaireViewer
         '
         'mainpanel
         '
+        Me.mainpanel.BackColor = System.Drawing.Color.Transparent
         Me.mainpanel.Controls.Add(Me.RichTextBox1)
         Me.mainpanel.Controls.Add(Me.RdButtonPanel)
         Me.mainpanel.Controls.Add(Me.DataGridView1)
         Me.mainpanel.Controls.Add(Me.TableLayoutPanel1)
-        Me.mainpanel.Location = New System.Drawing.Point(12, 14)
+        Me.mainpanel.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.mainpanel.Location = New System.Drawing.Point(0, 26)
         Me.mainpanel.Name = "mainpanel"
-        Me.mainpanel.Size = New System.Drawing.Size(437, 436)
+        Me.mainpanel.Size = New System.Drawing.Size(439, 436)
         Me.mainpanel.TabIndex = 10
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangeColorToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(439, 24)
+        Me.MenuStrip1.TabIndex = 11
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ChangeColorToolStripMenuItem
+        '
+        Me.ChangeColorToolStripMenuItem.Name = "ChangeColorToolStripMenuItem"
+        Me.ChangeColorToolStripMenuItem.Size = New System.Drawing.Size(92, 20)
+        Me.ChangeColorToolStripMenuItem.Text = "Change Color"
         '
         'frmQuestionnaireViewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(459, 462)
+        Me.ClientSize = New System.Drawing.Size(439, 462)
         Me.Controls.Add(Me.mainpanel)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.btnDevAuto13)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmQuestionnaireViewer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmQuestionnaireViewer"
@@ -316,6 +338,8 @@ Partial Class frmQuestionnaireViewer
         Me.RdButtonPanel.ResumeLayout(False)
         Me.RdButtonPanel.PerformLayout()
         Me.mainpanel.ResumeLayout(False)
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -329,14 +353,6 @@ Partial Class frmQuestionnaireViewer
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents btnDevAuto13 As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents tttIndex As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents tttQuestionBase As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents tttDistractor1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents tttDistractor2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents tttDistractor3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents tttDistractor4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents tttAns As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents tttActionButton As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents lblHours As System.Windows.Forms.Label
     Friend WithEvents lblMinutes As System.Windows.Forms.Label
@@ -346,4 +362,15 @@ Partial Class frmQuestionnaireViewer
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents mainpanel As System.Windows.Forms.Panel
+    Friend WithEvents tttIndex As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents tttQuestionBase As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents tttDistractor1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents tttDistractor2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents tttDistractor3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents tttDistractor4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents tttAns As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents tttActionButton As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents ChangeColorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ColorDialog1 As System.Windows.Forms.ColorDialog
 End Class

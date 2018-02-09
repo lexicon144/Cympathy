@@ -31,13 +31,18 @@ Partial Class frmStudyMaterialsHub
         Me.btnView = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtMaterialDescription = New System.Windows.Forms.TextBox()
+        Me.grpMaterilas = New System.Windows.Forms.GroupBox()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpMaterilas.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
         Me.DataGridView1.Name = "DataGridView1"
@@ -48,24 +53,26 @@ Partial Class frmStudyMaterialsHub
         '
         'txtMaterialID
         '
-        Me.txtMaterialID.Location = New System.Drawing.Point(118, 169)
+        Me.txtMaterialID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtMaterialID.Location = New System.Drawing.Point(193, 3)
         Me.txtMaterialID.Name = "txtMaterialID"
         Me.txtMaterialID.ReadOnly = True
-        Me.txtMaterialID.Size = New System.Drawing.Size(154, 20)
+        Me.txtMaterialID.Size = New System.Drawing.Size(184, 20)
         Me.txtMaterialID.TabIndex = 4
         '
         'txtMaterialName
         '
-        Me.txtMaterialName.Location = New System.Drawing.Point(118, 195)
+        Me.txtMaterialName.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtMaterialName.Location = New System.Drawing.Point(193, 35)
         Me.txtMaterialName.Name = "txtMaterialName"
         Me.txtMaterialName.ReadOnly = True
-        Me.txtMaterialName.Size = New System.Drawing.Size(154, 20)
+        Me.txtMaterialName.Size = New System.Drawing.Size(184, 20)
         Me.txtMaterialName.TabIndex = 5
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(54, 176)
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 13)
         Me.Label1.TabIndex = 6
@@ -74,7 +81,7 @@ Partial Class frmStudyMaterialsHub
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(37, 202)
+        Me.Label2.Location = New System.Drawing.Point(3, 32)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(75, 13)
         Me.Label2.TabIndex = 7
@@ -82,7 +89,7 @@ Partial Class frmStudyMaterialsHub
         '
         'btnOK
         '
-        Me.btnOK.Location = New System.Drawing.Point(404, 249)
+        Me.btnOK.Location = New System.Drawing.Point(404, 233)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(75, 23)
         Me.btnOK.TabIndex = 11
@@ -91,7 +98,7 @@ Partial Class frmStudyMaterialsHub
         '
         'btnView
         '
-        Me.btnView.Location = New System.Drawing.Point(323, 278)
+        Me.btnView.Location = New System.Drawing.Point(404, 262)
         Me.btnView.Name = "btnView"
         Me.btnView.Size = New System.Drawing.Size(75, 23)
         Me.btnView.TabIndex = 9
@@ -101,7 +108,7 @@ Partial Class frmStudyMaterialsHub
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 224)
+        Me.Label3.Location = New System.Drawing.Point(3, 64)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(100, 13)
         Me.Label3.TabIndex = 12
@@ -109,32 +116,61 @@ Partial Class frmStudyMaterialsHub
         '
         'txtMaterialDescription
         '
-        Me.txtMaterialDescription.Location = New System.Drawing.Point(118, 221)
+        Me.txtMaterialDescription.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtMaterialDescription.Location = New System.Drawing.Point(193, 67)
         Me.txtMaterialDescription.Name = "txtMaterialDescription"
         Me.txtMaterialDescription.ReadOnly = True
-        Me.txtMaterialDescription.Size = New System.Drawing.Size(154, 20)
+        Me.txtMaterialDescription.Size = New System.Drawing.Size(184, 20)
         Me.txtMaterialDescription.TabIndex = 13
+        '
+        'grpMaterilas
+        '
+        Me.grpMaterilas.Controls.Add(Me.TableLayoutPanel1)
+        Me.grpMaterilas.Location = New System.Drawing.Point(12, 172)
+        Me.grpMaterilas.Name = "grpMaterilas"
+        Me.grpMaterilas.Size = New System.Drawing.Size(386, 116)
+        Me.grpMaterilas.TabIndex = 14
+        Me.grpMaterilas.TabStop = False
+        Me.grpMaterilas.Text = "Material"
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.txtMaterialID, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtMaterialName, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtMaterialDescription, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 16)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 3
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(380, 97)
+        Me.TableLayoutPanel1.TabIndex = 15
         '
         'frmStudyMaterialsHub
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(491, 313)
-        Me.Controls.Add(Me.txtMaterialDescription)
-        Me.Controls.Add(Me.Label3)
+        Me.ClientSize = New System.Drawing.Size(491, 297)
+        Me.Controls.Add(Me.grpMaterilas)
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.btnView)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtMaterialName)
-        Me.Controls.Add(Me.txtMaterialID)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmStudyMaterialsHub"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmStudyMaterialHub"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpMaterilas.ResumeLayout(False)
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
@@ -148,4 +184,6 @@ Partial Class frmStudyMaterialsHub
     Friend WithEvents btnView As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtMaterialDescription As System.Windows.Forms.TextBox
+    Friend WithEvents grpMaterilas As System.Windows.Forms.GroupBox
+    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
 End Class

@@ -28,9 +28,7 @@
 
     Private Sub btnCompilePreGradeExams_Click(sender As Object, e As EventArgs) Handles btnCompilePreGradeExams.Click
         Dim ExamComputer As New frmGradeExamComputer()
-        If ExamComputer.ShowDialog() = Windows.Forms.DialogResult.OK Then
-            Me._ExamCompiledGrades = ExamComputer.FullAverage
-        End If
+        Me._ExamCompiledGrades = ExamComputer.FullAverage
         WriteOut()
     End Sub
 
@@ -47,9 +45,8 @@
 
     Private Sub btnCompilePreQuizGrades_Click(sender As Object, e As EventArgs) Handles btnCompilePreQuizGrades.Click
         Dim QuizComputer As New frmGradesQuizComputer()
-        If QuizComputer.ShowDialog() = Windows.Forms.DialogResult.OK Then
-            Me._QuizCompiledGrades = QuizComputer.FullAverage
-        End If
+        QuizComputer.ShowDialog()
+        Me._QuizCompiledGrades = QuizComputer.FullAverage
         WriteOut()
     End Sub
 

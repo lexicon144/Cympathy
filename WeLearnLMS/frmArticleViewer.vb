@@ -30,6 +30,7 @@
 
     Private Sub frmArticleViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
+            Me.Text = Me._ThisArticle.ArticleName
             ConvertBinary()
             DisplayRichText()
         Catch Exx As Exception

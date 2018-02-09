@@ -33,6 +33,7 @@ Partial Class frmExamsLinker
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtExamID = New System.Windows.Forms.TextBox()
         Me.txtExamName = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.grpClassroom.SuspendLayout()
         Me.grpExamDisplay.SuspendLayout()
         Me.SuspendLayout()
@@ -43,7 +44,7 @@ Partial Class frmExamsLinker
         Me.grpClassroom.Controls.Add(Me.Label3)
         Me.grpClassroom.Controls.Add(Me.txtClassroomName)
         Me.grpClassroom.Controls.Add(Me.txtClassroomID)
-        Me.grpClassroom.Location = New System.Drawing.Point(266, 12)
+        Me.grpClassroom.Location = New System.Drawing.Point(299, 12)
         Me.grpClassroom.Name = "grpClassroom"
         Me.grpClassroom.Size = New System.Drawing.Size(200, 100)
         Me.grpClassroom.TabIndex = 10
@@ -86,7 +87,7 @@ Partial Class frmExamsLinker
         '
         'btnLink
         '
-        Me.btnLink.Location = New System.Drawing.Point(204, 130)
+        Me.btnLink.Location = New System.Drawing.Point(218, 77)
         Me.btnLink.Name = "btnLink"
         Me.btnLink.Size = New System.Drawing.Size(75, 23)
         Me.btnLink.TabIndex = 9
@@ -140,11 +141,22 @@ Partial Class frmExamsLinker
         Me.txtExamName.Size = New System.Drawing.Size(100, 20)
         Me.txtExamName.TabIndex = 1
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(230, 61)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(32, 13)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "To ->"
+        '
         'frmExamsLinker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(479, 166)
+        Me.ClientSize = New System.Drawing.Size(509, 126)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.grpClassroom)
         Me.Controls.Add(Me.btnLink)
         Me.Controls.Add(Me.grpExamDisplay)
@@ -156,6 +168,7 @@ Partial Class frmExamsLinker
         Me.grpExamDisplay.ResumeLayout(False)
         Me.grpExamDisplay.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents grpClassroom As System.Windows.Forms.GroupBox
@@ -169,4 +182,5 @@ Partial Class frmExamsLinker
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtExamID As System.Windows.Forms.TextBox
     Friend WithEvents txtExamName As System.Windows.Forms.TextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

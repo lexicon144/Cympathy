@@ -169,7 +169,7 @@ Public Class frmQuestionnaireViewer
     End Sub
 
     Private Sub frmQuestionnaireViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        
+        Me.BackColor = My.Settings("QuestMainBackground")
         With Me
             With .DataGridView1
                 .Columns("tttANS").Visible = False
@@ -266,4 +266,9 @@ Public Class frmQuestionnaireViewer
         End With
     End Sub
 
+    Private Sub ChangeColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangeColorToolStripMenuItem.Click
+        If ColorDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+            Me.BackColor = ColorDialog1.Color
+        End If
+    End Sub
 End Class

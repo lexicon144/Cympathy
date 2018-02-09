@@ -38,9 +38,10 @@ Partial Class frmGradesQuizComputer
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
+        Me.DataGridView1.Location = New System.Drawing.Point(16, 15)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(260, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(347, 185)
         Me.DataGridView1.TabIndex = 0
         '
         'BackgroundWorker1
@@ -49,51 +50,57 @@ Partial Class frmGradesQuizComputer
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(-1, 22)
+        Me.Label1.Location = New System.Drawing.Point(-1, 27)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 13)
+        Me.Label1.Size = New System.Drawing.Size(118, 17)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Recorded Quizes"
         '
         'txtRecordedQuizes
         '
-        Me.txtRecordedQuizes.Location = New System.Drawing.Point(94, 19)
+        Me.txtRecordedQuizes.Location = New System.Drawing.Point(125, 23)
+        Me.txtRecordedQuizes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtRecordedQuizes.Name = "txtRecordedQuizes"
         Me.txtRecordedQuizes.ReadOnly = True
-        Me.txtRecordedQuizes.Size = New System.Drawing.Size(100, 20)
+        Me.txtRecordedQuizes.Size = New System.Drawing.Size(132, 22)
         Me.txtRecordedQuizes.TabIndex = 2
         '
         'txtLinkedQuizes
         '
-        Me.txtLinkedQuizes.Location = New System.Drawing.Point(94, 45)
+        Me.txtLinkedQuizes.Location = New System.Drawing.Point(125, 55)
+        Me.txtLinkedQuizes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtLinkedQuizes.Name = "txtLinkedQuizes"
         Me.txtLinkedQuizes.ReadOnly = True
-        Me.txtLinkedQuizes.Size = New System.Drawing.Size(100, 20)
+        Me.txtLinkedQuizes.Size = New System.Drawing.Size(132, 22)
         Me.txtLinkedQuizes.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(14, 48)
+        Me.Label2.Location = New System.Drawing.Point(19, 59)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(74, 13)
+        Me.Label2.Size = New System.Drawing.Size(98, 17)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Linked Quizes"
         '
         'txtFullAverage
         '
-        Me.txtFullAverage.Location = New System.Drawing.Point(94, 72)
+        Me.txtFullAverage.Location = New System.Drawing.Point(125, 89)
+        Me.txtFullAverage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtFullAverage.Name = "txtFullAverage"
         Me.txtFullAverage.ReadOnly = True
-        Me.txtFullAverage.Size = New System.Drawing.Size(100, 20)
+        Me.txtFullAverage.Size = New System.Drawing.Size(132, 22)
         Me.txtFullAverage.TabIndex = 5
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(22, 75)
+        Me.Label3.Location = New System.Drawing.Point(29, 92)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(66, 13)
+        Me.Label3.Size = New System.Drawing.Size(87, 17)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Full Average"
         '
@@ -105,20 +112,23 @@ Partial Class frmGradesQuizComputer
         Me.GroupBox1.Controls.Add(Me.txtFullAverage)
         Me.GroupBox1.Controls.Add(Me.txtLinkedQuizes)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(72, 168)
+        Me.GroupBox1.Location = New System.Drawing.Point(96, 207)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(200, 100)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(267, 123)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Count"
         '
         'frmGradesQuizComputer
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 281)
+        Me.ClientSize = New System.Drawing.Size(379, 346)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.DataGridView1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmGradesQuizComputer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmGradesQuizComputer"

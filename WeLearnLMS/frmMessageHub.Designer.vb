@@ -30,6 +30,7 @@ Partial Class frmMessageHub
         '
         'DataGridView1
         '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
         Me.DataGridView1.Name = "DataGridView1"
@@ -63,6 +64,8 @@ Partial Class frmMessageHub
         Me.Controls.Add(Me.btnViewFeedback)
         Me.Controls.Add(Me.btnCreateFeedback)
         Me.Controls.Add(Me.DataGridView1)
+        Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
         Me.Name = "frmMessageHub"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmFeedbackHub"

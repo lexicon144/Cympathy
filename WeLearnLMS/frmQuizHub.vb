@@ -5,7 +5,6 @@
     Private _XmlBase As String
 
     Private _IsModal As Boolean
-
     Private _Quiz As New c_Quiz
 
     Private _Deserializer As IDataDeserializer = New ImpDataDeserializer

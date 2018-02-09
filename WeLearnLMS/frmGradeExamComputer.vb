@@ -88,7 +88,7 @@
     ''' <param name="UserID"></param>
     ''' <param name="ClassID"></param>
     ''' <remarks></remarks>
-    Friend Function GetAnsweredQuizes(ByRef UserID As String, ByRef ClassID As String) As DataTable
+    Friend Function GetAnsweredExams(ByRef UserID As String, ByRef ClassID As String) As DataTable
         Dim DimTable As New DataTable
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
@@ -101,7 +101,7 @@
                 With Command
                     .Connection = Connection
                     .CommandType = CommandType.StoredProcedure
-                    .CommandText = "SelectGradesQuizes"
+                    .CommandText = "SelectGradesExam"
                     With .Parameters
                         .AddWithValue("UserID", UserID)
                         .AddWithValue("ClassID", ClassID)
@@ -165,7 +165,7 @@
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-        Me._AverageDatatable = GetAnsweredQuizes(_SharedUserID, _SharedClassroom.ClassroomId)
+        Me._AverageDatatable = GetAnsweredExams(_SharedUserID, _SharedClassroom.ClassroomId)
         GetRecordedCount(_RecordedCount)
         GetCountQuizesInClassroom(_SharedClassroom.ClassroomId)
         GetSumationOfQuizes()

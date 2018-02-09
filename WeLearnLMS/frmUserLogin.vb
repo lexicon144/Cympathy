@@ -125,9 +125,12 @@ Public Class frmUserLogin
             PreInfoToCredentialsParser()
 
             BackgroundWorker1.RunWorkerAsync(ValidateLogin())
-            Me.LinkLabel2.Enabled = True
-            Me.txtPassword.Text = ""
-            Me.txtUsername.Text = ""
+
+            With Me
+                .LinkLabel2.Enabled = True
+                .txtPassword.Text = ""
+                .txtUsername.Text = ""
+            End With
         Catch XXX As Exception
             MessageBox.Show("Something wrong happened when (You) tried to login. Reason: " & XXX.Message, "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
@@ -139,7 +142,7 @@ Public Class frmUserLogin
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-        
+        'if user login was correct!
         If e.Result Then
             ShareMe()
 
@@ -148,6 +151,7 @@ Public Class frmUserLogin
             MainMenu.ShowDialog()
             _SharedAdvancedCredentials = Nothing
             _SharedMainCredentials = Nothing
+            LinkLabel2.Enabled = False
 
             Exit Sub
         End If
@@ -175,7 +179,7 @@ Public Class frmUserLogin
 
     Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
         'check if this user id exists
-        If Me._PreInfo.Rows(0)("user_id").ToString() Is Nothing Then Exit Sub
+        If Me._PreInfo.Rows(0)("user_id").ToString() Is "" Then Exit Sub
 
         Dim passwordchallenge As New frmPasswordModifier(_PreInfo.Rows(0)("user_id").ToString())
         passwordchallenge.ShowDialog()

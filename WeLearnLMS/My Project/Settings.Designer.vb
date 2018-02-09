@@ -65,6 +65,77 @@ Namespace My
                 Me("city85") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property AttendanceReadOnly() As Boolean
+            Get
+                Return CType(Me("AttendanceReadOnly"),Boolean)
+            End Get
+            Set
+                Me("AttendanceReadOnly") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.DefaultSettingValueAttribute("ControlText")> _
+        Public Property AllMainBackground() As Global.System.Drawing.Color
+            Get
+                Return CType(Me("AllMainBackground"), Global.System.Drawing.Color)
+            End Get
+            Set(value As Global.System.Drawing.Color)
+                Me("AllMainBackground") = value
+            End Set
+        End Property
+
+        <Global.System.Configuration.UserScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()> _
+        Public Property QuestMainBackground() As Global.System.Drawing.Color
+            Get
+                Return CType(Me("QuestMainBackground"), Global.System.Drawing.Color)
+            End Get
+            Set(value As Global.System.Drawing.Color)
+                Me("QuestMainBackground") = value
+            End Set
+        End Property
+
+        <Global.System.Configuration.UserScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.DefaultSettingValueAttribute("Microsoft Sans Serif, 8.25pt")> _
+        Public Property MainFont() As Global.System.Drawing.Font
+            Get
+                Return CType(Me("MainFont"), Global.System.Drawing.Font)
+            End Get
+            Set(value As Global.System.Drawing.Font)
+                Me("MainFont") = value
+            End Set
+        End Property
+
+        <Global.System.Configuration.UserScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.DefaultSettingValueAttribute("Control")> _
+        Public Property MenuBGC() As Global.System.Drawing.Color
+            Get
+                Return CType(Me("MenuBGC"), Global.System.Drawing.Color)
+            End Get
+            Set(value As Global.System.Drawing.Color)
+                Me("MenuBGC") = value
+            End Set
+        End Property
+
+        <Global.System.Configuration.UserScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.DefaultSettingValueAttribute("Control")> _
+        Public Property ClassroomHubBGC() As Global.System.Drawing.Color
+            Get
+                Return CType(Me("ClassroomHubBGC"), Global.System.Drawing.Color)
+            End Get
+            Set(value As Global.System.Drawing.Color)
+                Me("ClassroomHubBGC") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

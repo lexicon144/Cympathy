@@ -33,9 +33,7 @@
     End Sub
 
     Private Sub frmGradesFinalCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If _SharedAdvancedCredentials.MyUserType = c_MainCredentials.UserType.STU Then
-            Panel1.Enabled = False
-        End If
+       
     End Sub
 
     Private Sub btnUserBrowser_Click(sender As Object, e As EventArgs) Handles btnUserBrowser.Click

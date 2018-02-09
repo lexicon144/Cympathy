@@ -31,7 +31,6 @@
         Me._IsModal = True
         Me.btnOK.Enabled = True
         Me.btnView.Enabled = False
-
         LoadAllMaterials()
     End Sub
 
@@ -48,7 +47,6 @@
         ' Add any initialization after the InitializeComponent() call.
         Me._ClassroomID = ClassroomID
         Me._IsModal = False
-
         LoadAllMaterials(ClassroomID)
     End Sub
 
@@ -64,7 +62,7 @@
         End With
 
         With DataGridView1
-            .DataSource = _Datatable
+            .DataSource = Me._Datatable
             .Columns.Add(btn)
 
         End With
@@ -154,7 +152,7 @@
     End Sub
 
     Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
-
+        ParseFromTextbox()
         Dim Viewer As New frmStudyMaterialsViewer(Me._StudyMaterial)
         Viewer.ShowDialog()
     End Sub

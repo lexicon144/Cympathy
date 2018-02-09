@@ -21,7 +21,7 @@
         Chart1.Series.Add("Ranking")
 
         For Each Row As DataRow In _RankingDatatable.Rows
-            Chart1.Series("Ranking").Points.AddXY(Row("candidate_id").ToString, Val(Row("COUNT(*)").ToString))
+            Chart1.Series("Ranking").Points.AddXY(Row("user_name").ToString, Val(Row("COUNT(*)").ToString))
         Next
 
         Chart1.Series("Ranking").Color = Color.LimeGreen
@@ -63,4 +63,5 @@
     Private Sub BackgroundWorker1_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorker1.ProgressChanged
         ToolStripProgressBar1.Value = e.ProgressPercentage
     End Sub
+
 End Class

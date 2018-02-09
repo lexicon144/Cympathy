@@ -10,6 +10,8 @@
         QGrade = 3
         QHits = 4
         QQuestions = 5
+        Drp = 6
+        ClassID = 7
     End Enum
 
     Public Sub New()
@@ -21,12 +23,18 @@
 
     End Sub
 
-
     Private Sub frmPreGrades_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+
+            DisplayDatatable()
+
+        Catch ex As Exception
+            DisplayGeneralException(ex)
+        End Try
 
     End Sub
 
-    Private Sub DisplayAsPregradeviewer()
+    friend Sub DisplayAsPregradeviewer()
         With Me
             .txtAverage.Text = _PreGrades.ReturnFullAverage
             .txtHits.Text = _PreGrades.Hits
@@ -36,8 +44,21 @@
     End Sub
 
     Private Sub DisplayDatatable()
+
+        Dim btn As New DataGridViewButtonColumn
+        With btn
+            .HeaderText = "Action"
+            .Text = "Open"
+            .Name = "btn"
+            .UseColumnTextForButtonValue = True
+        End With
+
         With Me.DataGridView1
             .DataSource = Me._MyDatatable
+            .Columns(LinkX_Grades.ClassID).Visible = False
+            .Columns(LinkX_Grades.Drp).Visible = False
+            .Columns(LinkX_Grades.QHits).Visible = False
+            .Columns(LinkX_Grades.QQuestions).Visible = False
         End With
     End Sub
 
@@ -48,7 +69,7 @@
 
     Friend Sub DisplayExamGrades()
         Dim Displayer As New frmGradeExamComputer()
-        _MyDatatable = Displayer.GetAnsweredQuizes(_SharedUserID, _SharedClassroom.ClassroomId)
+        _MyDatatable = Displayer.GetAnsweredExams(_SharedUserID, _SharedClassroom.ClassroomId)
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick

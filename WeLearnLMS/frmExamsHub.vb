@@ -6,6 +6,7 @@ Public Class frmExamsHub
     Private _Datatable As New DataTable
     Private _ClassroomID As String
     Private _XmlBase As String
+    Private _Deserializer As IDataDeserializer = New ImpDataDeserializer
 
     Private _Exam As New c_Exam
 
@@ -126,6 +127,7 @@ Public Class frmExamsHub
             .Columns.Add(btn)
 
             .Columns("xml_base").Visible = False
+            .Columns("exam_pin").Visible = False
         End With
 
     End Sub
@@ -135,21 +137,34 @@ Public Class frmExamsHub
             If DataGridView1.Columns(e.ColumnIndex).Name = "btn" Then
 
                 With DataGridView1.Rows(e.RowIndex)
+                    Me._Exam.PIN = .Cells("exam_pin").Value.ToString()
                     txtExamID.Text = .Cells("id").Value.ToString()
                     txtExamName.Text = .Cells("exam_name").Value.ToString()
                     _XmlBase = .Cells("xml_base").Value.ToString()
+
                 End With
 
             End If
         End If
     End Sub
 
+    Private Sub ParseToMe()
+        With Me._Exam
+
+            .QuestionnaireName = txtExamName.Text
+
+
+        End With
+    End Sub
+
     Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
-        Dim viewer As New frmExamsViewer
-        viewer.ShowDialog()
+        Try
+            Me._Exam.QuestionBase = _Deserializer.DataDeserialize(Me._XmlBase)
+            ParseToMe()
+            Me.DialogResult = Windows.Forms.DialogResult.OK
+        Catch ex As Exception
+            DisplayGeneralException(ex)
+        End Try
     End Sub
 
-    Private Sub btnCreate_Click(sender As Object, e As EventArgs)
-
-    End Sub
 End Class

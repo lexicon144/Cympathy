@@ -166,6 +166,12 @@
     <Compile Include="frmAttendance.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmAttendanceControl.Designer.vb">
+      <DependentUpon>frmAttendanceControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAttendanceControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmClassroomCreator.Designer.vb">
       <DependentUpon>frmClassroomCreator.vb</DependentUpon>
     </Compile>
@@ -346,6 +352,12 @@
     <Compile Include="frmRankingViewer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmSomeSettings.Designer.vb">
+      <DependentUpon>frmSomeSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSomeSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmUserLogin.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -497,6 +509,7 @@
     <Compile Include="ICreateQuestionnaire.vb" />
     <Compile Include="IDataDeserializer.vb" />
     <Compile Include="IDisableControls.vb" />
+    <Compile Include="IGetDate.vb" />
     <Compile Include="IHashing.vb" />
     <Compile Include="ImpAnswerArrayShuffler.vb" />
     <Compile Include="ImpCheaterExistsAMD64CheatEngine.vb" />
@@ -508,6 +521,7 @@
     <Compile Include="ImpDisableControlsADMIN.vb" />
     <Compile Include="ImpDisableControlsPROFESSOR.vb" />
     <Compile Include="ImpDisableControlsSTUDENT.vb" />
+    <Compile Include="ImpGetDateOnServer.vb" />
     <Compile Include="ImpQuestionAmount_PEXAM.vb" />
     <Compile Include="ImpQuestionAmount_SQUIZ.vb" />
     <Compile Include="ImpDataSerializer.vb" />
@@ -542,6 +556,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="POSIXEpoch.vb" />
+    <Compile Include="Settings.vb" />
     <Compile Include="SharedMod.vb" />
     <Compile Include="StrategyHashingSHA512.vb" />
     <Compile Include="StrategyVerifyCellularNumber.vb" />
@@ -570,6 +585,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAttendance.resx">
       <DependentUpon>frmAttendance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAttendanceControl.resx">
+      <DependentUpon>frmAttendanceControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmClassroomCreator.resx">
       <DependentUpon>frmClassroomCreator.vb</DependentUpon>
@@ -657,6 +675,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmServerEditor.resx">
       <DependentUpon>frmServerEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSomeSettings.resx">
+      <DependentUpon>frmSomeSettings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTimeSlotHub.resx">
       <DependentUpon>frmTimeSlotHub.vb</DependentUpon>
