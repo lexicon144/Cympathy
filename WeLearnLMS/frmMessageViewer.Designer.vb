@@ -35,22 +35,25 @@ Partial Class frmMessageViewer
         Me.txtReceiverNAME = New System.Windows.Forms.Label()
         Me.txtSenderNAME = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtSenderID
         '
-        Me.txtSenderID.Location = New System.Drawing.Point(78, 33)
+        Me.txtSenderID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtSenderID.Location = New System.Drawing.Point(166, 32)
         Me.txtSenderID.Margin = New System.Windows.Forms.Padding(2)
         Me.txtSenderID.Name = "txtSenderID"
         Me.txtSenderID.ReadOnly = True
-        Me.txtSenderID.Size = New System.Drawing.Size(97, 20)
+        Me.txtSenderID.Size = New System.Drawing.Size(160, 20)
         Me.txtSenderID.TabIndex = 1
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(27, 78)
+        Me.Label4.Location = New System.Drawing.Point(2, 90)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(50, 13)
@@ -59,17 +62,18 @@ Partial Class frmMessageViewer
         '
         'txtReceiverID
         '
-        Me.txtReceiverID.Location = New System.Drawing.Point(78, 55)
+        Me.txtReceiverID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtReceiverID.Location = New System.Drawing.Point(166, 62)
         Me.txtReceiverID.Margin = New System.Windows.Forms.Padding(2)
         Me.txtReceiverID.Name = "txtReceiverID"
         Me.txtReceiverID.ReadOnly = True
-        Me.txtReceiverID.Size = New System.Drawing.Size(97, 20)
+        Me.txtReceiverID.Size = New System.Drawing.Size(160, 20)
         Me.txtReceiverID.TabIndex = 2
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(13, 57)
+        Me.Label3.Location = New System.Drawing.Point(2, 60)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(64, 13)
@@ -78,19 +82,20 @@ Partial Class frmMessageViewer
         '
         'txtMessage
         '
-        Me.txtMessage.Location = New System.Drawing.Point(78, 76)
+        Me.txtMessage.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtMessage.Location = New System.Drawing.Point(166, 92)
         Me.txtMessage.Margin = New System.Windows.Forms.Padding(2)
         Me.txtMessage.MaxLength = 70
         Me.txtMessage.Multiline = True
         Me.txtMessage.Name = "txtMessage"
         Me.txtMessage.ReadOnly = True
-        Me.txtMessage.Size = New System.Drawing.Size(184, 97)
+        Me.txtMessage.Size = New System.Drawing.Size(160, 102)
         Me.txtMessage.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(21, 35)
+        Me.Label2.Location = New System.Drawing.Point(2, 30)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(55, 13)
@@ -100,7 +105,7 @@ Partial Class frmMessageViewer
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(11, 9)
+        Me.Label1.Location = New System.Drawing.Point(2, 0)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 13)
@@ -114,7 +119,7 @@ Partial Class frmMessageViewer
         'txtTimeDate
         '
         Me.txtTimeDate.AutoSize = True
-        Me.txtTimeDate.Location = New System.Drawing.Point(78, 9)
+        Me.txtTimeDate.Location = New System.Drawing.Point(166, 0)
         Me.txtTimeDate.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.txtTimeDate.Name = "txtTimeDate"
         Me.txtTimeDate.Size = New System.Drawing.Size(56, 13)
@@ -124,7 +129,7 @@ Partial Class frmMessageViewer
         'txtReceiverNAME
         '
         Me.txtReceiverNAME.AutoSize = True
-        Me.txtReceiverNAME.Location = New System.Drawing.Point(176, 57)
+        Me.txtReceiverNAME.Location = New System.Drawing.Point(330, 60)
         Me.txtReceiverNAME.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.txtReceiverNAME.Name = "txtReceiverNAME"
         Me.txtReceiverNAME.Size = New System.Drawing.Size(39, 13)
@@ -134,7 +139,7 @@ Partial Class frmMessageViewer
         'txtSenderNAME
         '
         Me.txtSenderNAME.AutoSize = True
-        Me.txtSenderNAME.Location = New System.Drawing.Point(176, 35)
+        Me.txtSenderNAME.Location = New System.Drawing.Point(330, 30)
         Me.txtSenderNAME.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.txtSenderNAME.Name = "txtSenderNAME"
         Me.txtSenderNAME.Size = New System.Drawing.Size(39, 13)
@@ -145,27 +150,48 @@ Partial Class frmMessageViewer
         '
         Me.Timer1.Interval = 1000
         '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 3
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.66667!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.66666!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66666!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtReceiverNAME, 2, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtTimeDate, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtSenderNAME, 2, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtSenderID, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtMessage, 1, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtReceiverID, 1, 2)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 4
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.77909!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.77909!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.77909!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.66272!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(395, 196)
+        Me.TableLayoutPanel1.TabIndex = 13
+        '
         'frmMessageViewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(275, 211)
-        Me.Controls.Add(Me.txtTimeDate)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtReceiverNAME)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txtSenderNAME)
-        Me.Controls.Add(Me.txtMessage)
-        Me.Controls.Add(Me.txtSenderID)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txtReceiverID)
+        Me.ClientSize = New System.Drawing.Size(395, 196)
+        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
         Me.Name = "frmMessageViewer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmFeedbackViewer"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents txtSenderID As System.Windows.Forms.TextBox
@@ -180,4 +206,5 @@ Partial Class frmMessageViewer
     Friend WithEvents txtReceiverNAME As System.Windows.Forms.Label
     Friend WithEvents txtSenderNAME As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
 End Class
