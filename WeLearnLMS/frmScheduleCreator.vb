@@ -89,4 +89,8 @@
     Private Sub btnCreateSchedule_Click(sender As Object, e As EventArgs) Handles btnCreateSchedule.Click
         If Evaluated() Then PerformLink()
     End Sub
+
+    Private Sub btnLifespan_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

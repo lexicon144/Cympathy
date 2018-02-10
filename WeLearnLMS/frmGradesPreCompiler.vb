@@ -26,12 +26,6 @@
         End Get
     End Property
 
-    Private Sub btnCompilePreGradeExams_Click(sender As Object, e As EventArgs) Handles btnCompilePreGradeExams.Click
-        Dim ExamComputer As New frmGradeExamComputer()
-        Me._ExamCompiledGrades = ExamComputer.FullAverage
-        WriteOut()
-    End Sub
-
     Friend Function CompileAllGrades(ByVal QuizCompiledGrades As Double, ByVal ExamCompiledGrades As Double, ByVal Attendance As Double) As Double
 
         Return ((QuizCompiledGrades * 0.4) + (ExamCompiledGrades * 0.5) + (Attendance * 0.1))
@@ -42,13 +36,6 @@
         Return ((Me._QuizCompiledGrades * 0.4) + (Me._ExamCompiledGrades * 0.5) + (Me._Attendance * 0.1))
 
     End Function
-
-    Private Sub btnCompilePreQuizGrades_Click(sender As Object, e As EventArgs) Handles btnCompilePreQuizGrades.Click
-        Dim QuizComputer As New frmGradesQuizComputer()
-        QuizComputer.ShowDialog()
-        Me._QuizCompiledGrades = QuizComputer.FullAverage
-        WriteOut()
-    End Sub
 
     Private Sub frmGradesPreCompiler_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -64,10 +51,6 @@
 
     Private Sub frmGradesPreCompiler_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Me.DialogResult = Windows.Forms.DialogResult.OK
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
     End Sub
 
     Private Sub txtAttendance_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtAttendance.Validating

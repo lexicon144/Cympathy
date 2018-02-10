@@ -121,6 +121,7 @@
     <Compile Include="c_AdvancedCredentials.vb" />
     <Compile Include="c_Article.vb" />
     <Compile Include="c_Classroom.vb" />
+    <Compile Include="c_ClassroomLifespan.vb" />
     <Compile Include="c_Day.vb" />
     <Compile Include="c_Exam.vb" />
     <Compile Include="c_Grades.vb" />
@@ -219,6 +220,18 @@
       <DependentUpon>frmNetworkPinger.vb</DependentUpon>
     </Compile>
     <Compile Include="frmNetworkPinger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScheduleClassroomLifeSpanCreator.Designer.vb">
+      <DependentUpon>frmScheduleClassroomLifeSpanCreator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmScheduleClassroomLifeSpanCreator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScheduleClassroomLifeSpanViewer.Designer.vb">
+      <DependentUpon>frmScheduleClassroomLifeSpanViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmScheduleClassroomLifeSpanViewer.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmServerEditor.Designer.vb">
@@ -673,6 +686,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRankingViewer.resx">
       <DependentUpon>frmRankingViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScheduleClassroomLifeSpanCreator.resx">
+      <DependentUpon>frmScheduleClassroomLifeSpanCreator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScheduleClassroomLifeSpanViewer.resx">
+      <DependentUpon>frmScheduleClassroomLifeSpanViewer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmServerEditor.resx">
       <DependentUpon>frmServerEditor.vb</DependentUpon>
