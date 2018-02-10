@@ -33,16 +33,21 @@ Partial Class frmArticleHub
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
+        Me.FlowLayoutPanel1.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnView
         '
-        Me.btnView.Location = New System.Drawing.Point(335, 197)
+        Me.btnView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnView.Location = New System.Drawing.Point(3, 39)
         Me.btnView.Name = "btnView"
-        Me.btnView.Size = New System.Drawing.Size(75, 23)
+        Me.btnView.Size = New System.Drawing.Size(69, 30)
         Me.btnView.TabIndex = 0
         Me.btnView.Text = "View"
         Me.btnView.UseVisualStyleBackColor = True
@@ -53,7 +58,7 @@ Partial Class frmArticleHub
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -72,7 +77,7 @@ Partial Class frmArticleHub
         'txtArticleName
         '
         Me.txtArticleName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtArticleName.Location = New System.Drawing.Point(158, 35)
+        Me.txtArticleName.Location = New System.Drawing.Point(158, 36)
         Me.txtArticleName.Name = "txtArticleName"
         Me.txtArticleName.ReadOnly = True
         Me.txtArticleName.Size = New System.Drawing.Size(150, 20)
@@ -90,7 +95,7 @@ Partial Class frmArticleHub
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 32)
+        Me.Label2.Location = New System.Drawing.Point(3, 33)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(35, 13)
         Me.Label2.TabIndex = 7
@@ -98,9 +103,10 @@ Partial Class frmArticleHub
         '
         'btnOK
         '
-        Me.btnOK.Location = New System.Drawing.Point(335, 168)
+        Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnOK.Location = New System.Drawing.Point(3, 3)
         Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(75, 23)
+        Me.btnOK.Size = New System.Drawing.Size(69, 30)
         Me.btnOK.TabIndex = 8
         Me.btnOK.Text = "O K"
         Me.btnOK.UseVisualStyleBackColor = True
@@ -108,7 +114,7 @@ Partial Class frmArticleHub
         'txtArticleBase
         '
         Me.txtArticleBase.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtArticleBase.Location = New System.Drawing.Point(158, 67)
+        Me.txtArticleBase.Location = New System.Drawing.Point(158, 69)
         Me.txtArticleBase.Name = "txtArticleBase"
         Me.txtArticleBase.ReadOnly = True
         Me.txtArticleBase.Size = New System.Drawing.Size(150, 20)
@@ -117,7 +123,7 @@ Partial Class frmArticleHub
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(3, 64)
+        Me.Label3.Location = New System.Drawing.Point(3, 66)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(31, 13)
         Me.Label3.TabIndex = 10
@@ -126,7 +132,7 @@ Partial Class frmArticleHub
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.TableLayoutPanel1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 168)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 159)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(317, 118)
         Me.GroupBox1.TabIndex = 11
@@ -154,15 +160,39 @@ Partial Class frmArticleHub
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(311, 99)
         Me.TableLayoutPanel1.TabIndex = 12
         '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Controls.Add(Me.DataGridView1)
+        Me.FlowLayoutPanel1.Controls.Add(Me.GroupBox1)
+        Me.FlowLayoutPanel1.Controls.Add(Me.TableLayoutPanel2)
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(409, 287)
+        Me.FlowLayoutPanel1.TabIndex = 12
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 1
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.btnOK, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.btnView, 0, 1)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(326, 159)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 2
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(75, 72)
+        Me.TableLayoutPanel2.TabIndex = 13
+        '
         'frmArticleHub
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(422, 305)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.btnOK)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.btnView)
+        Me.ClientSize = New System.Drawing.Size(409, 287)
+        Me.Controls.Add(Me.FlowLayoutPanel1)
+        Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
         Me.Name = "frmArticleHub"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmArticleHub"
@@ -170,6 +200,8 @@ Partial Class frmArticleHub
         Me.GroupBox1.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
+        Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -184,4 +216,6 @@ Partial Class frmArticleHub
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
+    Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
 End Class

@@ -20,33 +20,38 @@ Public Class frmGradesClassroomViewer
 
     End Sub
 
+    Public Sub New(ByRef UserID As String, ByRef ClassroomID As String)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        With Me
+            ._UserID = UserID
+            ._ClassroomID = ClassroomID
+
+        End With
+    End Sub
+
     Private Sub frmGradesClassroomViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim classroomhub As New frmClassroomDialog()
+        If classroomhub.ShowDialog = Windows.Forms.DialogResult.OK Then
+
+            GetAllClassroomGrades(_SharedUserID, _SharedClassroom.ClassroomId)
+
+        End If
 
     End Sub
 
     Private Sub ViewDatatable()
         Dim btn As New DataGridViewButtonColumn()
 
-        With btn
-            .HeaderText = "Action"
-            .Text = "Open"
-            .Name = "btn"
-            .UseColumnTextForButtonValue = True
-        End With
-
         With DataGridView1
             .DataSource = _ClassroomGradesDatatable
-            .Columns.Add(btn)
-
-            .Columns("xml_base").Visible = False
         End With
     End Sub
 
-    Private Sub DisplayOutside()
-
-    End Sub
-
-    Private Sub GetAllClassroomGrades()
+    Private Sub GetAllClassroomGrades(ByRef UserID As String, ByRef ClassroomID As String)
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
                 If .State = ConnectionState.Closed Then
@@ -59,8 +64,8 @@ Public Class frmGradesClassroomViewer
                     .CommandType = CommandType.StoredProcedure
                     .CommandText = "SelectClassroomGrades"
                     With .Parameters
-                        .AddWithValue("UserID", Me._UserID)
-                        .AddWithValue("ClassroomID", Me._ClassroomID)
+                        .AddWithValue("UserID", UserID)
+                        .AddWithValue("ClassroomID", ClassroomID)
                     End With
                 End With
                 Using Adapter As New MySqlDataAdapter

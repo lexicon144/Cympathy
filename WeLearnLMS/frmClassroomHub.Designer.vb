@@ -60,6 +60,7 @@ Partial Class frmClassroomHub
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ChangeColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.ScheduleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PanelProfessorsOnly.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -487,7 +488,7 @@ Partial Class frmClassroomHub
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangeColorToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangeColorToolStripMenuItem, Me.ScheduleToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(339, 24)
@@ -499,6 +500,12 @@ Partial Class frmClassroomHub
         Me.ChangeColorToolStripMenuItem.Name = "ChangeColorToolStripMenuItem"
         Me.ChangeColorToolStripMenuItem.Size = New System.Drawing.Size(92, 20)
         Me.ChangeColorToolStripMenuItem.Text = "Change Color"
+        '
+        'ScheduleToolStripMenuItem
+        '
+        Me.ScheduleToolStripMenuItem.Name = "ScheduleToolStripMenuItem"
+        Me.ScheduleToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
+        Me.ScheduleToolStripMenuItem.Text = "Schedule"
         '
         'frmClassroomHub
         '
@@ -572,4 +579,5 @@ Partial Class frmClassroomHub
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents ChangeColorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ColorDialog1 As System.Windows.Forms.ColorDialog
+    Friend WithEvents ScheduleToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

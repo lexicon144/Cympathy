@@ -37,7 +37,7 @@ Partial Class frmLessonListHub
         '
         Me.RichTextBox1.Location = New System.Drawing.Point(253, 230)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(405, 96)
+        Me.RichTextBox1.Size = New System.Drawing.Size(197, 96)
         Me.RichTextBox1.TabIndex = 1
         Me.RichTextBox1.Text = ""
         '
@@ -45,7 +45,7 @@ Partial Class frmLessonListHub
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(670, 338)
+        Me.ClientSize = New System.Drawing.Size(457, 338)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.TreeView1)
         Me.Name = "frmLessonListHub"

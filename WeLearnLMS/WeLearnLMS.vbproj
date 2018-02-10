@@ -136,6 +136,7 @@
     <Compile Include="c_SmallCredentials.vb" />
     <Compile Include="c_SmallQuestion.vb" />
     <Compile Include="c_Time.vb" />
+    <Compile Include="c_VanillaSchedule.vb" />
     <Compile Include="frmAccess.Designer.vb">
       <DependentUpon>frmAccess.vb</DependentUpon>
     </Compile>
@@ -837,6 +838,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\MySql.Data.dll" />
+    <None Include="bin\Debug\Sounds\startup.wav" />
+    <None Include="bin\Debug\Sounds\logout.wav" />
     <Content Include="bin\Debug\WeLearnLMS.exe" />
     <Content Include="bin\Debug\WeLearnLMS.pdb" />
     <Content Include="bin\Debug\WeLearnLMS.vshost.exe" />

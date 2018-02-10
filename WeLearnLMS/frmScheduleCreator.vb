@@ -1,6 +1,7 @@
 ﻿Public Class frmScheduleCreator
     
     Private _Schedule As New c_Schedule
+    Private _VanillaSchedule As New c_VanillaSchedule
 
     Public Sub New()
 
@@ -33,9 +34,10 @@
                         .CommandText = "InsertSchedule"
 
                         With .Parameters
-                            .AddWithValue("DayID", Me._Schedule.Day.DayID)
-                            .AddWithValue("TimeID", Me._Schedule.Time.TimeID)
-                            .AddWithValue("ClassID", Me._Schedule.Classroom.ClassroomId)
+                            .AddWithValue("DayNumber", Me._VanillaSchedule.Day)
+                            .AddWithValue("HourStart", Me._VanillaSchedule.Hour)
+                            .AddWithValue("HourEnd", Me._VanillaSchedule.HourEnd)
+                            .AddWithValue("ClassID", Me._VanillaSchedule.ClassroomID)
                         End With
 
                         .ExecuteNonQuery()
@@ -54,27 +56,30 @@
     Private Sub btnBrowseClassroom_Click(sender As Object, e As EventArgs) Handles btnBrowseClassroom.Click
         Dim browse As New frmClassroomDialog()
         If browse.ShowDialog = Windows.Forms.DialogResult.OK Then
-            Me._Schedule.Classroom = browse.GetClassroom
-
-            txtClassroom.Text = Me._Schedule.Classroom.ClassroomName
+            Me._VanillaSchedule.ClassroomID = browse.GetClassroom.ClassroomId
+            txtClassroom.Text = browse.GetClassroom.ClassroomName
         End If
     End Sub
 
     Private Sub btnBrowseTime_Click(sender As Object, e As EventArgs) Handles btnBrowseTime.Click
         Dim browse As New frmTimeDialog()
-        If browse.ShowDialog = Windows.Forms.DialogResult.OK Then
-            Me._Schedule.Time = browse.GetTime
-            txtTime.Text = Me._Schedule.Time.TimeDescription
-        End If
-
+        With browse
+            If .ShowDialog = Windows.Forms.DialogResult.OK Then
+                Me._VanillaSchedule.Hour = .GetTime
+                Me._VanillaSchedule.HourEnd = .GetTimeEnd
+                Me.txtTime.Text = _VanillaSchedule.Hour.ToString & " -> " & _VanillaSchedule.HourEnd.ToString
+            End If
+        End With
     End Sub
 
     Private Sub btnBrowseDays_Click(sender As Object, e As EventArgs) Handles btnBrowseDays.Click
-        Dim browse As New frmDayDialog
-        If browse.ShowDialog = Windows.Forms.DialogResult.OK Then
-            Me._Schedule.Day = browse.GetDay
-            txtDay.Text = Me._Schedule.Day.Day
-        End If
+        Dim browse As New frmDayDialog()
+        With browse
+            If .ShowDialog = Windows.Forms.DialogResult.OK Then
+                Me._VanillaSchedule.Day = .GetDay
+                Me.txtDay.Text = [Enum].GetName(GetType(DayOfWeek), .GetDay)
+            End If
+        End With
     End Sub
 
     Private Function Evaluated()
@@ -82,9 +87,6 @@
     End Function
 
     Private Sub btnCreateSchedule_Click(sender As Object, e As EventArgs) Handles btnCreateSchedule.Click
-        If Evaluated() Then
-
-            PerformLink()
-        End If
+        If Evaluated() Then PerformLink()
     End Sub
 End Class

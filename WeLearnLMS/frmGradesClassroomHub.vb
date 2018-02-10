@@ -11,4 +11,8 @@
 
     End Sub
 
+    Private Sub btnViewGrades_Click(sender As Object, e As EventArgs) Handles btnViewGrades.Click
+        Dim viewer As New frmGradesClassroomViewer(_SharedUserID, _SharedClassroom.ClassroomId)
+        viewer.ShowDialog()
+    End Sub
 End Class

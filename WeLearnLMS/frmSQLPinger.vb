@@ -73,4 +73,8 @@
     Private Sub frmSQLPinger_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Me.DialogResult = Windows.Forms.DialogResult.OK
     End Sub
+
+    Private Sub rtb_TextChanged_1(sender As Object, e As EventArgs) Handles rtb.TextChanged
+
+    End Sub
 End Class

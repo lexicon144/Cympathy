@@ -24,16 +24,20 @@ Partial Class frmExamsHub
     Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.grpExamDisplay = New System.Windows.Forms.GroupBox()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.txtExamID = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.txtExamName = New System.Windows.Forms.TextBox()
         Me.btnOK = New System.Windows.Forms.Button()
         Me.btnView = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpExamDisplay.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
+        Me.FlowLayoutPanel1.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -41,76 +45,23 @@ Partial Class frmExamsHub
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(346, 245)
+        Me.DataGridView1.Size = New System.Drawing.Size(346, 179)
         Me.DataGridView1.TabIndex = 8
         '
         'grpExamDisplay
         '
         Me.grpExamDisplay.Controls.Add(Me.TableLayoutPanel1)
-        Me.grpExamDisplay.Location = New System.Drawing.Point(12, 263)
+        Me.grpExamDisplay.Location = New System.Drawing.Point(3, 188)
         Me.grpExamDisplay.Name = "grpExamDisplay"
         Me.grpExamDisplay.Size = New System.Drawing.Size(265, 100)
         Me.grpExamDisplay.TabIndex = 9
         Me.grpExamDisplay.TabStop = False
         Me.grpExamDisplay.Text = "Exam"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 40)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Exam Name"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(47, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Exam ID"
-        '
-        'txtExamID
-        '
-        Me.txtExamID.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtExamID.Location = New System.Drawing.Point(132, 3)
-        Me.txtExamID.Name = "txtExamID"
-        Me.txtExamID.ReadOnly = True
-        Me.txtExamID.Size = New System.Drawing.Size(124, 20)
-        Me.txtExamID.TabIndex = 0
-        '
-        'txtExamName
-        '
-        Me.txtExamName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtExamName.Location = New System.Drawing.Point(132, 43)
-        Me.txtExamName.Name = "txtExamName"
-        Me.txtExamName.ReadOnly = True
-        Me.txtExamName.Size = New System.Drawing.Size(124, 20)
-        Me.txtExamName.TabIndex = 1
-        '
-        'btnOK
-        '
-        Me.btnOK.Location = New System.Drawing.Point(283, 310)
-        Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(75, 23)
-        Me.btnOK.TabIndex = 11
-        Me.btnOK.Text = "O K"
-        Me.btnOK.UseVisualStyleBackColor = True
-        '
-        'btnView
-        '
-        Me.btnView.Location = New System.Drawing.Point(283, 340)
-        Me.btnView.Name = "btnView"
-        Me.btnView.Size = New System.Drawing.Size(75, 23)
-        Me.btnView.TabIndex = 9
-        Me.btnView.Text = "View"
-        Me.btnView.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel1
         '
@@ -130,15 +81,95 @@ Partial Class frmExamsHub
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(259, 81)
         Me.TableLayoutPanel1.TabIndex = 12
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(3, 40)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(64, 13)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Exam Name"
+        '
+        'txtExamID
+        '
+        Me.txtExamID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtExamID.Location = New System.Drawing.Point(132, 3)
+        Me.txtExamID.Name = "txtExamID"
+        Me.txtExamID.ReadOnly = True
+        Me.txtExamID.Size = New System.Drawing.Size(124, 20)
+        Me.txtExamID.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(47, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Exam ID"
+        '
+        'txtExamName
+        '
+        Me.txtExamName.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtExamName.Location = New System.Drawing.Point(132, 43)
+        Me.txtExamName.Name = "txtExamName"
+        Me.txtExamName.ReadOnly = True
+        Me.txtExamName.Size = New System.Drawing.Size(124, 20)
+        Me.txtExamName.TabIndex = 1
+        '
+        'btnOK
+        '
+        Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnOK.Location = New System.Drawing.Point(3, 3)
+        Me.btnOK.Name = "btnOK"
+        Me.btnOK.Size = New System.Drawing.Size(64, 28)
+        Me.btnOK.TabIndex = 11
+        Me.btnOK.Text = "O K"
+        Me.btnOK.UseVisualStyleBackColor = True
+        '
+        'btnView
+        '
+        Me.btnView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnView.Location = New System.Drawing.Point(3, 37)
+        Me.btnView.Name = "btnView"
+        Me.btnView.Size = New System.Drawing.Size(64, 29)
+        Me.btnView.TabIndex = 9
+        Me.btnView.Text = "View"
+        Me.btnView.UseVisualStyleBackColor = True
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Controls.Add(Me.DataGridView1)
+        Me.FlowLayoutPanel1.Controls.Add(Me.grpExamDisplay)
+        Me.FlowLayoutPanel1.Controls.Add(Me.TableLayoutPanel2)
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(353, 290)
+        Me.FlowLayoutPanel1.TabIndex = 12
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 1
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.btnOK, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.btnView, 0, 1)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(274, 188)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 2
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(70, 69)
+        Me.TableLayoutPanel2.TabIndex = 13
+        '
         'frmExamsHub
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(373, 377)
-        Me.Controls.Add(Me.btnOK)
-        Me.Controls.Add(Me.grpExamDisplay)
-        Me.Controls.Add(Me.btnView)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.ClientSize = New System.Drawing.Size(353, 290)
+        Me.Controls.Add(Me.FlowLayoutPanel1)
+        Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
         Me.Name = "frmExamsHub"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmExamHub"
@@ -146,6 +177,8 @@ Partial Class frmExamsHub
         Me.grpExamDisplay.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
+        Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -158,4 +191,6 @@ Partial Class frmExamsHub
     Friend WithEvents btnOK As System.Windows.Forms.Button
     Friend WithEvents btnView As System.Windows.Forms.Button
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
+    Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
 End Class

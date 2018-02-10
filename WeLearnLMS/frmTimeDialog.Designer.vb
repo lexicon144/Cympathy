@@ -22,100 +22,105 @@ Partial Class frmTimeDialog
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnOK = New System.Windows.Forms.Button()
-        Me.txtTimeID = New System.Windows.Forms.TextBox()
-        Me.txtTimeStart = New System.Windows.Forms.TextBox()
+        Me.dtpStartTime = New System.Windows.Forms.DateTimePicker()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtTimeDescription = New System.Windows.Forms.TextBox()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.dtpEndTime = New System.Windows.Forms.DateTimePicker()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(339, 150)
-        Me.DataGridView1.TabIndex = 0
         '
         'btnOK
         '
-        Me.btnOK.Location = New System.Drawing.Point(277, 268)
+        Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnOK.Enabled = False
+        Me.btnOK.Location = New System.Drawing.Point(140, 179)
         Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(75, 23)
+        Me.btnOK.Size = New System.Drawing.Size(131, 83)
         Me.btnOK.TabIndex = 1
         Me.btnOK.Text = "O K "
         Me.btnOK.UseVisualStyleBackColor = True
         '
-        'txtTimeID
+        'dtpStartTime
         '
-        Me.txtTimeID.Location = New System.Drawing.Point(251, 168)
-        Me.txtTimeID.Name = "txtTimeID"
-        Me.txtTimeID.ReadOnly = True
-        Me.txtTimeID.Size = New System.Drawing.Size(100, 20)
-        Me.txtTimeID.TabIndex = 2
+        Me.dtpStartTime.CustomFormat = "HH"
+        Me.dtpStartTime.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dtpStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpStartTime.Location = New System.Drawing.Point(140, 3)
+        Me.dtpStartTime.Name = "dtpStartTime"
+        Me.dtpStartTime.ShowUpDown = True
+        Me.dtpStartTime.Size = New System.Drawing.Size(131, 20)
+        Me.dtpStartTime.TabIndex = 2
         '
-        'txtTimeStart
+        'TableLayoutPanel1
         '
-        Me.txtTimeStart.Location = New System.Drawing.Point(251, 195)
-        Me.txtTimeStart.Name = "txtTimeStart"
-        Me.txtTimeStart.ReadOnly = True
-        Me.txtTimeStart.Size = New System.Drawing.Size(100, 20)
-        Me.txtTimeStart.TabIndex = 3
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.dtpStartTime, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.dtpEndTime, 1, 1)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 3
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(274, 265)
+        Me.TableLayoutPanel1.TabIndex = 3
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(179, 174)
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 13)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Time ID"
+        Me.Label1.Size = New System.Drawing.Size(116, 26)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Select the STARTING time"
         '
-        'Label2
+        'Label3
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(179, 201)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(55, 13)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Time Start"
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(3, 88)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(122, 13)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Select the ENDING time"
         '
-        'txtTimeDescription
+        'dtpEndTime
         '
-        Me.txtTimeDescription.Location = New System.Drawing.Point(251, 222)
-        Me.txtTimeDescription.Name = "txtTimeDescription"
-        Me.txtTimeDescription.ReadOnly = True
-        Me.txtTimeDescription.Size = New System.Drawing.Size(100, 20)
-        Me.txtTimeDescription.TabIndex = 6
+        Me.dtpEndTime.CustomFormat = "HH"
+        Me.dtpEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpEndTime.Location = New System.Drawing.Point(140, 91)
+        Me.dtpEndTime.Name = "dtpEndTime"
+        Me.dtpEndTime.ShowUpDown = True
+        Me.dtpEndTime.Size = New System.Drawing.Size(131, 20)
+        Me.dtpEndTime.TabIndex = 6
         '
         'frmTimeDialog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(363, 304)
-        Me.Controls.Add(Me.txtTimeDescription)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtTimeStart)
-        Me.Controls.Add(Me.txtTimeID)
-        Me.Controls.Add(Me.btnOK)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.ClientSize = New System.Drawing.Size(274, 265)
+        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
         Me.Name = "frmTimeDialog"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmTimeViewer"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents btnOK As System.Windows.Forms.Button
-    Friend WithEvents txtTimeID As System.Windows.Forms.TextBox
-    Friend WithEvents txtTimeStart As System.Windows.Forms.TextBox
+    Friend WithEvents dtpStartTime As System.Windows.Forms.DateTimePicker
+    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents txtTimeDescription As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents dtpEndTime As System.Windows.Forms.DateTimePicker
 End Class

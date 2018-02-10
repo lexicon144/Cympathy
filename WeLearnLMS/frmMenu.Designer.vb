@@ -214,7 +214,6 @@ Partial Class frmMenu
         '
         'btnCreateClassroom
         '
-        Me.btnCreateClassroom.AutoEllipsis = True
         Me.btnCreateClassroom.AutoSize = True
         Me.btnCreateClassroom.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnCreateClassroom.Location = New System.Drawing.Point(3, 3)
@@ -226,7 +225,6 @@ Partial Class frmMenu
         '
         'btnCreateQuestionnaire
         '
-        Me.btnCreateQuestionnaire.AutoEllipsis = True
         Me.btnCreateQuestionnaire.AutoSize = True
         Me.btnCreateQuestionnaire.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnCreateQuestionnaire.Location = New System.Drawing.Point(131, 3)
@@ -238,7 +236,6 @@ Partial Class frmMenu
         '
         'btnCreateExam
         '
-        Me.btnCreateExam.AutoEllipsis = True
         Me.btnCreateExam.AutoSize = True
         Me.btnCreateExam.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnCreateExam.Location = New System.Drawing.Point(3, 54)
@@ -250,7 +247,6 @@ Partial Class frmMenu
         '
         'btnCreateArticles
         '
-        Me.btnCreateArticles.AutoEllipsis = True
         Me.btnCreateArticles.AutoSize = True
         Me.btnCreateArticles.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnCreateArticles.Location = New System.Drawing.Point(131, 54)
@@ -262,7 +258,6 @@ Partial Class frmMenu
         '
         'btnCreateMaterials
         '
-        Me.btnCreateMaterials.AutoEllipsis = True
         Me.btnCreateMaterials.AutoSize = True
         Me.btnCreateMaterials.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnCreateMaterials.Location = New System.Drawing.Point(3, 105)
@@ -367,7 +362,6 @@ Partial Class frmMenu
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ControlDark
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangeColorToolStripMenuItem, Me.ChangeSettingsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"

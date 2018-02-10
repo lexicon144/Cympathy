@@ -25,11 +25,15 @@
 #Region "Loader"
     Private Sub frmClassroomHub_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim NewClassroomDialog As New frmClassroomDialog()
-
         If NewClassroomDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
             Me._Classroom = NewClassroomDialog.GetClassroom
             REView()
         End If
+
+        Using AttendanceControl As New frmAttendanceControl
+            AttendanceControl.ShowDialog()
+        End Using
+
         FrmUAC.DisableAllMe(_SharedAdvancedCredentials.MyUserType, mainpanel)
 
         _SharedClassroom.ClassroomId = Me._Classroom.ClassroomId
@@ -48,29 +52,6 @@
     Private Sub btnViewMaterials_Click(sender As Object, e As EventArgs) Handles btnViewMaterials.Click
         Dim ViewMaterials As New frmStudyMaterialsHub(_Classroom.ClassroomId)
         ViewMaterials.ShowDialog()
-    End Sub
-#End Region
-
-#Region "Creator"
-    Private Sub btnCreateQuestionnaire_Click(sender As Object, e As EventArgs)
-        Dim QuizCreator As New frmQuizCreator
-        QuizCreator.ShowDialog()
-    End Sub
-
-    Private Sub btnCreateExam_Click(sender As Object, e As EventArgs)
-        Dim CreateExam As New frmExamsCreator()
-        CreateExam.ShowDialog()
-    End Sub
-
-    Private Sub btnCreateMaterials_Click(sender As Object, e As EventArgs)
-        Dim CreateMaterial As New frmStudyMaterialsCreator()
-        CreateMaterial.ShowDialog()
-
-    End Sub
-
-    Private Sub btnCreateArticles_Click(sender As Object, e As EventArgs)
-        Dim CreateArticle As New frmArticleMaker()
-        CreateArticle.ShowDialog()
     End Sub
 #End Region
 
@@ -147,5 +128,10 @@
         If ColorDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
             Me.BackColor = ColorDialog1.Color
         End If
+    End Sub
+
+    Private Sub ScheduleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ScheduleToolStripMenuItem.Click
+        Dim scheduleviewer As New frmScheduleViewer(Me._Classroom.ClassroomId)
+        scheduleviewer.ShowDialog()
     End Sub
 End Class

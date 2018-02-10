@@ -33,10 +33,9 @@ Partial Class frmTimeManagementHub
         Me.btnScheduleViewer.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnScheduleViewer.Location = New System.Drawing.Point(4, 4)
-        Me.btnScheduleViewer.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnScheduleViewer.Location = New System.Drawing.Point(3, 3)
         Me.btnScheduleViewer.Name = "btnScheduleViewer"
-        Me.btnScheduleViewer.Size = New System.Drawing.Size(168, 73)
+        Me.btnScheduleViewer.Size = New System.Drawing.Size(135, 79)
         Me.btnScheduleViewer.TabIndex = 2
         Me.btnScheduleViewer.Text = "Schedule Viewer"
         Me.btnScheduleViewer.UseVisualStyleBackColor = True
@@ -46,38 +45,35 @@ Partial Class frmTimeManagementHub
         Me.btnScheduleCreator.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnScheduleCreator.Location = New System.Drawing.Point(180, 4)
-        Me.btnScheduleCreator.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnScheduleCreator.Location = New System.Drawing.Point(144, 3)
         Me.btnScheduleCreator.Name = "btnScheduleCreator"
-        Me.btnScheduleCreator.Size = New System.Drawing.Size(168, 73)
+        Me.btnScheduleCreator.Size = New System.Drawing.Size(135, 79)
         Me.btnScheduleCreator.TabIndex = 3
         Me.btnScheduleCreator.Text = "Schedule Creator"
         Me.btnScheduleCreator.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel1
         '
-        Me.TableLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnScheduleViewer, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnScheduleCreator, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 12)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(352, 81)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(282, 85)
         Me.TableLayoutPanel1.TabIndex = 4
         '
         'frmTimeManagementHub
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(376, 105)
+        Me.ClientSize = New System.Drawing.Size(282, 85)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmTimeManagementHub"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmTimeManagementHub"
