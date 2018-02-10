@@ -101,7 +101,8 @@
             Using Command As New MySqlCommand
                 With Command
                     .Connection = Connection
-                    .CommandText = "SELECT id, file_name, file_blob FROM tbl_articles"
+                    .CommandType = CommandType.StoredProcedure
+                    .CommandText = "SelectAllArticles"
 
                 End With
                 Using Adapter As New MySqlDataAdapter

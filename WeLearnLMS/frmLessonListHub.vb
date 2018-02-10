@@ -110,7 +110,7 @@
             End With
         End Using
 
-        If Me._MaterialsDT.Rows("m_name") Is Nothing Then Exit Sub
+        If Me._MaterialsDT.Rows.Count = 0 Then Exit Sub
 
         For Each row As DataRow In Me._MaterialsDT.Rows
             'Classroom => [1st Layer] => [2ndLayerHere]

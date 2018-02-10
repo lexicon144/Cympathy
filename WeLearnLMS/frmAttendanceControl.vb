@@ -1,16 +1,13 @@
 ﻿Imports System.Text
 
 Public Class frmAttendanceControl
-
     Private _MyDataTable As New DataTable
-
     Private _MyClassroomDay As DayOfWeek
     Private _MyClassroomTimeStart As UInt16
     Private _MyClassroomTimeEnd As UInt16
-
     Private _MySQLDateNow As DateTime
-
     Private _Evaluated As Boolean = False
+    Private _GetDate As IGetDate = New ImpGetDateOnServer
 
     Public Sub New()
         InitializeComponent()
@@ -25,6 +22,7 @@ Public Class frmAttendanceControl
     Friend Function DateEvaluated(ByVal ThisDay As DayOfWeek, ByVal KnownDay As DayOfWeek) As Boolean
         Return (ThisDay = KnownDay)
     End Function
+
     Friend Function TimeSpanEvaluated(ByVal MIN_R As UInt16, ByVal GOLD As UInt16, ByVal MAX_R As UInt16) As Boolean
         Return (MIN_R <= GOLD <= MAX_R)
     End Function
@@ -45,22 +43,25 @@ Public Class frmAttendanceControl
     Private Sub PrintOut()
         Dim builder As New StringBuilder
         With builder
+            .AppendLine("REPORT")
+            .AppendLine()
+            .AppendLine()
             .Append("CLASSDate : ")
             .Append([Enum].GetName(GetType(DayOfWeek), _MyClassroomDay))
-            .Append(vbNewLine)
-            .Append(vbNewLine)
+            .AppendLine()
+            .AppendLine()
             .Append("MYSQLDate : ")
             .Append([Enum].GetName(GetType(DayOfWeek), _MySQLDateNow.DayOfWeek))
-            .Append(vbNewLine)
-            .Append(vbNewLine)
+            .AppendLine()
+            .AppendLine()
             .Append("CLASSHour : ")
             .Append(_MyClassroomTimeStart & " -> " & _MyClassroomTimeEnd)
-            .Append(vbNewLine)
-            .Append(vbNewLine)
+            .AppendLine()
+            .AppendLine()
             .Append("MYSQLHOUR : ")
             .Append(_MySQLDateNow.Hour)
-            .Append(vbNewLine)
-            .Append(vbNewLine)
+            .AppendLine()
+            .AppendLine()
             .Append("ISWITHIN? : ")
             .Append(_Evaluated.ToString)
         End With
@@ -94,21 +95,7 @@ Public Class frmAttendanceControl
     End Sub
 
     Private Sub GetMySQLServerDate()
-        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
-            With Connection
-                If .State = ConnectionState.Closed Then
-                    .Open()
-                End If
-            End With
-            Using Command As New MySqlCommand
-                With Command
-                    .Connection = Connection
-                    .CommandType = CommandType.StoredProcedure
-                    .CommandText = "GetNowDateScalar"
-                    Me._MySQLDateNow = .ExecuteScalar()
-                End With
-            End Using
-        End Using
+        Me._MySQLDateNow = _GetDate.GetDate
     End Sub
 
     Private Sub GetAllDatatable()

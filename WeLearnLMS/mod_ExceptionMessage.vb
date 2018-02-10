@@ -23,7 +23,6 @@ Friend Module mod_ExceptionMessage
             .Append(XXX.StackTrace)
         End With
         MessageBox.Show(NewMessage.ToString, "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
     End Sub
 
     Friend Sub DisplayGeneralException(ByRef XXX As Exception)
@@ -44,7 +43,6 @@ Friend Module mod_ExceptionMessage
             .Append(XXX.StackTrace)
         End With
         MessageBox.Show(NewMessage.ToString, "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
     End Sub
 
     Friend Sub DisplayExamCreationException(ByRef XXX As Exception)

@@ -24,6 +24,13 @@ Public Class frmExamsViewer
     End Sub
 
     Private Sub frmExamViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+        Dim ExamHub As New frmExamsHub()
+        If ExamHub.ShowDialog = Windows.Forms.DialogResult.OK Then
+
+        End If
+
         Dim Security As New frmQuestSecurity(_SharedMainCredentials.UserID, Me._exam)
         If Security.DialogResult = Windows.Forms.DialogResult.OK Then
             If Not Security.PassState Then

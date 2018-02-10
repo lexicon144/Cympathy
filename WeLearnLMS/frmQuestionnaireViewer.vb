@@ -117,9 +117,15 @@ Public Class frmQuestionnaireViewer
                 RadioButton2.Text = .Cells("tttDistractor2").Value.ToString()
                 RadioButton3.Text = .Cells("tttDistractor3").Value.ToString()
                 RadioButton4.Text = .Cells("tttDistractor4").Value.ToString()
+
             End With
         End If
-
+        With Me
+            .RadioButton1.Checked = False
+            .RadioButton2.Checked = False
+            .RadioButton3.Checked = False
+            .RadioButton4.Checked = False
+        End With
     End Sub
 
     Private Sub RadioButton1_Click(sender As Object, e As EventArgs) Handles RadioButton1.Click, RadioButton2.Click, RadioButton3.Click, RadioButton4.Click
@@ -179,14 +185,11 @@ Public Class frmQuestionnaireViewer
                 .Columns("tttDistractor4").Visible = False
                 .Columns("tttANS").Visible = False
                 .Columns("tttANS").Visible = False
-
             End With
         End With
-
         Dim wallop As New frmWALLOP
         wallop.ShowDialog()
         Me.WALLOP()
-
     End Sub
 
     Private Sub DevAutoFill(ByVal Limit As UInt32)

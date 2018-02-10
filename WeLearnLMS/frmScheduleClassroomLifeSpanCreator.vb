@@ -26,26 +26,9 @@
 
         ' Add any initialization after the InitializeComponent() call.
         Me._ClassroomID = ClassroomID
-    End Sub
-    Private Sub cmbSet_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles cmbSet.Validating
-        If Not _SharedValidator.Verify(VMethodology.Username, DirectCast(sender, ComboBox).Text) Then
-            ErrorProvider1.SetError(DirectCast(sender, ComboBox), "Invalid Number")
-            e.Cancel = True
-            DirectCast(sender, TextBox).SelectAll()
-            Exit Sub
-        End If
-        ErrorProvider1.SetError(DirectCast(sender, ComboBox), "")
+        txtClassroomID.Text = ClassroomID
     End Sub
 
-    ''' <summary>
-    ''' Set DATETIMEPICKER +My Increment
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub cmbSet_Validated(sender As Object, e As EventArgs) Handles cmbSet.Validated
-        Me.dtpEnd.Value = DateTime.Now.AddDays(Integer.Parse(cmbSet.Text))
-    End Sub
 
     ''' <summary>
     ''' Check if data has been evaluated
@@ -63,8 +46,8 @@
     Private Sub ParseToMyObject()
         With Me._TimeSpan
             .ClassroomID = Me._ClassroomID
-            .DateEnd = dtpEnd.Value
-            .DateStart = dtpStart.Value
+            .DateEnd = dtpEnd.Value.Date
+            .DateStart = dtpStart.Value.Date
         End With
     End Sub
 
@@ -88,7 +71,9 @@
                         .CommandText = "InsertClassroomLifespan"
                         .CommandType = CommandType.StoredProcedure
                         With .Parameters
-                            .AddWithValue("ClassroomID", Me._ClassroomID)
+                            .AddWithValue("ClassroomID", Me._TimeSpan.ClassroomID)
+                            .AddWithValue("DateStart", Me._TimeSpan.DateStart)
+                            .AddWithValue("DateEnd", Me._TimeSpan.DateEnd)
                         End With
                         .ExecuteNonQuery()
                         LinkingTransaction.Commit()
@@ -105,6 +90,7 @@
 
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
         If Evaluated() Then
+            ParseToMyObject()
             PerformLink()
         End If
     End Sub
@@ -112,4 +98,6 @@
     Private Sub frmScheduleClassroomLifeSpanCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+
 End Class

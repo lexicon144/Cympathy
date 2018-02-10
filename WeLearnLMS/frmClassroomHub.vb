@@ -33,7 +33,9 @@
         Using AttendanceControl As New frmAttendanceControl
             AttendanceControl.ShowDialog()
         End Using
-
+        Using LifeSpan As New frmScheduleClassroomLifeSpanControl
+            LifeSpan.ShowDialog()
+        End Using
         FrmUAC.DisableAllMe(_SharedAdvancedCredentials.MyUserType, mainpanel)
 
         _SharedClassroom.ClassroomId = Me._Classroom.ClassroomId
@@ -88,7 +90,7 @@
     End Sub
 
     Private Sub btnViewExams_Click(sender As Object, e As EventArgs) Handles btnViewExams.Click
-        Dim ViewExams As New frmExamsHub()
+        Dim ViewExams As New frmExamsViewer()
         ViewExams.ShowDialog()
     End Sub
 #End Region

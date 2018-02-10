@@ -29,8 +29,8 @@ Partial Class frmScheduleClassroomLifeSpanCreator
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.cmbSet = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtClassroomID = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,9 +41,9 @@ Partial Class frmScheduleClassroomLifeSpanCreator
         Me.dtpStart.CustomFormat = "MMMM dd - yyyy"
         Me.dtpStart.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpStart.Location = New System.Drawing.Point(151, 3)
+        Me.dtpStart.Location = New System.Drawing.Point(260, 3)
         Me.dtpStart.Name = "dtpStart"
-        Me.dtpStart.Size = New System.Drawing.Size(143, 20)
+        Me.dtpStart.Size = New System.Drawing.Size(251, 20)
         Me.dtpStart.TabIndex = 0
         '
         'dtpEnd
@@ -51,17 +51,17 @@ Partial Class frmScheduleClassroomLifeSpanCreator
         Me.dtpEnd.CustomFormat = "MMMM dd - yyyy"
         Me.dtpEnd.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpEnd.Location = New System.Drawing.Point(151, 71)
+        Me.dtpEnd.Location = New System.Drawing.Point(260, 81)
         Me.dtpEnd.Name = "dtpEnd"
-        Me.dtpEnd.Size = New System.Drawing.Size(143, 20)
+        Me.dtpEnd.Size = New System.Drawing.Size(251, 20)
         Me.dtpEnd.TabIndex = 1
         '
         'btnOK
         '
         Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnOK.Location = New System.Drawing.Point(151, 207)
+        Me.btnOK.Location = New System.Drawing.Point(260, 159)
         Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(143, 63)
+        Me.btnOK.Size = New System.Drawing.Size(251, 72)
         Me.btnOK.TabIndex = 2
         Me.btnOK.Text = "OK"
         Me.btnOK.UseVisualStyleBackColor = True
@@ -75,9 +75,9 @@ Partial Class frmScheduleClassroomLifeSpanCreator
         Me.TableLayoutPanel1.Controls.Add(Me.dtpEnd, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 1, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.cmbSet, 1, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtClassroomID, 1, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 3)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -86,7 +86,7 @@ Partial Class frmScheduleClassroomLifeSpanCreator
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(297, 273)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(514, 313)
         Me.TableLayoutPanel1.TabIndex = 3
         '
         'Label1
@@ -101,40 +101,41 @@ Partial Class frmScheduleClassroomLifeSpanCreator
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 68)
+        Me.Label2.Location = New System.Drawing.Point(3, 78)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(52, 13)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "End Date"
         '
-        'cmbSet
+        'txtClassroomID
         '
-        Me.cmbSet.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.cmbSet.FormattingEnabled = True
-        Me.cmbSet.Items.AddRange(New Object() {"120", "90", "60", "30"})
-        Me.cmbSet.Location = New System.Drawing.Point(151, 139)
-        Me.cmbSet.Name = "cmbSet"
-        Me.cmbSet.Size = New System.Drawing.Size(143, 21)
-        Me.cmbSet.TabIndex = 5
+        Me.txtClassroomID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtClassroomID.Location = New System.Drawing.Point(260, 237)
+        Me.txtClassroomID.Name = "txtClassroomID"
+        Me.txtClassroomID.ReadOnly = True
+        Me.txtClassroomID.Size = New System.Drawing.Size(251, 20)
+        Me.txtClassroomID.TabIndex = 8
         '
-        'Label3
+        'Label4
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(3, 136)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(101, 13)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Set Amount of Days"
+        Me.Label4.AutoSize = True
+        Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label4.Location = New System.Drawing.Point(3, 234)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(251, 79)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "Classroom: "
         '
         'ErrorProvider1
         '
+        Me.ErrorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.AlwaysBlink
         Me.ErrorProvider1.ContainerControl = Me
         '
         'frmScheduleClassroomLifeSpanCreator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(297, 273)
+        Me.ClientSize = New System.Drawing.Size(514, 313)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
@@ -153,7 +154,7 @@ Partial Class frmScheduleClassroomLifeSpanCreator
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents cmbSet As System.Windows.Forms.ComboBox
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
-    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents txtClassroomID As System.Windows.Forms.TextBox
 End Class

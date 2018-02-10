@@ -186,6 +186,12 @@
     <Compile Include="frmClassroomHub.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmScheduleClassroomLifeSpanControl.Designer.vb">
+      <DependentUpon>frmScheduleClassroomLifeSpanControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmScheduleClassroomLifeSpanControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmClassroomLinker.Designer.vb">
       <DependentUpon>frmClassroomLinker.vb</DependentUpon>
     </Compile>
@@ -522,8 +528,12 @@
     <Compile Include="IConStringBuilder.vb" />
     <Compile Include="ICreateQuestionnaire.vb" />
     <Compile Include="IDataDeserializer.vb" />
+    <Compile Include="IDateEvaluator.vb" />
     <Compile Include="IDisableControls.vb" />
+    <Compile Include="IDisplayWeLearnGeneralExceptions.vb" />
+    <Compile Include="IEvaluateDateRange.vb" />
     <Compile Include="IGetDate.vb" />
+    <Compile Include="IHappyMessage.vb" />
     <Compile Include="IHashing.vb" />
     <Compile Include="ImpAnswerArrayShuffler.vb" />
     <Compile Include="ImpCheaterExistsAMD64CheatEngine.vb" />
@@ -532,10 +542,13 @@
     <Compile Include="ImpConStringBuilderDeployment.vb" />
     <Compile Include="ImpCreateQuestionnaireSQUIZ.vb" />
     <Compile Include="ImpDataDeserializer.vb" />
+    <Compile Include="ImpDateEvaluator.vb" />
     <Compile Include="ImpDisableControlsADMIN.vb" />
     <Compile Include="ImpDisableControlsPROFESSOR.vb" />
     <Compile Include="ImpDisableControlsSTUDENT.vb" />
+    <Compile Include="ImpEvaluateDateRange.vb" />
     <Compile Include="ImpGetDateOnServer.vb" />
+    <Compile Include="ImpHappyMessage.vb" />
     <Compile Include="ImpQuestionAmount_PEXAM.vb" />
     <Compile Include="ImpQuestionAmount_SQUIZ.vb" />
     <Compile Include="ImpDataSerializer.vb" />
@@ -611,6 +624,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmClassroomHub.resx">
       <DependentUpon>frmClassroomHub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScheduleClassroomLifeSpanControl.resx">
+      <DependentUpon>frmScheduleClassroomLifeSpanControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmClassroomLinker.resx">
       <DependentUpon>frmClassroomLinker.vb</DependentUpon>
@@ -856,6 +872,7 @@
     <None Include="WeLearnLMS_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\monikalovesyou.txt" />
     <Content Include="bin\Debug\MySql.Data.dll" />
     <None Include="bin\Debug\Sounds\startup.wav" />
     <None Include="bin\Debug\Sounds\logout.wav" />
@@ -863,6 +880,7 @@
     <Content Include="bin\Debug\WeLearnLMS.pdb" />
     <Content Include="bin\Debug\WeLearnLMS.vshost.exe" />
     <Content Include="bin\Debug\WeLearnLMS.xml" />
+    <Content Include="monikalovesyou.txt" />
     <Content Include="obj\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
     <Content Include="obj\Debug\WeLearnLMS.exe" />
     <Content Include="obj\Debug\WeLearnLMS.pdb" />

@@ -41,7 +41,7 @@ Partial Class frmScheduleCreator
         Me.btnCreateSchedule.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnCreateSchedule.Location = New System.Drawing.Point(187, 198)
         Me.btnCreateSchedule.Name = "btnCreateSchedule"
-        Me.btnCreateSchedule.Size = New System.Drawing.Size(179, 59)
+        Me.btnCreateSchedule.Size = New System.Drawing.Size(178, 59)
         Me.btnCreateSchedule.TabIndex = 6
         Me.btnCreateSchedule.Text = "Create Schedule"
         Me.btnCreateSchedule.UseVisualStyleBackColor = True
@@ -49,28 +49,28 @@ Partial Class frmScheduleCreator
         'txtDay
         '
         Me.txtDay.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtDay.Location = New System.Drawing.Point(372, 133)
+        Me.txtDay.Location = New System.Drawing.Point(371, 133)
         Me.txtDay.Name = "txtDay"
         Me.txtDay.ReadOnly = True
-        Me.txtDay.Size = New System.Drawing.Size(180, 20)
+        Me.txtDay.Size = New System.Drawing.Size(181, 20)
         Me.txtDay.TabIndex = 7
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label3.Location = New System.Drawing.Point(372, 65)
+        Me.Label3.Location = New System.Drawing.Point(371, 65)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(180, 65)
+        Me.Label3.Size = New System.Drawing.Size(181, 65)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Day"
         '
         'btnBrowseDays
         '
         Me.btnBrowseDays.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnBrowseDays.Location = New System.Drawing.Point(372, 3)
+        Me.btnBrowseDays.Location = New System.Drawing.Point(371, 3)
         Me.btnBrowseDays.Name = "btnBrowseDays"
-        Me.btnBrowseDays.Size = New System.Drawing.Size(180, 59)
+        Me.btnBrowseDays.Size = New System.Drawing.Size(181, 59)
         Me.btnBrowseDays.TabIndex = 10
         Me.btnBrowseDays.Text = "Browse Days"
         Me.btnBrowseDays.UseVisualStyleBackColor = True
@@ -80,7 +80,7 @@ Partial Class frmScheduleCreator
         Me.btnBrowseTime.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBrowseTime.Location = New System.Drawing.Point(187, 3)
         Me.btnBrowseTime.Name = "btnBrowseTime"
-        Me.btnBrowseTime.Size = New System.Drawing.Size(179, 59)
+        Me.btnBrowseTime.Size = New System.Drawing.Size(178, 59)
         Me.btnBrowseTime.TabIndex = 16
         Me.btnBrowseTime.Text = "Browse Time"
         Me.btnBrowseTime.UseVisualStyleBackColor = True
@@ -101,7 +101,7 @@ Partial Class frmScheduleCreator
         Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label4.Location = New System.Drawing.Point(187, 65)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(179, 65)
+        Me.Label4.Size = New System.Drawing.Size(178, 65)
         Me.Label4.TabIndex = 14
         Me.Label4.Text = "Time"
         '
@@ -121,7 +121,7 @@ Partial Class frmScheduleCreator
         Me.txtTime.Location = New System.Drawing.Point(187, 133)
         Me.txtTime.Name = "txtTime"
         Me.txtTime.ReadOnly = True
-        Me.txtTime.Size = New System.Drawing.Size(179, 20)
+        Me.txtTime.Size = New System.Drawing.Size(178, 20)
         Me.txtTime.TabIndex = 12
         '
         'txtClassroom

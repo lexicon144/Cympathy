@@ -10,8 +10,6 @@ Public Class frmExamsHub
 
     Private _Exam As New c_Exam
 
-    Private _IsModal As Boolean = False
-
     Friend ReadOnly Property RetrieveExam As c_Exam
         Get
             Return _Exam
@@ -30,17 +28,13 @@ Public Class frmExamsHub
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        Me.btnView.Enabled = False
-        Me.btnOK.Enabled = False
-        Me._IsModal = True
-
+        
         LoadDatagridView()
     End Sub
 
     Public Sub New(ByRef ThisClassroom As c_Classroom)
         InitializeComponent()
         Me._ClassroomID = ThisClassroom.ClassroomId
-        Me._IsModal = False
 
         LoadDatagridView(ThisClassroom.ClassroomId)
     End Sub
@@ -58,7 +52,8 @@ Public Class frmExamsHub
                 Using Command As New MySqlCommand
                     With Command
                         .Connection = Connection
-                        .CommandText = "SELECT * FROM tbl_exams"
+                        .CommandType = CommandType.StoredProcedure
+                        .CommandText = "SelectAllExams"
                     End With
 
                     Using Adapter As New MySqlDataAdapter
