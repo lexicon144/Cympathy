@@ -27,26 +27,29 @@ Partial Class frmStudyMaterialsLinker
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtClassroomName = New System.Windows.Forms.TextBox()
         Me.txtClassroomID = New System.Windows.Forms.TextBox()
-        Me.btnLink = New System.Windows.Forms.Button()
         Me.grpMaterialDisplay = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtMaterialID = New System.Windows.Forms.TextBox()
         Me.txtMaterialName = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.grpClassroom.SuspendLayout()
         Me.grpMaterialDisplay.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
+        Me.TableLayoutPanel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'grpClassroom
         '
-        Me.grpClassroom.Controls.Add(Me.Label4)
-        Me.grpClassroom.Controls.Add(Me.Label3)
-        Me.grpClassroom.Controls.Add(Me.txtClassroomName)
-        Me.grpClassroom.Controls.Add(Me.txtClassroomID)
-        Me.grpClassroom.Location = New System.Drawing.Point(266, 12)
+        Me.grpClassroom.Controls.Add(Me.TableLayoutPanel1)
+        Me.grpClassroom.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.grpClassroom.Location = New System.Drawing.Point(333, 3)
         Me.grpClassroom.Name = "grpClassroom"
-        Me.grpClassroom.Size = New System.Drawing.Size(200, 100)
+        Me.grpClassroom.Size = New System.Drawing.Size(162, 105)
         Me.grpClassroom.TabIndex = 7
         Me.grpClassroom.TabStop = False
         Me.grpClassroom.Text = "Classroom"
@@ -54,55 +57,48 @@ Partial Class frmStudyMaterialsLinker
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(2, 45)
+        Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label4.Location = New System.Drawing.Point(3, 43)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(86, 13)
+        Me.Label4.Size = New System.Drawing.Size(72, 43)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Classroom Name"
+        Me.Label4.Text = "Name"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(19, 18)
+        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label3.Location = New System.Drawing.Point(3, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(69, 13)
+        Me.Label3.Size = New System.Drawing.Size(72, 43)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Classroom ID"
+        Me.Label3.Text = "ID"
         '
         'txtClassroomName
         '
-        Me.txtClassroomName.Location = New System.Drawing.Point(94, 42)
+        Me.txtClassroomName.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtClassroomName.Location = New System.Drawing.Point(81, 46)
         Me.txtClassroomName.Name = "txtClassroomName"
         Me.txtClassroomName.ReadOnly = True
-        Me.txtClassroomName.Size = New System.Drawing.Size(100, 20)
+        Me.txtClassroomName.Size = New System.Drawing.Size(72, 20)
         Me.txtClassroomName.TabIndex = 1
         '
         'txtClassroomID
         '
-        Me.txtClassroomID.Location = New System.Drawing.Point(94, 15)
+        Me.txtClassroomID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtClassroomID.Location = New System.Drawing.Point(81, 3)
         Me.txtClassroomID.Name = "txtClassroomID"
         Me.txtClassroomID.ReadOnly = True
-        Me.txtClassroomID.Size = New System.Drawing.Size(100, 20)
+        Me.txtClassroomID.Size = New System.Drawing.Size(72, 20)
         Me.txtClassroomID.TabIndex = 0
-        '
-        'btnLink
-        '
-        Me.btnLink.Location = New System.Drawing.Point(204, 130)
-        Me.btnLink.Name = "btnLink"
-        Me.btnLink.Size = New System.Drawing.Size(75, 23)
-        Me.btnLink.TabIndex = 6
-        Me.btnLink.Text = "Link ->"
-        Me.btnLink.UseVisualStyleBackColor = True
         '
         'grpMaterialDisplay
         '
-        Me.grpMaterialDisplay.Controls.Add(Me.Label2)
-        Me.grpMaterialDisplay.Controls.Add(Me.Label1)
-        Me.grpMaterialDisplay.Controls.Add(Me.txtMaterialID)
-        Me.grpMaterialDisplay.Controls.Add(Me.txtMaterialName)
-        Me.grpMaterialDisplay.Location = New System.Drawing.Point(12, 12)
+        Me.grpMaterialDisplay.Controls.Add(Me.TableLayoutPanel2)
+        Me.grpMaterialDisplay.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.grpMaterialDisplay.Location = New System.Drawing.Point(3, 3)
         Me.grpMaterialDisplay.Name = "grpMaterialDisplay"
-        Me.grpMaterialDisplay.Size = New System.Drawing.Size(200, 100)
+        Me.grpMaterialDisplay.Size = New System.Drawing.Size(159, 105)
         Me.grpMaterialDisplay.TabIndex = 5
         Me.grpMaterialDisplay.TabStop = False
         Me.grpMaterialDisplay.Text = "Material"
@@ -110,67 +106,126 @@ Partial Class frmStudyMaterialsLinker
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(13, 48)
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label2.Location = New System.Drawing.Point(3, 43)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(75, 13)
+        Me.Label2.Size = New System.Drawing.Size(70, 43)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Material Name"
+        Me.Label2.Text = "Name"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(30, 22)
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 13)
+        Me.Label1.Size = New System.Drawing.Size(70, 43)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Material ID"
+        Me.Label1.Text = "ID"
         '
         'txtMaterialID
         '
-        Me.txtMaterialID.Location = New System.Drawing.Point(94, 19)
+        Me.txtMaterialID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtMaterialID.Location = New System.Drawing.Point(79, 3)
         Me.txtMaterialID.Name = "txtMaterialID"
         Me.txtMaterialID.ReadOnly = True
-        Me.txtMaterialID.Size = New System.Drawing.Size(100, 20)
+        Me.txtMaterialID.Size = New System.Drawing.Size(71, 20)
         Me.txtMaterialID.TabIndex = 0
         '
         'txtMaterialName
         '
-        Me.txtMaterialName.Location = New System.Drawing.Point(94, 45)
+        Me.txtMaterialName.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtMaterialName.Location = New System.Drawing.Point(79, 46)
         Me.txtMaterialName.Name = "txtMaterialName"
         Me.txtMaterialName.ReadOnly = True
-        Me.txtMaterialName.Size = New System.Drawing.Size(100, 20)
+        Me.txtMaterialName.Size = New System.Drawing.Size(71, 20)
         Me.txtMaterialName.TabIndex = 1
         '
-        'Label6
+        'TableLayoutPanel1
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(230, 61)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(32, 13)
-        Me.Label6.TabIndex = 16
-        Me.Label6.Text = "To ->"
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtClassroomID, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtClassroomName, 1, 1)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 16)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(156, 86)
+        Me.TableLayoutPanel1.TabIndex = 17
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 2
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtMaterialID, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtMaterialName, 1, 1)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 16)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 2
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(153, 86)
+        Me.TableLayoutPanel2.TabIndex = 17
+        '
+        'TableLayoutPanel3
+        '
+        Me.TableLayoutPanel3.ColumnCount = 3
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel3.Controls.Add(Me.grpMaterialDisplay, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.grpClassroom, 2, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.LinkLabel1, 1, 0)
+        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        Me.TableLayoutPanel3.RowCount = 1
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(498, 111)
+        Me.TableLayoutPanel3.TabIndex = 17
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LinkLabel1.Location = New System.Drawing.Point(168, 0)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(159, 111)
+        Me.LinkLabel1.TabIndex = 8
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Link To -->"
+        Me.LinkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmStudyMaterialsLinker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(490, 184)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.grpClassroom)
-        Me.Controls.Add(Me.btnLink)
-        Me.Controls.Add(Me.grpMaterialDisplay)
+        Me.ClientSize = New System.Drawing.Size(498, 111)
+        Me.Controls.Add(Me.TableLayoutPanel3)
         Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
         Me.Name = "frmStudyMaterialsLinker"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmStudyMaterialsLinker"
         Me.grpClassroom.ResumeLayout(False)
-        Me.grpClassroom.PerformLayout()
         Me.grpMaterialDisplay.ResumeLayout(False)
-        Me.grpMaterialDisplay.PerformLayout()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
+        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.TableLayoutPanel2.PerformLayout()
+        Me.TableLayoutPanel3.ResumeLayout(False)
+        Me.TableLayoutPanel3.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents grpClassroom As System.Windows.Forms.GroupBox
@@ -178,11 +233,13 @@ Partial Class frmStudyMaterialsLinker
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtClassroomName As System.Windows.Forms.TextBox
     Friend WithEvents txtClassroomID As System.Windows.Forms.TextBox
-    Friend WithEvents btnLink As System.Windows.Forms.Button
     Friend WithEvents grpMaterialDisplay As System.Windows.Forms.GroupBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtMaterialID As System.Windows.Forms.TextBox
     Friend WithEvents txtMaterialName As System.Windows.Forms.TextBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents TableLayoutPanel3 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
 End Class

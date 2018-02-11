@@ -69,7 +69,7 @@
         End Using
     End Sub
 
-    Private Sub btnEnroll_Click(sender As Object, e As EventArgs) Handles btnEnroll.Click
+    Private Sub btnEnroll_Click(sender As Object, e As EventArgs)
         PerformLink()
     End Sub
 End Class
