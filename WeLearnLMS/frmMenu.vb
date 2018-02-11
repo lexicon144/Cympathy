@@ -103,7 +103,7 @@
 #End Region
 
     Private Sub btnLessonList_Click(sender As Object, e As EventArgs) Handles btnLessonList.Click
-        Dim viewer As New frmLessonListHub
+        Dim viewer As New frmLessonListHub(_SharedClassroom)
         viewer.ShowDialog()
     End Sub
 

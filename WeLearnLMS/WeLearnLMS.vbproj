@@ -105,6 +105,7 @@
     <Import Include="System.Data" />
     <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
+    <Import Include="System.Text" />
     <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
@@ -115,6 +116,7 @@
     <Compile Include="ContextAntiCheatEngine.vb" />
     <Compile Include="ContextCreateQuestionnaire.vb" />
     <Compile Include="ContextDisableControls.vb" />
+    <Compile Include="ContextMakeLessonListNode.vb" />
     <Compile Include="ContextValidateInput.vb" />
     <Compile Include="ContextVerification.vb" />
     <Compile Include="context_QuestionAmount.vb" />
@@ -535,6 +537,7 @@
     <Compile Include="IGetDate.vb" />
     <Compile Include="IHappyMessage.vb" />
     <Compile Include="IHashing.vb" />
+    <Compile Include="IMakeMyLessonTreeNode.vb" />
     <Compile Include="ImpAnswerArrayShuffler.vb" />
     <Compile Include="ImpCheaterExistsAMD64CheatEngine.vb" />
     <Compile Include="ImpCheaterExistsI386CheatEngine.vb" />
@@ -549,6 +552,10 @@
     <Compile Include="ImpEvaluateDateRange.vb" />
     <Compile Include="ImpGetDateOnServer.vb" />
     <Compile Include="ImpHappyMessage.vb" />
+    <Compile Include="ImpMakeArticleNode.vb" />
+    <Compile Include="ImpMakeExamNode.vb" />
+    <Compile Include="ImpMakeMaterialNode.vb" />
+    <Compile Include="ImpMakeQuizNode.vb" />
     <Compile Include="ImpQuestionAmount_PEXAM.vb" />
     <Compile Include="ImpQuestionAmount_SQUIZ.vb" />
     <Compile Include="ImpDataSerializer.vb" />

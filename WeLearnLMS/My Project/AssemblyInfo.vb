@@ -9,13 +9,13 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("WeLearnLMS")> 
-<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyDescription("A Learning Management System Utilizing Local Area Network (L.A.N.) Based Technology")> 
 <Assembly: AssemblyCompany("")> 
 <Assembly: AssemblyProduct("WeLearnLMS")> 
 <Assembly: AssemblyCopyright("Copyright ©  2018")> 
 <Assembly: AssemblyTrademark("")> 
 
-<Assembly: ComVisible(False)>
+<Assembly: ComVisible(True)> 
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
 <Assembly: Guid("2aef9e47-b2c7-4de6-8957-04747222bae6")> 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("0.0.0.0")> 
-<Assembly: AssemblyFileVersion("0.0.0.0")> 
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> 

@@ -18,13 +18,13 @@
 
     Friend ReadOnly Property RetrieveArticle As c_Article
         Get
-            Return _ThisArticle
+            Return Me._ThisArticle
         End Get
     End Property
 
     Friend ReadOnly Property ThrowMainDatatable As DataTable
         Get
-            Return _Datatable
+            Return Me._Datatable
         End Get
     End Property
 
@@ -58,7 +58,7 @@
     Private Sub frmArticleHub_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Me._IsModal Then LoadAllArticles()
         If Not Me._IsModal Then LoadAllArticles(_ThisClassroomID)
-        Console.WriteLine("IsModal {0}", Me._IsModal)
+
         Dim btn As New DataGridViewButtonColumn()
 
         With btn
@@ -109,7 +109,7 @@
                     With Adapter
                         With Adapter
                             .SelectCommand = Command
-                            .Fill(_Datatable)
+                            .Fill(Me._Datatable)
                         End With
                     End With
                 End Using
@@ -117,6 +117,7 @@
 
         End Using
     End Sub
+
     Friend Sub LoadAllArticles(ByRef ClassroomID As String)
         Console.WriteLine("Load most Articles")
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
@@ -138,7 +139,7 @@
 
                     With Adapter
                         .SelectCommand = Command
-                        .Fill(_Datatable)
+                        .Fill(Me._Datatable)
                     End With
                 End Using
             End Using
