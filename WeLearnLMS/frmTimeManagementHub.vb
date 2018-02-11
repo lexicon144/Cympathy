@@ -27,4 +27,9 @@
             btnScheduleCreator.Enabled = False
         End If
     End Sub
+
+    Private Sub btnLifeSpan_Click(sender As Object, e As EventArgs) Handles btnLifeSpan.Click
+        Dim Lifespan As New frmScheduleClassroomLifeSpanCreator(_SharedClassroom.ClassroomId)
+        Lifespan.ShowDialog()
+    End Sub
 End Class

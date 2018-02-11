@@ -22,16 +22,30 @@ Partial Class frmAttendanceControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.SuspendLayout()
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(12, 12)
+        Me.RichTextBox1.MaxLength = 100
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(209, 140)
+        Me.RichTextBox1.TabIndex = 2
+        Me.RichTextBox1.Text = ""
         '
         'frmAttendanceControl
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(282, 253)
+        Me.ClientSize = New System.Drawing.Size(232, 164)
+        Me.Controls.Add(Me.RichTextBox1)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmAttendanceControl"
         Me.Text = "frmAttendanceControl"
         Me.ResumeLayout(False)
 
     End Sub
+    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
 End Class

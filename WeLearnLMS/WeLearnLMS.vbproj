@@ -105,6 +105,7 @@
     <Import Include="System.Data" />
     <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
+    <Import Include="System.Text" />
     <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
@@ -115,12 +116,14 @@
     <Compile Include="ContextAntiCheatEngine.vb" />
     <Compile Include="ContextCreateQuestionnaire.vb" />
     <Compile Include="ContextDisableControls.vb" />
+    <Compile Include="ContextMakeLessonListNode.vb" />
     <Compile Include="ContextValidateInput.vb" />
     <Compile Include="ContextVerification.vb" />
     <Compile Include="context_QuestionAmount.vb" />
     <Compile Include="c_AdvancedCredentials.vb" />
     <Compile Include="c_Article.vb" />
     <Compile Include="c_Classroom.vb" />
+    <Compile Include="c_ClassroomLifespan.vb" />
     <Compile Include="c_Day.vb" />
     <Compile Include="c_Exam.vb" />
     <Compile Include="c_Grades.vb" />
@@ -136,6 +139,7 @@
     <Compile Include="c_SmallCredentials.vb" />
     <Compile Include="c_SmallQuestion.vb" />
     <Compile Include="c_Time.vb" />
+    <Compile Include="c_VanillaSchedule.vb" />
     <Compile Include="frmAccess.Designer.vb">
       <DependentUpon>frmAccess.vb</DependentUpon>
     </Compile>
@@ -184,6 +188,12 @@
     <Compile Include="frmClassroomHub.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmScheduleClassroomLifeSpanControl.Designer.vb">
+      <DependentUpon>frmScheduleClassroomLifeSpanControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmScheduleClassroomLifeSpanControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmClassroomLinker.Designer.vb">
       <DependentUpon>frmClassroomLinker.vb</DependentUpon>
     </Compile>
@@ -218,6 +228,18 @@
       <DependentUpon>frmNetworkPinger.vb</DependentUpon>
     </Compile>
     <Compile Include="frmNetworkPinger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScheduleClassroomLifeSpanCreator.Designer.vb">
+      <DependentUpon>frmScheduleClassroomLifeSpanCreator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmScheduleClassroomLifeSpanCreator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScheduleClassroomLifeSpanViewer.Designer.vb">
+      <DependentUpon>frmScheduleClassroomLifeSpanViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmScheduleClassroomLifeSpanViewer.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmServerEditor.Designer.vb">
@@ -508,9 +530,14 @@
     <Compile Include="IConStringBuilder.vb" />
     <Compile Include="ICreateQuestionnaire.vb" />
     <Compile Include="IDataDeserializer.vb" />
+    <Compile Include="IDateEvaluator.vb" />
     <Compile Include="IDisableControls.vb" />
+    <Compile Include="IDisplayWeLearnGeneralExceptions.vb" />
+    <Compile Include="IEvaluateDateRange.vb" />
     <Compile Include="IGetDate.vb" />
+    <Compile Include="IHappyMessage.vb" />
     <Compile Include="IHashing.vb" />
+    <Compile Include="IMakeMyLessonTreeNode.vb" />
     <Compile Include="ImpAnswerArrayShuffler.vb" />
     <Compile Include="ImpCheaterExistsAMD64CheatEngine.vb" />
     <Compile Include="ImpCheaterExistsI386CheatEngine.vb" />
@@ -518,10 +545,17 @@
     <Compile Include="ImpConStringBuilderDeployment.vb" />
     <Compile Include="ImpCreateQuestionnaireSQUIZ.vb" />
     <Compile Include="ImpDataDeserializer.vb" />
+    <Compile Include="ImpDateEvaluator.vb" />
     <Compile Include="ImpDisableControlsADMIN.vb" />
     <Compile Include="ImpDisableControlsPROFESSOR.vb" />
     <Compile Include="ImpDisableControlsSTUDENT.vb" />
+    <Compile Include="ImpEvaluateDateRange.vb" />
     <Compile Include="ImpGetDateOnServer.vb" />
+    <Compile Include="ImpHappyMessage.vb" />
+    <Compile Include="ImpMakeArticleNode.vb" />
+    <Compile Include="ImpMakeExamNode.vb" />
+    <Compile Include="ImpMakeMaterialNode.vb" />
+    <Compile Include="ImpMakeQuizNode.vb" />
     <Compile Include="ImpQuestionAmount_PEXAM.vb" />
     <Compile Include="ImpQuestionAmount_SQUIZ.vb" />
     <Compile Include="ImpDataSerializer.vb" />
@@ -598,6 +632,9 @@
     <EmbeddedResource Include="frmClassroomHub.resx">
       <DependentUpon>frmClassroomHub.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmScheduleClassroomLifeSpanControl.resx">
+      <DependentUpon>frmScheduleClassroomLifeSpanControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmClassroomLinker.resx">
       <DependentUpon>frmClassroomLinker.vb</DependentUpon>
     </EmbeddedResource>
@@ -672,6 +709,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRankingViewer.resx">
       <DependentUpon>frmRankingViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScheduleClassroomLifeSpanCreator.resx">
+      <DependentUpon>frmScheduleClassroomLifeSpanCreator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScheduleClassroomLifeSpanViewer.resx">
+      <DependentUpon>frmScheduleClassroomLifeSpanViewer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmServerEditor.resx">
       <DependentUpon>frmServerEditor.vb</DependentUpon>
@@ -836,11 +879,15 @@
     <None Include="WeLearnLMS_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\monikalovesyou.txt" />
     <Content Include="bin\Debug\MySql.Data.dll" />
+    <None Include="bin\Debug\Sounds\startup.wav" />
+    <None Include="bin\Debug\Sounds\logout.wav" />
     <Content Include="bin\Debug\WeLearnLMS.exe" />
     <Content Include="bin\Debug\WeLearnLMS.pdb" />
     <Content Include="bin\Debug\WeLearnLMS.vshost.exe" />
     <Content Include="bin\Debug\WeLearnLMS.xml" />
+    <Content Include="monikalovesyou.txt" />
     <Content Include="obj\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
     <Content Include="obj\Debug\WeLearnLMS.exe" />
     <Content Include="obj\Debug\WeLearnLMS.pdb" />

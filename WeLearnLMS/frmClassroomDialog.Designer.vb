@@ -34,8 +34,10 @@ Partial Class frmClassroomDialog
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.btnOk = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
+        Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label2
@@ -50,38 +52,42 @@ Partial Class frmClassroomDialog
         '
         'txtClassType
         '
+        Me.txtClassType.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtClassType.Location = New System.Drawing.Point(191, 70)
         Me.txtClassType.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassType.Name = "txtClassType"
         Me.txtClassType.ReadOnly = True
-        Me.txtClassType.Size = New System.Drawing.Size(177, 20)
+        Me.txtClassType.Size = New System.Drawing.Size(188, 20)
         Me.txtClassType.TabIndex = 10
         '
         'txtClassId
         '
+        Me.txtClassId.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtClassId.Location = New System.Drawing.Point(191, 1)
         Me.txtClassId.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassId.Name = "txtClassId"
         Me.txtClassId.ReadOnly = True
-        Me.txtClassId.Size = New System.Drawing.Size(177, 20)
+        Me.txtClassId.Size = New System.Drawing.Size(188, 20)
         Me.txtClassId.TabIndex = 7
         '
         'txtClassDescription
         '
+        Me.txtClassDescription.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtClassDescription.Location = New System.Drawing.Point(191, 47)
         Me.txtClassDescription.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassDescription.Name = "txtClassDescription"
         Me.txtClassDescription.ReadOnly = True
-        Me.txtClassDescription.Size = New System.Drawing.Size(177, 20)
+        Me.txtClassDescription.Size = New System.Drawing.Size(188, 20)
         Me.txtClassDescription.TabIndex = 6
         '
         'txtClassName
         '
+        Me.txtClassName.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtClassName.Location = New System.Drawing.Point(191, 24)
         Me.txtClassName.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassName.Name = "txtClassName"
         Me.txtClassName.ReadOnly = True
-        Me.txtClassName.Size = New System.Drawing.Size(177, 20)
+        Me.txtClassName.Size = New System.Drawing.Size(188, 20)
         Me.txtClassName.TabIndex = 5
         '
         'Label5
@@ -124,7 +130,7 @@ Partial Class frmClassroomDialog
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 13)
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 4)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -139,7 +145,7 @@ Partial Class frmClassroomDialog
         '
         'btnOk
         '
-        Me.btnOk.Location = New System.Drawing.Point(398, 258)
+        Me.btnOk.Location = New System.Drawing.Point(389, 177)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(75, 23)
         Me.btnOk.TabIndex = 28
@@ -159,7 +165,7 @@ Partial Class frmClassroomDialog
         Me.TableLayoutPanel1.Controls.Add(Me.txtClassType, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.txtClassName, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.txtClassDescription, 1, 2)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 186)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 177)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 4
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
@@ -169,14 +175,23 @@ Partial Class frmClassroomDialog
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(380, 95)
         Me.TableLayoutPanel1.TabIndex = 29
         '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Controls.Add(Me.DataGridView1)
+        Me.FlowLayoutPanel1.Controls.Add(Me.TableLayoutPanel1)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnOk)
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(469, 283)
+        Me.FlowLayoutPanel1.TabIndex = 30
+        '
         'frmClassroomDialog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(486, 292)
-        Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.btnOk)
+        Me.ClientSize = New System.Drawing.Size(469, 283)
+        Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
         Me.Name = "frmClassroomDialog"
@@ -185,6 +200,7 @@ Partial Class frmClassroomDialog
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
+        Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -200,4 +216,5 @@ Partial Class frmClassroomDialog
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Private WithEvents btnOk As System.Windows.Forms.Button
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
 End Class

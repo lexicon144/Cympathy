@@ -11,6 +11,13 @@ Public Module SharedMod2
     Friend WeLearnAC As New ContextAntiCheatEngine
     Friend FrmUAC As New ContextDisableControls()
 
+    Friend Enum LessonNodeTypes
+        ARTICLE
+        MATERIAL
+        QUIZ
+        EXAM
+    End Enum
+
     Friend Enum UserType
         ADM = 0
         PRO = 1

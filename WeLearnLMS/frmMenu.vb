@@ -2,6 +2,7 @@
 
     Private _AdvancedCredentials As New c_AdvancedCredentials
     Private _Stopwatch As New Stopwatch
+    Private _HappyStuff As IHappyMessage = New ImpHappyMessage
     Public Sub New(ByRef AdvancedCredentials As c_AdvancedCredentials)
 
         ' This call is required by the designer.
@@ -17,7 +18,7 @@
 
     Private Sub frmMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FlagThisUser(True)
-
+        tmrMessageAggregator.Start()
         FrmUAC.DisableAllMe(_SharedAdvancedCredentials.MyUserType, mainpanel)
 
         _Stopwatch.Start()
@@ -60,6 +61,8 @@
     Private Sub btnClassroomHub_Click(sender As Object, e As EventArgs) Handles btnClassroomHub.Click
         Dim ClassroomHub As New frmClassroomHub
         ClassroomHub.ShowDialog()
+
+
         With Me.StatusStrip1
 
             toolstripCLASSNAME.Text = _SharedClassroom.ClassroomName
@@ -100,7 +103,7 @@
 #End Region
 
     Private Sub btnLessonList_Click(sender As Object, e As EventArgs) Handles btnLessonList.Click
-        Dim viewer As New frmLessonListHub
+        Dim viewer As New frmLessonListHub(_SharedClassroom)
         viewer.ShowDialog()
     End Sub
 
@@ -181,4 +184,19 @@
         Me.Refresh()
     End Sub
 
+    Private Sub btnSetMySession_Click(sender As Object, e As EventArgs) Handles btnSetMySession.Click
+        Dim Dialog As New frmClassroomDialog()
+        If Dialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+
+        End If
+        With Me.StatusStrip1
+
+            toolstripCLASSNAME.Text = _SharedClassroom.ClassroomName
+            toolstripCLASSROOMID.Text = _SharedClassroom.ClassroomId
+        End With
+    End Sub
+
+    Private Sub tmrMessageAggregator_Tick(sender As Object, e As EventArgs) Handles tmrMessageAggregator.Tick
+        Me.lblHappyGreeting.Text = Me._HappyStuff.GetMyHappyMessage
+    End Sub
 End Class

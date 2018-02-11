@@ -15,12 +15,12 @@
 
     End Sub
 
-    Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
+    Private Sub SignIn()
         TimeMapper = New ImpTimeMapperIn()
         TimeMapper.TimeMapper(_SharedUserID, _SharedClassroom.ClassroomId)
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub SignOut()
         TimeMapper = New ImpTimeMapperOut()
         TimeMapper.TimeMapper(_SharedUserID, _SharedClassroom.ClassroomId)
     End Sub

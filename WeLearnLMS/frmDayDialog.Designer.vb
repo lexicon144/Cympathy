@@ -22,92 +22,76 @@ Partial Class frmDayDialog
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.txtDayID = New System.Windows.Forms.TextBox()
-        Me.txtDayDescription = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.btnOk = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'btnOk
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(260, 150)
-        Me.DataGridView1.TabIndex = 0
+        Me.btnOk.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnOk.Location = New System.Drawing.Point(137, 116)
+        Me.btnOk.Name = "btnOk"
+        Me.btnOk.Size = New System.Drawing.Size(129, 107)
+        Me.btnOk.TabIndex = 5
+        Me.btnOk.Text = "O K"
+        Me.btnOk.UseVisualStyleBackColor = True
         '
-        'txtDayID
+        'ComboBox1
         '
-        Me.txtDayID.Location = New System.Drawing.Point(172, 168)
-        Me.txtDayID.Name = "txtDayID"
-        Me.txtDayID.ReadOnly = True
-        Me.txtDayID.Size = New System.Drawing.Size(100, 20)
-        Me.txtDayID.TabIndex = 1
+        Me.ComboBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(137, 3)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(129, 21)
+        Me.ComboBox1.TabIndex = 6
         '
-        'txtDayDescription
+        'TableLayoutPanel1
         '
-        Me.txtDayDescription.Location = New System.Drawing.Point(172, 195)
-        Me.txtDayDescription.Name = "txtDayDescription"
-        Me.txtDayDescription.ReadOnly = True
-        Me.txtDayDescription.Size = New System.Drawing.Size(100, 20)
-        Me.txtDayDescription.TabIndex = 2
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.btnOk, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.ComboBox1, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(269, 226)
+        Me.TableLayoutPanel1.TabIndex = 7
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(111, 174)
+        Me.Label1.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.Label1.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(40, 13)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Day ID"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(84, 198)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(82, 13)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Day Description"
-        '
-        'btnOk
-        '
-        Me.btnOk.Location = New System.Drawing.Point(197, 226)
-        Me.btnOk.Name = "btnOk"
-        Me.btnOk.Size = New System.Drawing.Size(75, 23)
-        Me.btnOk.TabIndex = 5
-        Me.btnOk.Text = "O K"
-        Me.btnOk.UseVisualStyleBackColor = True
+        Me.Label1.Size = New System.Drawing.Size(62, 13)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "Select DAY"
         '
         'frmDayDialog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 261)
-        Me.Controls.Add(Me.btnOk)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtDayDescription)
-        Me.Controls.Add(Me.txtDayID)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.ClientSize = New System.Drawing.Size(269, 226)
+        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Name = "frmDayDialog"
         Me.Text = "frmDayDialog"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents txtDayID As System.Windows.Forms.TextBox
-    Friend WithEvents txtDayDescription As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents btnOk As System.Windows.Forms.Button
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

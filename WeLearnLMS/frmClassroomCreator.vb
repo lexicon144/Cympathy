@@ -148,7 +148,7 @@ Public Class frmClassroomCreator
 
     Private Sub cmbClassroomType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbClassroomType.SelectedIndexChanged
         With Me
-            ._Classroom.ClassType = DirectCast(sender, ComboBox).SelectedValue
+            ._Classroom.ClassType = DirectCast(sender, ComboBox).SelectedIndex
         End With
     End Sub
 End Class

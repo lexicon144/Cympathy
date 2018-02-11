@@ -1,6 +1,8 @@
-﻿Public Class frmSQLPinger
-    Private Safe As Boolean
+﻿Imports System.Text
 
+Public Class frmSQLPinger
+    Private Safe As Boolean
+    Private builder As New StringBuilder
     Friend ReadOnly Property Safety As Boolean
         Get
             Return Safe
@@ -24,38 +26,8 @@
 
     End Sub
     Private Sub frmSQLPinger_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        BackgroundWorker1.RunWorkerAsync()
 
-        Try
-            Using ConnectionObject As New MySqlConnection
-                With ConnectionObject
-                    .ConnectionString = _SharedConnString.ConnString
-                    rtb.AppendText("New MysqlConnection...")
-                    nl()
-                    rtb.AppendText("This Connection:::" & ConnectionObject.GetHashCode & ":::" & .State.ToString)
-                    nl()
-
-                    If .State = ConnectionState.Closed Then
-                        nl()
-                        rtb.AppendText("Connection is closed! Opening ....")
-                        .Open()
-                        nl()
-                        rtb.AppendText("Opened!")
-                        Safe = True
-
-                    End If
-                    Safe = True
-
-                End With
-            End Using
-
-        Catch XXX As Exception
-            Safe = False
-            nl()
-            rtb.AppendText("Caught Exception: " & XXX.Message)
-
-        End Try
-        Console.WriteLine(Safe)
-        Me.Timer1.Start()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -73,4 +45,68 @@
     Private Sub frmSQLPinger_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Me.DialogResult = Windows.Forms.DialogResult.OK
     End Sub
+
+    Private Sub rtb_TextChanged_1(sender As Object, e As EventArgs) Handles rtb.TextChanged
+
+    End Sub
+
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+        Try
+            BackgroundWorker1.ReportProgress(10)
+            Using ConnectionObject As New MySqlConnection
+                With ConnectionObject
+
+                    BackgroundWorker1.ReportProgress(50)
+                    .ConnectionString = _SharedConnString.ConnString
+
+                    With builder
+
+                        .AppendLine("New Mysql Connection ")
+                        .AppendLine("This Connection ")
+                        .AppendLine(ConnectionObject.GetHashCode)
+                        .AppendLine()
+                        .AppendLine("State: ")
+                        .AppendLine(ConnectionObject.State.ToString)
+                        .AppendLine()
+
+                    End With
+
+                    builder.AppendLine("Trying to Open the connection...")
+                    If .State = ConnectionState.Closed Then
+                        .Open()
+                        Safe = True
+                    End If
+                    builder.AppendLine("Connection was openned!!")
+                    Safe = True
+                    BackgroundWorker1.ReportProgress(90)
+                End With
+            End Using
+        Catch XXX As Exception
+            Safe = False
+            With builder
+                .AppendLine("An Error happened! ")
+                .AppendLine()
+                .AppendLine(XXX.Message)
+                .AppendLine()
+                .AppendLine(XXX.Source)
+                .AppendLine()
+                .AppendLine(XXX.StackTrace)
+                .AppendLine()
+                .AppendLine("Please Contact Your System Admin for details and help on this occurance")
+            End With
+        Finally
+
+            BackgroundWorker1.ReportProgress(100)
+        End Try
+        Me.Timer1.Start()
+    End Sub
+
+    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
+        rtb.Text = builder.ToString
+    End Sub
+
+    Private Sub BackgroundWorker1_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorker1.ProgressChanged
+        ToolStripProgressBar1.Value = e.ProgressPercentage
+    End Sub
+
 End Class

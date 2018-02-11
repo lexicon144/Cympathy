@@ -45,7 +45,7 @@
                         _Message.SenderName = .Cells("user_name").Value.ToString
                         _Message.ReceiverID = Me._MainCredentials.UserID
                         _Message.ReceiverName = Me._MainCredentials.UserName
-                        _Message.TimeStamp = .Cells("id").ToString
+                        _Message.TimeStamp = .Cells("id").Value.ToString
 
                     End With
 

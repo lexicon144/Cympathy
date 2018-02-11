@@ -328,6 +328,8 @@ Partial Class frmQuestionnaireViewer
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.btnDevAuto13)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmQuestionnaireViewer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

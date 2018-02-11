@@ -43,20 +43,20 @@ Partial Class frmUserLogin
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(137, 156)
+        Me.LinkLabel1.Location = New System.Drawing.Point(103, 126)
         Me.LinkLabel1.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(108, 34)
+        Me.LinkLabel1.Size = New System.Drawing.Size(83, 26)
         Me.LinkLabel1.TabIndex = 7
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Register a New Account"
         '
         'btnLogin
         '
-        Me.btnLogin.Location = New System.Drawing.Point(137, 105)
+        Me.btnLogin.Location = New System.Drawing.Point(103, 85)
         Me.btnLogin.Margin = New System.Windows.Forms.Padding(1)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(115, 28)
+        Me.btnLogin.Size = New System.Drawing.Size(86, 23)
         Me.btnLogin.TabIndex = 6
         Me.btnLogin.Text = "Log In"
         Me.btnLogin.UseVisualStyleBackColor = True
@@ -65,12 +65,12 @@ Partial Class frmUserLogin
         '
         Me.txtPassword.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtPassword.Location = New System.Drawing.Point(137, 53)
+        Me.txtPassword.Location = New System.Drawing.Point(103, 43)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(1)
         Me.txtPassword.MaxLength = 18
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(10084)
-        Me.txtPassword.Size = New System.Drawing.Size(134, 22)
+        Me.txtPassword.Size = New System.Drawing.Size(100, 20)
         Me.txtPassword.TabIndex = 5
         Me.txtPassword.Text = "Password"
         '
@@ -78,11 +78,11 @@ Partial Class frmUserLogin
         '
         Me.txtUsername.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtUsername.Location = New System.Drawing.Point(137, 1)
+        Me.txtUsername.Location = New System.Drawing.Point(103, 1)
         Me.txtUsername.Margin = New System.Windows.Forms.Padding(1)
         Me.txtUsername.MaxLength = 50
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(134, 22)
+        Me.txtUsername.Size = New System.Drawing.Size(100, 20)
         Me.txtUsername.TabIndex = 4
         Me.txtUsername.Text = "Username"
         '
@@ -97,10 +97,9 @@ Partial Class frmUserLogin
         '
         Me.LinkLabel2.AutoSize = True
         Me.LinkLabel2.Enabled = False
-        Me.LinkLabel2.Location = New System.Drawing.Point(140, 208)
-        Me.LinkLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LinkLabel2.Location = New System.Drawing.Point(105, 168)
         Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(85, 34)
+        Me.LinkLabel2.Size = New System.Drawing.Size(63, 26)
         Me.LinkLabel2.TabIndex = 8
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "Forgot your password?"
@@ -108,10 +107,9 @@ Partial Class frmUserLogin
         'lblChangeServer
         '
         Me.lblChangeServer.AutoSize = True
-        Me.lblChangeServer.Location = New System.Drawing.Point(140, 263)
-        Me.lblChangeServer.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblChangeServer.Location = New System.Drawing.Point(105, 212)
         Me.lblChangeServer.Name = "lblChangeServer"
-        Me.lblChangeServer.Size = New System.Drawing.Size(100, 17)
+        Me.lblChangeServer.Size = New System.Drawing.Size(76, 13)
         Me.lblChangeServer.TabIndex = 9
         Me.lblChangeServer.TabStop = True
         Me.lblChangeServer.Text = "Specify Server"
@@ -132,7 +130,8 @@ Partial Class frmUserLogin
         Me.TableLayoutPanel1.Controls.Add(Me.LinkLabel1, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.btnLogin, 1, 2)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 112)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(9, 91)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 6
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
@@ -141,43 +140,47 @@ Partial Class frmUserLogin
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.56272!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.48746!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(272, 317)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(204, 258)
         Me.TableLayoutPanel1.TabIndex = 10
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
+        Me.Label1.Location = New System.Drawing.Point(2, 0)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(73, 17)
+        Me.Label1.Size = New System.Drawing.Size(55, 13)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Username"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 52)
+        Me.Label2.Location = New System.Drawing.Point(2, 42)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 17)
+        Me.Label2.Size = New System.Drawing.Size(53, 13)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Password"
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(9, 10)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(272, 94)
+        Me.PictureBox1.Size = New System.Drawing.Size(204, 76)
         Me.PictureBox1.TabIndex = 11
         Me.PictureBox1.TabStop = False
         '
         'frmUserLogin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(296, 441)
+        Me.ClientSize = New System.Drawing.Size(222, 358)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
         Me.Name = "frmUserLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmLogin"
