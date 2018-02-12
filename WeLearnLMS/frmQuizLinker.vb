@@ -96,7 +96,8 @@
 
     End Sub
 
-    Private Sub btnLink_Click(sender As Object, e As EventArgs) Handles btnLink.Click
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         PerformTheLink()
+
     End Sub
 End Class

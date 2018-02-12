@@ -3,7 +3,7 @@
     Private _MainCredentials As New c_MainCredentials
 
     Private _QuizID, _UserID, _QuizName As String
-
+    Private _ClassroomID As String
     Private _PreGrade As New c_PreGrade
 
     Public Sub New()
@@ -40,6 +40,20 @@
             ._UserID = UserID
             ._PreGrade = PreGrade
             ._QuizName = QuizName
+        End With
+    End Sub
+    Public Sub New(ByRef QuizID As String, ByRef QuizName As String, ByRef UserID As String, ByRef PreGrade As c_PreGrade, ByRef ClassroomID As String)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        With Me
+            ._QuizID = QuizID
+            ._UserID = UserID
+            ._PreGrade = PreGrade
+            ._QuizName = QuizName
+            ._ClassroomID = ClassroomID
         End With
     End Sub
 
@@ -81,15 +95,13 @@
                             .Transaction = MarkingTransaction
                             .CommandType = CommandType.StoredProcedure
                             .CommandText = "InsertGradesQuiz"
-
                             With .Parameters
-                                .AddWithValue("@UserID", Me._UserID)
-                                .AddWithValue("@QuizID", Me._QuizID)
-                                .AddWithValue("@QuizGrade", Me._PreGrade.ReturnFullScore)
-                                .AddWithValue("@Hits", Me._PreGrade.Hits)
-                                .AddWithValue("@Questions", Me._PreGrade.TotalQuestions)
-                                .AddWithValue("@ClassroomID", _SharedClassroom.ClassroomId)
-
+                                .AddWithValue("UserID", Me._UserID)
+                                .AddWithValue("QuizID", Me._QuizID)
+                                .AddWithValue("QuizGrade", Me._PreGrade.ReturnFullScore)
+                                .AddWithValue("Hits", Me._PreGrade.Hits)
+                                .AddWithValue("Questions", Me._PreGrade.TotalQuestions)
+                                .AddWithValue("ClassroomID", Me._ClassroomID)
                             End With
                             .ExecuteNonQuery()
                             MarkingTransaction.Commit()
@@ -110,4 +122,7 @@
         End Using
     End Sub
 
+    Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles FlowLayoutPanel1.Paint
+
+    End Sub
 End Class

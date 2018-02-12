@@ -36,19 +36,18 @@ Partial Class frmServerEditor
         '
         'TextBox1
         '
-        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox1.Location = New System.Drawing.Point(215, 3)
+        Me.TextBox1.Location = New System.Drawing.Point(226, 3)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(182, 20)
         Me.TextBox1.TabIndex = 0
         '
         'btnSave
         '
         Me.btnSave.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnSave.Enabled = False
-        Me.btnSave.Location = New System.Drawing.Point(215, 105)
+        Me.btnSave.Location = New System.Drawing.Point(226, 105)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(206, 46)
+        Me.btnSave.Size = New System.Drawing.Size(217, 47)
         Me.btnSave.TabIndex = 1
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
@@ -68,10 +67,9 @@ Partial Class frmServerEditor
         '
         'txtTypeOK
         '
-        Me.txtTypeOK.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtTypeOK.Location = New System.Drawing.Point(215, 54)
+        Me.txtTypeOK.Location = New System.Drawing.Point(226, 54)
         Me.txtTypeOK.Name = "txtTypeOK"
-        Me.txtTypeOK.Size = New System.Drawing.Size(206, 20)
+        Me.txtTypeOK.Size = New System.Drawing.Size(182, 20)
         Me.txtTypeOK.TabIndex = 3
         '
         'Label2
@@ -100,15 +98,17 @@ Partial Class frmServerEditor
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(424, 154)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(446, 155)
         Me.TableLayoutPanel1.TabIndex = 5
         '
         'frmServerEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(424, 154)
+        Me.ClientSize = New System.Drawing.Size(446, 155)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
         Me.Name = "frmServerEditor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmServerEditor"

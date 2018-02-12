@@ -155,13 +155,16 @@ Public Class frmQuestionnaireCreator
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub btnSerialize_Click(sender As Object, e As EventArgs) Handles btnSerialize.Click
+        If Datagridview1.Rows.Count > 0 Then
+            With Me._QuestionnaireBase
+                .QuestionBase = CreateList()
+                .QuestionnaireType = _QuizType
+            End With
 
-        With Me._QuestionnaireBase
-            .QuestionBase = CreateList()
-            .QuestionnaireType = _QuizType
-        End With
-
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+            Me.DialogResult = Windows.Forms.DialogResult.OK
+        Else
+            Me.DialogResult = Windows.Forms.DialogResult.Cancel
+        End If
     End Sub
 
 
@@ -196,7 +199,7 @@ Public Class frmQuestionnaireCreator
     End Sub
 
     Private Sub frmQuestionnaireCreator_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.DialogResult = Windows.Forms.DialogResult.Cancel
     End Sub
 
     Private Sub frmQuestionnaireCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -8,6 +8,8 @@ Public Class frmExamsViewer
     Private _PreGrade As New c_PreGrade
     Private UserID As String
     Private ClassroomID As String
+    Private _Marked As UInt16 = 0
+    Private _Checked As UInt16 = 0
     Public Sub New()
 
         ' This call is required by the designer.
@@ -17,44 +19,72 @@ Public Class frmExamsViewer
 
     End Sub
 
-
     Public Sub New(ByRef ThisExam As c_Exam)
         InitializeComponent()
         Me._exam = ThisExam
     End Sub
 
     Private Sub frmExamViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Using Hub As New frmExamsHub(_SharedClassroom)
+            If Hub.ShowDialog = Windows.Forms.DialogResult.OK Then
+                Me._exam = Hub.GetExam
+            Else
+                Dim Security As New frmQuestSecurity(Me._exam)
+                IsChecked(Me._exam.QuestionnaireID)
+                If Security.ShowDialog = Windows.Forms.DialogResult.OK Then
+                    If Me._Checked = 0 Then
 
+                        Dim viewer As New frmQuestionnaireViewer(Me._exam)
+                        If viewer.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
+                            Me._PreGrade = viewer.GetPregrade
+                        End If
 
-        Dim ExamHub As New frmExamsHub()
-        If ExamHub.ShowDialog = Windows.Forms.DialogResult.OK Then
+                        Dim grader As New frmGradesExamPreCreator(Me._exam.QuestionnaireID, _SharedUserID, Me._PreGrade, _SharedClassroom.ClassroomId)
+                        grader.ShowDialog()
+                        MarkQuiz()
 
-        End If
+                    Else
+                        MessageBox.Show("Exam Has Been Taken Already", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    End If
+                Else
 
-        Dim Security As New frmQuestSecurity(_SharedMainCredentials.UserID, Me._exam)
-        If Security.DialogResult = Windows.Forms.DialogResult.OK Then
-            If Not Security.PassState Then
-                Me.Close()
+                    MessageBox.Show("Exam Authentication Failed", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                End If
             End If
 
-            MarkExam()
-
-            Dim viewer As New frmQuestionnaireViewer(Me._exam)
-            If viewer.ShowDialog() = Windows.Forms.DialogResult.OK Then
-                Me._PreGrade = viewer.GetPregrade
-            End If
-
-            Dim grader As New frmGradesExamPreCreator(Me._exam.QuestionnaireID, Me.UserID, Me._PreGrade)
-            grader.ShowDialog()
-            grader.Procure()
-        End If
+        End Using
     End Sub
 
+    Private Sub IsChecked(ByRef ExamID As String)
+        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
+            With Connection
+                If .State = ConnectionState.Closed Then
+                    .Open()
+                End If
+            End With
+            Using Command As New MySqlCommand
+                With Command
+                    .Connection = Connection
+                    .CommandType = CommandType.StoredProcedure
+                    .CommandText = "CheckThisExam"
+                    With .Parameters
+                        .AddWithValue("UserID", _SharedUserID)
+                        .AddWithValue("ExamID", ExamID)
+                    End With
+                    Me._Checked = .ExecuteScalar()
+                End With
+            End Using
+        End Using
+        Console.WriteLine(_Checked)
+    End Sub
+
+
     ''' <summary>
-    ''' Mark Exam
+    ''' Mark Quiz
+    ''' only mark the quiz, not grade it
     ''' </summary>
     ''' <remarks></remarks>
-    Private Sub MarkExam()
+    Private Sub MarkQuiz()
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
                 If .State = ConnectionState.Closed Then
@@ -71,7 +101,7 @@ Public Class frmExamsViewer
                             .CommandType = CommandType.StoredProcedure
                             .CommandText = "MarkThisExam"
                             With .Parameters
-                                .AddWithValue("UserID", UserID)
+                                .AddWithValue("UserID", _SharedUserID)
                                 .AddWithValue("ExamID", Me._exam.QuestionnaireID)
                             End With
                             .ExecuteNonQuery()
@@ -81,10 +111,9 @@ Public Class frmExamsViewer
                     End Using
                 Catch XXX As MySqlException
                     MarkingTransaction.Rollback()
-                    MessageBox.Show("This Exam cannot be marked", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    DisplayLinkingTransactionFailed(XXX)
                 End Try
             End Using
         End Using
     End Sub
-
 End Class

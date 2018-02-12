@@ -7,10 +7,10 @@ Public Class frmExamsHub
     Private _ClassroomID As String
     Private _XmlBase As String
     Private _Deserializer As IDataDeserializer = New ImpDataDeserializer
-
+    Private _TempPIN As String
     Private _Exam As New c_Exam
 
-    Friend ReadOnly Property RetrieveExam As c_Exam
+    Friend ReadOnly Property GetExam As c_Exam
         Get
             Return _Exam
         End Get
@@ -102,6 +102,7 @@ Public Class frmExamsHub
     End Sub
 
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
+        If txtExamID.Text = "" AndAlso txtExamName.Text = "" Then Me.DialogResult = Windows.Forms.DialogResult.Cancel
         Me.DialogResult = Windows.Forms.DialogResult.OK
     End Sub
 
@@ -115,15 +116,18 @@ Public Class frmExamsHub
             .Name = "btn"
             .UseColumnTextForButtonValue = True
         End With
-        If Me._Datatable Is Nothing And Me._Datatable.Rows.Count = 0 Then Exit Sub
+        If Not Me._Datatable.Rows.Count = 0 Then
 
-        With DataGridView1
-            .DataSource = _Datatable
-            .Columns.Add(btn)
+            With DataGridView1
+                .DataSource = _Datatable
+                .Columns.Add(btn)
+                If .Columns.Contains("xml_base") Then .Columns("xml_base").Visible = False
+                If .Columns.Contains("exam_pin") Then .Columns("exam_pin").Visible = False
+                If .Columns.Contains("drp") Then .Columns("drp").Visible = False
 
-            .Columns("xml_base").Visible = False
-            .Columns("exam_pin").Visible = False
-        End With
+            End With
+        End If
+
 
     End Sub
 
@@ -132,7 +136,7 @@ Public Class frmExamsHub
             If DataGridView1.Columns(e.ColumnIndex).Name = "btn" Then
 
                 With DataGridView1.Rows(e.RowIndex)
-                    Me._Exam.PIN = .Cells("exam_pin").Value.ToString()
+                    _TempPIN = .Cells("exam_pin").Value.ToString()
                     txtExamID.Text = .Cells("id").Value.ToString()
                     txtExamName.Text = .Cells("exam_name").Value.ToString()
                     _XmlBase = .Cells("xml_base").Value.ToString()
@@ -145,10 +149,10 @@ Public Class frmExamsHub
 
     Private Sub ParseToMe()
         With Me._Exam
-
+            .QuestionnaireID = txtExamID.Text
             .QuestionnaireName = txtExamName.Text
-
-
+            .QuestionBase = _Deserializer.DataDeserialize(Me._XmlBase)
+            .PIN = _TempPIN
         End With
     End Sub
 

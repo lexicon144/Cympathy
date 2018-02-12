@@ -86,7 +86,7 @@
         End Using
     End Sub
 
-    Private Sub btnLink_Click(sender As Object, e As EventArgs) Handles btnLink.Click
+    Private Sub btnLink_Click(sender As Object, e As EventArgs)
         PerformTheLink()
     End Sub
 End Class

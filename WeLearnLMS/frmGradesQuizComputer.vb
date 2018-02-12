@@ -1,6 +1,6 @@
 ﻿Public Class frmGradesQuizComputer
 
-    Private _QuestionnaireCount As UInt32
+    Private _AllQuizCount As UInt32
     Private _RecordedCount As UInt32
     Private _AverageDatatable As New DataTable
     Private _GradeSummation As Double = 0.0
@@ -18,7 +18,7 @@
 #Region "properties"
     Friend ReadOnly Property QuizCount As UInt32
         Get
-            Return _QuestionnaireCount
+            Return _AllQuizCount
         End Get
     End Property
 
@@ -68,7 +68,8 @@
             Using Command As New MySqlCommand
                 With Command
                     .Connection = Connection
-                    .CommandText = "SELECT COUNT(id) FROM link_quiz WHERE drp = FALSE AND class_id = @ClassID"
+                    .CommandType = CommandType.StoredProcedure
+                    .CommandText = "CountQuiz"
                     With .Parameters
                         .AddWithValue("ClassID", ClassroomID)
                     End With
@@ -166,6 +167,8 @@
             .DataSource = Me._AverageDatatable
             .Columns.Add(btn)
             .Refresh()
+            If .Columns.Contains("id") Then .Columns("id").Visible = False
+
         End With
     End Sub
 
@@ -176,17 +179,27 @@
     Private Sub DisplayOnTextboxes()
         With Me
             .txtFullAverage.Text = ._FullAverage.ToString
-            .txtLinkedQuizes.Text = ._QuestionnaireCount.ToString
-            .txtRecordedQuizes.Text = ._RecordedCount.ToString
+            .txtAllQuizes.Text = ._AllQuizCount.ToString
+            .txtYourQuizes.Text = ._RecordedCount.ToString
+            .txtFullSummation.Text = ._GradeSummation.ToString
         End With
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Me._AverageDatatable = GetAnsweredQuizes(_SharedUserID, _SharedClassroom.ClassroomId)
+        BackgroundWorker1.ReportProgress(20)
+        'get sum of all recorded exams (YOU)
         GetRecordedCount(_RecordedCount)
-        GetCountQuizesInClassroom(_SharedClassroom.ClassroomId)
+        BackgroundWorker1.ReportProgress(40)
+        'get count of all exams (ALL)
+        Me._AllQuizCount = GetCountQuizesInClassroom(_SharedClassroom.ClassroomId)
+        BackgroundWorker1.ReportProgress(60)
+        'get sum of grades of all exams
         GetSumationOfQuizes()
-        Me._FullAverage = GetNewAverage(Me._GradeSummation, Me._RecordedCount)
+        BackgroundWorker1.ReportProgress(80)
+
+        Me._FullAverage = GetNewAverage(Me._GradeSummation, Me._AllQuizCount)
+        BackgroundWorker1.ReportProgress(100)
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
@@ -194,4 +207,7 @@
         DisplayOnTextboxes()
     End Sub
 
+    Private Sub BackgroundWorker1_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorker1.ProgressChanged
+        backgroundProgress.Value = e.ProgressPercentage
+    End Sub
 End Class

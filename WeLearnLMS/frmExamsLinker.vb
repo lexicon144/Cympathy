@@ -35,9 +35,9 @@
 
         Dim Hub As New frmExamsHub()
         If Hub.ShowDialog = Windows.Forms.DialogResult.OK Then
-            Me._Exam = Hub.RetrieveExam
+            Me._Exam = Hub.GetExam
         End If
-
+        Prepare()
     End Sub
 
     Private Sub Prepare()
@@ -51,10 +51,12 @@
     End Sub
 
     Private Sub PerformTheLink()
-        Using Connection As New MySqlConnection
+        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
 
             With Connection
-                .ConnectionString = _SharedConnString.ConnString
+                If .State = ConnectionState.Closed Then
+                    .Open()
+                End If
             End With
             Dim ArticleLinkingTransaction As MySqlTransaction = Connection.BeginTransaction
             Try
@@ -76,13 +78,13 @@
                 End Using
             Catch Exx As Exception
                 ArticleLinkingTransaction.Rollback()
-                'MessageBox.Show("Exam Linking from " & _Classroom.ClassroomName & " ON " & _Exam.QuestionnaireName & " has been performed unsuccessfully. Rolledback automaticaly", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 DisplayLinkingTransactionFailed(Exx)
             End Try
         End Using
     End Sub
 
-    Private Sub btnLink_Click(sender As Object, e As EventArgs) Handles btnLink.Click
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         PerformTheLink()
     End Sub
 End Class

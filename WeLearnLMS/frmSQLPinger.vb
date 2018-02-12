@@ -98,11 +98,11 @@ Public Class frmSQLPinger
 
             BackgroundWorker1.ReportProgress(100)
         End Try
-        Me.Timer1.Start()
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
         rtb.Text = builder.ToString
+        Me.Timer1.Start()
     End Sub
 
     Private Sub BackgroundWorker1_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorker1.ProgressChanged

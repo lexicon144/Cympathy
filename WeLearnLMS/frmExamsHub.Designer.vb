@@ -146,7 +146,7 @@ Partial Class frmExamsHub
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(353, 290)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(355, 290)
         Me.FlowLayoutPanel1.TabIndex = 12
         '
         'TableLayoutPanel2
@@ -167,7 +167,7 @@ Partial Class frmExamsHub
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(353, 290)
+        Me.ClientSize = New System.Drawing.Size(355, 290)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont

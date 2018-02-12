@@ -16,18 +16,18 @@ Public Class frmExamsCreator
     End Sub
 
     Private Sub frmExamsCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If _SharedAdvancedCredentials.MyUserType = c_MainCredentials.UserType.STU Then
-            PanelProfessorsOnly.Enabled = False
-        End If
-
+        
         Dim Creator As New frmQuestionnaireCreator()
 
-        Creator.ShowDialog(Me)
-        Me._NewExam.QuestionBase = Creator.GetBASE
-        Me._NewExam.QuestionnaireType = QType.OEXAM
+        If Creator.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
+            With Me._NewExam
 
-        ParseToTextbox()
+                .QuestionBase = Creator.GetBASE
+                .QuestionnaireType = QType.OEXAM
 
+            End With
+            ParseToTextbox()
+        End If
     End Sub
 
     Private Sub InsertQuiz()
