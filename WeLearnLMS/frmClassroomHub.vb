@@ -30,14 +30,7 @@
             REView()
         End If
 
-        Using AttendanceControl As New frmAttendanceControl
-            AttendanceControl.ShowDialog()
-        End Using
-        Using LifeSpan As New frmScheduleClassroomLifeSpanControl
-            LifeSpan.ShowDialog()
-        End Using
         FrmUAC.DisableAllMe(_SharedAdvancedCredentials.MyUserType, mainpanel)
-
         _SharedClassroom.ClassroomId = Me._Classroom.ClassroomId
     End Sub
 
@@ -96,17 +89,15 @@
 #End Region
 
     Private Sub frmViewGrades_Click(sender As Object, e As EventArgs) Handles frmViewGrades.Click
-        Dim previewer As New frmGradesPreViewer()
+        Dim previewer As New frmGradesQuizComputer()
         With previewer
-            .DisplayQuizGrades()
             .ShowDialog()
         End With
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnViewExamGrades.Click
-        Dim previewer As New frmGradesPreViewer()
+        Dim previewer As New frmGradeExamComputer()
         With previewer
-            .DisplayExamGrades()
             .ShowDialog()
         End With
     End Sub
@@ -136,4 +127,5 @@
         Dim scheduleviewer As New frmScheduleViewer(Me._Classroom.ClassroomId)
         scheduleviewer.ShowDialog()
     End Sub
+
 End Class

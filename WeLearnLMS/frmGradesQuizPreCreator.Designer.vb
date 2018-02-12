@@ -23,140 +23,197 @@ Partial Class frmGradesQuizPreCreator
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.grpQuiz = New System.Windows.Forms.GroupBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.txtQuizName = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.txtQuizID = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.grpGrade = New System.Windows.Forms.GroupBox()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtGradeFullScore = New System.Windows.Forms.TextBox()
         Me.txtGradeNumber = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.grpQuiz.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.grpGrade.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
+        Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'grpQuiz
         '
-        Me.grpQuiz.Controls.Add(Me.Label2)
-        Me.grpQuiz.Controls.Add(Me.Label1)
-        Me.grpQuiz.Controls.Add(Me.txtQuizName)
-        Me.grpQuiz.Controls.Add(Me.txtQuizID)
-        Me.grpQuiz.Location = New System.Drawing.Point(12, 12)
+        Me.grpQuiz.Controls.Add(Me.TableLayoutPanel1)
+        Me.grpQuiz.Location = New System.Drawing.Point(3, 3)
         Me.grpQuiz.Name = "grpQuiz"
-        Me.grpQuiz.Size = New System.Drawing.Size(200, 75)
+        Me.grpQuiz.Size = New System.Drawing.Size(254, 150)
         Me.grpQuiz.TabIndex = 1
         Me.grpQuiz.TabStop = False
         Me.grpQuiz.Text = "Quiz"
         '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.txtQuizName, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtQuizID, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 16)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(248, 131)
+        Me.TableLayoutPanel1.TabIndex = 4
+        '
+        'txtQuizName
+        '
+        Me.txtQuizName.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtQuizName.Location = New System.Drawing.Point(127, 68)
+        Me.txtQuizName.Name = "txtQuizName"
+        Me.txtQuizName.ReadOnly = True
+        Me.txtQuizName.Size = New System.Drawing.Size(118, 20)
+        Me.txtQuizName.TabIndex = 1
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(29, 49)
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label2.Location = New System.Drawing.Point(3, 65)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(59, 13)
+        Me.Label2.Size = New System.Drawing.Size(118, 66)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Quiz Name"
+        '
+        'txtQuizID
+        '
+        Me.txtQuizID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtQuizID.Location = New System.Drawing.Point(127, 3)
+        Me.txtQuizID.Name = "txtQuizID"
+        Me.txtQuizID.ReadOnly = True
+        Me.txtQuizID.Size = New System.Drawing.Size(118, 20)
+        Me.txtQuizID.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(46, 22)
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(42, 13)
+        Me.Label1.Size = New System.Drawing.Size(118, 65)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Quiz ID"
         '
-        'txtQuizName
-        '
-        Me.txtQuizName.Location = New System.Drawing.Point(94, 46)
-        Me.txtQuizName.Name = "txtQuizName"
-        Me.txtQuizName.ReadOnly = True
-        Me.txtQuizName.Size = New System.Drawing.Size(100, 20)
-        Me.txtQuizName.TabIndex = 1
-        '
-        'txtQuizID
-        '
-        Me.txtQuizID.Location = New System.Drawing.Point(94, 19)
-        Me.txtQuizID.Name = "txtQuizID"
-        Me.txtQuizID.ReadOnly = True
-        Me.txtQuizID.Size = New System.Drawing.Size(100, 20)
-        Me.txtQuizID.TabIndex = 0
-        '
         'grpGrade
         '
-        Me.grpGrade.Controls.Add(Me.Label3)
-        Me.grpGrade.Controls.Add(Me.txtGradeFullScore)
-        Me.grpGrade.Controls.Add(Me.txtGradeNumber)
-        Me.grpGrade.Controls.Add(Me.Label4)
-        Me.grpGrade.Location = New System.Drawing.Point(218, 12)
+        Me.grpGrade.Controls.Add(Me.TableLayoutPanel2)
+        Me.grpGrade.Location = New System.Drawing.Point(263, 3)
         Me.grpGrade.Name = "grpGrade"
-        Me.grpGrade.Size = New System.Drawing.Size(200, 75)
+        Me.grpGrade.Size = New System.Drawing.Size(254, 150)
         Me.grpGrade.TabIndex = 2
         Me.grpGrade.TabStop = False
         Me.grpGrade.Text = "Grade"
         '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 2
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.Label4, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label3, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtGradeFullScore, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtGradeNumber, 1, 1)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 16)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 2
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(248, 131)
+        Me.TableLayoutPanel2.TabIndex = 5
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label4.Location = New System.Drawing.Point(3, 65)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(118, 66)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Average Number"
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(34, 22)
+        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label3.Location = New System.Drawing.Point(3, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(54, 13)
+        Me.Label3.Size = New System.Drawing.Size(118, 65)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Full Score"
         '
         'txtGradeFullScore
         '
-        Me.txtGradeFullScore.Location = New System.Drawing.Point(94, 19)
+        Me.txtGradeFullScore.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtGradeFullScore.Location = New System.Drawing.Point(127, 3)
         Me.txtGradeFullScore.Name = "txtGradeFullScore"
         Me.txtGradeFullScore.ReadOnly = True
-        Me.txtGradeFullScore.Size = New System.Drawing.Size(100, 20)
+        Me.txtGradeFullScore.Size = New System.Drawing.Size(118, 20)
         Me.txtGradeFullScore.TabIndex = 4
         '
         'txtGradeNumber
         '
-        Me.txtGradeNumber.Location = New System.Drawing.Point(94, 45)
+        Me.txtGradeNumber.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtGradeNumber.Location = New System.Drawing.Point(127, 68)
         Me.txtGradeNumber.Name = "txtGradeNumber"
         Me.txtGradeNumber.ReadOnly = True
-        Me.txtGradeNumber.Size = New System.Drawing.Size(100, 20)
+        Me.txtGradeNumber.Size = New System.Drawing.Size(118, 20)
         Me.txtGradeNumber.TabIndex = 3
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(1, 48)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(87, 13)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Average Number"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(9, 115)
+        Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label5.Location = New System.Drawing.Point(3, 156)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(39, 13)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "Label5"
         '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Controls.Add(Me.grpQuiz)
+        Me.FlowLayoutPanel1.Controls.Add(Me.grpGrade)
+        Me.FlowLayoutPanel1.Controls.Add(Me.Label5)
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(531, 227)
+        Me.FlowLayoutPanel1.TabIndex = 4
+        '
         'frmGradesQuizPreCreator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(432, 137)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.grpGrade)
-        Me.Controls.Add(Me.grpQuiz)
+        Me.ClientSize = New System.Drawing.Size(531, 227)
+        Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Name = "frmGradesQuizPreCreator"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmGradesQuizPreCreator"
+        Me.Text = "viewr"
         Me.grpQuiz.ResumeLayout(False)
-        Me.grpQuiz.PerformLayout()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
         Me.grpGrade.ResumeLayout(False)
-        Me.grpGrade.PerformLayout()
+        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.TableLayoutPanel2.PerformLayout()
+        Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.FlowLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents grpQuiz As System.Windows.Forms.GroupBox
@@ -170,4 +227,7 @@ Partial Class frmGradesQuizPreCreator
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtGradeFullScore As System.Windows.Forms.TextBox
+    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
 End Class

@@ -25,13 +25,10 @@
 
     Private Sub frmPreGrades_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-
             DisplayDatatable()
-
         Catch ex As Exception
             DisplayGeneralException(ex)
         End Try
-
     End Sub
 
     friend Sub DisplayAsPregradeviewer()
@@ -43,7 +40,7 @@
         End With
     End Sub
 
-    Private Sub DisplayDatatable()
+    Friend Sub DisplayDatatable()
 
         Dim btn As New DataGridViewButtonColumn
         With btn

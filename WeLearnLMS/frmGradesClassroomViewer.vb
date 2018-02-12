@@ -36,10 +36,11 @@ Public Class frmGradesClassroomViewer
     Private Sub frmGradesClassroomViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim classroomhub As New frmClassroomDialog()
         If classroomhub.ShowDialog = Windows.Forms.DialogResult.OK Then
-
-            GetAllClassroomGrades(_SharedUserID, _SharedClassroom.ClassroomId)
+            Me._ClassroomID = classroomhub.GetClassroom.ClassroomId
+            GetAllClassroomGrades(_SharedUserID, Me._ClassroomID)
 
         End If
+        ViewDatatable()
 
     End Sub
 
@@ -48,6 +49,9 @@ Public Class frmGradesClassroomViewer
 
         With DataGridView1
             .DataSource = _ClassroomGradesDatatable
+            .Columns("id_classroomgrades").Visible = False
+            .Columns("user_id").Visible = False
+            .Columns("class_id").Visible = False
         End With
     End Sub
 

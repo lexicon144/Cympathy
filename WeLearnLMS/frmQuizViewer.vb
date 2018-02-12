@@ -3,7 +3,7 @@
     Private _Quiz As New c_Quiz
     Private _Pregrade As New c_PreGrade
     Private _UserID As String
-
+    Private _ClassroomID As String
     ''' <summary>
     '''  Null constructor
     ''' </summary>
@@ -28,6 +28,21 @@
         Me._Quiz = ThisQuiz
     End Sub
 
+
+    ''' <summary>
+    ''' Constructor for making QuizRelated
+    ''' </summary>
+    ''' <param name="ThisQuiz"></param>
+    ''' <remarks></remarks>
+    Public Sub New(ByRef ThisQuiz As c_Quiz, ByRef ClassroomID As String)
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        Me._Quiz = ThisQuiz
+        Me._ClassroomID = ClassroomID
+    End Sub
+
     Private Sub frmQuizViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Dim viewer As New frmQuestionnaireViewer(_Quiz)
@@ -38,7 +53,7 @@
 
         MarkQuiz()
 
-        Dim procure As New frmGradesQuizPreCreator(Me._Quiz.QuestionnaireID, _SharedUserID, Me._Pregrade)
+        Dim procure As New frmGradesQuizPreCreator(Me._Quiz.QuestionnaireID, Me._Quiz.QuestionnaireName, _SharedUserID, Me._Pregrade, _SharedClassroom.ClassroomId)
         procure.ShowDialog()
     End Sub
 

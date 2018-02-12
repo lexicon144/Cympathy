@@ -31,7 +31,7 @@
             ._ExamID = ExamID
             ._UserID = UserID
             ._PreGrade = PreGrade
-
+            ._ClassroomID = ClassroomID
             .txtExamID.Text = ExamID
             .txtGradeFullScore.Text = _PreGrade.ReturnFullScore
         End With
@@ -51,7 +51,7 @@
                             .Connection = Connection
                             .Transaction = MarkingTransaction
                             .CommandType = CommandType.StoredProcedure
-                            .CommandText = "InsertGradeExam"
+                            .CommandText = "InsertGradesExam"
                             With .Parameters
                                 .AddWithValue("UserID", Me._UserID)
                                 .AddWithValue("ExamID", Me._ExamID)

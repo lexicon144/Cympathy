@@ -1,6 +1,6 @@
 ﻿Public Class frmGradeExamComputer
 
-    Private _QuestionnaireCount As UInt32
+    Private _AllExamsCount As UInt32
     Private _RecordedCount As UInt32
     Private _AverageDatatable As New DataTable
     Private _GradeSummation As Double = 0.0
@@ -9,10 +9,10 @@
     Private Sub frmGradeExamComputer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BackgroundWorker1.RunWorkerAsync()
     End Sub
-
+#Region "Properties"
     Friend ReadOnly Property ExamCount As UInt32
         Get
-            Return _QuestionnaireCount
+            Return _AllExamsCount
         End Get
     End Property
 
@@ -33,6 +33,7 @@
             Return _FullAverage
         End Get
     End Property
+#End Region
 
     ''' <summary>
     ''' Find the count of all registered Quizes in ThisClassroom
@@ -47,11 +48,11 @@
                     .Open()
                 End If
             End With
-
             Using Command As New MySqlCommand
                 With Command
                     .Connection = Connection
-                    .CommandText = "SELECT COUNT(id) FROM link_quiz WHERE drp = FALSE AND class_id = @ClassID"
+                    .CommandType = CommandType.StoredProcedure
+                    .CommandText = "CountExams"
                     With .Parameters
                         .AddWithValue("ClassID", ClassroomID)
                     End With
@@ -65,10 +66,10 @@
     ''' Summate all the quiz grades
     ''' </summary>
     ''' <remarks></remarks>
-    Private Sub GetSumationOfQuizes()
+    Private Sub GetSumationOfExams()
         Me._GradeSummation = 0.0
         For Each Row As DataRow In Me._AverageDatatable.Rows
-            Me._GradeSummation += Row("quiz_grade")
+            Me._GradeSummation += Row("exam_grade")
         Next
     End Sub
 
@@ -79,7 +80,7 @@
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub GetRecordedCount(ByVal Count As UInt32)
-        Count = Me._AverageDatatable.Rows.Count
+        Me._RecordedCount = Me._AverageDatatable.Rows.Count
     End Sub
 
     ''' <summary>
@@ -148,6 +149,8 @@
             .SelectionMode = DataGridViewSelectionMode.FullRowSelect
             .DataSource = Me._AverageDatatable
             .Columns.Add(btn)
+            If .Columns.Contains("id") Then .Columns("id").Visible = False
+
             .Refresh()
         End With
     End Sub
@@ -159,17 +162,27 @@
     Private Sub DisplayOnTextboxes()
         With Me
             .txtFullAverage.Text = ._FullAverage.ToString
-            .txtLinkedExams.Text = ._QuestionnaireCount.ToString
-            .txtRecordedExams.Text = ._RecordedCount.ToString
+            .txtAllExams.Text = ._AllExamsCount.ToString
+            .txtYourExams.Text = ._RecordedCount.ToString
+            .txtFullSummation.Text = ._GradeSummation
         End With
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Me._AverageDatatable = GetAnsweredExams(_SharedUserID, _SharedClassroom.ClassroomId)
+        BackgroundWorker1.ReportProgress(20)
+        'get sum of all recorded exams (YOU)
         GetRecordedCount(_RecordedCount)
-        GetCountQuizesInClassroom(_SharedClassroom.ClassroomId)
-        GetSumationOfQuizes()
-        Me._FullAverage = GetNewAverage(Me._GradeSummation, Me._RecordedCount)
+        BackgroundWorker1.ReportProgress(40)
+        'get count of all exams (ALL)
+        Me._AllExamsCount = GetCountQuizesInClassroom(_SharedClassroom.ClassroomId)
+        BackgroundWorker1.ReportProgress(60)
+        'get sum of grades of all exams
+        GetSumationOfExams()
+        BackgroundWorker1.ReportProgress(80)
+
+        Me._FullAverage = GetNewAverage(Me._GradeSummation, Me._AllExamsCount)
+        BackgroundWorker1.ReportProgress(100)
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
@@ -177,4 +190,7 @@
         DisplayOnTextboxes()
     End Sub
 
+    Private Sub BackgroundWorker1_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorker1.ProgressChanged
+        backgroundProgress.Value = e.ProgressPercentage
+    End Sub
 End Class

@@ -23,10 +23,11 @@ Partial Class frmQuizLinker
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.grpClassroom = New System.Windows.Forms.GroupBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.txtClassroomName = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.txtClassroomID = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.grpQuizDisplay = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -34,13 +35,12 @@ Partial Class frmQuizLinker
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtQuizName = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.grpClassroom.SuspendLayout()
+        Me.TableLayoutPanel3.SuspendLayout()
         Me.grpQuizDisplay.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.TableLayoutPanel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'grpClassroom
@@ -54,25 +54,23 @@ Partial Class frmQuizLinker
         Me.grpClassroom.TabStop = False
         Me.grpClassroom.Text = "Classroom"
         '
-        'Label4
+        'TableLayoutPanel3
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label4.Location = New System.Drawing.Point(3, 39)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(86, 39)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Name"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label3.Location = New System.Drawing.Point(3, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(86, 39)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "ID"
+        Me.TableLayoutPanel3.ColumnCount = 2
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel3.Controls.Add(Me.txtClassroomName, 1, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label4, 0, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtClassroomID, 1, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label3, 0, 0)
+        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 16)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        Me.TableLayoutPanel3.RowCount = 2
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(184, 78)
+        Me.TableLayoutPanel3.TabIndex = 18
         '
         'txtClassroomName
         '
@@ -83,6 +81,16 @@ Partial Class frmQuizLinker
         Me.txtClassroomName.Size = New System.Drawing.Size(86, 20)
         Me.txtClassroomName.TabIndex = 1
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label4.Location = New System.Drawing.Point(3, 39)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(86, 39)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Name"
+        '
         'txtClassroomID
         '
         Me.txtClassroomID.Dock = System.Windows.Forms.DockStyle.Fill
@@ -91,6 +99,16 @@ Partial Class frmQuizLinker
         Me.txtClassroomID.ReadOnly = True
         Me.txtClassroomID.Size = New System.Drawing.Size(86, 20)
         Me.txtClassroomID.TabIndex = 0
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label3.Location = New System.Drawing.Point(3, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(86, 39)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "ID"
         '
         'grpQuizDisplay
         '
@@ -176,24 +194,6 @@ Partial Class frmQuizLinker
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(586, 103)
         Me.TableLayoutPanel1.TabIndex = 17
         '
-        'TableLayoutPanel3
-        '
-        Me.TableLayoutPanel3.ColumnCount = 2
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.Controls.Add(Me.txtClassroomName, 1, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label4, 0, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.txtClassroomID, 1, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label3, 0, 0)
-        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 16)
-        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 2
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(184, 78)
-        Me.TableLayoutPanel3.TabIndex = 18
-        '
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
@@ -218,13 +218,13 @@ Partial Class frmQuizLinker
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmQuizLinker"
         Me.grpClassroom.ResumeLayout(False)
+        Me.TableLayoutPanel3.ResumeLayout(False)
+        Me.TableLayoutPanel3.PerformLayout()
         Me.grpQuizDisplay.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
-        Me.TableLayoutPanel3.ResumeLayout(False)
-        Me.TableLayoutPanel3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

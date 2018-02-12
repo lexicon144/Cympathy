@@ -47,14 +47,12 @@
         Try
             If TypeOf DataGridView1.Columns(e.ColumnIndex) Is DataGridViewButtonColumn Then
                 If DataGridView1.Columns(e.ColumnIndex).Name = "btn" Then
-
                     With DataGridView1.Rows(e.RowIndex)
-                        txtClassId.Text = .Cells(0).Value.ToString()
-                        txtClassName.Text = .Cells(1).Value.ToString()
-                        txtClassDescription.Text = .Cells(2).Value.ToString()
-                        txtClassType.Text = .Cells(3).Value.ToString
+                        txtClassId.Text = .Cells("id").Value.ToString()
+                        txtClassName.Text = .Cells("class_name").Value.ToString()
+                        txtClassDescription.Text = .Cells("class_description").Value.ToString()
+                        txtClassType.Text = .Cells("classType").Value.ToString
                     End With
-
                 End If
             End If
         Catch XXX As Exception
@@ -76,26 +74,24 @@
         With DataGridView1
             .DataSource = _Datatable
             .Columns.Add(btn)
+            .Columns("classType").Visible = False
+            .Columns("class_description").Visible = False
         End With
     End Sub
 
     Friend Sub ReturnClasses()
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
-
             With Connection
                 If .State = ConnectionState.Closed Then
                     .Open()
                 End If
             End With
-
             Using Command As New MySqlCommand
-
                 With Command
                     .Connection = Connection
                     .CommandText = CommandType.StoredProcedure
                     .CommandText = "SelectFullClassroom"
                 End With
-
                 Using Adapter As New MySqlDataAdapter
                     With Adapter
                         .SelectCommand = Command
@@ -113,25 +109,20 @@
                     .Open()
                 End If
             End With
-
             Using Command As New MySqlCommand
                 With Command
                     .Connection = Connection
                     .CommandText = "SelectEnrolledClassForThisStudent"
                     .CommandType = CommandType.StoredProcedure
-
                     With .Parameters
                         .AddWithValue("StudentID", StudentID)
                     End With
-
                 End With
-
                 Using Adapter As New MySqlDataAdapter
                     With Adapter
                         .SelectCommand = Command
                         .Fill(_Datatable)
                     End With
-
                 End Using
             End Using
         End Using
@@ -139,7 +130,6 @@
 
     Private Function ParseFromTextbox() As c_Classroom
         Dim NewClassroom As New c_Classroom
-
         With NewClassroom
             .ClassroomId = txtClassId.Text
             .ClassroomName = txtClassName.Text
@@ -154,5 +144,4 @@
         _SharedClassroom = ParseFromTextbox()
         Me.DialogResult = Windows.Forms.DialogResult.OK
     End Sub
-
 End Class
