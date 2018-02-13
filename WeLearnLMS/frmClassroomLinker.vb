@@ -69,7 +69,7 @@
         End Using
     End Sub
 
-    Private Sub btnEnroll_Click(sender As Object, e As EventArgs)
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         PerformLink()
     End Sub
 End Class

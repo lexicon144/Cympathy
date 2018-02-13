@@ -64,30 +64,30 @@ Partial Class frmQuizLinker
         Me.TableLayoutPanel3.Controls.Add(Me.txtClassroomID, 1, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.Label3, 0, 0)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 16)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 19)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 2
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(184, 78)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(184, 75)
         Me.TableLayoutPanel3.TabIndex = 18
         '
         'txtClassroomName
         '
         Me.txtClassroomName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtClassroomName.Location = New System.Drawing.Point(95, 42)
+        Me.txtClassroomName.Location = New System.Drawing.Point(95, 40)
         Me.txtClassroomName.Name = "txtClassroomName"
         Me.txtClassroomName.ReadOnly = True
-        Me.txtClassroomName.Size = New System.Drawing.Size(86, 20)
+        Me.txtClassroomName.Size = New System.Drawing.Size(86, 23)
         Me.txtClassroomName.TabIndex = 1
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label4.Location = New System.Drawing.Point(3, 39)
+        Me.Label4.Location = New System.Drawing.Point(3, 37)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(86, 39)
+        Me.Label4.Size = New System.Drawing.Size(86, 38)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Name"
         '
@@ -97,7 +97,7 @@ Partial Class frmQuizLinker
         Me.txtClassroomID.Location = New System.Drawing.Point(95, 3)
         Me.txtClassroomID.Name = "txtClassroomID"
         Me.txtClassroomID.ReadOnly = True
-        Me.txtClassroomID.Size = New System.Drawing.Size(86, 20)
+        Me.txtClassroomID.Size = New System.Drawing.Size(86, 23)
         Me.txtClassroomID.TabIndex = 0
         '
         'Label3
@@ -106,7 +106,7 @@ Partial Class frmQuizLinker
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label3.Location = New System.Drawing.Point(3, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(86, 39)
+        Me.Label3.Size = New System.Drawing.Size(86, 37)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "ID"
         '
@@ -131,21 +131,21 @@ Partial Class frmQuizLinker
         Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.txtQuizName, 1, 1)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 16)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 19)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 2
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(183, 78)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(183, 75)
         Me.TableLayoutPanel2.TabIndex = 18
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Location = New System.Drawing.Point(3, 39)
+        Me.Label2.Location = New System.Drawing.Point(3, 37)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(85, 39)
+        Me.Label2.Size = New System.Drawing.Size(85, 38)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Name"
         '
@@ -155,7 +155,7 @@ Partial Class frmQuizLinker
         Me.txtQuizID.Location = New System.Drawing.Point(94, 3)
         Me.txtQuizID.Name = "txtQuizID"
         Me.txtQuizID.ReadOnly = True
-        Me.txtQuizID.Size = New System.Drawing.Size(86, 20)
+        Me.txtQuizID.Size = New System.Drawing.Size(86, 23)
         Me.txtQuizID.TabIndex = 0
         '
         'Label1
@@ -164,17 +164,17 @@ Partial Class frmQuizLinker
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(85, 39)
+        Me.Label1.Size = New System.Drawing.Size(85, 37)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "ID"
         '
         'txtQuizName
         '
         Me.txtQuizName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtQuizName.Location = New System.Drawing.Point(94, 42)
+        Me.txtQuizName.Location = New System.Drawing.Point(94, 40)
         Me.txtQuizName.Name = "txtQuizName"
         Me.txtQuizName.ReadOnly = True
-        Me.txtQuizName.Size = New System.Drawing.Size(86, 20)
+        Me.txtQuizName.Size = New System.Drawing.Size(86, 23)
         Me.txtQuizName.TabIndex = 1
         '
         'TableLayoutPanel1
@@ -208,7 +208,7 @@ Partial Class frmQuizLinker
         '
         'frmQuizLinker
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(586, 103)
         Me.Controls.Add(Me.TableLayoutPanel1)
