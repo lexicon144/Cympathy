@@ -1,12 +1,13 @@
-﻿Public Class ImpHappyMessage
+﻿Public Class ImpHappyMessageDeploy
     Implements IHappyMessage
+
     Private ListOfMessages As New List(Of String)
 
     Public Sub New()
         Try
 
-            Dim fStream As New System.IO.FileStream(Application.StartupPath & "\monikalovesyou.txt", IO.FileMode.Open)
-            Dim sReader As New System.IO.StreamReader(fStream)
+            Dim fStream As new 
+            Dim sReader As New System.IO.StringReader(fStream)
 
             Do While sReader.Peek >= 0
                 ListOfMessages.Add(sReader.ReadLine)
@@ -17,8 +18,7 @@
         End Try
     End Sub
 
-
-    Friend Function GetMyHappyMessage() As String Implements IHappyMessage.GetMyHappyMessage
+    Public Function GetMyHappyMessage() As String Implements IHappyMessage.GetMyHappyMessage
 
         Dim rnd As New Random()
         Return ListOfMessages(rnd.Next(0, ListOfMessages.Count))
