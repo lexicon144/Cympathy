@@ -144,4 +144,5 @@
         _SharedClassroom = ParseFromTextbox()
         Me.DialogResult = Windows.Forms.DialogResult.OK
     End Sub
+
 End Class

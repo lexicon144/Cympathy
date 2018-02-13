@@ -20,18 +20,9 @@
     End Sub
 
     Private Sub ShowAll()
-        Dim btn As New DataGridViewButtonColumn
-
-        With btn
-            .HeaderText = "Action"
-            .Text = "Open"
-            .Name = "btn"
-            .UseColumnTextForButtonValue = True
-        End With
 
         With Me.DataGridView1
             .DataSource = _StandingDatatable
-            .Columns.Add(btn)
             .Columns("user_id").Visible = False
             .Columns("user_fname").Visible = False
             .Columns("user_mi").Visible = False
@@ -66,7 +57,4 @@
         End Using
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
-    End Sub
 End Class

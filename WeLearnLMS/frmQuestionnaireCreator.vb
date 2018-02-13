@@ -155,16 +155,13 @@ Public Class frmQuestionnaireCreator
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub btnSerialize_Click(sender As Object, e As EventArgs) Handles btnSerialize.Click
-        If Datagridview1.Rows.Count > 0 Then
-            With Me._QuestionnaireBase
-                .QuestionBase = CreateList()
-                .QuestionnaireType = _QuizType
-            End With
 
-            Me.DialogResult = Windows.Forms.DialogResult.OK
-        Else
-            Me.DialogResult = Windows.Forms.DialogResult.Cancel
-        End If
+        With Me._QuestionnaireBase
+            .QuestionBase = CreateList()
+            .QuestionnaireType = _QuizType
+        End With
+
+        Me.DialogResult = Windows.Forms.DialogResult.OK
     End Sub
 
 

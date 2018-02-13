@@ -888,7 +888,7 @@
     <Content Include="bin\Debug\WeLearnLMS.pdb" />
     <Content Include="bin\Debug\WeLearnLMS.vshost.exe" />
     <Content Include="bin\Debug\WeLearnLMS.xml" />
-    <Content Include="monikalovesyou.txt" />
+    <EmbeddedResource Include="monikalovesyou.txt" />
     <Content Include="obj\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
     <Content Include="obj\Debug\WeLearnLMS.exe" />
     <Content Include="obj\Debug\WeLearnLMS.pdb" />

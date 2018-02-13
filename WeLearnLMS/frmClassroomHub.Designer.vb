@@ -55,11 +55,12 @@ Partial Class frmClassroomHub
         Me.tablelayoutGrades = New System.Windows.Forms.TableLayoutPanel()
         Me.mainpanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.grpClassDATA = New System.Windows.Forms.GroupBox()
-        Me.btnClassStanding = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ChangeColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ScheduleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SchedulesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClassStandingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.PanelProfessorsOnly.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -129,9 +130,9 @@ Partial Class frmClassroomHub
         'btnViewMaterials
         '
         Me.btnViewMaterials.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnViewMaterials.Location = New System.Drawing.Point(3, 55)
+        Me.btnViewMaterials.Location = New System.Drawing.Point(3, 54)
         Me.btnViewMaterials.Name = "btnViewMaterials"
-        Me.btnViewMaterials.Size = New System.Drawing.Size(151, 46)
+        Me.btnViewMaterials.Size = New System.Drawing.Size(151, 45)
         Me.btnViewMaterials.TabIndex = 15
         Me.btnViewMaterials.Text = "View Materials"
         Me.btnViewMaterials.UseVisualStyleBackColor = True
@@ -141,7 +142,7 @@ Partial Class frmClassroomHub
         Me.btnViewArticles.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnViewArticles.Location = New System.Drawing.Point(3, 3)
         Me.btnViewArticles.Name = "btnViewArticles"
-        Me.btnViewArticles.Size = New System.Drawing.Size(151, 46)
+        Me.btnViewArticles.Size = New System.Drawing.Size(151, 45)
         Me.btnViewArticles.TabIndex = 13
         Me.btnViewArticles.Text = "View Articles"
         Me.btnViewArticles.UseVisualStyleBackColor = True
@@ -159,69 +160,73 @@ Partial Class frmClassroomHub
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(1, 72)
+        Me.Label2.Location = New System.Drawing.Point(1, 117)
         Me.Label2.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(59, 13)
+        Me.Label2.Size = New System.Drawing.Size(40, 17)
         Me.Label2.TabIndex = 11
-        Me.Label2.Text = "Class Type"
+        Me.Label2.Text = "Type"
         '
         'txtClassType
         '
-        Me.txtClassType.Location = New System.Drawing.Point(160, 73)
+        Me.txtClassType.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtClassType.Location = New System.Drawing.Point(89, 118)
         Me.txtClassType.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassType.Name = "txtClassType"
         Me.txtClassType.ReadOnly = True
-        Me.txtClassType.Size = New System.Drawing.Size(156, 20)
+        Me.txtClassType.Size = New System.Drawing.Size(237, 23)
         Me.txtClassType.TabIndex = 10
         '
         'txtClassId
         '
-        Me.txtClassId.Location = New System.Drawing.Point(160, 25)
+        Me.txtClassId.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtClassId.Location = New System.Drawing.Point(89, 40)
         Me.txtClassId.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassId.Name = "txtClassId"
         Me.txtClassId.ReadOnly = True
-        Me.txtClassId.Size = New System.Drawing.Size(156, 20)
+        Me.txtClassId.Size = New System.Drawing.Size(237, 23)
         Me.txtClassId.TabIndex = 7
         '
         'txtClassDescription
         '
-        Me.txtClassDescription.Location = New System.Drawing.Point(160, 49)
+        Me.txtClassDescription.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtClassDescription.Location = New System.Drawing.Point(89, 79)
         Me.txtClassDescription.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassDescription.Name = "txtClassDescription"
         Me.txtClassDescription.ReadOnly = True
-        Me.txtClassDescription.Size = New System.Drawing.Size(156, 20)
+        Me.txtClassDescription.Size = New System.Drawing.Size(237, 23)
         Me.txtClassDescription.TabIndex = 6
         '
         'txtClassName
         '
-        Me.txtClassName.Location = New System.Drawing.Point(160, 1)
+        Me.txtClassName.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtClassName.Location = New System.Drawing.Point(89, 1)
         Me.txtClassName.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassName.Name = "txtClassName"
         Me.txtClassName.ReadOnly = True
-        Me.txtClassName.Size = New System.Drawing.Size(156, 20)
+        Me.txtClassName.Size = New System.Drawing.Size(237, 23)
         Me.txtClassName.TabIndex = 5
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(1, 24)
+        Me.Label5.Location = New System.Drawing.Point(1, 39)
         Me.Label5.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(46, 13)
+        Me.Label5.Size = New System.Drawing.Size(21, 17)
         Me.Label5.TabIndex = 2
-        Me.Label5.Text = "Class ID"
+        Me.Label5.Text = "ID"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(1, 48)
+        Me.Label4.Location = New System.Drawing.Point(1, 78)
         Me.Label4.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(88, 13)
+        Me.Label4.Size = New System.Drawing.Size(79, 17)
         Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Class Description"
+        Me.Label4.Text = "Description"
         '
         'Label3
         '
@@ -229,17 +234,17 @@ Partial Class frmClassroomHub
         Me.Label3.Location = New System.Drawing.Point(1, 0)
         Me.Label3.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 13)
+        Me.Label3.Size = New System.Drawing.Size(45, 17)
         Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Class Name"
+        Me.Label3.Text = "Name"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'btnViewLessonlist
         '
         Me.btnViewLessonlist.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnViewLessonlist.Location = New System.Drawing.Point(3, 107)
+        Me.btnViewLessonlist.Location = New System.Drawing.Point(3, 105)
         Me.btnViewLessonlist.Name = "btnViewLessonlist"
-        Me.btnViewLessonlist.Size = New System.Drawing.Size(151, 46)
+        Me.btnViewLessonlist.Size = New System.Drawing.Size(151, 45)
         Me.btnViewLessonlist.TabIndex = 28
         Me.btnViewLessonlist.Text = "View Lesson List"
         Me.btnViewLessonlist.UseVisualStyleBackColor = True
@@ -259,7 +264,7 @@ Partial Class frmClassroomHub
         Me.frmViewGrades.Dock = System.Windows.Forms.DockStyle.Fill
         Me.frmViewGrades.Location = New System.Drawing.Point(3, 3)
         Me.frmViewGrades.Name = "frmViewGrades"
-        Me.frmViewGrades.Size = New System.Drawing.Size(149, 46)
+        Me.frmViewGrades.Size = New System.Drawing.Size(149, 45)
         Me.frmViewGrades.TabIndex = 30
         Me.frmViewGrades.Text = "View Quiz Grades"
         Me.frmViewGrades.UseVisualStyleBackColor = True
@@ -267,9 +272,9 @@ Partial Class frmClassroomHub
         'btnViewExamGrades
         '
         Me.btnViewExamGrades.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnViewExamGrades.Location = New System.Drawing.Point(3, 55)
+        Me.btnViewExamGrades.Location = New System.Drawing.Point(3, 54)
         Me.btnViewExamGrades.Name = "btnViewExamGrades"
-        Me.btnViewExamGrades.Size = New System.Drawing.Size(149, 46)
+        Me.btnViewExamGrades.Size = New System.Drawing.Size(149, 45)
         Me.btnViewExamGrades.TabIndex = 31
         Me.btnViewExamGrades.Text = "View Exam Grades"
         Me.btnViewExamGrades.UseVisualStyleBackColor = True
@@ -289,10 +294,10 @@ Partial Class frmClassroomHub
         Me.Panel1.AutoScroll = True
         Me.Panel1.Controls.Add(Me.TableLayoutPanel2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(3, 16)
+        Me.Panel1.Location = New System.Drawing.Point(3, 19)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(154, 156)
+        Me.Panel1.Size = New System.Drawing.Size(154, 153)
         Me.Panel1.TabIndex = 40
         '
         'TableLayoutPanel2
@@ -376,22 +381,22 @@ Partial Class frmClassroomHub
         Me.tablelayoutMisc.Controls.Add(Me.btnViewMaterials, 0, 1)
         Me.tablelayoutMisc.Controls.Add(Me.btnViewArticles, 0, 0)
         Me.tablelayoutMisc.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tablelayoutMisc.Location = New System.Drawing.Point(3, 16)
+        Me.tablelayoutMisc.Location = New System.Drawing.Point(3, 19)
         Me.tablelayoutMisc.Margin = New System.Windows.Forms.Padding(2)
         Me.tablelayoutMisc.Name = "tablelayoutMisc"
         Me.tablelayoutMisc.RowCount = 3
         Me.tablelayoutMisc.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.tablelayoutMisc.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.tablelayoutMisc.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.tablelayoutMisc.Size = New System.Drawing.Size(157, 156)
+        Me.tablelayoutMisc.Size = New System.Drawing.Size(157, 153)
         Me.tablelayoutMisc.TabIndex = 39
         '
         'btnViewClassGrades
         '
         Me.btnViewClassGrades.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnViewClassGrades.Location = New System.Drawing.Point(3, 107)
+        Me.btnViewClassGrades.Location = New System.Drawing.Point(3, 105)
         Me.btnViewClassGrades.Name = "btnViewClassGrades"
-        Me.btnViewClassGrades.Size = New System.Drawing.Size(149, 46)
+        Me.btnViewClassGrades.Size = New System.Drawing.Size(149, 45)
         Me.btnViewClassGrades.TabIndex = 34
         Me.btnViewClassGrades.Text = "View Class Grades"
         Me.btnViewClassGrades.UseVisualStyleBackColor = True
@@ -415,14 +420,14 @@ Partial Class frmClassroomHub
         Me.tablelayoutGrades.Controls.Add(Me.frmViewGrades, 0, 0)
         Me.tablelayoutGrades.Controls.Add(Me.btnViewExamGrades, 0, 1)
         Me.tablelayoutGrades.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tablelayoutGrades.Location = New System.Drawing.Point(3, 16)
+        Me.tablelayoutGrades.Location = New System.Drawing.Point(3, 19)
         Me.tablelayoutGrades.Margin = New System.Windows.Forms.Padding(2)
         Me.tablelayoutGrades.Name = "tablelayoutGrades"
         Me.tablelayoutGrades.RowCount = 3
         Me.tablelayoutGrades.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.tablelayoutGrades.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.tablelayoutGrades.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.tablelayoutGrades.Size = New System.Drawing.Size(155, 156)
+        Me.tablelayoutGrades.Size = New System.Drawing.Size(155, 153)
         Me.tablelayoutGrades.TabIndex = 39
         '
         'mainpanel
@@ -433,15 +438,14 @@ Partial Class frmClassroomHub
         Me.mainpanel.Controls.Add(Me.grpGrades)
         Me.mainpanel.Controls.Add(Me.PanelProfessorsOnly)
         Me.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.mainpanel.Location = New System.Drawing.Point(0, 24)
+        Me.mainpanel.Location = New System.Drawing.Point(0, 28)
         Me.mainpanel.Margin = New System.Windows.Forms.Padding(2)
         Me.mainpanel.Name = "mainpanel"
-        Me.mainpanel.Size = New System.Drawing.Size(339, 558)
+        Me.mainpanel.Size = New System.Drawing.Size(339, 554)
         Me.mainpanel.TabIndex = 38
         '
         'grpClassDATA
         '
-        Me.grpClassDATA.Controls.Add(Me.btnClassStanding)
         Me.grpClassDATA.Controls.Add(Me.TableLayoutPanel1)
         Me.grpClassDATA.Location = New System.Drawing.Point(2, 2)
         Me.grpClassDATA.Margin = New System.Windows.Forms.Padding(2)
@@ -452,21 +456,11 @@ Partial Class frmClassroomHub
         Me.grpClassDATA.TabStop = False
         Me.grpClassDATA.Text = "This Classroom"
         '
-        'btnClassStanding
-        '
-        Me.btnClassStanding.Location = New System.Drawing.Point(161, 123)
-        Me.btnClassStanding.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnClassStanding.Name = "btnClassStanding"
-        Me.btnClassStanding.Size = New System.Drawing.Size(161, 44)
-        Me.btnClassStanding.TabIndex = 40
-        Me.btnClassStanding.Text = "View Class Standing"
-        Me.btnClassStanding.UseVisualStyleBackColor = True
-        '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.21712!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.78288!))
         Me.TableLayoutPanel1.Controls.Add(Me.txtClassType, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.txtClassDescription, 1, 2)
@@ -475,7 +469,8 @@ Partial Class frmClassroomHub
         Me.TableLayoutPanel1.Controls.Add(Me.Label5, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.txtClassName, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txtClassId, 1, 1)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(4, 17)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(2, 18)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 4
@@ -483,7 +478,7 @@ Partial Class frmClassroomHub
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(319, 98)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(327, 156)
         Me.TableLayoutPanel1.TabIndex = 39
         '
         'MenuStrip1
@@ -491,25 +486,38 @@ Partial Class frmClassroomHub
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangeColorToolStripMenuItem, Me.ScheduleToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(339, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(339, 28)
         Me.MenuStrip1.TabIndex = 39
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'ChangeColorToolStripMenuItem
         '
         Me.ChangeColorToolStripMenuItem.Name = "ChangeColorToolStripMenuItem"
-        Me.ChangeColorToolStripMenuItem.Size = New System.Drawing.Size(92, 20)
+        Me.ChangeColorToolStripMenuItem.Size = New System.Drawing.Size(111, 24)
         Me.ChangeColorToolStripMenuItem.Text = "Change Color"
         '
         'ScheduleToolStripMenuItem
         '
+        Me.ScheduleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SchedulesToolStripMenuItem, Me.ClassStandingToolStripMenuItem})
         Me.ScheduleToolStripMenuItem.Name = "ScheduleToolStripMenuItem"
-        Me.ScheduleToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
-        Me.ScheduleToolStripMenuItem.Text = "Schedule"
+        Me.ScheduleToolStripMenuItem.Size = New System.Drawing.Size(101, 24)
+        Me.ScheduleToolStripMenuItem.Text = "More Data..."
+        '
+        'SchedulesToolStripMenuItem
+        '
+        Me.SchedulesToolStripMenuItem.Name = "SchedulesToolStripMenuItem"
+        Me.SchedulesToolStripMenuItem.Size = New System.Drawing.Size(174, 24)
+        Me.SchedulesToolStripMenuItem.Text = "Schedules"
+        '
+        'ClassStandingToolStripMenuItem
+        '
+        Me.ClassStandingToolStripMenuItem.Name = "ClassStandingToolStripMenuItem"
+        Me.ClassStandingToolStripMenuItem.Size = New System.Drawing.Size(174, 24)
+        Me.ClassStandingToolStripMenuItem.Text = "Class Standing"
         '
         'frmClassroomHub
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = Global.WeLearnLMS.My.MySettings.Default.ClassroomHubBGC
         Me.ClientSize = New System.Drawing.Size(339, 582)
@@ -572,7 +580,6 @@ Partial Class frmClassroomHub
     Friend WithEvents mainpanel As System.Windows.Forms.FlowLayoutPanel
     Friend WithEvents grpClassDATA As System.Windows.Forms.GroupBox
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents btnClassStanding As System.Windows.Forms.Button
     Friend WithEvents btnLinkUserHere As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
@@ -580,4 +587,6 @@ Partial Class frmClassroomHub
     Friend WithEvents ChangeColorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ColorDialog1 As System.Windows.Forms.ColorDialog
     Friend WithEvents ScheduleToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SchedulesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ClassStandingToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

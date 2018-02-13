@@ -57,7 +57,7 @@ Partial Class frmGradeExamComputer
         Me.GroupBox1.Controls.Add(Me.TableLayoutPanel1)
         Me.GroupBox1.Location = New System.Drawing.Point(3, 163)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(200, 160)
+        Me.GroupBox1.Size = New System.Drawing.Size(363, 160)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Count"
@@ -76,14 +76,14 @@ Partial Class frmGradeExamComputer
         Me.TableLayoutPanel1.Controls.Add(Me.txtAllExams, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.txtFullAverage, 1, 3)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 16)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 19)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 4
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(194, 141)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(357, 138)
         Me.TableLayoutPanel1.TabIndex = 9
         '
         'Label1
@@ -92,7 +92,7 @@ Partial Class frmGradeExamComputer
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(91, 35)
+        Me.Label1.Size = New System.Drawing.Size(172, 34)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "(You)r Exams"
         '
@@ -100,9 +100,9 @@ Partial Class frmGradeExamComputer
         '
         Me.Label4.AutoSize = True
         Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label4.Location = New System.Drawing.Point(3, 70)
+        Me.Label4.Location = New System.Drawing.Point(3, 68)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(91, 35)
+        Me.Label4.Size = New System.Drawing.Size(172, 34)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Full Summation"
         '
@@ -110,56 +110,56 @@ Partial Class frmGradeExamComputer
         '
         Me.Label2.AutoSize = True
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Location = New System.Drawing.Point(3, 35)
+        Me.Label2.Location = New System.Drawing.Point(3, 34)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(91, 35)
+        Me.Label2.Size = New System.Drawing.Size(172, 34)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "All Exams"
         '
         'txtYourExams
         '
         Me.txtYourExams.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtYourExams.Location = New System.Drawing.Point(100, 3)
+        Me.txtYourExams.Location = New System.Drawing.Point(181, 3)
         Me.txtYourExams.Name = "txtYourExams"
         Me.txtYourExams.ReadOnly = True
-        Me.txtYourExams.Size = New System.Drawing.Size(91, 20)
+        Me.txtYourExams.Size = New System.Drawing.Size(173, 23)
         Me.txtYourExams.TabIndex = 2
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label3.Location = New System.Drawing.Point(3, 105)
+        Me.Label3.Location = New System.Drawing.Point(3, 102)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(91, 36)
+        Me.Label3.Size = New System.Drawing.Size(172, 36)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Full Average"
         '
         'txtFullSummation
         '
         Me.txtFullSummation.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtFullSummation.Location = New System.Drawing.Point(100, 73)
+        Me.txtFullSummation.Location = New System.Drawing.Point(181, 71)
         Me.txtFullSummation.Name = "txtFullSummation"
         Me.txtFullSummation.ReadOnly = True
-        Me.txtFullSummation.Size = New System.Drawing.Size(91, 20)
+        Me.txtFullSummation.Size = New System.Drawing.Size(173, 23)
         Me.txtFullSummation.TabIndex = 9
         '
         'txtAllExams
         '
         Me.txtAllExams.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtAllExams.Location = New System.Drawing.Point(100, 38)
+        Me.txtAllExams.Location = New System.Drawing.Point(181, 37)
         Me.txtAllExams.Name = "txtAllExams"
         Me.txtAllExams.ReadOnly = True
-        Me.txtAllExams.Size = New System.Drawing.Size(91, 20)
+        Me.txtAllExams.Size = New System.Drawing.Size(173, 23)
         Me.txtAllExams.TabIndex = 3
         '
         'txtFullAverage
         '
         Me.txtFullAverage.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtFullAverage.Location = New System.Drawing.Point(100, 108)
+        Me.txtFullAverage.Location = New System.Drawing.Point(181, 105)
         Me.txtFullAverage.Name = "txtFullAverage"
         Me.txtFullAverage.ReadOnly = True
-        Me.txtFullAverage.Size = New System.Drawing.Size(91, 20)
+        Me.txtFullAverage.Size = New System.Drawing.Size(173, 23)
         Me.txtFullAverage.TabIndex = 5
         '
         'BackgroundWorker1
@@ -192,7 +192,7 @@ Partial Class frmGradeExamComputer
         '
         'frmGradeExamComputer
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(375, 353)
         Me.Controls.Add(Me.StatusStrip1)

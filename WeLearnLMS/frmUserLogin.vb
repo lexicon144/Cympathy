@@ -23,6 +23,8 @@ Public Class frmUserLogin
 
     Private _Hasher As IHashing = New StrategyHashingSHA512
 
+    Private _StopWatch As New Stopwatch
+
     Private _Username As String
     Private _Validator As New ContextVerification
     Private Sub formLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -30,6 +32,8 @@ Public Class frmUserLogin
         If Pinger.ShowDialog() = Windows.Forms.DialogResult.OK Then
             Me.btnLogin.Enabled = Pinger.Safety
         End If
+        _StopWatch.Start()
+        Timer1.Start()
     End Sub
 
     Private Sub LogMeIn()
@@ -146,21 +150,23 @@ Public Class frmUserLogin
         If e.Result Then
             ShareMe()
 
-            Dim MainMenu As New frmMenu(Me._UserAdvancedCredentials)
+            Using MainMenu As New frmMenu(Me._UserAdvancedCredentials)
 
-            MainMenu.ShowDialog()
-            _SharedAdvancedCredentials = Nothing
-            _SharedMainCredentials = Nothing
-            LinkLabel2.Enabled = False
-
+                MainMenu.ShowDialog()
+                _SharedAdvancedCredentials = Nothing
+                _SharedMainCredentials = Nothing
+                LinkLabel2.Enabled = False
+            End Using
             Exit Sub
         End If
         MessageBox.Show("Your password or username was incorrect", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Warning)
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        Dim registration As New frmUserRegistration
-        registration.ShowDialog()
+        Using registration As New frmUserRegistration
+            registration.ShowDialog()
+        End Using
+
     End Sub
 
     Private Sub txtUsername_Validated(sender As Object, e As EventArgs) Handles txtUsername.Validated
@@ -188,5 +194,11 @@ Public Class frmUserLogin
     Private Sub lblChangeServer_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblChangeServer.LinkClicked
         Dim editor As New frmServerEditor()
         editor.ShowDialog()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        lblHH.Text = _StopWatch.Elapsed.Hours
+        lblMM.Text = _StopWatch.Elapsed.Minutes
+        lblSS.Text = _StopWatch.Elapsed.Seconds
     End Sub
 End Class

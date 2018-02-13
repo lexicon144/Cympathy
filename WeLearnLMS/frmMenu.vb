@@ -3,6 +3,7 @@
     Private _AdvancedCredentials As New c_AdvancedCredentials
     Private _Stopwatch As New Stopwatch
     Private _HappyStuff As IHappyMessage = New ImpHappyMessage
+
     Public Sub New(ByRef AdvancedCredentials As c_AdvancedCredentials)
 
         ' This call is required by the designer.
@@ -59,25 +60,28 @@
     End Sub
 
     Private Sub btnClassroomHub_Click(sender As Object, e As EventArgs) Handles btnClassroomHub.Click
-        Dim ClassroomHub As New frmClassroomHub
-        ClassroomHub.ShowDialog()
+        Using ClassroomHub As New frmClassroomHub
+            ClassroomHub.ShowDialog(Me)
 
 
-        With Me.StatusStrip1
+            With Me.StatusStrip1
 
-            toolstripCLASSNAME.Text = _SharedClassroom.ClassroomName
-            toolstripCLASSROOMID.Text = _SharedClassroom.ClassroomId
-        End With
+                toolstripCLASSNAME.Text = _SharedClassroom.ClassroomName
+                toolstripCLASSROOMID.Text = _SharedClassroom.ClassroomId
+            End With
+        End Using
     End Sub
 
     Private Sub btnTimeManagement_Click(sender As Object, e As EventArgs) Handles btnTimeManagement.Click
-        Dim TimeManagement As New frmTimeManagementHub(TryCast(_AdvancedCredentials, c_MainCredentials))
-        TimeManagement.ShowDialog()
+        Using TimeManagement As New frmTimeManagementHub(TryCast(_AdvancedCredentials, c_MainCredentials))
+            TimeManagement.ShowDialog(Me)
+        End Using
     End Sub
 
     Private Sub btnFeedback_Click(sender As Object, e As EventArgs) Handles btnFeedback.Click
-        Dim bbbFeedback As New frmMessageHub(TryCast(_AdvancedCredentials, c_MainCredentials))
-        bbbFeedback.ShowDialog()
+        Using bbbFeedback As New frmMessageHub(TryCast(_AdvancedCredentials, c_MainCredentials))
+            bbbFeedback.ShowDialog()
+        End Using
     End Sub
 
 #Region "Creator"
@@ -103,18 +107,21 @@
 #End Region
 
     Private Sub btnLessonList_Click(sender As Object, e As EventArgs) Handles btnLessonList.Click
-        Dim viewer As New frmLessonListHub(_SharedClassroom)
-        viewer.ShowDialog()
+        Using viewer As New frmLessonListHub(_SharedClassroom)
+            viewer.ShowDialog()
+        End Using
     End Sub
 
     Private Sub btnRanking_Click(sender As Object, e As EventArgs) Handles btnRanking.Click
-        Dim viewer As New frmRankingHub()
-        viewer.ShowDialog()
+        Using viewer As New frmRankingHub()
+            viewer.ShowDialog()
+        End Using
     End Sub
 
     Private Sub btnGrades_Click(sender As Object, e As EventArgs) Handles btnGrades.Click
-        Dim viewer As New frmGradesClassroomHub
-        viewer.ShowDialog()
+        Using viewer As New frmGradesClassroomHub
+            viewer.ShowDialog()
+        End Using
     End Sub
 
     Private Sub timerSession_Tick(sender As Object, e As EventArgs) Handles timerSession.Tick
@@ -141,12 +148,9 @@
     End Sub
 
     Private Sub btnCreateClassroom_Click(sender As Object, e As EventArgs) Handles btnCreateClassroom.Click
-        Dim creator As New frmClassroomCreator()
-        creator.ShowDialog()
-    End Sub
-
-    Private Sub StatusStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles StatusStrip1.ItemClicked
-
+        Using creator As New frmClassroomCreator()
+            creator.ShowDialog()
+        End Using
     End Sub
 
     Private Sub frmMenu_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -179,16 +183,19 @@
     End Sub
 
     Private Sub MoreSettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MoreSettingsToolStripMenuItem.Click
-        Dim changeviews As New frmSomeSettings()
-        changeviews.ShowDialog()
-        Me.Refresh()
+        Using changeviews As New frmSomeSettings()
+            changeviews.ShowDialog()
+            Me.Refresh()
+        End Using
+
     End Sub
 
     Private Sub btnSetMySession_Click(sender As Object, e As EventArgs) Handles btnSetMySession.Click
-        Dim Dialog As New frmClassroomDialog()
-        If Dialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+        Using Dialog As New frmClassroomDialog()
+            If Dialog.ShowDialog = Windows.Forms.DialogResult.OK Then
 
-        End If
+            End If
+        End Using
         With Me.StatusStrip1
 
             toolstripCLASSNAME.Text = _SharedClassroom.ClassroomName
@@ -197,6 +204,8 @@
     End Sub
 
     Private Sub tmrMessageAggregator_Tick(sender As Object, e As EventArgs) Handles tmrMessageAggregator.Tick
-        Me.lblHappyGreeting.Text = Me._HappyStuff.GetMyHappyMessage
+        If Not Me._HappyStuff.GetMyHappyMessage Is Nothing Then
+            Me.lblHappyGreeting.Text = Me._HappyStuff.GetMyHappyMessage
+        End If
     End Sub
 End Class

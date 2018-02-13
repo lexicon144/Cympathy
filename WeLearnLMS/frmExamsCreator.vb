@@ -16,10 +16,10 @@ Public Class frmExamsCreator
     End Sub
 
     Private Sub frmExamsCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        
-        Dim Creator As New frmQuestionnaireCreator()
+        Try
+            Dim Creator As New frmQuestionnaireCreator()
 
-        If Creator.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
+            Creator.ShowDialog(Me)
             With Me._NewExam
 
                 .QuestionBase = Creator.GetBASE
@@ -27,8 +27,18 @@ Public Class frmExamsCreator
 
             End With
             ParseToTextbox()
-        End If
+        Catch XXX As Exception
+            DisplayGeneralException(XXX)
+        Finally
+            txtExamName.Focus()
+        End Try
+
     End Sub
+
+    Private Function ListIsNull(ByRef base As List(Of c_SmallQuestion)) As Boolean
+        Return (base Is Nothing)
+    End Function
+
 
     Private Sub InsertQuiz()
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
@@ -84,12 +94,15 @@ Public Class frmExamsCreator
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If Me.rtbXMLPreview.Text = "" Or txtExamName.Text = "" Or txtExamPIN.Text = "" Then Exit Sub
+        If ListIsNull(Me._NewExam.QuestionBase) Then
+            ErrorProvider1.SetError(rtbXMLPreview, "Invalid BASE")
+        End If
         InsertQuiz()
     End Sub
 
     Private Sub txtExamName_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtExamName.Validating
         If Not _SharedValidator.Verify(VMethodology.Username, DirectCast(sender, TextBox).Text) Then
-            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid Username")
+            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid Exam Name")
             e.Cancel = True
             DirectCast(sender, TextBox).SelectAll()
             Exit Sub
@@ -102,8 +115,8 @@ Public Class frmExamsCreator
     End Sub
 
     Private Sub txtExamPIN_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtExamPIN.Validating
-        If Not _SharedValidator.Verify(VMethodology.Username, DirectCast(sender, TextBox).Text) Then
-            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid Username")
+        If Not _SharedValidator.Verify(VMethodology.Numbers, DirectCast(sender, TextBox).Text) Then
+            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid PIN")
             e.Cancel = True
             DirectCast(sender, TextBox).SelectAll()
             Exit Sub
