@@ -27,6 +27,10 @@ Public Class frmUserLogin
 
     Private _Username As String
     Private _Validator As New ContextVerification
+
+    Private _Attempts As UInt16 = 0
+    Private _LoginStopwatch As New Stopwatch
+
     Private Sub formLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim Pinger As New frmSQLPinger
         If Pinger.ShowDialog() = Windows.Forms.DialogResult.OK Then
@@ -51,9 +55,10 @@ Public Class frmUserLogin
 
                     With Command
                         .Connection = Connection
-                        .CommandText = "SELECT * FROM tbl_user WHERE user_name = @UserName"
+                        .CommandType = CommandType.StoredProcedure
+                        .CommandText = "SelectUser"
                         With .Parameters
-                            .AddWithValue("@UserName", _Username)
+                            .AddWithValue("UserName", _Username)
                         End With
                     End With
 
@@ -66,7 +71,6 @@ Public Class frmUserLogin
                 End Using
             Catch eee As Exception
             End Try
-
         End Using
     End Sub
 
@@ -160,6 +164,18 @@ Public Class frmUserLogin
             Exit Sub
         End If
         MessageBox.Show("Your password or username was incorrect", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        _Attempts += 1
+        LoginControl()
+    End Sub
+
+    Private Sub LoginControl()
+
+        If _Attempts = 5 Then
+            _LoginStopwatch.Start()
+            btnLogin.Enabled = False
+            Me._StopWatch.Start()
+        End If
+
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
@@ -200,5 +216,14 @@ Public Class frmUserLogin
         lblHH.Text = _StopWatch.Elapsed.Hours
         lblMM.Text = _StopWatch.Elapsed.Minutes
         lblSS.Text = _StopWatch.Elapsed.Seconds
+    End Sub
+
+    Private Sub LoginTimer_Tick(sender As Object, e As EventArgs) Handles LoginTimer.Tick
+        If _StopWatch.Elapsed.Seconds = 5 Then
+            LoginTimer.Enabled = False
+            _StopWatch.Stop()
+            _StopWatch.Reset()
+            btnLogin.Enabled = True
+        End If
     End Sub
 End Class

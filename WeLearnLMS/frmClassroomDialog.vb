@@ -56,7 +56,7 @@
                 End If
             End If
         Catch XXX As Exception
-            DisplayGeneralException(XXX)
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, XXX)
         End Try
     End Sub
 

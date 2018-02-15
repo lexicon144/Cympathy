@@ -11,11 +11,16 @@ Public Class frmScheduleClassroomLifeSpanControl
     Private GetDate As IGetDate = New ImpGetDateOnServer()
 
     Private Sub frmClassroomLifespanChecker_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        GetLifeSpan(_SharedClassroom.ClassroomId)
-        Me._MySqlDate = GetDate.GetDate
-        If _MyDatatable.Rows.Count = 0 Then Exit Sub
-        ParseToDataTable()
-        printout()
+        Try
+
+            GetLifeSpan(_SharedClassroom.ClassroomId)
+            Me._MySqlDate = GetDate.GetDate
+            If _MyDatatable.Rows.Count = 0 Then Exit Sub
+            ParseToDataTable()
+            printout()
+        Catch xxx As Exception
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, xxx)
+        End Try
     End Sub
 
     Private Sub printout()

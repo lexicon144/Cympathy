@@ -20,7 +20,7 @@ Public Class frmQuizCreator
             ParseToTextbox()
 
         Catch XXX As Exception
-            DisplayGeneralException(XXX)
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, XXX)
         Finally
             txtQuizName.Focus()
         End Try

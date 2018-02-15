@@ -60,7 +60,7 @@ Public Class frmLessonListHub
     Private Sub LoadQuizNode(ByRef ClassroomID As String)
         Using QuizHub As New frmQuizHub
             With QuizHub
-                .LoadAllClasses(ClassroomID)
+                .LoadAllQuizes(ClassroomID)
                 Me._QuizsDT = .ThrowMainDatatable()
             End With
         End Using

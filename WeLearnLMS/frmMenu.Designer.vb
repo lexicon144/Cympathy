@@ -44,6 +44,7 @@ Partial Class frmMenu
         Me.lblPrevClass = New System.Windows.Forms.ToolStripStatusLabel()
         Me.toolstripCLASSROOMID = New System.Windows.Forms.ToolStripStatusLabel()
         Me.toolstripCLASSNAME = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.lblHappyGreeting = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tlstrpSECONDS = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tlstrpMINUTES = New System.Windows.Forms.ToolStripStatusLabel()
@@ -58,7 +59,6 @@ Partial Class frmMenu
         Me.ChangeSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RefreshToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MoreSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.lblHappyGreeting = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tmrMessageAggregator = New System.Windows.Forms.Timer(Me.components)
         Me.TableLayoutPanel3.SuspendLayout()
         Me.grpStartStudying.SuspendLayout()
@@ -80,12 +80,12 @@ Partial Class frmMenu
         Me.TableLayoutPanel3.Controls.Add(Me.btnFeedback, 1, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnRanking, 0, 1)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(2, 15)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(2, 18)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 2
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(332, 159)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(332, 156)
         Me.TableLayoutPanel3.TabIndex = 1
         '
         'btnGrades
@@ -94,7 +94,7 @@ Partial Class frmMenu
         Me.btnGrades.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnGrades.Location = New System.Drawing.Point(3, 3)
         Me.btnGrades.Name = "btnGrades"
-        Me.btnGrades.Size = New System.Drawing.Size(166, 73)
+        Me.btnGrades.Size = New System.Drawing.Size(166, 72)
         Me.btnGrades.TabIndex = 29
         Me.btnGrades.Text = "Grades"
         Me.btnGrades.UseVisualStyleBackColor = True
@@ -105,7 +105,7 @@ Partial Class frmMenu
         Me.btnFeedback.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnFeedback.Location = New System.Drawing.Point(175, 3)
         Me.btnFeedback.Name = "btnFeedback"
-        Me.btnFeedback.Size = New System.Drawing.Size(154, 73)
+        Me.btnFeedback.Size = New System.Drawing.Size(154, 72)
         Me.btnFeedback.TabIndex = 2
         Me.btnFeedback.Text = "Feedback"
         Me.btnFeedback.UseVisualStyleBackColor = True
@@ -114,9 +114,9 @@ Partial Class frmMenu
         '
         Me.btnRanking.AutoEllipsis = True
         Me.btnRanking.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnRanking.Location = New System.Drawing.Point(3, 82)
+        Me.btnRanking.Location = New System.Drawing.Point(3, 81)
         Me.btnRanking.Name = "btnRanking"
-        Me.btnRanking.Size = New System.Drawing.Size(166, 74)
+        Me.btnRanking.Size = New System.Drawing.Size(166, 72)
         Me.btnRanking.TabIndex = 28
         Me.btnRanking.Text = "Ranking"
         Me.btnRanking.UseVisualStyleBackColor = True
@@ -143,12 +143,12 @@ Partial Class frmMenu
         Me.TableLayoutPanel1.Controls.Add(Me.btnLessonList, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnSetMySession, 1, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(2, 15)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(2, 18)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(354, 159)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(354, 156)
         Me.TableLayoutPanel1.TabIndex = 31
         '
         'btnClassroomHub
@@ -157,7 +157,7 @@ Partial Class frmMenu
         Me.btnClassroomHub.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnClassroomHub.Location = New System.Drawing.Point(3, 3)
         Me.btnClassroomHub.Name = "btnClassroomHub"
-        Me.btnClassroomHub.Size = New System.Drawing.Size(171, 73)
+        Me.btnClassroomHub.Size = New System.Drawing.Size(171, 72)
         Me.btnClassroomHub.TabIndex = 0
         Me.btnClassroomHub.Text = "Classroom"
         Me.btnClassroomHub.UseVisualStyleBackColor = True
@@ -166,9 +166,9 @@ Partial Class frmMenu
         '
         Me.btnTimeManagement.AutoEllipsis = True
         Me.btnTimeManagement.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnTimeManagement.Location = New System.Drawing.Point(3, 82)
+        Me.btnTimeManagement.Location = New System.Drawing.Point(3, 81)
         Me.btnTimeManagement.Name = "btnTimeManagement"
-        Me.btnTimeManagement.Size = New System.Drawing.Size(171, 74)
+        Me.btnTimeManagement.Size = New System.Drawing.Size(171, 72)
         Me.btnTimeManagement.TabIndex = 1
         Me.btnTimeManagement.Text = "Time Management"
         Me.btnTimeManagement.UseVisualStyleBackColor = True
@@ -179,7 +179,7 @@ Partial Class frmMenu
         Me.btnLessonList.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnLessonList.Location = New System.Drawing.Point(180, 3)
         Me.btnLessonList.Name = "btnLessonList"
-        Me.btnLessonList.Size = New System.Drawing.Size(171, 73)
+        Me.btnLessonList.Size = New System.Drawing.Size(171, 72)
         Me.btnLessonList.TabIndex = 27
         Me.btnLessonList.Text = "Lesson List"
         Me.btnLessonList.UseVisualStyleBackColor = True
@@ -187,11 +187,11 @@ Partial Class frmMenu
         'btnSetMySession
         '
         Me.btnSetMySession.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnSetMySession.Location = New System.Drawing.Point(180, 82)
+        Me.btnSetMySession.Location = New System.Drawing.Point(180, 81)
         Me.btnSetMySession.Name = "btnSetMySession"
-        Me.btnSetMySession.Size = New System.Drawing.Size(171, 74)
+        Me.btnSetMySession.Size = New System.Drawing.Size(171, 72)
         Me.btnSetMySession.TabIndex = 28
-        Me.btnSetMySession.Text = "Set My Classroom As..."
+        Me.btnSetMySession.Text = "Set Session Classroom As..."
         Me.btnSetMySession.UseVisualStyleBackColor = True
         '
         'PanelProfessorsOnly
@@ -217,13 +217,13 @@ Partial Class frmMenu
         Me.paneltable4.Controls.Add(Me.btnCreateArticles, 1, 1)
         Me.paneltable4.Controls.Add(Me.btnCreateMaterials, 0, 2)
         Me.paneltable4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.paneltable4.Location = New System.Drawing.Point(2, 15)
+        Me.paneltable4.Location = New System.Drawing.Point(2, 18)
         Me.paneltable4.Name = "paneltable4"
         Me.paneltable4.RowCount = 3
         Me.paneltable4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.paneltable4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.paneltable4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.paneltable4.Size = New System.Drawing.Size(354, 159)
+        Me.paneltable4.Size = New System.Drawing.Size(354, 156)
         Me.paneltable4.TabIndex = 0
         '
         'btnCreateClassroom
@@ -232,7 +232,7 @@ Partial Class frmMenu
         Me.btnCreateClassroom.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnCreateClassroom.Location = New System.Drawing.Point(3, 3)
         Me.btnCreateClassroom.Name = "btnCreateClassroom"
-        Me.btnCreateClassroom.Size = New System.Drawing.Size(171, 47)
+        Me.btnCreateClassroom.Size = New System.Drawing.Size(171, 46)
         Me.btnCreateClassroom.TabIndex = 27
         Me.btnCreateClassroom.Text = "Create Classroom"
         Me.btnCreateClassroom.UseVisualStyleBackColor = True
@@ -243,7 +243,7 @@ Partial Class frmMenu
         Me.btnCreateQuestionnaire.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnCreateQuestionnaire.Location = New System.Drawing.Point(180, 3)
         Me.btnCreateQuestionnaire.Name = "btnCreateQuestionnaire"
-        Me.btnCreateQuestionnaire.Size = New System.Drawing.Size(171, 47)
+        Me.btnCreateQuestionnaire.Size = New System.Drawing.Size(171, 46)
         Me.btnCreateQuestionnaire.TabIndex = 23
         Me.btnCreateQuestionnaire.Text = "Create Quiz"
         Me.btnCreateQuestionnaire.UseVisualStyleBackColor = True
@@ -252,9 +252,9 @@ Partial Class frmMenu
         '
         Me.btnCreateExam.AutoSize = True
         Me.btnCreateExam.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCreateExam.Location = New System.Drawing.Point(3, 56)
+        Me.btnCreateExam.Location = New System.Drawing.Point(3, 55)
         Me.btnCreateExam.Name = "btnCreateExam"
-        Me.btnCreateExam.Size = New System.Drawing.Size(171, 47)
+        Me.btnCreateExam.Size = New System.Drawing.Size(171, 46)
         Me.btnCreateExam.TabIndex = 26
         Me.btnCreateExam.Text = "Create Exam"
         Me.btnCreateExam.UseVisualStyleBackColor = True
@@ -263,9 +263,9 @@ Partial Class frmMenu
         '
         Me.btnCreateArticles.AutoSize = True
         Me.btnCreateArticles.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCreateArticles.Location = New System.Drawing.Point(180, 56)
+        Me.btnCreateArticles.Location = New System.Drawing.Point(180, 55)
         Me.btnCreateArticles.Name = "btnCreateArticles"
-        Me.btnCreateArticles.Size = New System.Drawing.Size(171, 47)
+        Me.btnCreateArticles.Size = New System.Drawing.Size(171, 46)
         Me.btnCreateArticles.TabIndex = 24
         Me.btnCreateArticles.Text = "Create Articles"
         Me.btnCreateArticles.UseVisualStyleBackColor = True
@@ -274,9 +274,9 @@ Partial Class frmMenu
         '
         Me.btnCreateMaterials.AutoSize = True
         Me.btnCreateMaterials.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCreateMaterials.Location = New System.Drawing.Point(3, 109)
+        Me.btnCreateMaterials.Location = New System.Drawing.Point(3, 107)
         Me.btnCreateMaterials.Name = "btnCreateMaterials"
-        Me.btnCreateMaterials.Size = New System.Drawing.Size(171, 47)
+        Me.btnCreateMaterials.Size = New System.Drawing.Size(171, 46)
         Me.btnCreateMaterials.TabIndex = 25
         Me.btnCreateMaterials.Text = "Create Materials"
         Me.btnCreateMaterials.UseVisualStyleBackColor = True
@@ -284,58 +284,65 @@ Partial Class frmMenu
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblPrevClass, Me.toolstripCLASSROOMID, Me.toolstripCLASSNAME, Me.lblHappyGreeting, Me.ToolStripStatusLabel1, Me.tlstrpSECONDS, Me.tlstrpMINUTES, Me.tlstrpHOURS, Me.lblCheatDetector})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 421)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 418)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1093, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1093, 25)
         Me.StatusStrip1.TabIndex = 34
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'lblPrevClass
         '
         Me.lblPrevClass.Name = "lblPrevClass"
-        Me.lblPrevClass.Size = New System.Drawing.Size(108, 17)
+        Me.lblPrevClass.Size = New System.Drawing.Size(134, 20)
         Me.lblPrevClass.Text = "Session Classroom:"
         '
         'toolstripCLASSROOMID
         '
         Me.toolstripCLASSROOMID.Name = "toolstripCLASSROOMID"
-        Me.toolstripCLASSROOMID.Size = New System.Drawing.Size(15, 17)
+        Me.toolstripCLASSROOMID.Size = New System.Drawing.Size(19, 20)
         Me.toolstripCLASSROOMID.Text = "[]"
         '
         'toolstripCLASSNAME
         '
         Me.toolstripCLASSNAME.Name = "toolstripCLASSNAME"
-        Me.toolstripCLASSNAME.Size = New System.Drawing.Size(15, 17)
+        Me.toolstripCLASSNAME.Size = New System.Drawing.Size(19, 20)
         Me.toolstripCLASSNAME.Text = "[]"
+        '
+        'lblHappyGreeting
+        '
+        Me.lblHappyGreeting.Name = "lblHappyGreeting"
+        Me.lblHappyGreeting.Size = New System.Drawing.Size(708, 20)
+        Me.lblHappyGreeting.Spring = True
+        Me.lblHappyGreeting.Text = "WE LEARN !!"
         '
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(73, 17)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(91, 20)
         Me.ToolStripStatusLabel1.Text = "Your Session"
         '
         'tlstrpSECONDS
         '
         Me.tlstrpSECONDS.Name = "tlstrpSECONDS"
-        Me.tlstrpSECONDS.Size = New System.Drawing.Size(15, 17)
+        Me.tlstrpSECONDS.Size = New System.Drawing.Size(19, 20)
         Me.tlstrpSECONDS.Text = "[]"
         '
         'tlstrpMINUTES
         '
         Me.tlstrpMINUTES.Name = "tlstrpMINUTES"
-        Me.tlstrpMINUTES.Size = New System.Drawing.Size(15, 17)
+        Me.tlstrpMINUTES.Size = New System.Drawing.Size(19, 20)
         Me.tlstrpMINUTES.Text = "[]"
         '
         'tlstrpHOURS
         '
         Me.tlstrpHOURS.Name = "tlstrpHOURS"
-        Me.tlstrpHOURS.Size = New System.Drawing.Size(15, 17)
+        Me.tlstrpHOURS.Size = New System.Drawing.Size(19, 20)
         Me.tlstrpHOURS.Text = "[]"
         '
         'lblCheatDetector
         '
         Me.lblCheatDetector.Name = "lblCheatDetector"
-        Me.lblCheatDetector.Size = New System.Drawing.Size(15, 17)
+        Me.lblCheatDetector.Size = New System.Drawing.Size(19, 20)
         Me.lblCheatDetector.Text = "{}"
         Me.lblCheatDetector.ToolTipText = "You are given one of, if not, the simplest methods of studying... and yet you cho" & _
     "ose to do this." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Really now?" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "R E A L L Y ?" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ＣＡＮ　ＹＯＵ　ＤＯＮ＇Ｔ　隠づ英" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "That's just not " & _
@@ -363,10 +370,10 @@ Partial Class frmMenu
         Me.mainpanel.Controls.Add(Me.grpMisc)
         Me.mainpanel.Controls.Add(Me.PanelProfessorsOnly)
         Me.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.mainpanel.Location = New System.Drawing.Point(0, 24)
+        Me.mainpanel.Location = New System.Drawing.Point(0, 28)
         Me.mainpanel.Margin = New System.Windows.Forms.Padding(2)
         Me.mainpanel.Name = "mainpanel"
-        Me.mainpanel.Size = New System.Drawing.Size(1093, 397)
+        Me.mainpanel.Size = New System.Drawing.Size(1093, 390)
         Me.mainpanel.TabIndex = 35
         '
         'ColorDialog1
@@ -380,41 +387,34 @@ Partial Class frmMenu
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(1093, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1093, 28)
         Me.MenuStrip1.TabIndex = 36
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'ChangeColorToolStripMenuItem
         '
         Me.ChangeColorToolStripMenuItem.Name = "ChangeColorToolStripMenuItem"
-        Me.ChangeColorToolStripMenuItem.Size = New System.Drawing.Size(92, 20)
+        Me.ChangeColorToolStripMenuItem.Size = New System.Drawing.Size(111, 24)
         Me.ChangeColorToolStripMenuItem.Text = "Change Color"
         '
         'ChangeSettingsToolStripMenuItem
         '
         Me.ChangeSettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RefreshToolStripMenuItem, Me.MoreSettingsToolStripMenuItem})
         Me.ChangeSettingsToolStripMenuItem.Name = "ChangeSettingsToolStripMenuItem"
-        Me.ChangeSettingsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.ChangeSettingsToolStripMenuItem.Size = New System.Drawing.Size(74, 24)
         Me.ChangeSettingsToolStripMenuItem.Text = "Settings"
         '
         'RefreshToolStripMenuItem
         '
         Me.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem"
-        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(170, 24)
         Me.RefreshToolStripMenuItem.Text = "Refresh"
         '
         'MoreSettingsToolStripMenuItem
         '
         Me.MoreSettingsToolStripMenuItem.Name = "MoreSettingsToolStripMenuItem"
-        Me.MoreSettingsToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.MoreSettingsToolStripMenuItem.Size = New System.Drawing.Size(170, 24)
         Me.MoreSettingsToolStripMenuItem.Text = "More Settings"
-        '
-        'lblHappyGreeting
-        '
-        Me.lblHappyGreeting.Name = "lblHappyGreeting"
-        Me.lblHappyGreeting.Size = New System.Drawing.Size(807, 17)
-        Me.lblHappyGreeting.Spring = True
-        Me.lblHappyGreeting.Text = "WE LEARN !!"
         '
         'tmrMessageAggregator
         '
@@ -422,7 +422,7 @@ Partial Class frmMenu
         '
         'frmMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = Global.WeLearnLMS.My.MySettings.Default.MenuBGC
         Me.ClientSize = New System.Drawing.Size(1093, 443)

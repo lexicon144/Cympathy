@@ -27,18 +27,36 @@ Public Class frmQuestionnaireViewer
         End Get
     End Property
 
+    ''' <summary>
+    ''' Quiz Constructor
+    ''' </summary>
+    ''' <param name="ThisQuiz"></param>
+    ''' <remarks></remarks>
     Public Sub New(ByRef ThisQuiz As c_Quiz)
         InitializeComponent()
         Me._cQuiz = ThisQuiz
         Me._IsExam = False
+        If _cQuiz.QuestionBase Is Nothing Then Exit Sub
         ForEachStuff(_cQuiz.QuestionBase)
     End Sub
+
+    ''' <summary>
+    ''' Exam Constructor
+    ''' </summary>
+    ''' <param name="ThisExam"></param>
+    ''' <remarks></remarks>
     Public Sub New(ByRef ThisExam As c_Exam)
         InitializeComponent()
         Me._cExam = ThisExam
         Me._IsExam = True
+        If _cExam.QuestionBase Is Nothing Then Exit Sub
         ForEachStuff(_cExam.QuestionBase)
     End Sub
+    ''' <summary>
+    ''' General Creator
+    ''' </summary>
+    ''' <param name="ThisQuestionnaire"></param>
+    ''' <remarks></remarks>
     Public Sub New(ByRef ThisQuestionnaire As c_Questionnaire)
 
         ' This call is required by the designer.
@@ -47,6 +65,11 @@ Public Class frmQuestionnaireViewer
         ' Add any initialization after the InitializeComponent() call.
         Me._Questionnaire = ThisQuestionnaire
     End Sub
+    ''' <summary>
+    ''' Creator Via XML String
+    ''' </summary>
+    ''' <param name="XMLString"></param>
+    ''' <remarks></remarks>
     Public Sub New(ByRef XMLString As String)
 
         ' This call is required by the designer.

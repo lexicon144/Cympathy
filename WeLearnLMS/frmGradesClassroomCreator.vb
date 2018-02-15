@@ -86,7 +86,7 @@
                 End Using
             Catch xxx As Exception
                 GradeTransaction.Rollback()
-                DisplayLinkingTransactionFailed(xxx)
+                WeLearnMessageDisplay.Display(WeLearnExceptions.Linking, Me, xxx)
             End Try
 
         End Using

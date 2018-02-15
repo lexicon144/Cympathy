@@ -135,3 +135,6 @@ C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.fr
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmScheduleClassroomLifeSpanViewer.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmScheduleClassroomLifeSpanControl.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.vbprojResolveAssemblyReference.cache
+C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\RdlCompile.cache
+C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\RdlCompile.compiled
+C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.vbproj.ResolveComReference.cache

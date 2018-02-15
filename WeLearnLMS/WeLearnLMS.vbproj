@@ -80,6 +80,8 @@
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
@@ -87,6 +89,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
@@ -117,8 +120,10 @@
     <Compile Include="ContextCreateQuestionnaire.vb" />
     <Compile Include="ContextDisableControls.vb" />
     <Compile Include="ContextMakeLessonListNode.vb" />
+    <Compile Include="ContextQuestMarker.vb" />
     <Compile Include="ContextValidateInput.vb" />
     <Compile Include="ContextVerification.vb" />
+    <Compile Include="ContextWeLearnException.vb" />
     <Compile Include="context_QuestionAmount.vb" />
     <Compile Include="c_AdvancedCredentials.vb" />
     <Compile Include="c_Article.vb" />
@@ -532,12 +537,13 @@
     <Compile Include="IDataDeserializer.vb" />
     <Compile Include="IDateEvaluator.vb" />
     <Compile Include="IDisableControls.vb" />
-    <Compile Include="IDisplayWeLearnGeneralExceptions.vb" />
+    <Compile Include="IDisplayWeLearnException.vb" />
     <Compile Include="IEvaluateDateRange.vb" />
     <Compile Include="IGetDate.vb" />
     <Compile Include="IHappyMessage.vb" />
     <Compile Include="IHashing.vb" />
     <Compile Include="IMakeMyLessonTreeNode.vb" />
+    <Compile Include="IMarkQuestionnaire.vb" />
     <Compile Include="ImpAnswerArrayShuffler.vb" />
     <Compile Include="ImpCheaterExistsAMD64CheatEngine.vb" />
     <Compile Include="ImpCheaterExistsI386CheatEngine.vb" />
@@ -549,6 +555,11 @@
     <Compile Include="ImpDisableControlsADMIN.vb" />
     <Compile Include="ImpDisableControlsPROFESSOR.vb" />
     <Compile Include="ImpDisableControlsSTUDENT.vb" />
+    <Compile Include="ImpDisplayWeLearnExceptionDatagridView.vb" />
+    <Compile Include="ImpDisplayWeLearnExceptionExams.vb" />
+    <Compile Include="ImpDisplayWeLearnExceptionGeneral.vb" />
+    <Compile Include="ImpDisplayWeLearnExceptionLinking.vb" />
+    <Compile Include="ImpDisplayWeLearnExceptionSimple.vb" />
     <Compile Include="ImpEvaluateDateRange.vb" />
     <Compile Include="ImpGetDateOnServer.vb" />
     <Compile Include="ImpHappyMessage.vb" />
@@ -557,6 +568,8 @@
     <Compile Include="ImpMakeExamNode.vb" />
     <Compile Include="ImpMakeMaterialNode.vb" />
     <Compile Include="ImpMakeQuizNode.vb" />
+    <Compile Include="ImpMarkQuestionnaireExam.vb" />
+    <Compile Include="ImpMarkQuestionnaireQuiz.vb" />
     <Compile Include="ImpQuestionAmount_PEXAM.vb" />
     <Compile Include="ImpQuestionAmount_SQUIZ.vb" />
     <Compile Include="ImpDataSerializer.vb" />
@@ -568,7 +581,6 @@
     <Compile Include="ISalter.vb" />
     <Compile Include="ITimeMapper.vb" />
     <Compile Include="IVerifyTextInput.vb" />
-    <Compile Include="mod_ExceptionMessage.vb" />
     <Compile Include="MonikaLovesYou.Designer.vb">
       <DependentUpon>MonikaLovesYou.vb</DependentUpon>
     </Compile>
@@ -858,6 +870,7 @@
     <EmbeddedResource Include="obj\Debug\WeLearnLMS.frmUsersViewer.resources" />
     <EmbeddedResource Include="obj\Debug\WeLearnLMS.MonikaLovesYou.resources" />
     <EmbeddedResource Include="obj\Debug\WeLearnLMS.Resources.resources" />
+    <EmbeddedResource Include="r_ScheduleReport.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\WeLearnLMS.exe.config" />
@@ -936,6 +949,35 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

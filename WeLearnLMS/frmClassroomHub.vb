@@ -28,13 +28,13 @@
         If NewClassroomDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
             Me._Classroom = NewClassroomDialog.GetClassroom
             REView()
+
+            frmScheduleClassroomLifeSpanControl.Show(Me)
+            frmAttendanceControl.Show(Me)
+
+            FrmUAC.DisableAllMe(_SharedAdvancedCredentials.MyUserType, mainpanel)
+            _SharedClassroom.ClassroomId = Me._Classroom.ClassroomId
         End If
-
-        frmScheduleClassroomLifeSpanControl.Show(Me)
-        frmAttendanceControl.Show(Me)
-        FrmUAC.DisableAllMe(_SharedAdvancedCredentials.MyUserType, mainpanel)
-        _SharedClassroom.ClassroomId = Me._Classroom.ClassroomId
-
     End Sub
 
     Private Sub btnOpenQuestionnaire_Click(sender As Object, e As EventArgs) Handles btnOpenQuestionnaire.Click

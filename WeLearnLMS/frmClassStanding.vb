@@ -7,8 +7,8 @@
             DisplayAllChildren(_SharedClassroom.ClassroomId)
             ShowAll()
             FormatGrid()
-        Catch ex As Exception
-            DisplayGeneralException(ex)
+        Catch xxx As Exception
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, xxx)
         End Try
     End Sub
 

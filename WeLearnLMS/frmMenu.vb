@@ -18,21 +18,22 @@
 
 
     Private Sub frmMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        FlagThisUser(True)
+
         tmrMessageAggregator.Start()
         FrmUAC.DisableAllMe(_SharedAdvancedCredentials.MyUserType, mainpanel)
 
         _Stopwatch.Start()
         timerSession.Start()
         startupsound()
+
+        FlagThisUser(True, Me._AdvancedCredentials.UserID)
     End Sub
 
-    Private Sub FlagThisUser(ByVal State As Boolean)
+    Private Sub FlagThisUser(ByVal State As Boolean, ByRef UserID As String)
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
                 If .State = ConnectionState.Closed Then
                     .Open()
-
                 End If
             End With
             Dim transaction As MySqlTransaction = Connection.BeginTransaction
@@ -40,32 +41,31 @@
                 Using Command As New MySqlCommand
                     With Command
                         .Connection = Connection
+                        .CommandType = CommandType.StoredProcedure
+                        .Transaction = transaction
                         .CommandText = "SetUserOnline"
                         With .Parameters
-                            .AddWithValue("UserID", _SharedUserID)
+                            .AddWithValue("UserID", UserID)
                             .AddWithValue("UserState", State)
                         End With
                         .ExecuteNonQuery()
+                        transaction.Commit()
                     End With
                 End Using
 
             Catch XXX As MySqlException
+                Console.WriteLine(XXX.Message)
                 transaction.Rollback()
-            Catch ex As Exception
-                DisplayGeneralException(ex)
+            Catch xxx As Exception
+                WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, xxx)
             End Try
-
-
         End Using
     End Sub
 
     Private Sub btnClassroomHub_Click(sender As Object, e As EventArgs) Handles btnClassroomHub.Click
         Using ClassroomHub As New frmClassroomHub
             ClassroomHub.ShowDialog(Me)
-
-
             With Me.StatusStrip1
-
                 toolstripCLASSNAME.Text = _SharedClassroom.ClassroomName
                 toolstripCLASSROOMID.Text = _SharedClassroom.ClassroomId
             End With
@@ -156,7 +156,7 @@
     Private Sub frmMenu_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If MessageBox.Show("Are you sure you want to log out?", "WeLearnLMS", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then
             logoutsound()
-            FlagThisUser(False)
+            FlagThisUser(False, Me._AdvancedCredentials.UserID)
 
             e.Cancel = False
             Exit Sub

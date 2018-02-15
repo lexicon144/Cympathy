@@ -3,7 +3,7 @@
     Private IPHost As String
 
     Private Sub ChangeHostName()
-        My.Settings("city85") = IPHost
+        My.Settings("city85") = TextBox1.Text
         MessageBox.Show("Saved", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
@@ -11,7 +11,7 @@
         Try
             ChangeHostName()
         Catch XXX As Exception
-            DisplayGeneralException(XXX)
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, XXX)
         End Try
     End Sub
 
@@ -28,6 +28,7 @@
 
     Private Sub TextBox1_Validated(sender As Object, e As EventArgs) Handles TextBox1.Validated
         TextBox1.Enabled = True
+
     End Sub
 
     Private Sub txtTypeOK_TextChanged(sender As Object, e As EventArgs) Handles txtTypeOK.TextChanged

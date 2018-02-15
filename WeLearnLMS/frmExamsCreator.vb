@@ -28,7 +28,7 @@ Public Class frmExamsCreator
             End With
             ParseToTextbox()
         Catch XXX As Exception
-            DisplayGeneralException(XXX)
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, XXX)
         Finally
             txtExamName.Focus()
         End Try

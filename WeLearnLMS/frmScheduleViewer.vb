@@ -87,7 +87,7 @@
                 End Using
             End Using
         Catch XXX As Exception
-            DisplayNoDatagridView(XXX)
+            WeLearnMessageDisplay.Display(WeLearnExceptions.DGV, Me, XXX)
         End Try
 
     End Sub
@@ -119,7 +119,7 @@
                 End Using
             End Using
         Catch XXX As Exception
-            DisplayNoDatagridView(XXX)
+            WeLearnMessageDisplay.Display(WeLearnExceptions.DGV, Me, XXX)
         End Try
     End Sub
 
@@ -141,8 +141,8 @@
 
                 End If
             End If
-        Catch EXX As Exception
-            DisplayGeneralException(EXX)
+        Catch xxx As Exception
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, xxx)
         End Try
     End Sub
 

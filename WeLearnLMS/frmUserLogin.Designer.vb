@@ -40,6 +40,7 @@ Partial Class frmUserLogin
         Me.lblMM = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblSS = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.LoginTimer = New System.Windows.Forms.Timer(Me.components)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -205,6 +206,10 @@ Partial Class frmUserLogin
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 500
         '
+        'LoginTimer
+        '
+        Me.LoginTimer.Interval = 1000
+        '
         'frmUserLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
@@ -243,5 +248,6 @@ Partial Class frmUserLogin
     Friend WithEvents lblMM As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents lblSS As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents LoginTimer As System.Windows.Forms.Timer
 
 End Class

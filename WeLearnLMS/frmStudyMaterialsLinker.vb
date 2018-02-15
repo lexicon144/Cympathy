@@ -78,10 +78,10 @@
                     MessageBox.Show("Material Linking from " & _Classroom.ClassroomName & " ON " & _Material.MaterialName & " has been committed successfully", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                 End Using
-            Catch Exx As Exception
+            Catch xxx As Exception
                 ArticleLinkingTransaction.Rollback()
                 'MessageBox.Show("Article Linking from " & _Classroom.ClassroomName & " ON " & _Material.MaterialName & " has been performed unsuccessfully. Rolledback automaticaly", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                DisplayLinkingTransactionFailed(Exx)
+                WeLearnMessageDisplay.Display(WeLearnExceptions.Linking, Me, xxx)
             End Try
         End Using
     End Sub

@@ -74,15 +74,20 @@
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        If TypeOf DataGridView1.Columns(e.ColumnIndex) Is DataGridViewButtonColumn Then
-            If DataGridView1.Columns(e.ColumnIndex).Name = "btn" Then
+        Try
 
-                With DataGridView1.Rows(e.RowIndex)
-                    txtUserID.Text = .Cells("user_id").Value.ToString()
-                    txtUserName.Text = .Cells("user_name").Value.ToString()
-                End With
+            If TypeOf DataGridView1.Columns(e.ColumnIndex) Is DataGridViewButtonColumn Then
+                If DataGridView1.Columns(e.ColumnIndex).Name = "btn" Then
 
+                    With DataGridView1.Rows(e.RowIndex)
+                        txtUserID.Text = .Cells("user_id").Value.ToString()
+                        txtUserName.Text = .Cells("user_name").Value.ToString()
+                    End With
+
+                End If
             End If
-        End If
+        Catch xxx As Exception
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, xxx)
+        End Try
     End Sub
 End Class
