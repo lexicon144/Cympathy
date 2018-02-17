@@ -62,7 +62,7 @@
             Procure()
             RefreshText()
         Catch XXX As Exception
-            DisplayGeneralException(XXX)
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, XXX)
         End Try
 
     End Sub
@@ -122,7 +122,4 @@
         End Using
     End Sub
 
-    Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles FlowLayoutPanel1.Paint
-
-    End Sub
 End Class

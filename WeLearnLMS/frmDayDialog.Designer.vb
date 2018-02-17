@@ -32,9 +32,10 @@ Partial Class frmDayDialog
         'btnOk
         '
         Me.btnOk.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnOk.Location = New System.Drawing.Point(137, 116)
+        Me.btnOk.Location = New System.Drawing.Point(183, 143)
+        Me.btnOk.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOk.Name = "btnOk"
-        Me.btnOk.Size = New System.Drawing.Size(129, 107)
+        Me.btnOk.Size = New System.Drawing.Size(172, 131)
         Me.btnOk.TabIndex = 5
         Me.btnOk.Text = "O K"
         Me.btnOk.UseVisualStyleBackColor = True
@@ -44,9 +45,10 @@ Partial Class frmDayDialog
         Me.ComboBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(137, 3)
+        Me.ComboBox1.Location = New System.Drawing.Point(183, 4)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(129, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(172, 24)
         Me.ComboBox1.TabIndex = 6
         '
         'TableLayoutPanel1
@@ -59,11 +61,12 @@ Partial Class frmDayDialog
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(269, 226)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(359, 278)
         Me.TableLayoutPanel1.TabIndex = 7
         '
         'Label1
@@ -71,18 +74,20 @@ Partial Class frmDayDialog
         Me.Label1.AutoSize = True
         Me.Label1.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.Label1.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
+        Me.Label1.Location = New System.Drawing.Point(4, 0)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(62, 13)
+        Me.Label1.Size = New System.Drawing.Size(79, 17)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Select DAY"
         '
         'frmDayDialog
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(269, 226)
+        Me.ClientSize = New System.Drawing.Size(359, 278)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmDayDialog"
         Me.Text = "frmDayDialog"
         Me.TableLayoutPanel1.ResumeLayout(False)

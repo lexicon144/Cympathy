@@ -27,18 +27,36 @@ Public Class frmQuestionnaireViewer
         End Get
     End Property
 
+    ''' <summary>
+    ''' Quiz Constructor
+    ''' </summary>
+    ''' <param name="ThisQuiz"></param>
+    ''' <remarks></remarks>
     Public Sub New(ByRef ThisQuiz As c_Quiz)
         InitializeComponent()
         Me._cQuiz = ThisQuiz
         Me._IsExam = False
+        If _cQuiz.QuestionBase Is Nothing Then Exit Sub
         ForEachStuff(_cQuiz.QuestionBase)
     End Sub
+
+    ''' <summary>
+    ''' Exam Constructor
+    ''' </summary>
+    ''' <param name="ThisExam"></param>
+    ''' <remarks></remarks>
     Public Sub New(ByRef ThisExam As c_Exam)
         InitializeComponent()
         Me._cExam = ThisExam
         Me._IsExam = True
+        If _cExam.QuestionBase Is Nothing Then Exit Sub
         ForEachStuff(_cExam.QuestionBase)
     End Sub
+    ''' <summary>
+    ''' General Creator
+    ''' </summary>
+    ''' <param name="ThisQuestionnaire"></param>
+    ''' <remarks></remarks>
     Public Sub New(ByRef ThisQuestionnaire As c_Questionnaire)
 
         ' This call is required by the designer.
@@ -47,6 +65,11 @@ Public Class frmQuestionnaireViewer
         ' Add any initialization after the InitializeComponent() call.
         Me._Questionnaire = ThisQuestionnaire
     End Sub
+    ''' <summary>
+    ''' Creator Via XML String
+    ''' </summary>
+    ''' <param name="XMLString"></param>
+    ''' <remarks></remarks>
     Public Sub New(ByRef XMLString As String)
 
         ' This call is required by the designer.
@@ -175,21 +198,26 @@ Public Class frmQuestionnaireViewer
     End Sub
 
     Private Sub frmQuestionnaireViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.BackColor = My.Settings("QuestMainBackground")
-        With Me
-            With .DataGridView1
-                .Columns("tttANS").Visible = False
-                .Columns("tttDistractor1").Visible = False
-                .Columns("tttDistractor2").Visible = False
-                .Columns("tttDistractor3").Visible = False
-                .Columns("tttDistractor4").Visible = False
-                .Columns("tttANS").Visible = False
-                .Columns("tttANS").Visible = False
+        Try
+
+            Me.BackColor = My.Settings("QuestMainBackground")
+            With Me
+                With .DataGridView1
+                    .Columns("tttANS").Visible = False
+                    .Columns("tttDistractor1").Visible = False
+                    .Columns("tttDistractor2").Visible = False
+                    .Columns("tttDistractor3").Visible = False
+                    .Columns("tttDistractor4").Visible = False
+                    .Columns("tttANS").Visible = False
+                    .Columns("tttANS").Visible = False
+                End With
             End With
-        End With
-        Dim wallop As New frmWALLOP
-        wallop.ShowDialog()
-        Me.WALLOP()
+            Dim wallop As New frmWALLOP
+            wallop.ShowDialog()
+            Me.WALLOP()
+        Catch ex As Exception
+            WeLearnMessageDisplay.Display(WeLearnExceptions.Simple, Me, ex)
+        End Try
     End Sub
 
     Private Sub DevAutoFill(ByVal Limit As UInt32)

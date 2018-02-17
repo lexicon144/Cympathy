@@ -68,7 +68,8 @@ Public Class frmSQLPinger
                         .AppendLine("State: ")
                         .AppendLine(ConnectionObject.State.ToString)
                         .AppendLine()
-
+                        .AppendLine("CITY85:")
+                        .AppendLine(My.Settings("city85"))
                     End With
 
                     builder.AppendLine("Trying to Open the connection...")

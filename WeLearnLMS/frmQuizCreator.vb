@@ -11,16 +11,26 @@ Public Class frmQuizCreator
         Try
             Dim Creator As New frmQuestionnaireCreator
 
-            If Creator.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
+            Creator.ShowDialog()
+            With Me._NewQuiz
+                .QuestionBase = Creator.GetBASE
+                .QuestionnaireType = Creator.GetQType
+            End With
 
-                Me._NewQuiz.QuestionBase = Creator.GetBASE
-                Me._NewQuiz.QuestionnaireType = Creator.GetQType
-            End If
             ParseToTextbox()
+
         Catch XXX As Exception
-            DisplayGeneralException(XXX)
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, XXX)
+        Finally
+            txtQuizName.Focus()
         End Try
+
     End Sub
+
+    Private Function ListIsNull(ByRef base As List(Of c_SmallQuestion)) As Boolean
+        Return (base Is Nothing)
+    End Function
+
 
     Private Sub InsertQuiz()
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
@@ -82,6 +92,23 @@ Public Class frmQuizCreator
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If Me.rtbXMLPreview.Text = "" Or Me.txtQuizName.Text = "" Then Exit Sub
+        If ListIsNull(Me._NewQuiz.QuestionBase) Then
+            ErrorProvider1.SetError(rtbXMLPreview, "Invalid BASE")
+        End If
         InsertQuiz()
+    End Sub
+
+    Private Sub txtQuizName_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtQuizName.Validating
+        If Not _SharedValidator.Verify(VMethodology.Username, DirectCast(sender, TextBox).Text) Then
+            ErrorProvider1.SetError(DirectCast(sender, TextBox), "Invalid QuizName")
+            e.Cancel = True
+            DirectCast(sender, TextBox).SelectAll()
+            Exit Sub
+        End If
+        ErrorProvider1.SetError(DirectCast(sender, TextBox), "")
+    End Sub
+
+    Private Sub txtQuizName_Validated(sender As Object, e As EventArgs) Handles txtQuizName.Validated
+
     End Sub
 End Class

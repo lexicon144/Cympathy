@@ -62,14 +62,15 @@
                     MessageBox.Show("Student Linking from " & _Classroom.ClassroomName & " ON " & _User.UserName & " has been committed successfully", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                 End Using
-            Catch Exx As Exception
+            Catch xxx As Exception
                 LinkingTransaction.Rollback()
-                DisplayLinkingTransactionFailed(Exx)
+                WeLearnMessageDisplay.Display(WeLearnExceptions.Linking, Me, xxx)
             End Try
         End Using
     End Sub
 
-    Private Sub btnEnroll_Click(sender As Object, e As EventArgs)
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         PerformLink()
+        LinkLabel1.Enabled = False
     End Sub
 End Class

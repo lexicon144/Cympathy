@@ -4,7 +4,7 @@
     Private _ClassroomID As String
     Private _XmlBase As String
 
-    Private _IsModal As Boolean
+
     Private _Quiz As New c_Quiz
 
     Private _Deserializer As IDataDeserializer = New ImpDataDeserializer
@@ -29,7 +29,6 @@
         ' Add any initialization after the InitializeComponent() call.
         Me.btnView.Enabled = False
         Me.btnOK.Enabled = True
-        Me._IsModal = True
     End Sub
 
     Public Sub New(ByRef ClassroomID As String)
@@ -40,10 +39,10 @@
         ' Add any initialization after the InitializeComponent() call.
         'Me._Credentials = Credentials
         Me._ClassroomID = ClassroomID
-        Me._IsModal = False
+
     End Sub
 
-    Friend Sub LoadAllClasses()
+    Friend Sub LoadAllQuizes()
         Using Connection As New MySqlConnection
             With Connection
                 .ConnectionString = _SharedConnString.ConnString
@@ -68,7 +67,7 @@
             End Using
         End Using
     End Sub
-    Friend Sub LoadAllClasses(ByRef ThisClassroomID As String)
+    Friend Sub LoadAllQuizes(ByRef ThisClassroomID As String)
         Using Connection As New MySqlConnection
             With Connection
                 .ConnectionString = _SharedConnString.ConnString
@@ -108,19 +107,15 @@
         Try
             If TypeOf DataGridView1.Columns(e.ColumnIndex) Is DataGridViewButtonColumn Then
                 If DataGridView1.Columns(e.ColumnIndex).Name = "btn" Then
-
                     With DataGridView1.Rows(e.RowIndex)
-
-
                         txtQuizID.Text = .Cells("id").Value.ToString()
                         txtQuizName.Text = .Cells("quest_name").Value.ToString()
                         _XmlBase = .Cells("xml_base").Value.ToString()
                     End With
-
                 End If
             End If
         Catch XXX As Exception
-            DisplayGeneralException(XXX)
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, XXX)
         End Try
     End Sub
 
@@ -130,8 +125,12 @@
     End Sub
 
     Private Sub frmQuizHub_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Me._IsModal Then LoadAllClasses()
-        If Not Me._IsModal Then LoadAllClasses(_ClassroomID)
+
+        If _SharedMainCredentials.MyUserType = c_MainCredentials.UserType.ADM Then
+            LoadAllQuizes()
+        Else
+            LoadAllQuizes(Me._ClassroomID)
+        End If
 
         Dim btn As New DataGridViewButtonColumn()
 
@@ -145,8 +144,8 @@
         With DataGridView1
             .DataSource = _Datatable
             .Columns.Add(btn)
-
-            .Columns("xml_base").Visible = False
+            If .Columns.Contains("status_long") Then .Columns("status_long").Visible = False
+            If .Columns.Contains("xml_base") Then .Columns("xml_base").Visible = False
         End With
 
     End Sub
@@ -159,7 +158,7 @@
             Dim viewer As New frmQuizViewer(Me._Quiz)
             viewer.ShowDialog()
         Catch XXX As Exception
-            DisplayGeneralException(XXX)
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, XXX)
         End Try
     End Sub
 End Class

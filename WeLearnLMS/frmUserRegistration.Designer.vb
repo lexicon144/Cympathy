@@ -35,31 +35,41 @@ Partial Class frmUserRegistration
         Me.Label13 = New System.Windows.Forms.Label()
         Me.rdStudent = New System.Windows.Forms.RadioButton()
         Me.grpPersonal = New System.Windows.Forms.GroupBox()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtFirstname = New System.Windows.Forms.TextBox()
+        Me.txtAge = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtSurname = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.txtAge = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtLandlineNumber = New System.Windows.Forms.TextBox()
-        Me.cellNumber = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.txtSurname = New System.Windows.Forms.TextBox()
         Me.cmbGender = New System.Windows.Forms.ComboBox()
+        Me.cellNumber = New System.Windows.Forms.TextBox()
+        Me.txtLandlineNumber = New System.Windows.Forms.TextBox()
+        Me.txtFirstname = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.questionIndex = New System.Windows.Forms.ComboBox()
         Me.txtSecretAnswer = New System.Windows.Forms.TextBox()
         Me.grpCredentials = New System.Windows.Forms.GroupBox()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.txtPassword = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_save = New System.Windows.Forms.Button()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpPersonal.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
+        Me.TableLayoutPanel3.SuspendLayout()
         Me.grpCredentials.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ErrorProvider1
@@ -69,66 +79,66 @@ Partial Class frmUserRegistration
         'DateTimePicker1
         '
         Me.DateTimePicker1.CustomFormat = "yyyy-MM-dd"
-        Me.DateTimePicker1.Location = New System.Drawing.Point(107, 171)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(221, 325)
         Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(1)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(174, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(174, 23)
         Me.DateTimePicker1.TabIndex = 9
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(51, 176)
+        Me.Label4.Location = New System.Drawing.Point(1, 324)
         Me.Label4.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(54, 13)
+        Me.Label4.Size = New System.Drawing.Size(71, 17)
         Me.Label4.TabIndex = 34
         Me.Label4.Text = "Birth Date"
         '
         'txtMi
         '
-        Me.txtMi.Location = New System.Drawing.Point(178, 16)
+        Me.txtMi.Location = New System.Drawing.Point(221, 37)
         Me.txtMi.Margin = New System.Windows.Forms.Padding(1)
         Me.txtMi.MaxLength = 1
         Me.txtMi.Name = "txtMi"
-        Me.txtMi.Size = New System.Drawing.Size(30, 20)
+        Me.txtMi.Size = New System.Drawing.Size(72, 23)
         Me.txtMi.TabIndex = 1
         '
         'txtCitizenship
         '
-        Me.txtCitizenship.Location = New System.Drawing.Point(107, 149)
+        Me.txtCitizenship.Location = New System.Drawing.Point(221, 289)
         Me.txtCitizenship.Margin = New System.Windows.Forms.Padding(1)
         Me.txtCitizenship.MaxLength = 20
         Me.txtCitizenship.Name = "txtCitizenship"
-        Me.txtCitizenship.Size = New System.Drawing.Size(174, 20)
+        Me.txtCitizenship.Size = New System.Drawing.Size(174, 23)
         Me.txtCitizenship.TabIndex = 8
         '
         'txtAddress
         '
-        Me.txtAddress.Location = New System.Drawing.Point(107, 127)
+        Me.txtAddress.Location = New System.Drawing.Point(221, 253)
         Me.txtAddress.Margin = New System.Windows.Forms.Padding(1)
         Me.txtAddress.MaxLength = 225
         Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(174, 20)
+        Me.txtAddress.Size = New System.Drawing.Size(174, 23)
         Me.txtAddress.TabIndex = 7
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(48, 152)
+        Me.Label14.Location = New System.Drawing.Point(1, 288)
         Me.Label14.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(57, 13)
+        Me.Label14.Size = New System.Drawing.Size(76, 17)
         Me.Label14.TabIndex = 29
         Me.Label14.Text = "Citizenship"
         '
         'rdTeacher
         '
         Me.rdTeacher.AutoSize = True
-        Me.rdTeacher.Location = New System.Drawing.Point(171, 213)
+        Me.rdTeacher.Location = New System.Drawing.Point(101, 1)
         Me.rdTeacher.Margin = New System.Windows.Forms.Padding(1)
         Me.rdTeacher.Name = "rdTeacher"
-        Me.rdTeacher.Size = New System.Drawing.Size(65, 17)
+        Me.rdTeacher.Size = New System.Drawing.Size(82, 20)
         Me.rdTeacher.TabIndex = 12
         Me.rdTeacher.TabStop = True
         Me.rdTeacher.Text = "Teacher"
@@ -136,30 +146,30 @@ Partial Class frmUserRegistration
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(107, 105)
+        Me.txtEmail.Location = New System.Drawing.Point(221, 217)
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(1)
         Me.txtEmail.MaxLength = 40
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(174, 20)
+        Me.txtEmail.Size = New System.Drawing.Size(174, 23)
         Me.txtEmail.TabIndex = 6
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(60, 130)
+        Me.Label13.Location = New System.Drawing.Point(1, 252)
         Me.Label13.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(45, 13)
+        Me.Label13.Size = New System.Drawing.Size(60, 17)
         Me.Label13.TabIndex = 27
         Me.Label13.Text = "Address"
         '
         'rdStudent
         '
         Me.rdStudent.AutoSize = True
-        Me.rdStudent.Location = New System.Drawing.Point(107, 213)
+        Me.rdStudent.Location = New System.Drawing.Point(1, 1)
         Me.rdStudent.Margin = New System.Windows.Forms.Padding(1)
         Me.rdStudent.Name = "rdStudent"
-        Me.rdStudent.Size = New System.Drawing.Size(62, 17)
+        Me.rdStudent.Size = New System.Drawing.Size(78, 20)
         Me.rdStudent.TabIndex = 11
         Me.rdStudent.TabStop = True
         Me.rdStudent.Text = "Student"
@@ -167,76 +177,117 @@ Partial Class frmUserRegistration
         '
         'grpPersonal
         '
-        Me.grpPersonal.Controls.Add(Me.DateTimePicker1)
-        Me.grpPersonal.Controls.Add(Me.Label4)
-        Me.grpPersonal.Controls.Add(Me.txtMi)
-        Me.grpPersonal.Controls.Add(Me.txtCitizenship)
-        Me.grpPersonal.Controls.Add(Me.txtAddress)
-        Me.grpPersonal.Controls.Add(Me.Label14)
-        Me.grpPersonal.Controls.Add(Me.rdTeacher)
-        Me.grpPersonal.Controls.Add(Me.Label3)
-        Me.grpPersonal.Controls.Add(Me.Label6)
-        Me.grpPersonal.Controls.Add(Me.txtEmail)
-        Me.grpPersonal.Controls.Add(Me.Label13)
-        Me.grpPersonal.Controls.Add(Me.txtFirstname)
-        Me.grpPersonal.Controls.Add(Me.Label5)
-        Me.grpPersonal.Controls.Add(Me.rdStudent)
-        Me.grpPersonal.Controls.Add(Me.Label7)
-        Me.grpPersonal.Controls.Add(Me.txtSurname)
-        Me.grpPersonal.Controls.Add(Me.Label12)
-        Me.grpPersonal.Controls.Add(Me.txtAge)
-        Me.grpPersonal.Controls.Add(Me.Label8)
-        Me.grpPersonal.Controls.Add(Me.txtLandlineNumber)
-        Me.grpPersonal.Controls.Add(Me.cellNumber)
-        Me.grpPersonal.Controls.Add(Me.cmbGender)
-        Me.grpPersonal.Location = New System.Drawing.Point(10, 123)
+        Me.grpPersonal.Controls.Add(Me.TableLayoutPanel2)
+        Me.grpPersonal.Location = New System.Drawing.Point(1, 143)
         Me.grpPersonal.Margin = New System.Windows.Forms.Padding(1)
         Me.grpPersonal.Name = "grpPersonal"
         Me.grpPersonal.Padding = New System.Windows.Forms.Padding(1)
-        Me.grpPersonal.Size = New System.Drawing.Size(317, 274)
+        Me.grpPersonal.Size = New System.Drawing.Size(443, 461)
         Me.grpPersonal.TabIndex = 5
         Me.grpPersonal.TabStop = False
         Me.grpPersonal.Text = "Personal Info"
         '
-        'Label3
+        'TableLayoutPanel2
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(48, 18)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(54, 13)
-        Me.Label3.TabIndex = 9
-        Me.Label3.Text = "Full Name"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.TableLayoutPanel2.ColumnCount = 2
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel3, 1, 11)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label4, 0, 9)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label6, 0, 10)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtAge, 1, 10)
+        Me.TableLayoutPanel2.Controls.Add(Me.DateTimePicker1, 1, 9)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label14, 0, 8)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label3, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label5, 0, 3)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label13, 0, 7)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label7, 0, 4)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label8, 0, 5)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label12, 0, 6)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtMi, 1, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtSurname, 1, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.cmbGender, 1, 3)
+        Me.TableLayoutPanel2.Controls.Add(Me.cellNumber, 1, 4)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtLandlineNumber, 1, 5)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtEmail, 1, 6)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtAddress, 1, 7)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtCitizenship, 1, 8)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtFirstname, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label9, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label15, 0, 2)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(1, 17)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 12
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(441, 443)
+        Me.TableLayoutPanel2.TabIndex = 8
+        '
+        'TableLayoutPanel3
+        '
+        Me.TableLayoutPanel3.ColumnCount = 2
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel3.Controls.Add(Me.rdStudent, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.rdTeacher, 1, 0)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(223, 399)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        Me.TableLayoutPanel3.RowCount = 1
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(200, 22)
+        Me.TableLayoutPanel3.TabIndex = 9
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(79, 196)
+        Me.Label6.Location = New System.Drawing.Point(1, 360)
         Me.Label6.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(26, 13)
+        Me.Label6.Size = New System.Drawing.Size(33, 17)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Age"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'txtFirstname
+        'txtAge
         '
-        Me.txtFirstname.Location = New System.Drawing.Point(107, 16)
-        Me.txtFirstname.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtFirstname.MaxLength = 10
-        Me.txtFirstname.Name = "txtFirstname"
-        Me.txtFirstname.Size = New System.Drawing.Size(69, 20)
-        Me.txtFirstname.TabIndex = 0
-        Me.txtFirstname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtAge.Location = New System.Drawing.Point(221, 361)
+        Me.txtAge.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtAge.MaxLength = 2
+        Me.txtAge.Name = "txtAge"
+        Me.txtAge.ReadOnly = True
+        Me.txtAge.Size = New System.Drawing.Size(30, 23)
+        Me.txtAge.TabIndex = 10
+        Me.txtAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(1, 0)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(76, 17)
+        Me.Label3.TabIndex = 9
+        Me.Label3.Text = "First Name"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(60, 41)
+        Me.Label5.Location = New System.Drawing.Point(1, 108)
         Me.Label5.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(42, 13)
+        Me.Label5.Size = New System.Drawing.Size(56, 17)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Gender"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -244,102 +295,101 @@ Partial Class frmUserRegistration
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(24, 62)
+        Me.Label7.Location = New System.Drawing.Point(1, 144)
         Me.Label7.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(81, 13)
+        Me.Label7.Size = New System.Drawing.Size(109, 17)
         Me.Label7.TabIndex = 17
         Me.Label7.Text = "Cellular Number"
-        '
-        'txtSurname
-        '
-        Me.txtSurname.Location = New System.Drawing.Point(209, 16)
-        Me.txtSurname.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtSurname.MaxLength = 10
-        Me.txtSurname.Name = "txtSurname"
-        Me.txtSurname.Size = New System.Drawing.Size(72, 20)
-        Me.txtSurname.TabIndex = 2
-        Me.txtSurname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(69, 108)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(36, 13)
-        Me.Label12.TabIndex = 23
-        Me.Label12.Text = "E-Mail"
-        '
-        'txtAge
-        '
-        Me.txtAge.Location = New System.Drawing.Point(107, 193)
-        Me.txtAge.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtAge.MaxLength = 2
-        Me.txtAge.Name = "txtAge"
-        Me.txtAge.ReadOnly = True
-        Me.txtAge.Size = New System.Drawing.Size(30, 20)
-        Me.txtAge.TabIndex = 10
-        Me.txtAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(58, 86)
+        Me.Label8.Location = New System.Drawing.Point(1, 180)
         Me.Label8.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(47, 13)
+        Me.Label8.Size = New System.Drawing.Size(62, 17)
         Me.Label8.TabIndex = 18
         Me.Label8.Text = "Landline"
         '
-        'txtLandlineNumber
+        'Label12
         '
-        Me.txtLandlineNumber.Location = New System.Drawing.Point(107, 83)
-        Me.txtLandlineNumber.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtLandlineNumber.MaxLength = 8
-        Me.txtLandlineNumber.Name = "txtLandlineNumber"
-        Me.txtLandlineNumber.Size = New System.Drawing.Size(174, 20)
-        Me.txtLandlineNumber.TabIndex = 5
-        Me.txtLandlineNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(1, 216)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(47, 17)
+        Me.Label12.TabIndex = 23
+        Me.Label12.Text = "E-Mail"
         '
-        'cellNumber
+        'txtSurname
         '
-        Me.cellNumber.Location = New System.Drawing.Point(107, 61)
-        Me.cellNumber.Margin = New System.Windows.Forms.Padding(1)
-        Me.cellNumber.MaxLength = 16
-        Me.cellNumber.Name = "cellNumber"
-        Me.cellNumber.Size = New System.Drawing.Size(174, 20)
-        Me.cellNumber.TabIndex = 4
-        Me.cellNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtSurname.Location = New System.Drawing.Point(221, 73)
+        Me.txtSurname.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtSurname.MaxLength = 10
+        Me.txtSurname.Name = "txtSurname"
+        Me.txtSurname.Size = New System.Drawing.Size(175, 23)
+        Me.txtSurname.TabIndex = 2
+        Me.txtSurname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'cmbGender
         '
         Me.cmbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbGender.FormattingEnabled = True
         Me.cmbGender.Items.AddRange(New Object() {"Male", "Female"})
-        Me.cmbGender.Location = New System.Drawing.Point(107, 38)
+        Me.cmbGender.Location = New System.Drawing.Point(221, 109)
         Me.cmbGender.Margin = New System.Windows.Forms.Padding(1)
         Me.cmbGender.Name = "cmbGender"
-        Me.cmbGender.Size = New System.Drawing.Size(53, 21)
+        Me.cmbGender.Size = New System.Drawing.Size(72, 25)
         Me.cmbGender.TabIndex = 3
+        '
+        'cellNumber
+        '
+        Me.cellNumber.Location = New System.Drawing.Point(221, 145)
+        Me.cellNumber.Margin = New System.Windows.Forms.Padding(1)
+        Me.cellNumber.MaxLength = 16
+        Me.cellNumber.Name = "cellNumber"
+        Me.cellNumber.Size = New System.Drawing.Size(174, 23)
+        Me.cellNumber.TabIndex = 4
+        Me.cellNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtLandlineNumber
+        '
+        Me.txtLandlineNumber.Location = New System.Drawing.Point(221, 181)
+        Me.txtLandlineNumber.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtLandlineNumber.MaxLength = 8
+        Me.txtLandlineNumber.Name = "txtLandlineNumber"
+        Me.txtLandlineNumber.Size = New System.Drawing.Size(174, 23)
+        Me.txtLandlineNumber.TabIndex = 5
+        Me.txtLandlineNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtFirstname
+        '
+        Me.txtFirstname.Location = New System.Drawing.Point(221, 1)
+        Me.txtFirstname.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtFirstname.MaxLength = 10
+        Me.txtFirstname.Name = "txtFirstname"
+        Me.txtFirstname.Size = New System.Drawing.Size(174, 23)
+        Me.txtFirstname.TabIndex = 0
+        Me.txtFirstname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(13, 67)
+        Me.Label11.Location = New System.Drawing.Point(1, 60)
         Me.Label11.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(90, 13)
+        Me.Label11.Size = New System.Drawing.Size(120, 17)
         Me.Label11.TabIndex = 29
         Me.Label11.Text = "Security Question"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(29, 85)
+        Me.Label10.Location = New System.Drawing.Point(1, 90)
         Me.Label10.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(76, 13)
+        Me.Label10.Size = New System.Drawing.Size(99, 17)
         Me.Label10.TabIndex = 28
         Me.Label10.Text = "Secret Answer"
         '
@@ -348,100 +398,144 @@ Partial Class frmUserRegistration
         Me.questionIndex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.questionIndex.FormattingEnabled = True
         Me.questionIndex.Items.AddRange(New Object() {"Who was your childhood hero?", "What is life to you?", "What was your childhood nickname?"})
-        Me.questionIndex.Location = New System.Drawing.Point(107, 59)
+        Me.questionIndex.Location = New System.Drawing.Point(222, 61)
         Me.questionIndex.Margin = New System.Windows.Forms.Padding(1)
         Me.questionIndex.Name = "questionIndex"
-        Me.questionIndex.Size = New System.Drawing.Size(174, 21)
+        Me.questionIndex.Size = New System.Drawing.Size(174, 25)
         Me.questionIndex.TabIndex = 3
         '
         'txtSecretAnswer
         '
-        Me.txtSecretAnswer.Location = New System.Drawing.Point(107, 82)
+        Me.txtSecretAnswer.Location = New System.Drawing.Point(222, 91)
         Me.txtSecretAnswer.Margin = New System.Windows.Forms.Padding(1)
         Me.txtSecretAnswer.MaxLength = 50
         Me.txtSecretAnswer.Name = "txtSecretAnswer"
-        Me.txtSecretAnswer.Size = New System.Drawing.Size(174, 20)
+        Me.txtSecretAnswer.Size = New System.Drawing.Size(174, 23)
         Me.txtSecretAnswer.TabIndex = 4
         '
         'grpCredentials
         '
-        Me.grpCredentials.Controls.Add(Me.Label11)
-        Me.grpCredentials.Controls.Add(Me.Label10)
-        Me.grpCredentials.Controls.Add(Me.questionIndex)
-        Me.grpCredentials.Controls.Add(Me.txtUsername)
-        Me.grpCredentials.Controls.Add(Me.txtPassword)
-        Me.grpCredentials.Controls.Add(Me.txtSecretAnswer)
-        Me.grpCredentials.Controls.Add(Me.Label1)
-        Me.grpCredentials.Controls.Add(Me.Label2)
-        Me.grpCredentials.Location = New System.Drawing.Point(10, 10)
+        Me.grpCredentials.Controls.Add(Me.TableLayoutPanel1)
+        Me.grpCredentials.Location = New System.Drawing.Point(1, 1)
         Me.grpCredentials.Margin = New System.Windows.Forms.Padding(1)
         Me.grpCredentials.Name = "grpCredentials"
         Me.grpCredentials.Padding = New System.Windows.Forms.Padding(1)
-        Me.grpCredentials.Size = New System.Drawing.Size(317, 111)
+        Me.grpCredentials.Size = New System.Drawing.Size(444, 140)
         Me.grpCredentials.TabIndex = 4
         Me.grpCredentials.TabStop = False
         Me.grpCredentials.Text = "Credentials"
         '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Label10, 0, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label11, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtUsername, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtPassword, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtSecretAnswer, 1, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.questionIndex, 1, 2)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(1, 17)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 4
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(442, 122)
+        Me.TableLayoutPanel1.TabIndex = 7
+        '
         'txtUsername
         '
-        Me.txtUsername.Location = New System.Drawing.Point(107, 16)
+        Me.txtUsername.Location = New System.Drawing.Point(222, 1)
         Me.txtUsername.Margin = New System.Windows.Forms.Padding(1)
         Me.txtUsername.MaxLength = 50
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(174, 20)
+        Me.txtUsername.Size = New System.Drawing.Size(174, 23)
         Me.txtUsername.TabIndex = 1
         Me.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(107, 38)
+        Me.txtPassword.Location = New System.Drawing.Point(222, 31)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(1)
         Me.txtPassword.MaxLength = 12
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(174, 20)
+        Me.txtPassword.Size = New System.Drawing.Size(174, 23)
         Me.txtPassword.TabIndex = 2
         Me.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(47, 19)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 13)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Username"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(49, 41)
+        Me.Label2.Location = New System.Drawing.Point(1, 30)
         Me.Label2.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 13)
+        Me.Label2.Size = New System.Drawing.Size(69, 17)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Password"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(1, 0)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(73, 17)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Username"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'btn_save
         '
-        Me.btn_save.Location = New System.Drawing.Point(259, 413)
+        Me.btn_save.Location = New System.Drawing.Point(1, 606)
         Me.btn_save.Margin = New System.Windows.Forms.Padding(1)
         Me.btn_save.Name = "btn_save"
-        Me.btn_save.Size = New System.Drawing.Size(68, 28)
+        Me.btn_save.Size = New System.Drawing.Size(109, 51)
         Me.btn_save.TabIndex = 6
         Me.btn_save.Text = "SAVE"
         Me.btn_save.UseVisualStyleBackColor = True
         '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Controls.Add(Me.grpCredentials)
+        Me.FlowLayoutPanel1.Controls.Add(Me.grpPersonal)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btn_save)
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(445, 668)
+        Me.FlowLayoutPanel1.TabIndex = 7
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(3, 36)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(85, 17)
+        Me.Label9.TabIndex = 35
+        Me.Label9.Text = "Middle Initial"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(3, 72)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(76, 17)
+        Me.Label15.TabIndex = 36
+        Me.Label15.Text = "Last Name"
+        '
         'frmUserRegistration
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(337, 451)
-        Me.Controls.Add(Me.grpPersonal)
-        Me.Controls.Add(Me.grpCredentials)
-        Me.Controls.Add(Me.btn_save)
+        Me.ClientSize = New System.Drawing.Size(445, 668)
+        Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
         Me.Name = "frmUserRegistration"
@@ -449,9 +543,14 @@ Partial Class frmUserRegistration
         Me.Text = "formRegistration"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpPersonal.ResumeLayout(False)
-        Me.grpPersonal.PerformLayout()
+        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.TableLayoutPanel2.PerformLayout()
+        Me.TableLayoutPanel3.ResumeLayout(False)
+        Me.TableLayoutPanel3.PerformLayout()
         Me.grpCredentials.ResumeLayout(False)
-        Me.grpCredentials.PerformLayout()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
+        Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -489,4 +588,10 @@ Partial Class frmUserRegistration
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents btn_save As System.Windows.Forms.Button
+    Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
+    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents TableLayoutPanel3 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label15 As System.Windows.Forms.Label
 End Class

@@ -28,16 +28,21 @@ Public Class frmAttendanceControl
     End Function
 
     Private Sub frmAttendanceControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        GetMySQLServerDate()
-        GetMyClassroomDate(_SharedClassroom.ClassroomId)
-        GetAllDatatable()
+        Try
 
-        If DateEvaluated(_MySQLDateNow.DayOfWeek, _MyClassroomDay) AndAlso TimeSpanEvaluated(_MyClassroomTimeStart, _MySQLDateNow.Hour, _MyClassroomTimeEnd) Then
-            MessageBox.Show("Date / Time Evaluated", "WeLearnLMS")
-            _Evaluated = True
-        End If
+            GetMySQLServerDate()
+            GetMyClassroomDate(_SharedClassroom.ClassroomId)
+            GetAllDatatable()
 
-        PrintOut()
+            If DateEvaluated(_MySQLDateNow.DayOfWeek, _MyClassroomDay) AndAlso TimeSpanEvaluated(_MyClassroomTimeStart, _MySQLDateNow.Hour, _MyClassroomTimeEnd) Then
+                MessageBox.Show("Date / Time Evaluated", "WeLearnLMS")
+                _Evaluated = True
+            End If
+
+            PrintOut()
+        Catch xxx As Exception
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, xxx)
+        End Try
     End Sub
 
     Private Sub PrintOut()

@@ -13,7 +13,7 @@
 
     End Sub
 
-
+#Region "Properties"
     Friend ReadOnly Property GetQuizCompiledGrades As Double
         Get
             Return Me._QuizCompiledGrades
@@ -25,6 +25,7 @@
             Return Me._ExamCompiledGrades
         End Get
     End Property
+#End Region
 
     Friend Function CompileAllGrades(ByVal QuizCompiledGrades As Double, ByVal ExamCompiledGrades As Double, ByVal Attendance As Double) As Double
 
@@ -38,7 +39,7 @@
     End Function
 
     Private Sub frmGradesPreCompiler_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        BackgroundWorker1.RunWorkerAsync()
     End Sub
 
     Private Sub WriteOut()
@@ -65,5 +66,33 @@
 
     Private Sub txtAttendance_Validated(sender As Object, e As EventArgs) Handles txtAttendance.Validated
         Me._Attendance = Convert.ToDouble(txtAttendance.Text)
+    End Sub
+
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+
+        Dim Computer As New frmGradeExamComputer()
+        With Computer
+            Me._ExamCompiledGrades = .ReturnFullAverage()
+        End With
+        BackgroundWorker1.ReportProgress(50)
+
+        Dim GradeComputer As New frmGradesQuizComputer()
+        With GradeComputer
+            Me._QuizCompiledGrades = .ReturnFullAverage()
+
+        End With
+        BackgroundWorker1.ReportProgress(100)
+    End Sub
+
+    Private Sub BackgroundWorker1_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorker1.ProgressChanged
+        Me.backgroundProgress.Value = e.ProgressPercentage
+    End Sub
+
+    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
+        WriteOut()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.DialogResult = Windows.Forms.DialogResult.OK
     End Sub
 End Class

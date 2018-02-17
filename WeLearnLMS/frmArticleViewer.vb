@@ -33,8 +33,8 @@
             Me.Text = Me._ThisArticle.ArticleName
             ConvertBinary()
             DisplayRichText()
-        Catch Exx As Exception
-            DisplayGeneralException(Exx)
+        Catch xxx As Exception
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, xxx)
         End Try
 
     End Sub

@@ -46,7 +46,7 @@ Partial Class frmClassroomDialog
         Me.Label2.Location = New System.Drawing.Point(1, 69)
         Me.Label2.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(59, 13)
+        Me.Label2.Size = New System.Drawing.Size(78, 17)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "Class Type"
         '
@@ -57,7 +57,7 @@ Partial Class frmClassroomDialog
         Me.txtClassType.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassType.Name = "txtClassType"
         Me.txtClassType.ReadOnly = True
-        Me.txtClassType.Size = New System.Drawing.Size(188, 20)
+        Me.txtClassType.Size = New System.Drawing.Size(188, 23)
         Me.txtClassType.TabIndex = 10
         '
         'txtClassId
@@ -67,7 +67,7 @@ Partial Class frmClassroomDialog
         Me.txtClassId.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassId.Name = "txtClassId"
         Me.txtClassId.ReadOnly = True
-        Me.txtClassId.Size = New System.Drawing.Size(188, 20)
+        Me.txtClassId.Size = New System.Drawing.Size(188, 23)
         Me.txtClassId.TabIndex = 7
         '
         'txtClassDescription
@@ -77,7 +77,7 @@ Partial Class frmClassroomDialog
         Me.txtClassDescription.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassDescription.Name = "txtClassDescription"
         Me.txtClassDescription.ReadOnly = True
-        Me.txtClassDescription.Size = New System.Drawing.Size(188, 20)
+        Me.txtClassDescription.Size = New System.Drawing.Size(188, 23)
         Me.txtClassDescription.TabIndex = 6
         '
         'txtClassName
@@ -87,7 +87,7 @@ Partial Class frmClassroomDialog
         Me.txtClassName.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassName.Name = "txtClassName"
         Me.txtClassName.ReadOnly = True
-        Me.txtClassName.Size = New System.Drawing.Size(188, 20)
+        Me.txtClassName.Size = New System.Drawing.Size(188, 23)
         Me.txtClassName.TabIndex = 5
         '
         'Label5
@@ -96,7 +96,7 @@ Partial Class frmClassroomDialog
         Me.Label5.Location = New System.Drawing.Point(1, 0)
         Me.Label5.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(46, 13)
+        Me.Label5.Size = New System.Drawing.Size(59, 17)
         Me.Label5.TabIndex = 2
         Me.Label5.Text = "Class ID"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -107,7 +107,7 @@ Partial Class frmClassroomDialog
         Me.Label4.Location = New System.Drawing.Point(1, 46)
         Me.Label4.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(88, 13)
+        Me.Label4.Size = New System.Drawing.Size(117, 17)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Class Description"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -118,7 +118,7 @@ Partial Class frmClassroomDialog
         Me.Label3.Location = New System.Drawing.Point(1, 23)
         Me.Label3.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(76, 13)
+        Me.Label3.Size = New System.Drawing.Size(99, 17)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Selected class"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -147,7 +147,7 @@ Partial Class frmClassroomDialog
         '
         Me.btnOk.Location = New System.Drawing.Point(389, 177)
         Me.btnOk.Name = "btnOk"
-        Me.btnOk.Size = New System.Drawing.Size(75, 23)
+        Me.btnOk.Size = New System.Drawing.Size(75, 47)
         Me.btnOk.TabIndex = 28
         Me.btnOk.Text = "O K "
         Me.btnOk.UseVisualStyleBackColor = True
@@ -188,7 +188,7 @@ Partial Class frmClassroomDialog
         '
         'frmClassroomDialog
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(469, 283)
         Me.Controls.Add(Me.FlowLayoutPanel1)

@@ -27,7 +27,7 @@
                     End With
                 End Using
             Catch XXX As Exception
-                DisplayGeneralException(XXX)
+                WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, XXX)
             End Try
         End Using
     End Sub

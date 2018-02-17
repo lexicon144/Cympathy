@@ -56,7 +56,7 @@
                 End If
             End If
         Catch XXX As Exception
-            DisplayGeneralException(XXX)
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, XXX)
         End Try
     End Sub
 
@@ -144,4 +144,5 @@
         _SharedClassroom = ParseFromTextbox()
         Me.DialogResult = Windows.Forms.DialogResult.OK
     End Sub
+
 End Class

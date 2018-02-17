@@ -26,8 +26,8 @@
     Private Sub frmPreGrades_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             DisplayDatatable()
-        Catch ex As Exception
-            DisplayGeneralException(ex)
+        Catch xxx As Exception
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, xxx)
         End Try
     End Sub
 

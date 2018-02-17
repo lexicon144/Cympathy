@@ -76,9 +76,9 @@
                     MessageBox.Show("Exam Linking from " & _Classroom.ClassroomName & " ON " & _Exam.QuestionnaireName & " has been committed successfully", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                 End Using
-            Catch Exx As Exception
+            Catch xxx As Exception
                 ArticleLinkingTransaction.Rollback()
-                DisplayLinkingTransactionFailed(Exx)
+                WeLearnMessageDisplay.Display(WeLearnExceptions.Linking, Me, xxx)
             End Try
         End Using
     End Sub
@@ -86,5 +86,6 @@
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         PerformTheLink()
+        LinkLabel1.Enabled = False
     End Sub
 End Class

@@ -5,8 +5,8 @@
     Private Sub frmRankingViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             BackgroundWorker1.RunWorkerAsync()
-        Catch ex As Exception
-            DisplayGeneralException(ex)
+        Catch xxx As Exception
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, xxx)
         End Try
     End Sub
 

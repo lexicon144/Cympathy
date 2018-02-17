@@ -56,20 +56,20 @@ Partial Class frmQuizHub
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txtQuizName, 1, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 16)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 19)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(392, 81)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(392, 78)
         Me.TableLayoutPanel1.TabIndex = 15
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 40)
+        Me.Label2.Location = New System.Drawing.Point(3, 39)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(59, 13)
+        Me.Label2.Size = New System.Drawing.Size(78, 17)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Quiz Name"
         '
@@ -79,7 +79,7 @@ Partial Class frmQuizHub
         Me.txtQuizID.Location = New System.Drawing.Point(199, 3)
         Me.txtQuizID.Name = "txtQuizID"
         Me.txtQuizID.ReadOnly = True
-        Me.txtQuizID.Size = New System.Drawing.Size(190, 20)
+        Me.txtQuizID.Size = New System.Drawing.Size(190, 23)
         Me.txtQuizID.TabIndex = 0
         '
         'Label1
@@ -87,17 +87,17 @@ Partial Class frmQuizHub
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(42, 13)
+        Me.Label1.Size = New System.Drawing.Size(54, 17)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Quiz ID"
         '
         'txtQuizName
         '
         Me.txtQuizName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtQuizName.Location = New System.Drawing.Point(199, 43)
+        Me.txtQuizName.Location = New System.Drawing.Point(199, 42)
         Me.txtQuizName.Name = "txtQuizName"
         Me.txtQuizName.ReadOnly = True
-        Me.txtQuizName.Size = New System.Drawing.Size(190, 20)
+        Me.txtQuizName.Size = New System.Drawing.Size(190, 23)
         Me.txtQuizName.TabIndex = 1
         '
         'DataGridView1
@@ -114,25 +114,25 @@ Partial Class frmQuizHub
         '
         'btnOK
         '
-        Me.btnOK.Location = New System.Drawing.Point(437, 301)
+        Me.btnOK.Location = New System.Drawing.Point(437, 263)
         Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(75, 23)
+        Me.btnOK.Size = New System.Drawing.Size(75, 45)
         Me.btnOK.TabIndex = 14
         Me.btnOK.Text = "O K"
         Me.btnOK.UseVisualStyleBackColor = True
         '
         'btnView
         '
-        Me.btnView.Location = New System.Drawing.Point(437, 330)
+        Me.btnView.Location = New System.Drawing.Point(437, 314)
         Me.btnView.Name = "btnView"
-        Me.btnView.Size = New System.Drawing.Size(75, 23)
+        Me.btnView.Size = New System.Drawing.Size(75, 44)
         Me.btnView.TabIndex = 12
         Me.btnView.Text = "View"
         Me.btnView.UseVisualStyleBackColor = True
         '
         'frmQuizHub
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(524, 370)
         Me.Controls.Add(Me.btnOK)

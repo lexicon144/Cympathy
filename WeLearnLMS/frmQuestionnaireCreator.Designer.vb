@@ -59,11 +59,12 @@ Partial Class frmQuestionnaireCreator
         Me.Datagridview1.AllowUserToDeleteRows = False
         Me.Datagridview1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Datagridview1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.tttQuestion, Me.tttDistractor1, Me.tttDistractor2, Me.tttDistractor3, Me.tttDistractor4})
-        Me.Datagridview1.Location = New System.Drawing.Point(230, 101)
+        Me.Datagridview1.Location = New System.Drawing.Point(307, 124)
+        Me.Datagridview1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Datagridview1.Name = "Datagridview1"
         Me.Datagridview1.ReadOnly = True
         Me.Datagridview1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.Datagridview1.Size = New System.Drawing.Size(542, 228)
+        Me.Datagridview1.Size = New System.Drawing.Size(723, 281)
         Me.Datagridview1.TabIndex = 0
         '
         'tttQuestion
@@ -98,83 +99,93 @@ Partial Class frmQuestionnaireCreator
         '
         'txtDisc1
         '
-        Me.txtDisc1.Location = New System.Drawing.Point(100, 121)
+        Me.txtDisc1.Location = New System.Drawing.Point(133, 149)
+        Me.txtDisc1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDisc1.Name = "txtDisc1"
-        Me.txtDisc1.Size = New System.Drawing.Size(100, 20)
+        Me.txtDisc1.Size = New System.Drawing.Size(132, 22)
         Me.txtDisc1.TabIndex = 1
         '
         'txtDisc2
         '
-        Me.txtDisc2.Location = New System.Drawing.Point(100, 148)
+        Me.txtDisc2.Location = New System.Drawing.Point(133, 182)
+        Me.txtDisc2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDisc2.Name = "txtDisc2"
-        Me.txtDisc2.Size = New System.Drawing.Size(100, 20)
+        Me.txtDisc2.Size = New System.Drawing.Size(132, 22)
         Me.txtDisc2.TabIndex = 2
         '
         'txtDisc3
         '
-        Me.txtDisc3.Location = New System.Drawing.Point(100, 174)
+        Me.txtDisc3.Location = New System.Drawing.Point(133, 214)
+        Me.txtDisc3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDisc3.Name = "txtDisc3"
-        Me.txtDisc3.Size = New System.Drawing.Size(100, 20)
+        Me.txtDisc3.Size = New System.Drawing.Size(132, 22)
         Me.txtDisc3.TabIndex = 3
         '
         'txtDisc4
         '
-        Me.txtDisc4.Location = New System.Drawing.Point(100, 200)
+        Me.txtDisc4.Location = New System.Drawing.Point(133, 246)
+        Me.txtDisc4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDisc4.Name = "txtDisc4"
-        Me.txtDisc4.Size = New System.Drawing.Size(100, 20)
+        Me.txtDisc4.Size = New System.Drawing.Size(132, 22)
         Me.txtDisc4.TabIndex = 4
         '
         'txtQuestion
         '
-        Me.txtQuestion.Location = New System.Drawing.Point(100, 19)
+        Me.txtQuestion.Location = New System.Drawing.Point(133, 23)
+        Me.txtQuestion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtQuestion.MaxLength = 2000
         Me.txtQuestion.Name = "txtQuestion"
-        Me.txtQuestion.Size = New System.Drawing.Size(100, 96)
+        Me.txtQuestion.Size = New System.Drawing.Size(132, 117)
         Me.txtQuestion.TabIndex = 5
         Me.txtQuestion.Text = ""
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(45, 22)
+        Me.Label1.Location = New System.Drawing.Point(60, 27)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(49, 13)
+        Me.Label1.Size = New System.Drawing.Size(65, 17)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Question"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(33, 124)
+        Me.Label2.Location = New System.Drawing.Point(44, 153)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 13)
+        Me.Label2.Size = New System.Drawing.Size(81, 17)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Distractor 1"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(33, 151)
+        Me.Label3.Location = New System.Drawing.Point(44, 186)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(61, 13)
+        Me.Label3.Size = New System.Drawing.Size(81, 17)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Distractor 2"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(33, 177)
+        Me.Label4.Location = New System.Drawing.Point(44, 218)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(61, 13)
+        Me.Label4.Size = New System.Drawing.Size(81, 17)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Distractor 3"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(15, 203)
+        Me.Label5.Location = New System.Drawing.Point(20, 250)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(79, 13)
+        Me.Label5.Size = New System.Drawing.Size(104, 17)
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Correct Answer"
         '
@@ -190,45 +201,51 @@ Partial Class frmQuestionnaireCreator
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txtDisc4)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 101)
+        Me.GroupBox1.Location = New System.Drawing.Point(17, 124)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(211, 228)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(281, 281)
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Mod"
         '
         'btnSerialize
         '
-        Me.btnSerialize.Location = New System.Drawing.Point(697, 335)
+        Me.btnSerialize.Location = New System.Drawing.Point(479, 412)
+        Me.btnSerialize.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnSerialize.Name = "btnSerialize"
-        Me.btnSerialize.Size = New System.Drawing.Size(75, 23)
+        Me.btnSerialize.Size = New System.Drawing.Size(100, 28)
         Me.btnSerialize.TabIndex = 14
         Me.btnSerialize.Text = "Serialize"
         Me.btnSerialize.UseVisualStyleBackColor = True
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(149, 335)
+        Me.btnAdd.Location = New System.Drawing.Point(199, 412)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
+        Me.btnAdd.Size = New System.Drawing.Size(100, 28)
         Me.btnAdd.TabIndex = 15
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(226, 385)
+        Me.RichTextBox1.Location = New System.Drawing.Point(301, 474)
+        Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(545, 185)
+        Me.RichTextBox1.Size = New System.Drawing.Size(725, 227)
         Me.RichTextBox1.TabIndex = 16
         Me.RichTextBox1.Text = ""
         '
         'rdSQUIZ
         '
         Me.rdSQUIZ.AutoSize = True
-        Me.rdSQUIZ.Location = New System.Drawing.Point(697, 12)
+        Me.rdSQUIZ.Location = New System.Drawing.Point(929, 15)
+        Me.rdSQUIZ.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.rdSQUIZ.Name = "rdSQUIZ"
-        Me.rdSQUIZ.Size = New System.Drawing.Size(74, 17)
+        Me.rdSQUIZ.Size = New System.Drawing.Size(96, 21)
         Me.rdSQUIZ.TabIndex = 17
         Me.rdSQUIZ.TabStop = True
         Me.rdSQUIZ.Text = "Short Quiz"
@@ -237,9 +254,10 @@ Partial Class frmQuestionnaireCreator
         'rdPEXAM
         '
         Me.rdPEXAM.AutoSize = True
-        Me.rdPEXAM.Location = New System.Drawing.Point(697, 35)
+        Me.rdPEXAM.Location = New System.Drawing.Point(929, 43)
+        Me.rdPEXAM.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.rdPEXAM.Name = "rdPEXAM"
-        Me.rdPEXAM.Size = New System.Drawing.Size(70, 17)
+        Me.rdPEXAM.Size = New System.Drawing.Size(89, 21)
         Me.rdPEXAM.TabIndex = 18
         Me.rdPEXAM.TabStop = True
         Me.rdPEXAM.Text = "Pre Exam"
@@ -247,9 +265,10 @@ Partial Class frmQuestionnaireCreator
         '
         'btnFillUpQuiz
         '
-        Me.btnFillUpQuiz.Location = New System.Drawing.Point(12, 12)
+        Me.btnFillUpQuiz.Location = New System.Drawing.Point(16, 15)
+        Me.btnFillUpQuiz.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnFillUpQuiz.Name = "btnFillUpQuiz"
-        Me.btnFillUpQuiz.Size = New System.Drawing.Size(75, 23)
+        Me.btnFillUpQuiz.Size = New System.Drawing.Size(100, 28)
         Me.btnFillUpQuiz.TabIndex = 19
         Me.btnFillUpQuiz.Text = "DevAutoFill"
         Me.btnFillUpQuiz.UseVisualStyleBackColor = True
@@ -261,9 +280,10 @@ Partial Class frmQuestionnaireCreator
         'rdOEXAM
         '
         Me.rdOEXAM.AutoSize = True
-        Me.rdOEXAM.Location = New System.Drawing.Point(697, 58)
+        Me.rdOEXAM.Location = New System.Drawing.Point(929, 71)
+        Me.rdOEXAM.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.rdOEXAM.Name = "rdOEXAM"
-        Me.rdOEXAM.Size = New System.Drawing.Size(62, 17)
+        Me.rdOEXAM.Size = New System.Drawing.Size(78, 21)
         Me.rdOEXAM.TabIndex = 20
         Me.rdOEXAM.TabStop = True
         Me.rdOEXAM.Text = "O Exam"
@@ -271,9 +291,9 @@ Partial Class frmQuestionnaireCreator
         '
         'frmQuestionnaireCreator
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 366)
+        Me.ClientSize = New System.Drawing.Size(1045, 450)
         Me.Controls.Add(Me.rdOEXAM)
         Me.Controls.Add(Me.btnFillUpQuiz)
         Me.Controls.Add(Me.rdPEXAM)
@@ -283,6 +303,7 @@ Partial Class frmQuestionnaireCreator
         Me.Controls.Add(Me.btnSerialize)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Datagridview1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmQuestionnaireCreator"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmQuestionnaireCreator"

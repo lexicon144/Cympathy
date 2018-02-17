@@ -59,5 +59,22 @@ Namespace My.Resources
                 resourceCulture = value
             End Set
         End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to You have a long way to go! Keep moving!
+        '''Do change the colors if you feel so!
+        ''':3
+        '''You are yet 40%! You can do it!
+        '''(You) can do better!
+        '''Keep studying, Anon!
+        '''&gt;:3
+        '''ＢＩＧ　ＣＡＴＺＺ
+        '''Nanananananannaaaaaa... I can&apos;t sing verbally though....
+        '''</summary>
+        Friend ReadOnly Property monikalovesyou() As String
+            Get
+                Return ResourceManager.GetString("monikalovesyou", resourceCulture)
+            End Get
+        End Property
     End Module
 End Namespace

@@ -65,7 +65,7 @@ Public Class frmExamsHub
                 End Using
             End Using
         Catch XXX As Exception
-            DisplayNoDatagridView(XXX)
+            WeLearnMessageDisplay.Display(WeLearnExceptions.DGV, Me, XXX)
         End Try
     End Sub
     Friend Sub LoadDatagridView(ByRef ClassroomID As String)
@@ -97,7 +97,7 @@ Public Class frmExamsHub
                 End Using
             End Using
         Catch XXX As Exception
-            DisplayNoDatagridView(XXX)
+            WeLearnMessageDisplay.Display(WeLearnExceptions.DGV, Me, XXX)
         End Try
     End Sub
 
@@ -132,19 +132,23 @@ Public Class frmExamsHub
     End Sub
 
     Private Sub DataGridView1_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        If TypeOf DataGridView1.Columns(e.ColumnIndex) Is DataGridViewButtonColumn Then
-            If DataGridView1.Columns(e.ColumnIndex).Name = "btn" Then
+        Try
+            If TypeOf DataGridView1.Columns(e.ColumnIndex) Is DataGridViewButtonColumn Then
+                If DataGridView1.Columns(e.ColumnIndex).Name = "btn" Then
 
-                With DataGridView1.Rows(e.RowIndex)
-                    _TempPIN = .Cells("exam_pin").Value.ToString()
-                    txtExamID.Text = .Cells("id").Value.ToString()
-                    txtExamName.Text = .Cells("exam_name").Value.ToString()
-                    _XmlBase = .Cells("xml_base").Value.ToString()
+                    With DataGridView1.Rows(e.RowIndex)
+                        _TempPIN = .Cells("exam_pin").Value.ToString()
+                        txtExamID.Text = .Cells("id").Value.ToString()
+                        txtExamName.Text = .Cells("exam_name").Value.ToString()
+                        _XmlBase = .Cells("xml_base").Value.ToString()
 
-                End With
+                    End With
 
+                End If
             End If
-        End If
+        Catch xxx As Exception
+            WeLearnMessageDisplay.Display(WeLearnExceptions.DGV, sender, xxx)
+        End Try
     End Sub
 
     Private Sub ParseToMe()
@@ -161,8 +165,8 @@ Public Class frmExamsHub
             Me._Exam.QuestionBase = _Deserializer.DataDeserialize(Me._XmlBase)
             ParseToMe()
             Me.DialogResult = Windows.Forms.DialogResult.OK
-        Catch ex As Exception
-            DisplayGeneralException(ex)
+        Catch xxx As Exception
+            WeLearnMessageDisplay.Display(WeLearnExceptions.Simple, sender, xxx)
         End Try
     End Sub
 

@@ -34,14 +34,14 @@
         End Get
     End Property
 #End Region
-
+#Region "Functionality"
     ''' <summary>
     ''' Find the count of all registered Quizes in ThisClassroom
     ''' </summary>
     ''' <param name="ClassroomID"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Private Function GetCountQuizesInClassroom(ByRef ClassroomID As String)
+    Friend Function GetCountQuizesInClassroom(ByRef ClassroomID As String)
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
                 If .State = ConnectionState.Closed Then
@@ -66,12 +66,13 @@
     ''' Summate all the quiz grades
     ''' </summary>
     ''' <remarks></remarks>
-    Private Sub GetSumationOfExams()
-        Me._GradeSummation = 0.0
+    Friend Function GetSumationOfExams() As Double
+        Dim myGradeSummation = 0.0
         For Each Row As DataRow In Me._AverageDatatable.Rows
-            Me._GradeSummation += Row("exam_grade")
+            myGradeSummation += Row("exam_grade")
         Next
-    End Sub
+        Return myGradeSummation
+    End Function
 
     ''' <summary>
     ''' Return the Count of AverageDatatable
@@ -79,9 +80,9 @@
     ''' Count of all the Quizes the Studen Answered
     ''' </summary>
     ''' <remarks></remarks>
-    Private Sub GetRecordedCount(ByVal Count As UInt32)
-        Me._RecordedCount = Me._AverageDatatable.Rows.Count
-    End Sub
+    Friend Function GetRecordedCount() As UInt32
+        Return Me._AverageDatatable.Rows.Count
+    End Function
 
     ''' <summary>
     ''' Get The Datatable containing all the quizes
@@ -125,10 +126,10 @@
     ''' <param name="Count">The Count of all existing quizes</param>
     ''' <returns>a Double</returns>
     ''' <remarks></remarks>
-    Private Function GetNewAverage(ByVal Summation As Double, ByVal Count As UInt32) As Double
+    Friend Function GetNewAverage(ByVal Summation As Double, ByVal Count As UInt32) As Double
         Return (Summation / Count)
     End Function
-
+#End Region
     ''' <summary>
     ''' Display all necessary data outside to the GUI
     ''' </summary>
@@ -172,18 +173,31 @@
         Me._AverageDatatable = GetAnsweredExams(_SharedUserID, _SharedClassroom.ClassroomId)
         BackgroundWorker1.ReportProgress(20)
         'get sum of all recorded exams (YOU)
-        GetRecordedCount(_RecordedCount)
+        Me._RecordedCount = GetRecordedCount()
         BackgroundWorker1.ReportProgress(40)
         'get count of all exams (ALL)
         Me._AllExamsCount = GetCountQuizesInClassroom(_SharedClassroom.ClassroomId)
         BackgroundWorker1.ReportProgress(60)
         'get sum of grades of all exams
-        GetSumationOfExams()
+        Me._GradeSummation = GetSumationOfExams()
         BackgroundWorker1.ReportProgress(80)
-
+        'get average
         Me._FullAverage = GetNewAverage(Me._GradeSummation, Me._AllExamsCount)
         BackgroundWorker1.ReportProgress(100)
     End Sub
+
+    Friend Function ReturnFullAverage() As Double
+        Me._AverageDatatable = GetAnsweredExams(_SharedUserID, _SharedClassroom.ClassroomId)
+        'get sum of all recorded exams (YOU)
+        Me._RecordedCount = GetRecordedCount()
+        'get count of all exams (ALL)
+        Me._AllExamsCount = GetCountQuizesInClassroom(_SharedClassroom.ClassroomId)
+        'get sum of grades of all exams
+        Me._GradeSummation = GetSumationOfExams()
+        'get average
+        Me._FullAverage = GetNewAverage(Me._GradeSummation, Me._AllExamsCount)
+        Return Me._FullAverage
+    End Function
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
         DisplayOnDatagridview()

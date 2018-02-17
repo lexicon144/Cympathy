@@ -28,6 +28,12 @@
         LoadSchedules(ClassroomID)
     End Sub
 
+    Friend ReadOnly Property MyDatatable As DataTable
+        Get
+            Return Me._MyDatatable
+        End Get
+    End Property
+
     Private Sub SimpleView(ByVal State As Boolean)
         With Me
             .Label1.Visible = State
@@ -87,7 +93,7 @@
                 End Using
             End Using
         Catch XXX As Exception
-            DisplayNoDatagridView(XXX)
+            WeLearnMessageDisplay.Display(WeLearnExceptions.DGV, Me, XXX)
         End Try
 
     End Sub
@@ -119,7 +125,7 @@
                 End Using
             End Using
         Catch XXX As Exception
-            DisplayNoDatagridView(XXX)
+            WeLearnMessageDisplay.Display(WeLearnExceptions.DGV, Me, XXX)
         End Try
     End Sub
 
@@ -141,8 +147,8 @@
 
                 End If
             End If
-        Catch EXX As Exception
-            DisplayGeneralException(EXX)
+        Catch xxx As Exception
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, xxx)
         End Try
     End Sub
 

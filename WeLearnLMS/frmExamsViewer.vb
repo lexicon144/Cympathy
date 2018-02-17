@@ -9,6 +9,7 @@ Public Class frmExamsViewer
     Private UserID As String
     Private ClassroomID As String
     Private _Marked As UInt16 = 0
+    Private Marker As New ContextQuestMarker
     Private _Checked As UInt16 = 0
     Public Sub New()
 
@@ -28,7 +29,6 @@ Public Class frmExamsViewer
         Using Hub As New frmExamsHub(_SharedClassroom)
             If Hub.ShowDialog = Windows.Forms.DialogResult.OK Then
                 Me._exam = Hub.GetExam
-            Else
                 Dim Security As New frmQuestSecurity(Me._exam)
                 IsChecked(Me._exam.QuestionnaireID)
                 If Security.ShowDialog = Windows.Forms.DialogResult.OK Then
@@ -41,7 +41,8 @@ Public Class frmExamsViewer
 
                         Dim grader As New frmGradesExamPreCreator(Me._exam.QuestionnaireID, _SharedUserID, Me._PreGrade, _SharedClassroom.ClassroomId)
                         grader.ShowDialog()
-                        MarkQuiz()
+                        ''''
+                        Marker.MarkThis(SharedMod2.Marker.Exam, _SharedUserID, Me._exam.QuestionnaireID)
 
                     Else
                         MessageBox.Show("Exam Has Been Taken Already", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -78,42 +79,4 @@ Public Class frmExamsViewer
         Console.WriteLine(_Checked)
     End Sub
 
-
-    ''' <summary>
-    ''' Mark Quiz
-    ''' only mark the quiz, not grade it
-    ''' </summary>
-    ''' <remarks></remarks>
-    Private Sub MarkQuiz()
-        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
-            With Connection
-                If .State = ConnectionState.Closed Then
-                    .Open()
-                End If
-            End With
-            Using MarkingTransaction As MySqlTransaction = Connection.BeginTransaction
-
-                Try
-                    Using Command As New MySqlCommand
-                        With Command
-                            .Connection = Connection
-                            .Transaction = MarkingTransaction
-                            .CommandType = CommandType.StoredProcedure
-                            .CommandText = "MarkThisExam"
-                            With .Parameters
-                                .AddWithValue("UserID", _SharedUserID)
-                                .AddWithValue("ExamID", Me._exam.QuestionnaireID)
-                            End With
-                            .ExecuteNonQuery()
-                            MarkingTransaction.Commit()
-                            MessageBox.Show("This Exam has been marked", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        End With
-                    End Using
-                Catch XXX As MySqlException
-                    MarkingTransaction.Rollback()
-                    DisplayLinkingTransactionFailed(XXX)
-                End Try
-            End Using
-        End Using
-    End Sub
 End Class

@@ -154,7 +154,7 @@
             Dim ArticleViewer As New frmArticleViewer(ContextualArticle)
             ArticleViewer.Show()
         Catch xxx As Exception
-            DisplayGeneralException(xxx)
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, xxx)
         End Try
     End Sub
 

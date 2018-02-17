@@ -81,9 +81,9 @@
                         MessageBox.Show("Linking Transaction was Successfull", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     End With
                 End Using
-            Catch ex As Exception
+            Catch xxx As Exception
                 LinkingTransaction.Rollback()
-                DisplayLinkingTransactionFailed(ex)
+                WeLearnMessageDisplay.Display(WeLearnExceptions.Linking, Me, xxx)
             End Try
         End Using
     End Sub

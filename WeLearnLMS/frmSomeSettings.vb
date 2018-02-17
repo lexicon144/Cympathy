@@ -7,8 +7,8 @@
                 My.Settings("MainFont") = FontDialog1.Font
             End If
 
-        Catch ex As Exception
-            DisplayGeneralException(ex)
+        Catch XXX As Exception
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, XXX)
         End Try
     End Sub
 

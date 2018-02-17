@@ -34,17 +34,22 @@ Partial Class frmExamsCreator
         Me.txtQType = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.PanelProfessorsOnly = New System.Windows.Forms.Panel()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.grpXmlPreview.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelProfessorsOnly.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
+        Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnEditor
         '
-        Me.btnEditor.Location = New System.Drawing.Point(400, 300)
+        Me.btnEditor.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnEditor.Location = New System.Drawing.Point(3, 3)
         Me.btnEditor.Name = "btnEditor"
-        Me.btnEditor.Size = New System.Drawing.Size(75, 23)
+        Me.btnEditor.Size = New System.Drawing.Size(94, 60)
         Me.btnEditor.TabIndex = 6
         Me.btnEditor.Text = "Edit"
         Me.btnEditor.UseVisualStyleBackColor = True
@@ -52,7 +57,7 @@ Partial Class frmExamsCreator
         'grpXmlPreview
         '
         Me.grpXmlPreview.Controls.Add(Me.rtbXMLPreview)
-        Me.grpXmlPreview.Location = New System.Drawing.Point(7, 88)
+        Me.grpXmlPreview.Location = New System.Drawing.Point(3, 109)
         Me.grpXmlPreview.Name = "grpXmlPreview"
         Me.grpXmlPreview.Size = New System.Drawing.Size(387, 264)
         Me.grpXmlPreview.TabIndex = 5
@@ -61,69 +66,74 @@ Partial Class frmExamsCreator
         '
         'rtbXMLPreview
         '
-        Me.rtbXMLPreview.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.rtbXMLPreview.Location = New System.Drawing.Point(3, 16)
+        Me.rtbXMLPreview.Dock = System.Windows.Forms.DockStyle.Left
+        Me.rtbXMLPreview.Location = New System.Drawing.Point(3, 19)
         Me.rtbXMLPreview.Name = "rtbXMLPreview"
         Me.rtbXMLPreview.ReadOnly = True
-        Me.rtbXMLPreview.Size = New System.Drawing.Size(381, 245)
+        Me.rtbXMLPreview.Size = New System.Drawing.Size(340, 242)
         Me.rtbXMLPreview.TabIndex = 1
         Me.rtbXMLPreview.Text = ""
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(400, 329)
+        Me.btnSave.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnSave.Location = New System.Drawing.Point(103, 3)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(75, 23)
+        Me.btnSave.Size = New System.Drawing.Size(94, 60)
         Me.btnSave.TabIndex = 4
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
         '
         'txtExamPIN
         '
-        Me.txtExamPIN.Location = New System.Drawing.Point(88, 29)
+        Me.txtExamPIN.Location = New System.Drawing.Point(196, 36)
+        Me.txtExamPIN.MaxLength = 4
         Me.txtExamPIN.Name = "txtExamPIN"
-        Me.txtExamPIN.Size = New System.Drawing.Size(100, 20)
+        Me.txtExamPIN.Size = New System.Drawing.Size(147, 23)
         Me.txtExamPIN.TabIndex = 7
         '
         'txtExamName
         '
-        Me.txtExamName.Location = New System.Drawing.Point(88, 3)
+        Me.txtExamName.Location = New System.Drawing.Point(196, 3)
         Me.txtExamName.Name = "txtExamName"
-        Me.txtExamName.Size = New System.Drawing.Size(100, 20)
+        Me.txtExamName.Size = New System.Drawing.Size(147, 23)
         Me.txtExamName.TabIndex = 8
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(18, 6)
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 13)
+        Me.Label1.Size = New System.Drawing.Size(187, 33)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Exam Name"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(28, 32)
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label2.Location = New System.Drawing.Point(3, 33)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(54, 13)
+        Me.Label2.Size = New System.Drawing.Size(187, 33)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "Exam PIN"
         '
         'txtQType
         '
-        Me.txtQType.Location = New System.Drawing.Point(88, 55)
+        Me.txtQType.Location = New System.Drawing.Point(196, 69)
         Me.txtQType.Name = "txtQType"
         Me.txtQType.ReadOnly = True
-        Me.txtQType.Size = New System.Drawing.Size(100, 20)
+        Me.txtQType.Size = New System.Drawing.Size(147, 23)
         Me.txtQType.TabIndex = 11
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(43, 58)
+        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label3.Location = New System.Drawing.Point(3, 66)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.Size = New System.Drawing.Size(187, 34)
         Me.Label3.TabIndex = 12
         Me.Label3.Text = "QType"
         '
@@ -131,29 +141,57 @@ Partial Class frmExamsCreator
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'PanelProfessorsOnly
+        'TableLayoutPanel1
         '
-        Me.PanelProfessorsOnly.Controls.Add(Me.Label1)
-        Me.PanelProfessorsOnly.Controls.Add(Me.Label3)
-        Me.PanelProfessorsOnly.Controls.Add(Me.btnSave)
-        Me.PanelProfessorsOnly.Controls.Add(Me.txtQType)
-        Me.PanelProfessorsOnly.Controls.Add(Me.grpXmlPreview)
-        Me.PanelProfessorsOnly.Controls.Add(Me.Label2)
-        Me.PanelProfessorsOnly.Controls.Add(Me.btnEditor)
-        Me.PanelProfessorsOnly.Controls.Add(Me.txtExamPIN)
-        Me.PanelProfessorsOnly.Controls.Add(Me.txtExamName)
-        Me.PanelProfessorsOnly.Location = New System.Drawing.Point(9, 10)
-        Me.PanelProfessorsOnly.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.PanelProfessorsOnly.Name = "PanelProfessorsOnly"
-        Me.PanelProfessorsOnly.Size = New System.Drawing.Size(489, 362)
-        Me.PanelProfessorsOnly.TabIndex = 13
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtExamName, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtExamPIN, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtQType, 1, 2)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 3
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(387, 100)
+        Me.TableLayoutPanel1.TabIndex = 14
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 2
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.btnSave, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.btnEditor, 0, 0)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 379)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 1
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(200, 66)
+        Me.TableLayoutPanel2.TabIndex = 15
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Controls.Add(Me.TableLayoutPanel1)
+        Me.FlowLayoutPanel1.Controls.Add(Me.grpXmlPreview)
+        Me.FlowLayoutPanel1.Controls.Add(Me.TableLayoutPanel2)
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(398, 454)
+        Me.FlowLayoutPanel1.TabIndex = 16
         '
         'frmExamsCreator
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(505, 382)
-        Me.Controls.Add(Me.PanelProfessorsOnly)
+        Me.ClientSize = New System.Drawing.Size(398, 454)
+        Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
         Me.Name = "frmExamsCreator"
@@ -161,8 +199,10 @@ Partial Class frmExamsCreator
         Me.Text = "frmExamsCreator"
         Me.grpXmlPreview.ResumeLayout(False)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelProfessorsOnly.ResumeLayout(False)
-        Me.PanelProfessorsOnly.PerformLayout()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
+        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -177,5 +217,7 @@ Partial Class frmExamsCreator
     Friend WithEvents txtQType As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
-    Friend WithEvents PanelProfessorsOnly As System.Windows.Forms.Panel
+    Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
+    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
 End Class

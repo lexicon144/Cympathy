@@ -15,6 +15,7 @@
 
 
     End Sub
+
 #Region "properties"
     Friend ReadOnly Property QuizCount As UInt32
         Get
@@ -201,6 +202,22 @@
         Me._FullAverage = GetNewAverage(Me._GradeSummation, Me._AllQuizCount)
         BackgroundWorker1.ReportProgress(100)
     End Sub
+
+    Friend Function ReturnFullAverage() As Double
+        Me._AverageDatatable = GetAnsweredQuizes(_SharedUserID, _SharedClassroom.ClassroomId)
+
+        'get sum of all recorded exams (YOU)
+        GetRecordedCount(_RecordedCount)
+
+        'get count of all exams (ALL)
+        Me._AllQuizCount = GetCountQuizesInClassroom(_SharedClassroom.ClassroomId)
+
+        'get sum of grades of all exams
+        GetSumationOfQuizes()
+
+        Me._FullAverage = GetNewAverage(Me._GradeSummation, Me._AllQuizCount)
+        Return Me._FullAverage
+    End Function
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
         DisplayOnDatagridview()

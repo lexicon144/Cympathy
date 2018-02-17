@@ -19,6 +19,7 @@
 
 
     Friend Function GetMyHappyMessage() As String Implements IHappyMessage.GetMyHappyMessage
+
         Dim rnd As New Random()
         Return ListOfMessages(rnd.Next(0, ListOfMessages.Count))
     End Function

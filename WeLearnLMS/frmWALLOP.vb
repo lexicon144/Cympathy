@@ -23,7 +23,6 @@
                 Me.lblcount.Visible = False
             End If
         End If
-
     End Sub
 
     Private Sub frmWALLOP_Load(sender As Object, e As EventArgs) Handles MyBase.Load

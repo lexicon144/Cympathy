@@ -11,11 +11,16 @@ Public Class frmScheduleClassroomLifeSpanControl
     Private GetDate As IGetDate = New ImpGetDateOnServer()
 
     Private Sub frmClassroomLifespanChecker_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        GetLifeSpan(_SharedClassroom.ClassroomId)
-        Me._MySqlDate = GetDate.GetDate
-        If _MyDatatable.Rows.Count = 0 Then Exit Sub
-        ParseToDataTable()
-        printout()
+        Try
+
+            GetLifeSpan(_SharedClassroom.ClassroomId)
+            Me._MySqlDate = GetDate.GetDate
+            If _MyDatatable.Rows.Count = 0 Then Exit Sub
+            ParseToDataTable()
+            printout()
+        Catch xxx As Exception
+            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, xxx)
+        End Try
     End Sub
 
     Private Sub printout()
@@ -26,22 +31,20 @@ Public Class frmScheduleClassroomLifeSpanControl
             .AppendLine("Classroom ID: ")
             .Append(_MyDatatable.Rows(0)("id").ToString())
             .AppendLine()
-            .AppendLine()
             .AppendLine("Classroom Name: ")
             .Append(_MyDatatable.Rows(0)("class_name").ToString())
-            .AppendLine()
             .AppendLine()
             .AppendLine("Life span is : ")
             .Append(_NewLifespan.DateStart.ToString & " -> " & _NewLifespan.DateEnd.ToString)
             .AppendLine()
-            .AppendLine()
             .AppendLine("MYSQLDATE is : ")
             .Append(_MySqlDate)
-            .AppendLine()
             .AppendLine()
             .AppendLine("IS WITHIN? ")
             .Append(Evaluated)
             .AppendLine()
+            .AppendLine("DAYS LFSPN: ")
+            .AppendLine(DateDiff(DateInterval.DayOfYear, _NewLifespan.DateStart, _NewLifespan.DateEnd))
         End With
         RichTextBox1.Text = Builder.ToString
     End Sub

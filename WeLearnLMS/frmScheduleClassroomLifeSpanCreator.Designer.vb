@@ -43,7 +43,7 @@ Partial Class frmScheduleClassroomLifeSpanCreator
         Me.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtpStart.Location = New System.Drawing.Point(260, 3)
         Me.dtpStart.Name = "dtpStart"
-        Me.dtpStart.Size = New System.Drawing.Size(251, 20)
+        Me.dtpStart.Size = New System.Drawing.Size(251, 23)
         Me.dtpStart.TabIndex = 0
         '
         'dtpEnd
@@ -53,7 +53,7 @@ Partial Class frmScheduleClassroomLifeSpanCreator
         Me.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtpEnd.Location = New System.Drawing.Point(260, 81)
         Me.dtpEnd.Name = "dtpEnd"
-        Me.dtpEnd.Size = New System.Drawing.Size(251, 20)
+        Me.dtpEnd.Size = New System.Drawing.Size(251, 23)
         Me.dtpEnd.TabIndex = 1
         '
         'btnOK
@@ -94,7 +94,7 @@ Partial Class frmScheduleClassroomLifeSpanCreator
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 13)
+        Me.Label1.Size = New System.Drawing.Size(72, 17)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Start Date"
         '
@@ -103,7 +103,7 @@ Partial Class frmScheduleClassroomLifeSpanCreator
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(3, 78)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(52, 13)
+        Me.Label2.Size = New System.Drawing.Size(67, 17)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "End Date"
         '
@@ -113,7 +113,7 @@ Partial Class frmScheduleClassroomLifeSpanCreator
         Me.txtClassroomID.Location = New System.Drawing.Point(260, 237)
         Me.txtClassroomID.Name = "txtClassroomID"
         Me.txtClassroomID.ReadOnly = True
-        Me.txtClassroomID.Size = New System.Drawing.Size(251, 20)
+        Me.txtClassroomID.Size = New System.Drawing.Size(251, 23)
         Me.txtClassroomID.TabIndex = 8
         '
         'Label4
@@ -133,7 +133,7 @@ Partial Class frmScheduleClassroomLifeSpanCreator
         '
         'frmScheduleClassroomLifeSpanCreator
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(514, 313)
         Me.Controls.Add(Me.TableLayoutPanel1)

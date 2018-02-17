@@ -23,13 +23,21 @@ Public Class frmUserLogin
 
     Private _Hasher As IHashing = New StrategyHashingSHA512
 
+    Private _StopWatch As New Stopwatch
+
     Private _Username As String
     Private _Validator As New ContextVerification
+
+    Private _Attempts As UInt16 = 0
+    Private _LoginStopwatch As New Stopwatch
+
     Private Sub formLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim Pinger As New frmSQLPinger
         If Pinger.ShowDialog() = Windows.Forms.DialogResult.OK Then
             Me.btnLogin.Enabled = Pinger.Safety
         End If
+        _StopWatch.Start()
+        Timer1.Start()
     End Sub
 
     Private Sub LogMeIn()
@@ -47,9 +55,10 @@ Public Class frmUserLogin
 
                     With Command
                         .Connection = Connection
-                        .CommandText = "SELECT * FROM tbl_user WHERE user_name = @UserName"
+                        .CommandType = CommandType.StoredProcedure
+                        .CommandText = "SelectUser"
                         With .Parameters
-                            .AddWithValue("@UserName", _Username)
+                            .AddWithValue("UserName", _Username)
                         End With
                     End With
 
@@ -62,7 +71,6 @@ Public Class frmUserLogin
                 End Using
             Catch eee As Exception
             End Try
-
         End Using
     End Sub
 
@@ -124,7 +132,22 @@ Public Class frmUserLogin
             End If
             PreInfoToCredentialsParser()
 
-            BackgroundWorker1.RunWorkerAsync(ValidateLogin())
+            If ValidateLogin() Then
+                ShareMe()
+
+                Using MainMenu As New frmMenu(Me._UserAdvancedCredentials)
+                    MainMenu.ShowDialog()
+                    _SharedAdvancedCredentials = Nothing
+                    _SharedMainCredentials = Nothing
+                    LinkLabel2.Enabled = False
+                End Using
+                _Attempts = 0
+                Exit Sub
+            Else
+                MessageBox.Show("Your password or username was incorrect", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                _Attempts += 1
+                LoginControl()
+            End If
 
             With Me
                 .LinkLabel2.Enabled = True
@@ -136,31 +159,22 @@ Public Class frmUserLogin
         End Try
     End Sub
 
-    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-        Dim value As Boolean = e.Argument
-        e.Result = value
-    End Sub
 
-    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-        'if user login was correct!
-        If e.Result Then
-            ShareMe()
+    Private Sub LoginControl()
 
-            Dim MainMenu As New frmMenu(Me._UserAdvancedCredentials)
-
-            MainMenu.ShowDialog()
-            _SharedAdvancedCredentials = Nothing
-            _SharedMainCredentials = Nothing
-            LinkLabel2.Enabled = False
-
-            Exit Sub
+        If _Attempts = 5 Then
+            Me._LoginStopwatch.Start()
+            btnLogin.Enabled = False
+            Me._StopWatch.Start()
         End If
-        MessageBox.Show("Your password or username was incorrect", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        Dim registration As New frmUserRegistration
-        registration.ShowDialog()
+        Using registration As New frmUserRegistration
+            registration.ShowDialog()
+        End Using
+
     End Sub
 
     Private Sub txtUsername_Validated(sender As Object, e As EventArgs) Handles txtUsername.Validated
@@ -188,5 +202,22 @@ Public Class frmUserLogin
     Private Sub lblChangeServer_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblChangeServer.LinkClicked
         Dim editor As New frmServerEditor()
         editor.ShowDialog()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        lblHH.Text = _StopWatch.Elapsed.Hours
+        lblMM.Text = _StopWatch.Elapsed.Minutes
+        lblSS.Text = _StopWatch.Elapsed.Seconds
+    End Sub
+
+    Private Sub LoginTimer_Tick(sender As Object, e As EventArgs) Handles LoginTimer.Tick
+        With Me
+            If ._LoginStopwatch.Elapsed.Seconds = 5 Then
+                .LoginTimer.Enabled = False
+                ._LoginStopwatch.Stop()
+                ._LoginStopwatch.Reset()
+                .btnLogin.Enabled = True
+            End If
+        End With
     End Sub
 End Class

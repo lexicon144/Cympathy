@@ -66,9 +66,9 @@ Public Class frmPasswordModifier
                     PasswordModifierTransaction.Commit()
                     MessageBox.Show("Password Modification Succeded", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End Using
-            Catch EEE As Exception
+            Catch xxx As Exception
                 PasswordModifierTransaction.Rollback()
-                DisplayLinkingTransactionFailed(EEE)
+                WeLearnMessageDisplay.Display(WeLearnExceptions.Linking, Me, xxx)
             End Try
         End Using
     End Sub

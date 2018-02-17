@@ -33,7 +33,7 @@
     End Sub
 
     Private Sub frmGradesFinalCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-       
+        btnToggleRO.Checked = True
     End Sub
 
     Private Sub btnUserBrowser_Click(sender As Object, e As EventArgs) Handles btnUserBrowser.Click
@@ -86,7 +86,7 @@
                 End Using
             Catch xxx As Exception
                 GradeTransaction.Rollback()
-                DisplayLinkingTransactionFailed(xxx)
+                WeLearnMessageDisplay.Display(WeLearnExceptions.Linking, Me, xxx)
             End Try
 
         End Using
@@ -102,9 +102,9 @@
         If GradeComputer.ShowDialog() = Windows.Forms.DialogResult.OK Then
             With Me
                 .txtAverage.Text = GradeComputer.CompileAllGrades().ToString
-                '.txtLetter.Text = "XXX"
             End With
         End If
         RefreshData()
     End Sub
+
 End Class

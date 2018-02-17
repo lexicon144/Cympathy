@@ -6,8 +6,8 @@
 
         With abc
             .UserID = "cympathy"
-            .Password = "8wJQdshQe8LyHAPX"
-            .Server = My.Settings("city85")
+            .Password = "NEONBEACH"
+            .Server = My.Settings.city85
             .Database = "we_learndb"
         End With
 

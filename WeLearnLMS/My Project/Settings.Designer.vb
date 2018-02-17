@@ -54,16 +54,13 @@ Namespace My
             End Get
         End Property
         
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("127.0.0.1")>  _
-        Public Property city85() As String
+        Public ReadOnly Property city85() As String
             Get
                 Return CType(Me("city85"),String)
             End Get
-            Set
-                Me("city85") = value
-            End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
@@ -78,61 +75,61 @@ Namespace My
             End Set
         End Property
         
-        <Global.System.Configuration.UserScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("ControlText")> _
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("ControlText")>  _
         Public Property AllMainBackground() As Global.System.Drawing.Color
             Get
-                Return CType(Me("AllMainBackground"), Global.System.Drawing.Color)
+                Return CType(Me("AllMainBackground"),Global.System.Drawing.Color)
             End Get
-            Set(value As Global.System.Drawing.Color)
+            Set
                 Me("AllMainBackground") = value
             End Set
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()> _
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Property QuestMainBackground() As Global.System.Drawing.Color
             Get
-                Return CType(Me("QuestMainBackground"), Global.System.Drawing.Color)
+                Return CType(Me("QuestMainBackground"),Global.System.Drawing.Color)
             End Get
-            Set(value As Global.System.Drawing.Color)
+            Set
                 Me("QuestMainBackground") = value
             End Set
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("Microsoft Sans Serif, 8.25pt")> _
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Microsoft Sans Serif, 8.25pt")>  _
         Public Property MainFont() As Global.System.Drawing.Font
             Get
-                Return CType(Me("MainFont"), Global.System.Drawing.Font)
+                Return CType(Me("MainFont"),Global.System.Drawing.Font)
             End Get
-            Set(value As Global.System.Drawing.Font)
+            Set
                 Me("MainFont") = value
             End Set
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("Control")> _
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Control")>  _
         Public Property MenuBGC() As Global.System.Drawing.Color
             Get
-                Return CType(Me("MenuBGC"), Global.System.Drawing.Color)
+                Return CType(Me("MenuBGC"),Global.System.Drawing.Color)
             End Get
-            Set(value As Global.System.Drawing.Color)
+            Set
                 Me("MenuBGC") = value
             End Set
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("Control")> _
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Control")>  _
         Public Property ClassroomHubBGC() As Global.System.Drawing.Color
             Get
-                Return CType(Me("ClassroomHubBGC"), Global.System.Drawing.Color)
+                Return CType(Me("ClassroomHubBGC"),Global.System.Drawing.Color)
             End Get
-            Set(value As Global.System.Drawing.Color)
+            Set
                 Me("ClassroomHubBGC") = value
             End Set
         End Property

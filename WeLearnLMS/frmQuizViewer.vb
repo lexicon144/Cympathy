@@ -4,6 +4,7 @@
     Private _Pregrade As New c_PreGrade
     Private _UserID As String
     Private _ClassroomID As String
+    Private Marker As New ContextQuestMarker()
     ''' <summary>
     '''  Null constructor
     ''' </summary>
@@ -44,55 +45,23 @@
     End Sub
 
     Private Sub frmQuizViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
 
-        Dim viewer As New frmQuestionnaireViewer(_Quiz)
-        
-        If viewer.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
-            Me._Pregrade = viewer.GetPregrade
-        End If
+            Dim viewer As New frmQuestionnaireViewer(_Quiz)
 
-        MarkQuiz()
+            If viewer.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
+                Me._Pregrade = viewer.GetPregrade
 
-        Dim procure As New frmGradesQuizPreCreator(Me._Quiz.QuestionnaireID, Me._Quiz.QuestionnaireName, _SharedUserID, Me._Pregrade, _SharedClassroom.ClassroomId)
-        procure.ShowDialog()
+                Marker.MarkThis(SharedMod2.Marker.Quiz, _SharedUserID, Me._Quiz.QuestionnaireID)
+
+                Dim procure As New frmGradesQuizPreCreator(Me._Quiz.QuestionnaireID, Me._Quiz.QuestionnaireName, _SharedUserID, Me._Pregrade, _SharedClassroom.ClassroomId)
+                procure.ShowDialog()
+            End If
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
-    ''' <summary>
-    ''' Mark Quiz
-    ''' only mark the quiz, not grade it
-    ''' </summary>
-    ''' <remarks></remarks>
-    Private Sub MarkQuiz()
-        Using Connection As New MySqlConnection(_SharedConnString.ConnString)
-            With Connection
-                If .State = ConnectionState.Closed Then
-                    .Open()
-                End If
-            End With
-            Using MarkingTransaction As MySqlTransaction = Connection.BeginTransaction
-
-                Try
-                    Using Command As New MySqlCommand
-                        With Command
-                            .Connection = Connection
-                            .Transaction = MarkingTransaction
-                            .CommandType = CommandType.StoredProcedure
-                            .CommandText = "MarkThisQuiz"
-                            With .Parameters
-                                .AddWithValue("UserID", _SharedUserID)
-                                .AddWithValue("QuizID", Me._Quiz.QuestionnaireID)
-                            End With
-                            .ExecuteNonQuery()
-                            MarkingTransaction.Commit()
-                            MessageBox.Show("This Quiz has been marked", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        End With
-                    End Using
-                Catch XXX As MySqlException
-                    MarkingTransaction.Rollback()
-                    DisplayLinkingTransactionFailed(XXX)
-                End Try
-            End Using
-        End Using
-    End Sub
 
 End Class
