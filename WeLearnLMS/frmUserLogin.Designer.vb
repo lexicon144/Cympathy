@@ -52,7 +52,7 @@ Partial Class frmUserLogin
         Me.LinkLabel1.Location = New System.Drawing.Point(149, 231)
         Me.LinkLabel1.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(108, 34)
+        Me.LinkLabel1.Size = New System.Drawing.Size(123, 13)
         Me.LinkLabel1.TabIndex = 7
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Register a New Account"
@@ -77,7 +77,7 @@ Partial Class frmUserLogin
         Me.txtPassword.MaxLength = 18
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(10084)
-        Me.txtPassword.Size = New System.Drawing.Size(147, 23)
+        Me.txtPassword.Size = New System.Drawing.Size(147, 20)
         Me.txtPassword.TabIndex = 5
         Me.txtPassword.Text = "Password"
         '
@@ -89,12 +89,9 @@ Partial Class frmUserLogin
         Me.txtUsername.Margin = New System.Windows.Forms.Padding(1)
         Me.txtUsername.MaxLength = 50
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(147, 23)
+        Me.txtUsername.Size = New System.Drawing.Size(147, 20)
         Me.txtUsername.TabIndex = 4
         Me.txtUsername.Text = "Username"
-        '
-        'BackgroundWorker1
-        '
         '
         'ErrorProvider1
         '
@@ -106,7 +103,7 @@ Partial Class frmUserLogin
         Me.LinkLabel2.Enabled = False
         Me.LinkLabel2.Location = New System.Drawing.Point(151, 308)
         Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(85, 34)
+        Me.LinkLabel2.Size = New System.Drawing.Size(114, 13)
         Me.LinkLabel2.TabIndex = 8
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "Forgot your password?"
@@ -116,7 +113,7 @@ Partial Class frmUserLogin
         Me.lblChangeServer.AutoSize = True
         Me.lblChangeServer.Location = New System.Drawing.Point(151, 389)
         Me.lblChangeServer.Name = "lblChangeServer"
-        Me.lblChangeServer.Size = New System.Drawing.Size(100, 17)
+        Me.lblChangeServer.Size = New System.Drawing.Size(76, 13)
         Me.lblChangeServer.TabIndex = 9
         Me.lblChangeServer.TabStop = True
         Me.lblChangeServer.Text = "Specify Server"
@@ -154,7 +151,7 @@ Partial Class frmUserLogin
         Me.Label1.Location = New System.Drawing.Point(2, 0)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(73, 17)
+        Me.Label1.Size = New System.Drawing.Size(55, 13)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Username"
         '
@@ -164,41 +161,41 @@ Partial Class frmUserLogin
         Me.Label2.Location = New System.Drawing.Point(2, 77)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 17)
+        Me.Label2.Size = New System.Drawing.Size(53, 13)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Password"
         '
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblclientuptime, Me.lblHH, Me.lblMM, Me.lblSS})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 443)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 446)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(297, 25)
+        Me.StatusStrip1.Size = New System.Drawing.Size(297, 22)
         Me.StatusStrip1.TabIndex = 12
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'lblclientuptime
         '
         Me.lblclientuptime.Name = "lblclientuptime"
-        Me.lblclientuptime.Size = New System.Drawing.Size(109, 20)
+        Me.lblclientuptime.Size = New System.Drawing.Size(88, 17)
         Me.lblclientuptime.Text = "Client Up-time:"
         '
         'lblHH
         '
         Me.lblHH.Name = "lblHH"
-        Me.lblHH.Size = New System.Drawing.Size(31, 20)
+        Me.lblHH.Size = New System.Drawing.Size(25, 17)
         Me.lblHH.Text = "HH"
         '
         'lblMM
         '
         Me.lblMM.Name = "lblMM"
-        Me.lblMM.Size = New System.Drawing.Size(35, 20)
+        Me.lblMM.Size = New System.Drawing.Size(29, 17)
         Me.lblMM.Text = "MM"
         '
         'lblSS
         '
         Me.lblSS.Name = "lblSS"
-        Me.lblSS.Size = New System.Drawing.Size(25, 20)
+        Me.lblSS.Size = New System.Drawing.Size(19, 17)
         Me.lblSS.Text = "SS"
         '
         'Timer1
@@ -208,11 +205,13 @@ Partial Class frmUserLogin
         '
         'LoginTimer
         '
+        Me.LoginTimer.Enabled = True
         Me.LoginTimer.Interval = 1000
         '
         'frmUserLogin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.AcceptButton = Me.btnLogin
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(297, 468)
         Me.Controls.Add(Me.StatusStrip1)

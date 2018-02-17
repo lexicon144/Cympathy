@@ -63,13 +63,17 @@
     End Sub
 
     Private Sub btnClassroomHub_Click(sender As Object, e As EventArgs) Handles btnClassroomHub.Click
-        Using ClassroomHub As New frmClassroomHub
-            ClassroomHub.ShowDialog(Me)
-            With Me.StatusStrip1
-                toolstripCLASSNAME.Text = _SharedClassroom.ClassroomName
-                toolstripCLASSROOMID.Text = _SharedClassroom.ClassroomId
-            End With
-        End Using
+        Try
+            Using ClassroomHub As New frmClassroomHub
+                ClassroomHub.ShowDialog(Me)
+                With Me.StatusStrip1
+                    toolstripCLASSNAME.Text = _SharedClassroom.ClassroomName
+                    toolstripCLASSROOMID.Text = _SharedClassroom.ClassroomId
+                End With
+            End Using
+        Catch ex As Exception
+            WeLearnMessageDisplay.Display(WeLearnExceptions.Simple, Me, ex)
+        End Try
     End Sub
 
     Private Sub btnTimeManagement_Click(sender As Object, e As EventArgs) Handles btnTimeManagement.Click
@@ -207,5 +211,11 @@
         If Not Me._HappyStuff.GetMyHappyMessage Is Nothing Then
             Me.lblHappyGreeting.Text = Me._HappyStuff.GetMyHappyMessage
         End If
+    End Sub
+
+    Private Sub btnViewReports_Click(sender As Object, e As EventArgs) Handles btnViewReports.Click
+        Using ReportHub As New frmReportHub
+            ReportHub.ShowDialog()
+        End Using
     End Sub
 End Class

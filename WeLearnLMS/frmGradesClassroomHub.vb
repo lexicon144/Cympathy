@@ -9,6 +9,8 @@
 
     Private Sub frmGradesClassroomHub_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        FrmUAC.DisableAllMe(_SharedMainCredentials.MyUserType, Me)
+
     End Sub
 
     Private Sub btnViewGrades_Click(sender As Object, e As EventArgs) Handles btnViewGrades.Click

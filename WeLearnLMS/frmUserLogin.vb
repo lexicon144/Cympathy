@@ -132,7 +132,22 @@ Public Class frmUserLogin
             End If
             PreInfoToCredentialsParser()
 
-            BackgroundWorker1.RunWorkerAsync(ValidateLogin())
+            If ValidateLogin() Then
+                ShareMe()
+
+                Using MainMenu As New frmMenu(Me._UserAdvancedCredentials)
+                    MainMenu.ShowDialog()
+                    _SharedAdvancedCredentials = Nothing
+                    _SharedMainCredentials = Nothing
+                    LinkLabel2.Enabled = False
+                End Using
+                _Attempts = 0
+                Exit Sub
+            Else
+                MessageBox.Show("Your password or username was incorrect", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                _Attempts += 1
+                LoginControl()
+            End If
 
             With Me
                 .LinkLabel2.Enabled = True
@@ -144,34 +159,11 @@ Public Class frmUserLogin
         End Try
     End Sub
 
-    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-        Dim value As Boolean = e.Argument
-        e.Result = value
-    End Sub
-
-    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-        'if user login was correct!
-        If e.Result Then
-            ShareMe()
-
-            Using MainMenu As New frmMenu(Me._UserAdvancedCredentials)
-
-                MainMenu.ShowDialog()
-                _SharedAdvancedCredentials = Nothing
-                _SharedMainCredentials = Nothing
-                LinkLabel2.Enabled = False
-            End Using
-            Exit Sub
-        End If
-        MessageBox.Show("Your password or username was incorrect", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        _Attempts += 1
-        LoginControl()
-    End Sub
 
     Private Sub LoginControl()
 
         If _Attempts = 5 Then
-            _LoginStopwatch.Start()
+            Me._LoginStopwatch.Start()
             btnLogin.Enabled = False
             Me._StopWatch.Start()
         End If
@@ -219,11 +211,13 @@ Public Class frmUserLogin
     End Sub
 
     Private Sub LoginTimer_Tick(sender As Object, e As EventArgs) Handles LoginTimer.Tick
-        If _StopWatch.Elapsed.Seconds = 5 Then
-            LoginTimer.Enabled = False
-            _StopWatch.Stop()
-            _StopWatch.Reset()
-            btnLogin.Enabled = True
-        End If
+        With Me
+            If ._LoginStopwatch.Elapsed.Seconds = 5 Then
+                .LoginTimer.Enabled = False
+                ._LoginStopwatch.Stop()
+                ._LoginStopwatch.Reset()
+                .btnLogin.Enabled = True
+            End If
+        End With
     End Sub
 End Class

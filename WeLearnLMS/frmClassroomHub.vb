@@ -24,17 +24,22 @@
 
 #Region "Loader"
     Private Sub frmClassroomHub_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim NewClassroomDialog As New frmClassroomDialog()
-        If NewClassroomDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
-            Me._Classroom = NewClassroomDialog.GetClassroom
-            REView()
+        Try
 
-            frmScheduleClassroomLifeSpanControl.Show(Me)
-            frmAttendanceControl.Show(Me)
+            Dim NewClassroomDialog As New frmClassroomDialog()
+            If NewClassroomDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+                Me._Classroom = NewClassroomDialog.GetClassroom
+                REView()
 
-            FrmUAC.DisableAllMe(_SharedAdvancedCredentials.MyUserType, mainpanel)
-            _SharedClassroom.ClassroomId = Me._Classroom.ClassroomId
-        End If
+                frmScheduleClassroomLifeSpanControl.Show(Me)
+                frmAttendanceControl.Show(Me)
+
+                FrmUAC.DisableAllMe(_SharedAdvancedCredentials.MyUserType, mainpanel)
+                _SharedClassroom.ClassroomId = Me._Classroom.ClassroomId
+            End If
+        Catch ex As Exception
+            WeLearnMessageDisplay.Display(WeLearnExceptions.Simple, Me, ex)
+        End Try
     End Sub
 
     Private Sub btnOpenQuestionnaire_Click(sender As Object, e As EventArgs) Handles btnOpenQuestionnaire.Click
@@ -147,4 +152,7 @@
         End Using
     End Sub
 
+    Private Sub frmClassroomHub_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        e.Cancel = (MessageBox.Show("Are you sure you want to close this classroom?", "WeLearnLMS", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes)
+    End Sub
 End Class

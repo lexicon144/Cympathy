@@ -45,17 +45,21 @@
     End Sub
 
     Private Sub frmQuizViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
 
-        Dim viewer As New frmQuestionnaireViewer(_Quiz)
-        
-        If viewer.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
-            Me._Pregrade = viewer.GetPregrade
+            Dim viewer As New frmQuestionnaireViewer(_Quiz)
 
-            Marker.MarkThis(SharedMod2.Marker.Quiz, _SharedUserID, Me._Quiz.QuestionnaireID)
+            If viewer.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
+                Me._Pregrade = viewer.GetPregrade
 
-            Dim procure As New frmGradesQuizPreCreator(Me._Quiz.QuestionnaireID, Me._Quiz.QuestionnaireName, _SharedUserID, Me._Pregrade, _SharedClassroom.ClassroomId)
-            procure.ShowDialog()
-        End If
+                Marker.MarkThis(SharedMod2.Marker.Quiz, _SharedUserID, Me._Quiz.QuestionnaireID)
+
+                Dim procure As New frmGradesQuizPreCreator(Me._Quiz.QuestionnaireID, Me._Quiz.QuestionnaireName, _SharedUserID, Me._Pregrade, _SharedClassroom.ClassroomId)
+                procure.ShowDialog()
+            End If
+        Catch ex As Exception
+
+        End Try
 
     End Sub
 

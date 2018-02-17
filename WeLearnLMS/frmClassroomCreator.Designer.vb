@@ -47,12 +47,12 @@ Partial Class frmClassroomCreator
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Button1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(206, 192)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(206, 204)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(195, 36)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(195, 38)
         Me.TableLayoutPanel1.TabIndex = 20
         '
         'Button1
@@ -60,7 +60,7 @@ Partial Class frmClassroomCreator
         Me.Button1.Location = New System.Drawing.Point(3, 2)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(91, 31)
+        Me.Button1.Size = New System.Drawing.Size(91, 33)
         Me.Button1.TabIndex = 20
         Me.Button1.Text = "Add"
         Me.Button1.UseVisualStyleBackColor = True
@@ -69,9 +69,9 @@ Partial Class frmClassroomCreator
         '
         Me.OK_Button.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.OK_Button.Location = New System.Drawing.Point(101, 4)
-        Me.OK_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.OK_Button.Margin = New System.Windows.Forms.Padding(4)
         Me.OK_Button.Name = "OK_Button"
-        Me.OK_Button.Size = New System.Drawing.Size(89, 28)
+        Me.OK_Button.Size = New System.Drawing.Size(89, 30)
         Me.OK_Button.TabIndex = 0
         Me.OK_Button.Text = "OK"
         '
@@ -88,7 +88,7 @@ Partial Class frmClassroomCreator
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(1, 130)
+        Me.Label1.Location = New System.Drawing.Point(1, 138)
         Me.Label1.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(78, 17)
@@ -97,37 +97,37 @@ Partial Class frmClassroomCreator
         '
         'txtClassName
         '
-        Me.txtClassName.Location = New System.Drawing.Point(3, 22)
+        Me.txtClassName.Location = New System.Drawing.Point(3, 23)
         Me.txtClassName.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassName.MaxLength = 20
         Me.txtClassName.Name = "txtClassName"
-        Me.txtClassName.Size = New System.Drawing.Size(401, 22)
+        Me.txtClassName.Size = New System.Drawing.Size(401, 23)
         Me.txtClassName.TabIndex = 2
         '
         'cmbClassroomType
         '
         Me.cmbClassroomType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbClassroomType.FormattingEnabled = True
-        Me.cmbClassroomType.Location = New System.Drawing.Point(4, 150)
+        Me.cmbClassroomType.Location = New System.Drawing.Point(4, 159)
         Me.cmbClassroomType.Margin = New System.Windows.Forms.Padding(1)
         Me.cmbClassroomType.Name = "cmbClassroomType"
-        Me.cmbClassroomType.Size = New System.Drawing.Size(135, 24)
+        Me.cmbClassroomType.Size = New System.Drawing.Size(135, 25)
         Me.cmbClassroomType.TabIndex = 17
         '
         'rtbClassDescription
         '
-        Me.rtbClassDescription.Location = New System.Drawing.Point(3, 63)
+        Me.rtbClassDescription.Location = New System.Drawing.Point(3, 67)
         Me.rtbClassDescription.Margin = New System.Windows.Forms.Padding(1)
         Me.rtbClassDescription.MaxLength = 20
         Me.rtbClassDescription.Name = "rtbClassDescription"
-        Me.rtbClassDescription.Size = New System.Drawing.Size(401, 67)
+        Me.rtbClassDescription.Size = New System.Drawing.Size(401, 71)
         Me.rtbClassDescription.TabIndex = 7
         Me.rtbClassDescription.Text = ""
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(-1, 46)
+        Me.Label4.Location = New System.Drawing.Point(-1, 49)
         Me.Label4.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(288, 17)
@@ -149,19 +149,21 @@ Partial Class frmClassroomCreator
         Me.PanelProfessorsOnly.Controls.Add(Me.cmbClassroomType)
         Me.PanelProfessorsOnly.Controls.Add(Me.rtbClassDescription)
         Me.PanelProfessorsOnly.Controls.Add(Me.Label4)
-        Me.PanelProfessorsOnly.Location = New System.Drawing.Point(15, 14)
+        Me.PanelProfessorsOnly.Location = New System.Drawing.Point(15, 15)
         Me.PanelProfessorsOnly.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelProfessorsOnly.Name = "PanelProfessorsOnly"
-        Me.PanelProfessorsOnly.Size = New System.Drawing.Size(405, 232)
+        Me.PanelProfessorsOnly.Size = New System.Drawing.Size(405, 246)
         Me.PanelProfessorsOnly.TabIndex = 21
         '
         'frmClassroomCreator
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(432, 257)
+        Me.ClientSize = New System.Drawing.Size(432, 273)
         Me.Controls.Add(Me.PanelProfessorsOnly)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmClassroomCreator"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmClassroomCreator"

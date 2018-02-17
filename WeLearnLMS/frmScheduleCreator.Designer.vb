@@ -52,7 +52,7 @@ Partial Class frmScheduleCreator
         Me.txtDay.Location = New System.Drawing.Point(371, 133)
         Me.txtDay.Name = "txtDay"
         Me.txtDay.ReadOnly = True
-        Me.txtDay.Size = New System.Drawing.Size(181, 20)
+        Me.txtDay.Size = New System.Drawing.Size(181, 23)
         Me.txtDay.TabIndex = 7
         '
         'Label3
@@ -121,7 +121,7 @@ Partial Class frmScheduleCreator
         Me.txtTime.Location = New System.Drawing.Point(187, 133)
         Me.txtTime.Name = "txtTime"
         Me.txtTime.ReadOnly = True
-        Me.txtTime.Size = New System.Drawing.Size(178, 20)
+        Me.txtTime.Size = New System.Drawing.Size(178, 23)
         Me.txtTime.TabIndex = 12
         '
         'txtClassroom
@@ -130,7 +130,7 @@ Partial Class frmScheduleCreator
         Me.txtClassroom.Location = New System.Drawing.Point(3, 133)
         Me.txtClassroom.Name = "txtClassroom"
         Me.txtClassroom.ReadOnly = True
-        Me.txtClassroom.Size = New System.Drawing.Size(178, 20)
+        Me.txtClassroom.Size = New System.Drawing.Size(178, 23)
         Me.txtClassroom.TabIndex = 11
         '
         'TableLayoutPanel1
@@ -162,7 +162,7 @@ Partial Class frmScheduleCreator
         '
         'frmScheduleCreator
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(555, 260)
         Me.Controls.Add(Me.TableLayoutPanel1)

@@ -138,3 +138,7 @@ C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.vb
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\RdlCompile.cache
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\RdlCompile.compiled
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.vbproj.ResolveComReference.cache
+C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\bin\Debug\AODL.dll
+C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmScheduleReportCreator.resources
+C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmReportHub.resources

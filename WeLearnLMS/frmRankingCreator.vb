@@ -122,13 +122,16 @@ Public Class frmRankingCreator
     End Sub
 
     Private Sub btnBrowseUser_Click(sender As Object, e As EventArgs) Handles btnBrowseUser.Click
-
-        Dim browser As New frmUsersViewer()
-        If browser.ShowDialog() = Windows.Forms.DialogResult.OK Then
-            Me._CandidateCredentials = browser.GetSmallCredentials
-        End If
-
-        Me.txtVote.Text = CountVotes(Me._CandidateCredentials.UserID)
+        Try
+            Dim browser As New frmUsersViewer()
+            If browser.ShowDialog() = Windows.Forms.DialogResult.OK Then
+                Me._CandidateCredentials = browser.GetSmallCredentials
+            End If
+            DisplayToText()
+            Me.txtVote.Text = CountVotes(Me._CandidateCredentials.UserID)
+        Catch ex As Exception
+            WeLearnMessageDisplay.Display(WeLearnExceptions.Simple, Me, ex)
+        End Try
     End Sub
 
     Private Sub Label4_MouseHover(sender As Object, e As EventArgs) Handles Label4.MouseHover

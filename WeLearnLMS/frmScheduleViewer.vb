@@ -28,6 +28,12 @@
         LoadSchedules(ClassroomID)
     End Sub
 
+    Friend ReadOnly Property MyDatatable As DataTable
+        Get
+            Return Me._MyDatatable
+        End Get
+    End Property
+
     Private Sub SimpleView(ByVal State As Boolean)
         With Me
             .Label1.Visible = State

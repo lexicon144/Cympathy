@@ -198,21 +198,26 @@ Public Class frmQuestionnaireViewer
     End Sub
 
     Private Sub frmQuestionnaireViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.BackColor = My.Settings("QuestMainBackground")
-        With Me
-            With .DataGridView1
-                .Columns("tttANS").Visible = False
-                .Columns("tttDistractor1").Visible = False
-                .Columns("tttDistractor2").Visible = False
-                .Columns("tttDistractor3").Visible = False
-                .Columns("tttDistractor4").Visible = False
-                .Columns("tttANS").Visible = False
-                .Columns("tttANS").Visible = False
+        Try
+
+            Me.BackColor = My.Settings("QuestMainBackground")
+            With Me
+                With .DataGridView1
+                    .Columns("tttANS").Visible = False
+                    .Columns("tttDistractor1").Visible = False
+                    .Columns("tttDistractor2").Visible = False
+                    .Columns("tttDistractor3").Visible = False
+                    .Columns("tttDistractor4").Visible = False
+                    .Columns("tttANS").Visible = False
+                    .Columns("tttANS").Visible = False
+                End With
             End With
-        End With
-        Dim wallop As New frmWALLOP
-        wallop.ShowDialog()
-        Me.WALLOP()
+            Dim wallop As New frmWALLOP
+            wallop.ShowDialog()
+            Me.WALLOP()
+        Catch ex As Exception
+            WeLearnMessageDisplay.Display(WeLearnExceptions.Simple, Me, ex)
+        End Try
     End Sub
 
     Private Sub DevAutoFill(ByVal Limit As UInt32)

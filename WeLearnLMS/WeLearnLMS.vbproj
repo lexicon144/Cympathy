@@ -80,6 +80,12 @@
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AODL">
+      <HintPath>..\packages\AODL.1.2.0.1\lib\AODL.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\AODL.1.2.0.1\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
@@ -193,6 +199,12 @@
     <Compile Include="frmClassroomHub.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmReportHub.Designer.vb">
+      <DependentUpon>frmReportHub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportHub.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmScheduleClassroomLifeSpanControl.Designer.vb">
       <DependentUpon>frmScheduleClassroomLifeSpanControl.vb</DependentUpon>
     </Compile>
@@ -245,6 +257,12 @@
       <DependentUpon>frmScheduleClassroomLifeSpanViewer.vb</DependentUpon>
     </Compile>
     <Compile Include="frmScheduleClassroomLifeSpanViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScheduleReportCreator.Designer.vb">
+      <DependentUpon>frmScheduleReportCreator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmScheduleReportCreator.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmServerEditor.Designer.vb">
@@ -542,6 +560,7 @@
     <Compile Include="IGetDate.vb" />
     <Compile Include="IHappyMessage.vb" />
     <Compile Include="IHashing.vb" />
+    <Compile Include="IMakeHTML.vb" />
     <Compile Include="IMakeMyLessonTreeNode.vb" />
     <Compile Include="IMarkQuestionnaire.vb" />
     <Compile Include="ImpAnswerArrayShuffler.vb" />
@@ -566,6 +585,8 @@
     <Compile Include="ImpHappyMessageDeploy.vb" />
     <Compile Include="ImpMakeArticleNode.vb" />
     <Compile Include="ImpMakeExamNode.vb" />
+    <Compile Include="ImpMakeHTMLQuizGrades.vb" />
+    <Compile Include="ImpMakeHTMLString.vb" />
     <Compile Include="ImpMakeMaterialNode.vb" />
     <Compile Include="ImpMakeQuizNode.vb" />
     <Compile Include="ImpMarkQuestionnaireExam.vb" />
@@ -644,6 +665,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmClassroomHub.resx">
       <DependentUpon>frmClassroomHub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportHub.resx">
+      <DependentUpon>frmReportHub.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmScheduleClassroomLifeSpanControl.resx">
       <DependentUpon>frmScheduleClassroomLifeSpanControl.vb</DependentUpon>
@@ -728,6 +752,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmScheduleClassroomLifeSpanViewer.resx">
       <DependentUpon>frmScheduleClassroomLifeSpanViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScheduleReportCreator.resx">
+      <DependentUpon>frmScheduleReportCreator.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmServerEditor.resx">
       <DependentUpon>frmServerEditor.vb</DependentUpon>
@@ -890,6 +917,7 @@
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\WeLearnLMS.vbproj.GenerateResource.Cache" />
+    <None Include="packages.config" />
     <None Include="WeLearnLMS_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
