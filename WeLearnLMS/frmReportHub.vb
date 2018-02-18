@@ -5,4 +5,10 @@
             Hub.ShowDialog()
         End Using
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Using hub As New frmQuizGradesReporter
+            hub.ShowDialog()
+        End Using
+    End Sub
 End Class

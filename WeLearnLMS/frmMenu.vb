@@ -27,6 +27,8 @@
         startupsound()
 
         FlagThisUser(True, Me._AdvancedCredentials.UserID)
+        SetMyClassroom()
+        Me.blinker.Start()
     End Sub
 
     Private Sub FlagThisUser(ByVal State As Boolean, ByRef UserID As String)
@@ -62,13 +64,16 @@
         End Using
     End Sub
 
+    Private Sub SetMyClassroom(Optional ByRef ID As String = "Nothing", Optional ByRef Classroom As String = "Nothing")
+        lblPrevClass.Text = "Session Classroom: " & Classroom & " " & ID
+    End Sub
+
     Private Sub btnClassroomHub_Click(sender As Object, e As EventArgs) Handles btnClassroomHub.Click
         Try
             Using ClassroomHub As New frmClassroomHub
                 ClassroomHub.ShowDialog(Me)
                 With Me.StatusStrip1
-                    toolstripCLASSNAME.Text = _SharedClassroom.ClassroomName
-                    toolstripCLASSROOMID.Text = _SharedClassroom.ClassroomId
+                    SetMyClassroom(_SharedClassroom.ClassroomId, _SharedClassroom.ClassroomName)
                 End With
             End Using
         Catch ex As Exception
@@ -197,19 +202,15 @@
     Private Sub btnSetMySession_Click(sender As Object, e As EventArgs) Handles btnSetMySession.Click
         Using Dialog As New frmClassroomDialog()
             If Dialog.ShowDialog = Windows.Forms.DialogResult.OK Then
-
+                _SharedClassroom = Dialog.GetClassroom
             End If
         End Using
-        With Me.StatusStrip1
-
-            toolstripCLASSNAME.Text = _SharedClassroom.ClassroomName
-            toolstripCLASSROOMID.Text = _SharedClassroom.ClassroomId
-        End With
+        SetMyClassroom(_SharedClassroom.ClassroomId, _SharedClassroom.ClassroomName)
     End Sub
 
     Private Sub tmrMessageAggregator_Tick(sender As Object, e As EventArgs) Handles tmrMessageAggregator.Tick
         If Not Me._HappyStuff.GetMyHappyMessage Is Nothing Then
-            Me.lblHappyGreeting.Text = Me._HappyStuff.GetMyHappyMessage
+            Me.Text = Me._HappyStuff.GetMyHappyMessage
         End If
     End Sub
 
@@ -217,5 +218,39 @@
         Using ReportHub As New frmReportHub
             ReportHub.ShowDialog()
         End Using
+    End Sub
+
+    Private Sub blinker_Tick(sender As Object, e As EventArgs) Handles blinker.Tick
+        With Me.lblPrevClass
+            If .Text = "Session Classroom: Nothing Nothing" Then
+
+                If .BackColor = DefaultBackColor Then
+                    .BackColor = Color.Red
+                Else
+                    .BackColor = DefaultBackColor
+                End If
+            Else
+                .BackColor = Color.LightGreen
+            End If
+        End With
+    End Sub
+
+    Private Sub lblPrevClass_Click(sender As Object, e As EventArgs) Handles lblPrevClass.Click
+        Using Dialog As New frmClassroomDialog()
+            If Dialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+                _SharedClassroom = Dialog.GetClassroom
+            End If
+        End Using
+
+        SetMyClassroom(_SharedClassroom.ClassroomId, _SharedClassroom.ClassroomName)
+
+    End Sub
+
+    Private Sub lblPrevClass_MouseHover(sender As Object, e As EventArgs) Handles lblPrevClass.MouseHover
+        blinker.Stop()
+    End Sub
+
+    Private Sub lblPrevClass_MouseLeave(sender As Object, e As EventArgs) Handles lblPrevClass.MouseLeave
+        blinker.Start()
     End Sub
 End Class

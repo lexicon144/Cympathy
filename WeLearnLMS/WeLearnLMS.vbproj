@@ -199,6 +199,12 @@
     <Compile Include="frmClassroomHub.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmQuizGradesReporter.Designer.vb">
+      <DependentUpon>frmQuizGradesReporter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuizGradesReporter.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmReportHub.Designer.vb">
       <DependentUpon>frmReportHub.vb</DependentUpon>
     </Compile>
@@ -560,6 +566,7 @@
     <Compile Include="IGetDate.vb" />
     <Compile Include="IHappyMessage.vb" />
     <Compile Include="IHashing.vb" />
+    <Compile Include="IMakeCSS.vb" />
     <Compile Include="IMakeHTML.vb" />
     <Compile Include="IMakeMyLessonTreeNode.vb" />
     <Compile Include="IMarkQuestionnaire.vb" />
@@ -584,6 +591,7 @@
     <Compile Include="ImpHappyMessage.vb" />
     <Compile Include="ImpHappyMessageDeploy.vb" />
     <Compile Include="ImpMakeArticleNode.vb" />
+    <Compile Include="ImpMakeCSS.vb" />
     <Compile Include="ImpMakeExamNode.vb" />
     <Compile Include="ImpMakeHTMLQuizGrades.vb" />
     <Compile Include="ImpMakeHTMLString.vb" />
@@ -602,6 +610,7 @@
     <Compile Include="ISalter.vb" />
     <Compile Include="ITimeMapper.vb" />
     <Compile Include="IVerifyTextInput.vb" />
+    <Compile Include="modHTMLConstants.vb" />
     <Compile Include="MonikaLovesYou.Designer.vb">
       <DependentUpon>MonikaLovesYou.vb</DependentUpon>
     </Compile>
@@ -665,6 +674,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmClassroomHub.resx">
       <DependentUpon>frmClassroomHub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuizGradesReporter.resx">
+      <DependentUpon>frmQuizGradesReporter.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportHub.resx">
       <DependentUpon>frmReportHub.vb</DependentUpon>

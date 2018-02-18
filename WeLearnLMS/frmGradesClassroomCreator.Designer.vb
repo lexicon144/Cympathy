@@ -109,7 +109,7 @@ Partial Class frmGradesClassroomCreator
         Me.TableLayoutPanel1.Controls.Add(Me.txtClassroomName, 1, 2)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 16)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
@@ -178,7 +178,7 @@ Partial Class frmGradesClassroomCreator
         Me.TableLayoutPanel2.Controls.Add(Me.txtUserName, 1, 2)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 16)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 3
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
@@ -259,7 +259,7 @@ Partial Class frmGradesClassroomCreator
         Me.TableLayoutPanel3.Controls.Add(Me.txtAverage, 1, 2)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 16)
-        Me.TableLayoutPanel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TableLayoutPanel3.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 3
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
@@ -324,7 +324,7 @@ Partial Class frmGradesClassroomCreator
         Me.FlowLayoutPanel1.Controls.Add(Me.TableLayoutPanel4)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(740, 249)
         Me.FlowLayoutPanel1.TabIndex = 8
@@ -337,7 +337,7 @@ Partial Class frmGradesClassroomCreator
         Me.TableLayoutPanel4.Controls.Add(Me.btnToggleRO, 0, 0)
         Me.TableLayoutPanel4.Controls.Add(Me.btnFinalizeGrades, 1, 0)
         Me.TableLayoutPanel4.Location = New System.Drawing.Point(2, 196)
-        Me.TableLayoutPanel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TableLayoutPanel4.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 1
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))

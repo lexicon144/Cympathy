@@ -24,6 +24,7 @@ Partial Class frmReportHub
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnScheduleReports = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -33,6 +34,7 @@ Partial Class frmReportHub
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnScheduleReports, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Button1, 1, 0)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 13)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
@@ -51,9 +53,19 @@ Partial Class frmReportHub
         Me.btnScheduleReports.Text = "Schedule Reports"
         Me.btnScheduleReports.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button1.Location = New System.Drawing.Point(178, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(170, 78)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Quiz Reports"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmReportHub
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = Global.WeLearnLMS.My.MySettings.Default.MenuBGC
         Me.ClientSize = New System.Drawing.Size(372, 197)
@@ -70,4 +82,5 @@ Partial Class frmReportHub
     End Sub
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents btnScheduleReports As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

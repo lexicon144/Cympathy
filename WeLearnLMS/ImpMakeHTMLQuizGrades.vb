@@ -1,6 +1,6 @@
 ﻿Public Class ImpMakeHTMLQuizGrades
     Implements IMakeHTML
-
+    Private MakeCSS As IMakeCSS = New ImpMakeCSS
     Private QuizName As String = ""
 
     Public Sub New(Optional ByRef Quizname As String = "QUESTIONNAIRE")
@@ -10,31 +10,48 @@
     Public Function MakeHTML(ByRef Datatable As DataTable) As String Implements IMakeHTML.MakeHTML
         Dim builder As New StringBuilder
         With builder
-            .Append("<html >")
-            .Append("<head>")
-            .Append("</head>")
-            .Append("<body>")
-            .Append("<h1>" & Me.QuizName & "</h1>")
-            .Append("<table border='3px' cellpadding='2' cellspacing='1' bgcolor='lightyellow' style='font-family:Garamond; font-size:smaller'>")
-            .Append("<tr >")
+            'headers etc
+            .Append(StartHTML)
+            .Append(StartHEAD)
+            .Append(StartSTYLE)
+            .Append(MakeCSS.MakeCSS)
+            .Append(EndSTYLE)
+            .Append(EndHEAD)
+            .Append(StartBODY)
+            .Append("<div id=""ReportHeader"">")
+            .Append(StartP & "WeLearn Reports" & EndP)
+            .Append("<p class=""subtitle"">A Cympathy Solution</p>")
+            .Append("<div id=""ReportSubHeader"">")
+            .Append("<table style=""position:relative; top:1000%;left:10;font-size: 1em;"">")
+            .Append(EndTABLE)
+            .Append(EndDIV)
+            'start of TABLE div
+            .Append("<div align=""center"" style=""top:70%;border:1px"">")
+            .Append("<p style=""font-family:arial"">" & "DATA" & EndP)
+
+            .Append("<table id=""GradesTable"">")
+            .Append("<tr class=""GradesTable"">")
             For Each myColumn As DataColumn In Datatable.Columns
-                .Append("<td >")
+                .Append(StartTD)
                 .Append(myColumn.ColumnName)
-                .Append("</td>")
+                .Append(EndTD)
             Next
-            .Append("</tr>")
+            .Append(EndTR)
+
             For Each myRow As DataRow In Datatable.Rows
-                .Append("<tr >")
+                .Append("<tr class=""GradesTable"">")
                 For Each myColumn As DataColumn In Datatable.Columns
-                    .Append("<td >")
+                    .Append(StartTD)
                     .Append(myRow(myColumn.ColumnName).ToString())
-                    .Append("</td>")
+                    .Append(EndTD)
                 Next
-                .Append("</tr>")
+                .Append(EndTR)
             Next
-            .Append("</table>")
-            .Append("</body>")
-            .Append("</html>")
+            .Append(EndTABLE)
+            .Append(EndDIV)
+            'closing
+            .Append(EndBODY)
+            .Append(EndHTML)
         End With
         Return builder.ToString
     End Function

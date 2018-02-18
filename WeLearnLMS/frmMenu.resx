@@ -132,4 +132,7 @@
   <metadata name="tmrMessageAggregator.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>497, 32</value>
   </metadata>
+  <metadata name="blinker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>678, 32</value>
+  </metadata>
 </root>

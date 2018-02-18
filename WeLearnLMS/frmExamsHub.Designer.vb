@@ -74,20 +74,20 @@ Partial Class frmExamsHub
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txtExamName, 1, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 19)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 16)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(259, 78)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(259, 81)
         Me.TableLayoutPanel1.TabIndex = 12
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 39)
+        Me.Label2.Location = New System.Drawing.Point(3, 40)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(83, 17)
+        Me.Label2.Size = New System.Drawing.Size(64, 13)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Exam Name"
         '
@@ -97,7 +97,7 @@ Partial Class frmExamsHub
         Me.txtExamID.Location = New System.Drawing.Point(132, 3)
         Me.txtExamID.Name = "txtExamID"
         Me.txtExamID.ReadOnly = True
-        Me.txtExamID.Size = New System.Drawing.Size(124, 23)
+        Me.txtExamID.Size = New System.Drawing.Size(124, 20)
         Me.txtExamID.TabIndex = 0
         '
         'Label1
@@ -105,17 +105,17 @@ Partial Class frmExamsHub
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 17)
+        Me.Label1.Size = New System.Drawing.Size(47, 13)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Exam ID"
         '
         'txtExamName
         '
         Me.txtExamName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtExamName.Location = New System.Drawing.Point(132, 42)
+        Me.txtExamName.Location = New System.Drawing.Point(132, 43)
         Me.txtExamName.Name = "txtExamName"
         Me.txtExamName.ReadOnly = True
-        Me.txtExamName.Size = New System.Drawing.Size(124, 23)
+        Me.txtExamName.Size = New System.Drawing.Size(124, 20)
         Me.txtExamName.TabIndex = 1
         '
         'btnOK
@@ -165,7 +165,7 @@ Partial Class frmExamsHub
         '
         'frmExamsHub
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(355, 290)
         Me.Controls.Add(Me.FlowLayoutPanel1)

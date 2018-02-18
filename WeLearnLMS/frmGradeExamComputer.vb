@@ -33,6 +33,12 @@
             Return _FullAverage
         End Get
     End Property
+
+    Friend ReadOnly Property GetMyDatatable As DataTable
+        Get
+            Return Me._AverageDatatable
+        End Get
+    End Property
 #End Region
 #Region "Functionality"
     ''' <summary>
