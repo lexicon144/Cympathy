@@ -145,7 +145,7 @@
             Where txt.Text.Length = 0
             Select txt.Name
         If emptyTextBoxes.Any Then
-            MessageBox.Show(String.Format("Please Select a Classroom","WeLearnLMS",MessageBoxButtons.OK,MessageBoxIcon.Exclamation)
+            MessageBox.Show(String.Format("Please Select a Classroom", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation))
         Else
             Me._Classroom = ParseFromTextbox()
             _SharedClassroom = ParseFromTextbox()

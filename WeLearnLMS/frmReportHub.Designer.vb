@@ -24,7 +24,8 @@ Partial Class frmReportHub
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnScheduleReports = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnQuizReports = New System.Windows.Forms.Button()
+        Me.btnClassStanding = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -34,7 +35,8 @@ Partial Class frmReportHub
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnScheduleReports, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button1, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.btnQuizReports, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.btnClassStanding, 0, 1)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 13)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
@@ -53,15 +55,25 @@ Partial Class frmReportHub
         Me.btnScheduleReports.Text = "Schedule Reports"
         Me.btnScheduleReports.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnQuizReports
         '
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button1.Location = New System.Drawing.Point(178, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(170, 78)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Quiz Reports"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnQuizReports.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnQuizReports.Location = New System.Drawing.Point(178, 3)
+        Me.btnQuizReports.Name = "btnQuizReports"
+        Me.btnQuizReports.Size = New System.Drawing.Size(170, 78)
+        Me.btnQuizReports.TabIndex = 1
+        Me.btnQuizReports.Text = "Quiz Reports"
+        Me.btnQuizReports.UseVisualStyleBackColor = True
+        '
+        'btnClassStanding
+        '
+        Me.btnClassStanding.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnClassStanding.Location = New System.Drawing.Point(3, 87)
+        Me.btnClassStanding.Name = "btnClassStanding"
+        Me.btnClassStanding.Size = New System.Drawing.Size(169, 78)
+        Me.btnClassStanding.TabIndex = 2
+        Me.btnClassStanding.Text = "Class Standing Reports"
+        Me.btnClassStanding.UseVisualStyleBackColor = True
         '
         'frmReportHub
         '
@@ -82,5 +94,6 @@ Partial Class frmReportHub
     End Sub
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents btnScheduleReports As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnQuizReports As System.Windows.Forms.Button
+    Friend WithEvents btnClassStanding As System.Windows.Forms.Button
 End Class

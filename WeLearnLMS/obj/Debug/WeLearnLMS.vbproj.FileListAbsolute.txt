@@ -101,7 +101,6 @@ C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.fr
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmRankingViewer.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmScheduleClassroomLifeSpanCreator.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmScheduleClassroomLifeSpanViewer.resources
-C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmScheduleReportCreator.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmServerEditor.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmSomeSettings.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmTimeSlotHub.resources
@@ -142,3 +141,6 @@ C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\bin\Debug\ICSharpCode.S
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmQuizCreator.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.exe
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.xml
+C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.vbprojResolveAssemblyReference.cache
+C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmClassStandingReporter.resources
+C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmScheduleReporter.resources

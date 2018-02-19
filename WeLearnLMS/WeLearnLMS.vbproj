@@ -199,6 +199,12 @@
     <Compile Include="frmClassroomHub.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmClassStandingReporter.Designer.vb">
+      <DependentUpon>frmClassStandingReporter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClassStandingReporter.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmQuizGradesReporter.Designer.vb">
       <DependentUpon>frmQuizGradesReporter.vb</DependentUpon>
     </Compile>
@@ -265,10 +271,10 @@
     <Compile Include="frmScheduleClassroomLifeSpanViewer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmScheduleReportCreator.Designer.vb">
-      <DependentUpon>frmScheduleReportCreator.vb</DependentUpon>
+    <Compile Include="frmScheduleReporter.Designer.vb">
+      <DependentUpon>frmScheduleReporter.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmScheduleReportCreator.vb">
+    <Compile Include="frmScheduleReporter.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmServerEditor.Designer.vb">
@@ -593,6 +599,8 @@
     <Compile Include="ImpMakeArticleNode.vb" />
     <Compile Include="ImpMakeCSS.vb" />
     <Compile Include="ImpMakeExamNode.vb" />
+    <Compile Include="ImpMakeHTMLClassStanding.vb" />
+    <Compile Include="ImpMakeHTMLExamGrades.vb" />
     <Compile Include="ImpMakeHTMLQuizGrades.vb" />
     <Compile Include="ImpMakeHTMLString.vb" />
     <Compile Include="ImpMakeMaterialNode.vb" />
@@ -674,6 +682,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmClassroomHub.resx">
       <DependentUpon>frmClassroomHub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClassStandingReporter.resx">
+      <DependentUpon>frmClassStandingReporter.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuizGradesReporter.resx">
       <DependentUpon>frmQuizGradesReporter.vb</DependentUpon>
@@ -765,8 +776,8 @@
     <EmbeddedResource Include="frmScheduleClassroomLifeSpanViewer.resx">
       <DependentUpon>frmScheduleClassroomLifeSpanViewer.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmScheduleReportCreator.resx">
-      <DependentUpon>frmScheduleReportCreator.vb</DependentUpon>
+    <EmbeddedResource Include="frmScheduleReporter.resx">
+      <DependentUpon>frmScheduleReporter.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmServerEditor.resx">
       <DependentUpon>frmServerEditor.vb</DependentUpon>
