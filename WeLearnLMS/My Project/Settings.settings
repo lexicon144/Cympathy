@@ -23,5 +23,8 @@
     <Setting Name="ClassroomHubBGC" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">Control</Value>
     </Setting>
+    <Setting Name="QuestionnaireViewerFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Microsoft Sans Serif, 8.25pt</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

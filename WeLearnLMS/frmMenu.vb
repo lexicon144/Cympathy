@@ -3,7 +3,8 @@
     Private _AdvancedCredentials As New c_AdvancedCredentials
     Private _Stopwatch As New Stopwatch
     Private _HappyStuff As IHappyMessage = New ImpHappyMessage
-
+    Private _MySession As New ImpStartSession
+    Private NYOOOMS As String = Application.StartupPath & "\foo\" & _SharedMainCredentials.UserName & ".nyooom"
     Public Sub New(ByRef AdvancedCredentials As c_AdvancedCredentials)
 
         ' This call is required by the designer.
@@ -27,11 +28,13 @@
         startupsound()
 
         FlagThisUser(True, Me._AdvancedCredentials.UserID)
+
+        _MySession.MakeNyoooms(_SharedMainCredentials.UserName)
         SetMyClassroom()
         Me.blinker.Start()
     End Sub
 
-    Private Sub FlagThisUser(ByVal State As Boolean, ByRef UserID As String)
+    Friend Sub FlagThisUser(ByVal State As Boolean, ByRef UserID As String)
         Using Connection As New MySqlConnection(_SharedConnString.ConnString)
             With Connection
                 If .State = ConnectionState.Closed Then
@@ -165,8 +168,13 @@
     Private Sub frmMenu_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If MessageBox.Show("Are you sure you want to log out?", "WeLearnLMS", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then
             logoutsound()
-            FlagThisUser(False, Me._AdvancedCredentials.UserID)
 
+            If System.IO.File.Exists(NYOOOMS) Then
+                MessageBox.Show("Clearing Your Session.... Done! You are now Logged Out!", "Cympathy", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\foo\" & _SharedMainCredentials.UserName & ".nyooom", FileIO.UIOption.OnlyErrorDialogs, FileIO.RecycleOption.DeletePermanently)
+            End If
+
+            FlagThisUser(False, Me._AdvancedCredentials.UserID)
             e.Cancel = False
             Exit Sub
         End If
@@ -196,7 +204,6 @@
             changeviews.ShowDialog()
             Me.Refresh()
         End Using
-
     End Sub
 
     Private Sub btnSetMySession_Click(sender As Object, e As EventArgs) Handles btnSetMySession.Click
@@ -252,5 +259,18 @@
 
     Private Sub lblPrevClass_MouseLeave(sender As Object, e As EventArgs) Handles lblPrevClass.MouseLeave
         blinker.Start()
+    End Sub
+
+    Private Sub ShowHelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowHelpToolStripMenuItem.Click
+        Help.ShowHelp(Me, Application.StartupPath & "\welearnman.chm")
+    End Sub
+
+    Private Sub RegisterProfessorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegisterProfessorToolStripMenuItem.Click
+        Using registration As New frmUserRegistration
+            registration.DisableProfessors = False
+
+            registration.ShowDialog()
+
+        End Using
     End Sub
 End Class

@@ -42,6 +42,7 @@ Partial Class frmMenu
         Me.btnCreateMaterials = New System.Windows.Forms.Button()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lblPrevClass = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tlstrpSECONDS = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tlstrpMINUTES = New System.Windows.Forms.ToolStripStatusLabel()
@@ -60,9 +61,12 @@ Partial Class frmMenu
         Me.ChangeSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RefreshToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MoreSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegisterProfessorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShowHelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tmrMessageAggregator = New System.Windows.Forms.Timer(Me.components)
         Me.blinker = New System.Windows.Forms.Timer(Me.components)
-        Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.grpStartStudying.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -98,8 +102,10 @@ Partial Class frmMenu
         '
         Me.btnGrades.AutoEllipsis = True
         Me.btnGrades.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnGrades, "Opens the Grades Module")
         Me.btnGrades.Location = New System.Drawing.Point(3, 3)
         Me.btnGrades.Name = "btnGrades"
+        Me.HelpProvider1.SetShowHelp(Me.btnGrades, True)
         Me.btnGrades.Size = New System.Drawing.Size(166, 73)
         Me.btnGrades.TabIndex = 29
         Me.btnGrades.Text = "Grades"
@@ -109,8 +115,10 @@ Partial Class frmMenu
         '
         Me.btnFeedback.AutoEllipsis = True
         Me.btnFeedback.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnFeedback, "Opens the Feedback Module")
         Me.btnFeedback.Location = New System.Drawing.Point(175, 3)
         Me.btnFeedback.Name = "btnFeedback"
+        Me.HelpProvider1.SetShowHelp(Me.btnFeedback, True)
         Me.btnFeedback.Size = New System.Drawing.Size(154, 73)
         Me.btnFeedback.TabIndex = 2
         Me.btnFeedback.Text = "Feedback"
@@ -120,8 +128,10 @@ Partial Class frmMenu
         '
         Me.btnRanking.AutoEllipsis = True
         Me.btnRanking.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnRanking, "Opens the Ranking Module")
         Me.btnRanking.Location = New System.Drawing.Point(3, 82)
         Me.btnRanking.Name = "btnRanking"
+        Me.HelpProvider1.SetShowHelp(Me.btnRanking, True)
         Me.btnRanking.Size = New System.Drawing.Size(166, 74)
         Me.btnRanking.TabIndex = 28
         Me.btnRanking.Text = "Ranking"
@@ -161,8 +171,10 @@ Partial Class frmMenu
         '
         Me.btnClassroomHub.AutoEllipsis = True
         Me.btnClassroomHub.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnClassroomHub, "Opens the Classroom Hub")
         Me.btnClassroomHub.Location = New System.Drawing.Point(3, 3)
         Me.btnClassroomHub.Name = "btnClassroomHub"
+        Me.HelpProvider1.SetShowHelp(Me.btnClassroomHub, True)
         Me.btnClassroomHub.Size = New System.Drawing.Size(171, 73)
         Me.btnClassroomHub.TabIndex = 0
         Me.btnClassroomHub.Text = "Classroom"
@@ -172,8 +184,10 @@ Partial Class frmMenu
         '
         Me.btnTimeManagement.AutoEllipsis = True
         Me.btnTimeManagement.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnTimeManagement, "Opens the Time Management Module")
         Me.btnTimeManagement.Location = New System.Drawing.Point(3, 82)
         Me.btnTimeManagement.Name = "btnTimeManagement"
+        Me.HelpProvider1.SetShowHelp(Me.btnTimeManagement, True)
         Me.btnTimeManagement.Size = New System.Drawing.Size(171, 74)
         Me.btnTimeManagement.TabIndex = 1
         Me.btnTimeManagement.Text = "Time Management"
@@ -183,8 +197,10 @@ Partial Class frmMenu
         '
         Me.btnLessonList.AutoEllipsis = True
         Me.btnLessonList.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnLessonList, "Opens the Lesson List Module")
         Me.btnLessonList.Location = New System.Drawing.Point(180, 3)
         Me.btnLessonList.Name = "btnLessonList"
+        Me.HelpProvider1.SetShowHelp(Me.btnLessonList, True)
         Me.btnLessonList.Size = New System.Drawing.Size(171, 73)
         Me.btnLessonList.TabIndex = 27
         Me.btnLessonList.Text = "Lesson List"
@@ -193,8 +209,10 @@ Partial Class frmMenu
         'btnSetMySession
         '
         Me.btnSetMySession.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnSetMySession, "Sets your Session Classroom for the Reports")
         Me.btnSetMySession.Location = New System.Drawing.Point(180, 82)
         Me.btnSetMySession.Name = "btnSetMySession"
+        Me.HelpProvider1.SetShowHelp(Me.btnSetMySession, True)
         Me.btnSetMySession.Size = New System.Drawing.Size(171, 74)
         Me.btnSetMySession.TabIndex = 28
         Me.btnSetMySession.Text = "Set My Classroom As..."
@@ -207,7 +225,7 @@ Partial Class frmMenu
         Me.grpCreate.Margin = New System.Windows.Forms.Padding(2)
         Me.grpCreate.Name = "grpCreate"
         Me.grpCreate.Padding = New System.Windows.Forms.Padding(2)
-        Me.grpCreate.Size = New System.Drawing.Size(353, 173)
+        Me.grpCreate.Size = New System.Drawing.Size(353, 170)
         Me.grpCreate.TabIndex = 33
         Me.grpCreate.TabStop = False
         Me.grpCreate.Text = "Create..!"
@@ -229,16 +247,18 @@ Partial Class frmMenu
         Me.panel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.panel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.panel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.panel4.Size = New System.Drawing.Size(349, 156)
+        Me.panel4.Size = New System.Drawing.Size(349, 153)
         Me.panel4.TabIndex = 0
         '
         'btnCreateClassroom
         '
         Me.btnCreateClassroom.AutoSize = True
         Me.btnCreateClassroom.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnCreateClassroom, "Opens the Classroom Creator Module")
         Me.btnCreateClassroom.Location = New System.Drawing.Point(3, 3)
         Me.btnCreateClassroom.Name = "btnCreateClassroom"
-        Me.btnCreateClassroom.Size = New System.Drawing.Size(168, 46)
+        Me.HelpProvider1.SetShowHelp(Me.btnCreateClassroom, True)
+        Me.btnCreateClassroom.Size = New System.Drawing.Size(168, 45)
         Me.btnCreateClassroom.TabIndex = 27
         Me.btnCreateClassroom.Text = "Create Classroom"
         Me.btnCreateClassroom.UseVisualStyleBackColor = True
@@ -247,9 +267,11 @@ Partial Class frmMenu
         '
         Me.btnCreateQuestionnaire.AutoSize = True
         Me.btnCreateQuestionnaire.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnCreateQuestionnaire, "Opens the Questionnaire Creator Module")
         Me.btnCreateQuestionnaire.Location = New System.Drawing.Point(177, 3)
         Me.btnCreateQuestionnaire.Name = "btnCreateQuestionnaire"
-        Me.btnCreateQuestionnaire.Size = New System.Drawing.Size(169, 46)
+        Me.HelpProvider1.SetShowHelp(Me.btnCreateQuestionnaire, True)
+        Me.btnCreateQuestionnaire.Size = New System.Drawing.Size(169, 45)
         Me.btnCreateQuestionnaire.TabIndex = 23
         Me.btnCreateQuestionnaire.Text = "Create Quiz"
         Me.btnCreateQuestionnaire.UseVisualStyleBackColor = True
@@ -258,9 +280,11 @@ Partial Class frmMenu
         '
         Me.btnCreateExam.AutoSize = True
         Me.btnCreateExam.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCreateExam.Location = New System.Drawing.Point(3, 55)
+        Me.HelpProvider1.SetHelpString(Me.btnCreateExam, "Opens the Questionnaire Creator Module")
+        Me.btnCreateExam.Location = New System.Drawing.Point(3, 54)
         Me.btnCreateExam.Name = "btnCreateExam"
-        Me.btnCreateExam.Size = New System.Drawing.Size(168, 46)
+        Me.HelpProvider1.SetShowHelp(Me.btnCreateExam, False)
+        Me.btnCreateExam.Size = New System.Drawing.Size(168, 45)
         Me.btnCreateExam.TabIndex = 26
         Me.btnCreateExam.Text = "Create Exam"
         Me.btnCreateExam.UseVisualStyleBackColor = True
@@ -269,9 +293,11 @@ Partial Class frmMenu
         '
         Me.btnCreateArticles.AutoSize = True
         Me.btnCreateArticles.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCreateArticles.Location = New System.Drawing.Point(177, 55)
+        Me.HelpProvider1.SetHelpString(Me.btnCreateArticles, "Opens the Article Creator Module")
+        Me.btnCreateArticles.Location = New System.Drawing.Point(177, 54)
         Me.btnCreateArticles.Name = "btnCreateArticles"
-        Me.btnCreateArticles.Size = New System.Drawing.Size(169, 46)
+        Me.HelpProvider1.SetShowHelp(Me.btnCreateArticles, True)
+        Me.btnCreateArticles.Size = New System.Drawing.Size(169, 45)
         Me.btnCreateArticles.TabIndex = 24
         Me.btnCreateArticles.Text = "Create Articles"
         Me.btnCreateArticles.UseVisualStyleBackColor = True
@@ -280,19 +306,23 @@ Partial Class frmMenu
         '
         Me.btnCreateMaterials.AutoSize = True
         Me.btnCreateMaterials.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCreateMaterials.Location = New System.Drawing.Point(3, 107)
+        Me.HelpProvider1.SetHelpString(Me.btnCreateMaterials, "Opens the Materials Creator Module")
+        Me.btnCreateMaterials.Location = New System.Drawing.Point(3, 105)
         Me.btnCreateMaterials.Name = "btnCreateMaterials"
-        Me.btnCreateMaterials.Size = New System.Drawing.Size(168, 46)
+        Me.HelpProvider1.SetShowHelp(Me.btnCreateMaterials, True)
+        Me.btnCreateMaterials.Size = New System.Drawing.Size(168, 45)
         Me.btnCreateMaterials.TabIndex = 25
         Me.btnCreateMaterials.Text = "Create Materials"
         Me.btnCreateMaterials.UseVisualStyleBackColor = True
         '
         'StatusStrip1
         '
+        Me.HelpProvider1.SetHelpString(Me.StatusStrip1, "Any important information that you need to know is displayed here...")
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblPrevClass, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel1, Me.tlstrpSECONDS, Me.tlstrpMINUTES, Me.tlstrpHOURS, Me.lblCheatDetector})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 431)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1433, 22)
+        Me.HelpProvider1.SetShowHelp(Me.StatusStrip1, True)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1414, 22)
         Me.StatusStrip1.TabIndex = 34
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -302,6 +332,13 @@ Partial Class frmMenu
         Me.lblPrevClass.Name = "lblPrevClass"
         Me.lblPrevClass.Size = New System.Drawing.Size(108, 17)
         Me.lblPrevClass.Text = "Session Classroom:"
+        '
+        'ToolStripStatusLabel2
+        '
+        Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
+        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(1158, 17)
+        Me.ToolStripStatusLabel2.Spring = True
+        Me.ToolStripStatusLabel2.Text = "WeLearnLMS"
         '
         'ToolStripStatusLabel1
         '
@@ -362,7 +399,7 @@ Partial Class frmMenu
         Me.mainpanel.Location = New System.Drawing.Point(0, 24)
         Me.mainpanel.Margin = New System.Windows.Forms.Padding(2)
         Me.mainpanel.Name = "mainpanel"
-        Me.mainpanel.Size = New System.Drawing.Size(1433, 407)
+        Me.mainpanel.Size = New System.Drawing.Size(1414, 407)
         Me.mainpanel.TabIndex = 35
         '
         'PanelProfessorsOnly
@@ -379,7 +416,7 @@ Partial Class frmMenu
         Me.grpReports.Controls.Add(Me.TableLayoutPanel2)
         Me.grpReports.Location = New System.Drawing.Point(363, 3)
         Me.grpReports.Name = "grpReports"
-        Me.grpReports.Size = New System.Drawing.Size(329, 167)
+        Me.grpReports.Size = New System.Drawing.Size(329, 165)
         Me.grpReports.TabIndex = 34
         Me.grpReports.TabStop = False
         Me.grpReports.Text = "Reports..."
@@ -396,15 +433,17 @@ Partial Class frmMenu
         Me.TableLayoutPanel2.RowCount = 2
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(323, 148)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(323, 146)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'btnViewReports
         '
         Me.btnViewReports.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnViewReports, "Display the Reports Hub")
         Me.btnViewReports.Location = New System.Drawing.Point(3, 3)
         Me.btnViewReports.Name = "btnViewReports"
-        Me.btnViewReports.Size = New System.Drawing.Size(155, 68)
+        Me.HelpProvider1.SetShowHelp(Me.btnViewReports, True)
+        Me.btnViewReports.Size = New System.Drawing.Size(155, 67)
         Me.btnViewReports.TabIndex = 0
         Me.btnViewReports.Text = "View Reports"
         Me.btnViewReports.UseVisualStyleBackColor = True
@@ -416,11 +455,13 @@ Partial Class frmMenu
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangeColorToolStripMenuItem, Me.ChangeSettingsToolStripMenuItem})
+        Me.HelpProvider1.SetHelpString(Me.MenuStrip1, "More options!")
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangeColorToolStripMenuItem, Me.ChangeSettingsToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(1433, 24)
+        Me.HelpProvider1.SetShowHelp(Me.MenuStrip1, True)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1414, 24)
         Me.MenuStrip1.TabIndex = 36
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -432,22 +473,41 @@ Partial Class frmMenu
         '
         'ChangeSettingsToolStripMenuItem
         '
-        Me.ChangeSettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RefreshToolStripMenuItem, Me.MoreSettingsToolStripMenuItem})
+        Me.ChangeSettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RefreshToolStripMenuItem, Me.MoreSettingsToolStripMenuItem, Me.RegisterProfessorToolStripMenuItem})
         Me.ChangeSettingsToolStripMenuItem.Name = "ChangeSettingsToolStripMenuItem"
-        Me.ChangeSettingsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
-        Me.ChangeSettingsToolStripMenuItem.Text = "Settings"
+        Me.ChangeSettingsToolStripMenuItem.Size = New System.Drawing.Size(92, 20)
+        Me.ChangeSettingsToolStripMenuItem.Text = "More Options"
         '
         'RefreshToolStripMenuItem
         '
         Me.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem"
-        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
         Me.RefreshToolStripMenuItem.Text = "Refresh"
         '
         'MoreSettingsToolStripMenuItem
         '
         Me.MoreSettingsToolStripMenuItem.Name = "MoreSettingsToolStripMenuItem"
-        Me.MoreSettingsToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.MoreSettingsToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
         Me.MoreSettingsToolStripMenuItem.Text = "More Settings"
+        '
+        'RegisterProfessorToolStripMenuItem
+        '
+        Me.RegisterProfessorToolStripMenuItem.Name = "RegisterProfessorToolStripMenuItem"
+        Me.RegisterProfessorToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.RegisterProfessorToolStripMenuItem.Text = "Register Professor"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowHelpToolStripMenuItem})
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "Help"
+        '
+        'ShowHelpToolStripMenuItem
+        '
+        Me.ShowHelpToolStripMenuItem.Name = "ShowHelpToolStripMenuItem"
+        Me.ShowHelpToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.ShowHelpToolStripMenuItem.Text = "Show Help"
         '
         'tmrMessageAggregator
         '
@@ -458,29 +518,27 @@ Partial Class frmMenu
         Me.blinker.Enabled = True
         Me.blinker.Interval = 800
         '
-        'ToolStripStatusLabel2
-        '
-        Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
-        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(1177, 17)
-        Me.ToolStripStatusLabel2.Spring = True
-        Me.ToolStripStatusLabel2.Text = "WeLearnLMS"
-        '
         'frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = Global.WeLearnLMS.My.MySettings.Default.MenuBGC
-        Me.ClientSize = New System.Drawing.Size(1433, 453)
+        Me.ClientSize = New System.Drawing.Size(1414, 453)
         Me.Controls.Add(Me.mainpanel)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.DataBindings.Add(New System.Windows.Forms.Binding("BackColor", Global.WeLearnLMS.My.MySettings.Default, "MenuBGC", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpString(Me, "This is the main menu! All the common controls that you will be needing will be l" & _
+        "ocated here!")
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMenu"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmMenu"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.grpStartStudying.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
@@ -540,4 +598,8 @@ Partial Class frmMenu
     Friend WithEvents btnViewReports As System.Windows.Forms.Button
     Friend WithEvents blinker As System.Windows.Forms.Timer
     Friend WithEvents ToolStripStatusLabel2 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents HelpToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ShowHelpToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
+    Friend WithEvents RegisterProfessorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

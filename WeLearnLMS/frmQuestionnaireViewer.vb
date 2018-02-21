@@ -193,13 +193,14 @@ Public Class frmQuestionnaireViewer
     End Sub
 
     Private Sub frmQuestionnaireViewer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        Counter()
+        If Not _SharedAdvancedCredentials.MyUserType = c_MainCredentials.UserType.PRO Or _SharedAdvancedCredentials.MyUserType = c_MainCredentials.UserType.ADM Then
+            Counter()
+        End If
         Me.DialogResult = Windows.Forms.DialogResult.OK
     End Sub
 
     Private Sub frmQuestionnaireViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-
             Me.BackColor = My.Settings("QuestMainBackground")
             With Me
                 With .DataGridView1
@@ -244,9 +245,18 @@ Public Class frmQuestionnaireViewer
             .lblSeconds.Text = ._MyStopwatch.Elapsed.Seconds
         End With
         CheatDetector()
+        CheckTime()
+    End Sub
+
+    Private Sub CheckTime()
+        If Me._MyStopwatch.Elapsed.Hours = 2 Then
+            _MyStopwatch.Stop()
+            MessageBox.Show("It has been 2 Hours Already. Your Questionnaire Is Now Finalized", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 
     Private Sub WALLOP()
+        If _SharedAdvancedCredentials.MyUserType = c_MainCredentials.UserType.PRO Or _SharedAdvancedCredentials.MyUserType = c_MainCredentials.UserType.ADM Then Exit Sub
         Me._MyStopwatch.Start()
         Me.Timer1.Start()
     End Sub

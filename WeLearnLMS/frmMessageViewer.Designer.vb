@@ -36,6 +36,7 @@ Partial Class frmMessageViewer
         Me.txtSenderNAME = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -43,10 +44,12 @@ Partial Class frmMessageViewer
         'txtSenderID
         '
         Me.txtSenderID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.txtSenderID, "The UserID that SENT this message to you")
         Me.txtSenderID.Location = New System.Drawing.Point(166, 32)
         Me.txtSenderID.Margin = New System.Windows.Forms.Padding(2)
         Me.txtSenderID.Name = "txtSenderID"
         Me.txtSenderID.ReadOnly = True
+        Me.HelpProvider1.SetShowHelp(Me.txtSenderID, True)
         Me.txtSenderID.Size = New System.Drawing.Size(160, 20)
         Me.txtSenderID.TabIndex = 1
         '
@@ -63,10 +66,12 @@ Partial Class frmMessageViewer
         'txtReceiverID
         '
         Me.txtReceiverID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.txtReceiverID, "(YOU)")
         Me.txtReceiverID.Location = New System.Drawing.Point(166, 62)
         Me.txtReceiverID.Margin = New System.Windows.Forms.Padding(2)
         Me.txtReceiverID.Name = "txtReceiverID"
         Me.txtReceiverID.ReadOnly = True
+        Me.HelpProvider1.SetShowHelp(Me.txtReceiverID, True)
         Me.txtReceiverID.Size = New System.Drawing.Size(160, 20)
         Me.txtReceiverID.TabIndex = 2
         '
@@ -83,12 +88,15 @@ Partial Class frmMessageViewer
         'txtMessage
         '
         Me.txtMessage.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpKeyword(Me.txtMessage, "")
+        Me.HelpProvider1.SetHelpString(Me.txtMessage, "this is YOUR message")
         Me.txtMessage.Location = New System.Drawing.Point(166, 92)
         Me.txtMessage.Margin = New System.Windows.Forms.Padding(2)
         Me.txtMessage.MaxLength = 70
         Me.txtMessage.Multiline = True
         Me.txtMessage.Name = "txtMessage"
         Me.txtMessage.ReadOnly = True
+        Me.HelpProvider1.SetShowHelp(Me.txtMessage, True)
         Me.txtMessage.Size = New System.Drawing.Size(160, 102)
         Me.txtMessage.TabIndex = 3
         '
@@ -185,7 +193,12 @@ Partial Class frmMessageViewer
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpString(Me, "This is the Feedback Viewer")
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmMessageViewer"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmFeedbackViewer"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -207,4 +220,5 @@ Partial Class frmMessageViewer
     Friend WithEvents txtSenderNAME As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
 End Class

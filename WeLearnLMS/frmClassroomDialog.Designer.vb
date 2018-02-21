@@ -35,6 +35,7 @@ Partial Class frmClassroomDialog
         Me.btnOk = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
@@ -53,40 +54,49 @@ Partial Class frmClassroomDialog
         'txtClassType
         '
         Me.txtClassType.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.txtClassType, "This is the Classroom type")
         Me.txtClassType.Location = New System.Drawing.Point(191, 70)
         Me.txtClassType.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassType.Name = "txtClassType"
         Me.txtClassType.ReadOnly = True
+        Me.HelpProvider1.SetShowHelp(Me.txtClassType, True)
         Me.txtClassType.Size = New System.Drawing.Size(188, 20)
         Me.txtClassType.TabIndex = 10
         '
         'txtClassId
         '
         Me.txtClassId.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.txtClassId, "This is the Classroom ID (only the tech guys make use of these... and maybe so do" & _
+        " you!)")
         Me.txtClassId.Location = New System.Drawing.Point(191, 1)
         Me.txtClassId.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassId.Name = "txtClassId"
         Me.txtClassId.ReadOnly = True
+        Me.HelpProvider1.SetShowHelp(Me.txtClassId, True)
         Me.txtClassId.Size = New System.Drawing.Size(188, 20)
         Me.txtClassId.TabIndex = 7
         '
         'txtClassDescription
         '
         Me.txtClassDescription.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.txtClassDescription, "This is the Classroom Description")
         Me.txtClassDescription.Location = New System.Drawing.Point(191, 47)
         Me.txtClassDescription.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassDescription.Name = "txtClassDescription"
         Me.txtClassDescription.ReadOnly = True
+        Me.HelpProvider1.SetShowHelp(Me.txtClassDescription, True)
         Me.txtClassDescription.Size = New System.Drawing.Size(188, 20)
         Me.txtClassDescription.TabIndex = 6
         '
         'txtClassName
         '
         Me.txtClassName.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.txtClassName, "This is the Classroom Name!")
         Me.txtClassName.Location = New System.Drawing.Point(191, 24)
         Me.txtClassName.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassName.Name = "txtClassName"
         Me.txtClassName.ReadOnly = True
+        Me.HelpProvider1.SetShowHelp(Me.txtClassName, True)
         Me.txtClassName.Size = New System.Drawing.Size(188, 20)
         Me.txtClassName.TabIndex = 5
         '
@@ -130,11 +140,13 @@ Partial Class frmClassroomDialog
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.HelpProvider1.SetHelpString(Me.DataGridView1, "Click the Select button to select a classroom!")
         Me.DataGridView1.Location = New System.Drawing.Point(3, 4)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.HelpProvider1.SetShowHelp(Me.DataGridView1, True)
         Me.DataGridView1.Size = New System.Drawing.Size(461, 166)
         Me.DataGridView1.TabIndex = 25
         '
@@ -145,8 +157,10 @@ Partial Class frmClassroomDialog
         '
         'btnOk
         '
+        Me.HelpProvider1.SetHelpString(Me.btnOk, "Click me to open the Selected Classroom!")
         Me.btnOk.Location = New System.Drawing.Point(389, 177)
         Me.btnOk.Name = "btnOk"
+        Me.HelpProvider1.SetShowHelp(Me.btnOk, True)
         Me.btnOk.Size = New System.Drawing.Size(75, 47)
         Me.btnOk.TabIndex = 28
         Me.btnOk.Text = "O K "
@@ -194,7 +208,13 @@ Partial Class frmClassroomDialog
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpString(Me, "This is the Classroom Dialog! This will show you the classrooms that you are enro" & _
+        "lled into! (the admin can view all the classrooms)")
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmClassroomDialog"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmClassroomDialog"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -217,4 +237,5 @@ Partial Class frmClassroomDialog
     Private WithEvents btnOk As System.Windows.Forms.Button
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
+    Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
 End Class

@@ -1,13 +1,9 @@
-﻿Public Class frmQuizGradesReporter
+﻿Public Class frmClassroomGradeReporter
 
     Private _Table As New DataTable
-    Private _Maker As IMakeHTML = New ImpMakeHTMLQuizGrades
+    Private _Maker As IMakeHTML = New ImpMakeHTMLClassroomGrades
     Private _HTMLString As String
-
-    Private _AllQuizCount As UInt32
-    Private _RecordedCount As UInt32
-    Private _GradeSummation As Double = 0.0
-    Private _FullAverage As Double = 0.0
+    Private _FormattedTable As New DataTable
 
     Private Sub frmQuizGradesCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Cursor = Cursors.WaitCursor
@@ -15,25 +11,38 @@
     End Sub
 
     Private Sub FillMyDatatable()
-        Dim Computer As New frmGradesQuizComputer
-
+        Dim Computer As New frmGradesClassroomViewer
         With Computer
-            Me._Table = .GetMyDatatable()
-            .TriggerNecessaryFunctions()
-            Me._AllQuizCount = .QuizCount
-            Me._RecordedCount = .RecordedCount
-            Me._GradeSummation = .GradeSummation
-            Me._FullAverage = .FullAverage
+            .GetAllClassroomGrades(_SharedClassroom.ClassroomId)
+            Me._Table = .GetMyTable
         End With
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Try
-
-            BackgroundWorker1.ReportProgress(10)
             FillMyDatatable()
-            BackgroundWorker1.ReportProgress(50)
-            Me._HTMLString = _Maker.MakeHTML(Me._Table)
+            With Me._Table
+                .Columns("user_id").ColumnName = "UserID"
+                .Columns("user_name").ColumnName = "UserName"
+                .Columns("class_name").ColumnName = "ClassName"
+                .Columns("class_grade").ColumnName = "Grade"
+            End With
+
+            With Me._FormattedTable.Columns
+                .Add("UserID")
+                .Add("UserName")
+                .Add("ClassName")
+                .Add("Grade")
+            End With
+
+            BackgroundWorker1.ReportProgress(90)
+
+            For Each row As DataRow In Me._Table.Rows
+                Dim NewRow As String() = New String() {row("UserID"), row("UserName"), row("ClassName"), row("Grade")}
+                _FormattedTable.Rows.Add(NewRow)
+            Next
+
+            Me._HTMLString = Me._Maker.MakeHTML(Me._FormattedTable)
             BackgroundWorker1.ReportProgress(100)
         Catch ex As Exception
             Throw ex

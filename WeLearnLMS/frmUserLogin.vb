@@ -14,7 +14,7 @@
 ''' <remarks></remarks>
 Public Class frmUserLogin
     Private _PreInfo As New DataTable
-
+    Private _IsOnline As Boolean
     Private _UserMainCredentials As New c_MainCredentials
     Private _UserAdvancedCredentials As New c_AdvancedCredentials
 
@@ -31,6 +31,8 @@ Public Class frmUserLogin
     Private _Attempts As UInt16 = 0
     Private _LoginStopwatch As New Stopwatch
 
+    Private _MySession As New ImpStartSession
+
     Private Sub formLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim Pinger As New frmSQLPinger
         If Pinger.ShowDialog() = Windows.Forms.DialogResult.OK Then
@@ -40,7 +42,7 @@ Public Class frmUserLogin
         Timer1.Start()
     End Sub
 
-    Private Sub LogMeIn()
+    Private Sub SelectThisUser()
         Using Connection As New MySqlConnection
             With Connection
                 .ConnectionString = _SharedConnString.ConnString
@@ -70,11 +72,17 @@ Public Class frmUserLogin
                     End Using
                 End Using
             Catch eee As Exception
+                Console.WriteLine(eee.Message)
             End Try
         End Using
     End Sub
 
-    Private Function ValidateLogin() As Boolean
+    ''' <summary>
+    ''' Validate the Login
+    ''' </summary>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Private Function LoginValidated() As Boolean
 
         Dim TestingPassword As String
         TestingPassword = _Hasher.HashThis(Me.txtPassword.Text, Me._UserMainCredentials.UserSalt)
@@ -82,18 +90,23 @@ Public Class frmUserLogin
 
     End Function
 
+    ''' <summary>
+    ''' Parse Datatables to Credentials
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub PreInfoToCredentialsParser()
         With Me
             ._UserQuestionIndex = _PreInfo.Rows(0)("questionIndex").ToString()
             ._UserQuestionAnswer = _PreInfo.Rows(0)("sec_ans").ToString()
             With ._UserMainCredentials
-                _SharedUserID = _PreInfo.Rows(0)("user_id").ToString()
+                _SharedUserID = _PreInfo.Rows(0)("user_id").ToString
                 .UserID = _PreInfo.Rows(0)("user_id").ToString()
                 .MyUserType = _PreInfo.Rows(0)("user_type").ToString()
                 .UserName = _PreInfo.Rows(0)("user_name").ToString()
                 .UserSalt = _PreInfo.Rows(0)("user_leagueoflegends").ToString()
                 .UserSaltedPassword = _PreInfo.Rows(0)("user_password").ToString()
             End With
+            ._IsOnline = _PreInfo.Rows(0)("isOnline").ToString()
         End With
         With Me._UserAdvancedCredentials
 
@@ -110,7 +123,6 @@ Public Class frmUserLogin
             .UserGender = _PreInfo.Rows(0)("user_gender").ToString()
             .UserCellularNumber = _PreInfo.Rows(0)("user_cellularnumber").ToString()
             .UserLandline = _PreInfo.Rows(0)("user_landline").ToString()
-            '. = _PreInfo.Rows(0)("user_dob").ToString()
             .UserAddress = _PreInfo.Rows(0)("address").ToString()
             .UserEmail = _PreInfo.Rows(0)("email").ToString()
         End With
@@ -122,61 +134,49 @@ Public Class frmUserLogin
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        Try
-            Me._PreInfo.Clear()
-            LogMeIn()
 
-            If _PreInfo Is Nothing And _PreInfo.Rows.Count = 0 Then
-                MessageBox.Show("(You) do not exist!", "Non-existent Username", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Exit Sub
-            End If
-            PreInfoToCredentialsParser()
+        SelectThisUser()
+        PreInfoToCredentialsParser()
+        ShareMe()
+        Dim NYOOOMS As String = Application.StartupPath & "\foo\" & _SharedMainCredentials.UserName & ".nyooom"
+        'Password and Username Verified
+        If LoginValidated() Then
 
-            If ValidateLogin() Then
-                ShareMe()
-
-                Using MainMenu As New frmMenu(Me._UserAdvancedCredentials)
-                    MainMenu.ShowDialog()
-                    _SharedAdvancedCredentials = Nothing
-                    _SharedMainCredentials = Nothing
-                    LinkLabel2.Enabled = False
-                End Using
-                _Attempts = 0
-                Exit Sub
+            If Me._IsOnline Then
+                MessageBox.Show("YOU ARE ONLINE ELSEWHERE", "me", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                If System.IO.File.Exists(NYOOOMS) Then 'corrupted session most likeley
+                    MessageBox.Show("YOUR SESSION FILE WAS FOUND! You might not have logged out correctly earlier!! Cympathy will make a new sesssion for you!", "Cympathy", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\foo\" & _SharedMainCredentials.UserName & ".nyooom", FileIO.UIOption.OnlyErrorDialogs, FileIO.RecycleOption.DeletePermanently)
+                End If
             Else
-                MessageBox.Show("Your password or username was incorrect", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                _Attempts += 1
-                LoginControl()
+                MessageBox.Show("YOU ARE NOT ONLINE ELSEWHERE", "me", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
 
-            With Me
-                .LinkLabel2.Enabled = True
-                .txtPassword.Text = ""
-                .txtUsername.Text = ""
-            End With
-        Catch XXX As Exception
-            MessageBox.Show("Something wrong happened when (You) tried to login. Reason: " & XXX.Message, "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        End Try
-    End Sub
 
+            Using MainMenu As New frmMenu(Me._UserAdvancedCredentials)
+                MainMenu.ShowDialog()
+                _SharedAdvancedCredentials = Nothing
+                _SharedMainCredentials = Nothing
+                LinkLabel2.Enabled = False
+            End Using
 
-    Private Sub LoginControl()
+            _Attempts = 0
 
-        If _Attempts = 5 Then
-            Me._LoginStopwatch.Start()
-            btnLogin.Enabled = False
-            Me._StopWatch.Start()
+        Else
+            'Password and username wrong
+            MessageBox.Show("There was a problem when (You) tried to login! Your username or password might not have been registered", "Cympathy", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            LinkLabel2.Enabled = True
+            _Attempts += 1
+            LoginControl()
         End If
 
+        If System.IO.File.Exists(NYOOOMS) Then
+            Console.WriteLine("Found session file")
+            My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\foo\" & _SharedMainCredentials.UserName & ".nyooom", FileIO.UIOption.OnlyErrorDialogs, FileIO.RecycleOption.DeletePermanently)
+        End If
     End Sub
 
-    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        Using registration As New frmUserRegistration
-            registration.ShowDialog()
-        End Using
-
-    End Sub
-
+#Region "validation"
     Private Sub txtUsername_Validated(sender As Object, e As EventArgs) Handles txtUsername.Validated
         Me._Username = DirectCast(sender, TextBox).Text
     End Sub
@@ -190,7 +190,30 @@ Public Class frmUserLogin
         End If
         ErrorProvider1.SetError(DirectCast(sender, TextBox), "")
     End Sub
+#End Region
 
+#Region "Misc"
+
+    ''' <summary>
+    ''' Register a user
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Using registration As New frmUserRegistration
+            registration.DisableProfessors = True
+            registration.ShowDialog()
+        End Using
+
+    End Sub
+
+    ''' <summary>
+    ''' open the forgot password
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
         'check if this user id exists
         If Me._PreInfo.Rows(0)("user_id").ToString() Is "" Then Exit Sub
@@ -199,17 +222,35 @@ Public Class frmUserLogin
         passwordchallenge.ShowDialog()
     End Sub
 
+    ''' <summary>
+    ''' Open Server Management
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub lblChangeServer_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblChangeServer.LinkClicked
         Dim editor As New frmServerEditor()
         editor.ShowDialog()
     End Sub
 
+    ''' <summary>
+    ''' Client Log Timer
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lblHH.Text = _StopWatch.Elapsed.Hours
         lblMM.Text = _StopWatch.Elapsed.Minutes
         lblSS.Text = _StopWatch.Elapsed.Seconds
     End Sub
 
+    ''' <summary>
+    ''' Login Limit Timer
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub LoginTimer_Tick(sender As Object, e As EventArgs) Handles LoginTimer.Tick
         With Me
             If ._LoginStopwatch.Elapsed.Seconds = 5 Then
@@ -220,4 +261,19 @@ Public Class frmUserLogin
             End If
         End With
     End Sub
+    ''' <summary>
+    ''' Login Control
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub LoginControl()
+
+        If _Attempts = 5 Then
+            Me._LoginStopwatch.Start()
+            btnLogin.Enabled = False
+            Me._StopWatch.Start()
+        End If
+
+    End Sub
+
+#End Region
 End Class

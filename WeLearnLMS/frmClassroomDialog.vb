@@ -51,12 +51,12 @@
                         txtClassId.Text = .Cells("id").Value.ToString()
                         txtClassName.Text = .Cells("class_name").Value.ToString()
                         txtClassDescription.Text = .Cells("class_description").Value.ToString()
-                        txtClassType.Text = .Cells("classType").Value.ToString
+                        txtClassType.Text = [Enum].GetName(GetType(eClassType), .Cells("classType").Value)
                     End With
                 End If
             End If
         Catch XXX As Exception
-            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, XXX)
+            WeLearnMessageDisplay.Display(WeLearnExceptions.Simple, Me, XXX)
         End Try
     End Sub
 

@@ -205,10 +205,10 @@
     <Compile Include="frmClassStandingReporter.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQuizGradesReporter.Designer.vb">
-      <DependentUpon>frmQuizGradesReporter.vb</DependentUpon>
+    <Compile Include="frmClassroomGradeReporter.Designer.vb">
+      <DependentUpon>frmClassroomGradeReporter.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmQuizGradesReporter.vb">
+    <Compile Include="frmClassroomGradeReporter.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmReportHub.Designer.vb">
@@ -568,10 +568,14 @@
     <Compile Include="IDateEvaluator.vb" />
     <Compile Include="IDisableControls.vb" />
     <Compile Include="IDisplayWeLearnException.vb" />
+    <Compile Include="IEndSession.vb" />
     <Compile Include="IEvaluateDateRange.vb" />
     <Compile Include="IGetDate.vb" />
     <Compile Include="IHappyMessage.vb" />
     <Compile Include="IHashing.vb" />
+    <Compile Include="ImpEndSession.vb" />
+    <Compile Include="IStartSession.vb" />
+    <Compile Include="ImpStartSession.vb" />
     <Compile Include="IMakeCSS.vb" />
     <Compile Include="IMakeHTML.vb" />
     <Compile Include="IMakeMyLessonTreeNode.vb" />
@@ -601,7 +605,8 @@
     <Compile Include="ImpMakeExamNode.vb" />
     <Compile Include="ImpMakeHTMLClassStanding.vb" />
     <Compile Include="ImpMakeHTMLExamGrades.vb" />
-    <Compile Include="ImpMakeHTMLQuizGrades.vb" />
+    <Compile Include="ImpMakeHTMLClassroomGrades.vb" />
+    <Compile Include="ImpMakeHTMLSchedules.vb" />
     <Compile Include="ImpMakeHTMLString.vb" />
     <Compile Include="ImpMakeMaterialNode.vb" />
     <Compile Include="ImpMakeQuizNode.vb" />
@@ -686,8 +691,8 @@
     <EmbeddedResource Include="frmClassStandingReporter.resx">
       <DependentUpon>frmClassStandingReporter.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQuizGradesReporter.resx">
-      <DependentUpon>frmQuizGradesReporter.vb</DependentUpon>
+    <EmbeddedResource Include="frmClassroomGradeReporter.resx">
+      <DependentUpon>frmClassroomGradeReporter.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportHub.resx">
       <DependentUpon>frmReportHub.vb</DependentUpon>
@@ -941,6 +946,9 @@
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\WeLearnLMS.vbproj.GenerateResource.Cache" />
     <None Include="packages.config" />
+    <None Include="welearnman.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="WeLearnLMS_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

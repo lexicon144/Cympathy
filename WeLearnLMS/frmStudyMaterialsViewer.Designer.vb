@@ -28,6 +28,7 @@ Partial Class frmStudyMaterialsViewer
         Me.txtMaterialName = New System.Windows.Forms.TextBox()
         Me.txtMaterialID = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.SuspendLayout()
         '
         'Label2
@@ -93,7 +94,9 @@ Partial Class frmStudyMaterialsViewer
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtMaterialDescription)
         Me.Controls.Add(Me.txtMaterialName)
+        Me.HelpProvider1.SetHelpString(Me, "This is where you can view the data of the Selected Material")
         Me.Name = "frmStudyMaterialsViewer"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmStudyMaterialsViewer"
         Me.ResumeLayout(False)
@@ -106,4 +109,5 @@ Partial Class frmStudyMaterialsViewer
     Friend WithEvents txtMaterialName As System.Windows.Forms.TextBox
     Friend WithEvents txtMaterialID As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
 End Class

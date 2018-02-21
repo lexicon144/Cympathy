@@ -40,8 +40,7 @@
 
     End Sub
 
-    Private Sub LoadAllUsers()
-
+    Friend Sub LoadAllUsers()
         Using Connection As New MySqlConnection
             With Connection
                 .ConnectionString = _SharedConnString.ConnString
@@ -50,13 +49,10 @@
                     .Open()
                 End If
             End With
-
             Using Command As New MySqlCommand
-
                 With Command
                     .Connection = Connection
                     .CommandText = "SELECT user_id, user_name FROM tbl_user"
-
                 End With
                 Using Adapter As New MySqlDataAdapter
                     With Adapter

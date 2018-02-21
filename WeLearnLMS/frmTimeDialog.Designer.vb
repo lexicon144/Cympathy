@@ -28,6 +28,7 @@ Partial Class frmTimeDialog
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dtpEndTime = New System.Windows.Forms.DateTimePicker()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -35,8 +36,10 @@ Partial Class frmTimeDialog
         '
         Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnOK.Enabled = False
+        Me.HelpProvider1.SetHelpString(Me.btnOK, "Save the data")
         Me.btnOK.Location = New System.Drawing.Point(140, 179)
         Me.btnOK.Name = "btnOK"
+        Me.HelpProvider1.SetShowHelp(Me.btnOK, True)
         Me.btnOK.Size = New System.Drawing.Size(131, 83)
         Me.btnOK.TabIndex = 1
         Me.btnOK.Text = "O K "
@@ -47,10 +50,12 @@ Partial Class frmTimeDialog
         Me.dtpStartTime.CustomFormat = "HH"
         Me.dtpStartTime.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtpStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.HelpProvider1.SetHelpString(Me.dtpStartTime, "Select the starting time of the Lifespan")
         Me.dtpStartTime.Location = New System.Drawing.Point(140, 3)
         Me.dtpStartTime.Name = "dtpStartTime"
+        Me.HelpProvider1.SetShowHelp(Me.dtpStartTime, True)
         Me.dtpStartTime.ShowUpDown = True
-        Me.dtpStartTime.Size = New System.Drawing.Size(131, 23)
+        Me.dtpStartTime.Size = New System.Drawing.Size(131, 20)
         Me.dtpStartTime.TabIndex = 2
         '
         'TableLayoutPanel1
@@ -78,7 +83,7 @@ Partial Class frmTimeDialog
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(108, 34)
+        Me.Label1.Size = New System.Drawing.Size(116, 26)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Select the STARTING time"
         '
@@ -87,7 +92,7 @@ Partial Class frmTimeDialog
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(3, 88)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(128, 34)
+        Me.Label3.Size = New System.Drawing.Size(122, 13)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Select the ENDING time"
         '
@@ -95,15 +100,17 @@ Partial Class frmTimeDialog
         '
         Me.dtpEndTime.CustomFormat = "HH"
         Me.dtpEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.HelpProvider1.SetHelpString(Me.dtpEndTime, "Select the Ending Time of the lifespan")
         Me.dtpEndTime.Location = New System.Drawing.Point(140, 91)
         Me.dtpEndTime.Name = "dtpEndTime"
+        Me.HelpProvider1.SetShowHelp(Me.dtpEndTime, True)
         Me.dtpEndTime.ShowUpDown = True
-        Me.dtpEndTime.Size = New System.Drawing.Size(131, 23)
+        Me.dtpEndTime.Size = New System.Drawing.Size(131, 20)
         Me.dtpEndTime.TabIndex = 6
         '
         'frmTimeDialog
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(274, 265)
         Me.Controls.Add(Me.TableLayoutPanel1)
@@ -123,4 +130,5 @@ Partial Class frmTimeDialog
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents dtpEndTime As System.Windows.Forms.DateTimePicker
+    Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
 End Class

@@ -76,7 +76,7 @@ Partial Class frmScheduleReporter
         Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(43, 20)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
-        'frmScheduleReportCreator
+        'frmScheduleReporter
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -86,8 +86,9 @@ Partial Class frmScheduleReporter
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.Name = "frmScheduleReportCreator"
+        Me.Name = "frmScheduleReporter"
         Me.Text = "frmScheduleReportCreator"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)

@@ -1,7 +1,7 @@
 ﻿Public Class frmScheduleReporter
     Private _Table As New DataTable
     Private _FormattedTable As New DataTable
-    Private _Maker As IMakeHTML = New ImpMakeHTMLString
+    Private _Maker As IMakeHTML = New ImpMakeHTMLSchedules
     Private _HTMLString As String
 
     Private Sub frmScheduleReportCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load

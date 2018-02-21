@@ -300,7 +300,7 @@ Partial Class frmQuestionnaireViewer
         Me.mainpanel.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.mainpanel.Location = New System.Drawing.Point(0, 26)
         Me.mainpanel.Name = "mainpanel"
-        Me.mainpanel.Size = New System.Drawing.Size(439, 436)
+        Me.mainpanel.Size = New System.Drawing.Size(436, 436)
         Me.mainpanel.TabIndex = 10
         '
         'MenuStrip1
@@ -309,7 +309,7 @@ Partial Class frmQuestionnaireViewer
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(439, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(436, 24)
         Me.MenuStrip1.TabIndex = 11
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -323,13 +323,13 @@ Partial Class frmQuestionnaireViewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(439, 462)
+        Me.ClientSize = New System.Drawing.Size(436, 462)
         Me.Controls.Add(Me.mainpanel)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.btnDevAuto13)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
+        Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "QuestionnaireViewerFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.Font = Global.WeLearnLMS.My.MySettings.Default.QuestionnaireViewerFont
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmQuestionnaireViewer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

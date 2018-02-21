@@ -30,22 +30,27 @@ Partial Class frmStudyMaterialsCreator
         Me.btnAddMaterial = New System.Windows.Forms.Button()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtMaterialName
         '
+        Me.HelpProvider1.SetHelpString(Me.txtMaterialName, "Enter the material name")
         Me.txtMaterialName.Location = New System.Drawing.Point(143, 3)
         Me.txtMaterialName.Name = "txtMaterialName"
+        Me.HelpProvider1.SetShowHelp(Me.txtMaterialName, True)
         Me.txtMaterialName.Size = New System.Drawing.Size(134, 20)
         Me.txtMaterialName.TabIndex = 0
         '
         'txtMaterialDescription
         '
+        Me.HelpProvider1.SetHelpString(Me.txtMaterialDescription, "Enter the material description")
         Me.txtMaterialDescription.Location = New System.Drawing.Point(143, 60)
         Me.txtMaterialDescription.Multiline = True
         Me.txtMaterialDescription.Name = "txtMaterialDescription"
+        Me.HelpProvider1.SetShowHelp(Me.txtMaterialDescription, True)
         Me.txtMaterialDescription.Size = New System.Drawing.Size(134, 52)
         Me.txtMaterialDescription.TabIndex = 1
         '
@@ -69,8 +74,10 @@ Partial Class frmStudyMaterialsCreator
         '
         'btnAddMaterial
         '
+        Me.HelpProvider1.SetHelpString(Me.btnAddMaterial, "Save the data to the database")
         Me.btnAddMaterial.Location = New System.Drawing.Point(211, 131)
         Me.btnAddMaterial.Name = "btnAddMaterial"
+        Me.HelpProvider1.SetShowHelp(Me.btnAddMaterial, True)
         Me.btnAddMaterial.Size = New System.Drawing.Size(75, 23)
         Me.btnAddMaterial.TabIndex = 4
         Me.btnAddMaterial.Text = "Add"
@@ -90,7 +97,7 @@ Partial Class frmStudyMaterialsCreator
         Me.TableLayoutPanel1.Controls.Add(Me.txtMaterialName, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txtMaterialDescription, 1, 1)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(9, 10)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -107,6 +114,9 @@ Partial Class frmStudyMaterialsCreator
         Me.Controls.Add(Me.btnAddMaterial)
         Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
+        Me.HelpButton = True
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmStudyMaterialsCreator"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmStudyMaterialsCreator"
@@ -123,4 +133,5 @@ Partial Class frmStudyMaterialsCreator
     Friend WithEvents btnAddMaterial As System.Windows.Forms.Button
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
 End Class

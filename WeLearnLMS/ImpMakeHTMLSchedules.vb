@@ -1,10 +1,11 @@
-﻿Public Class ImpMakeHTMLClassStanding
+﻿Public Class ImpMakeHTMLSchedules
     Implements IMakeHTML
-    Private MakeCss As IMakeCSS = New ImpMakeCSS
+
+    Private MakeCSS As IMakeCSS = New ImpMakeCSS
 
     Public Function MakeHTML(ByRef Datatable As DataTable) As String Implements IMakeHTML.MakeHTML
-        Dim Builder As New StringBuilder
-        With Builder
+        Dim builder As New StringBuilder
+        With builder
             'headers etc
             .Append(StartHTML)
             .Append(StartHEAD)
@@ -17,14 +18,15 @@
             .Append(StartP & "WeLearn Reports" & EndP)
             .Append("<p class=""subtitle"">A Cympathy Solution</p>")
             .Append("<div id=""ReportSubHeader"">")
-            .Append("<table style=""position:relative; top:1000%;left:10;font-size: 2em;"">")
+            .Append("<table style=""position:relative; top:1000%;left:10;font-size: 1em;"">")
             .Append(EndTABLE)
             .Append(EndDIV)
             'start of TABLE div
             .Append("<div align=""center"" style=""top:70%;border:1px"">")
-            .Append(StartP & "Class Standing on " & _SharedClassroom.ClassroomName & EndP)
-            .Append("<table id=""GradesTable"">")
-            .Append("<tr class=""GradesTable"">")
+            .Append("<p style=""font-family:arial"">" & "Schedules in WeLearn" & EndP)
+
+            .Append("<table id=""ScheduleTable"">")
+            .Append("<tr class=""ScheduleTable"">")
             For Each myColumn As DataColumn In Datatable.Columns
                 .Append(StartTD)
                 .Append(myColumn.ColumnName)
@@ -33,7 +35,7 @@
             .Append(EndTR)
 
             For Each myRow As DataRow In Datatable.Rows
-                .Append("<tr class=""GradesTable"">")
+                .Append("<tr class=""ScheduleTable"">")
                 For Each myColumn As DataColumn In Datatable.Columns
                     .Append(StartTD)
                     .Append(myRow(myColumn.ColumnName).ToString())
@@ -46,8 +48,7 @@
             'closing
             .Append(EndBODY)
             .Append(EndHTML)
-            Return .ToString
         End With
+        Return builder.ToString
     End Function
-
 End Class

@@ -41,6 +41,7 @@ Partial Class frmUserLogin
         Me.lblSS = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.LoginTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -60,9 +61,11 @@ Partial Class frmUserLogin
         'btnLogin
         '
         Me.btnLogin.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnLogin, "nooowww LOG IN!")
         Me.btnLogin.Location = New System.Drawing.Point(149, 155)
         Me.btnLogin.Margin = New System.Windows.Forms.Padding(1)
         Me.btnLogin.Name = "btnLogin"
+        Me.HelpProvider1.SetShowHelp(Me.btnLogin, True)
         Me.btnLogin.Size = New System.Drawing.Size(147, 75)
         Me.btnLogin.TabIndex = 6
         Me.btnLogin.Text = "Log In"
@@ -72,11 +75,13 @@ Partial Class frmUserLogin
         '
         Me.txtPassword.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.HelpProvider1.SetHelpString(Me.txtPassword, "Input your password here (look behind you just in case)")
         Me.txtPassword.Location = New System.Drawing.Point(149, 78)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(1)
         Me.txtPassword.MaxLength = 18
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(10084)
+        Me.HelpProvider1.SetShowHelp(Me.txtPassword, True)
         Me.txtPassword.Size = New System.Drawing.Size(147, 20)
         Me.txtPassword.TabIndex = 5
         Me.txtPassword.Text = "Password"
@@ -85,10 +90,12 @@ Partial Class frmUserLogin
         '
         Me.txtUsername.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.HelpProvider1.SetHelpString(Me.txtUsername, "Input your Login Username HERE!")
         Me.txtUsername.Location = New System.Drawing.Point(149, 1)
         Me.txtUsername.Margin = New System.Windows.Forms.Padding(1)
         Me.txtUsername.MaxLength = 50
         Me.txtUsername.Name = "txtUsername"
+        Me.HelpProvider1.SetShowHelp(Me.txtUsername, True)
         Me.txtUsername.Size = New System.Drawing.Size(147, 20)
         Me.txtUsername.TabIndex = 4
         Me.txtUsername.Text = "Username"
@@ -218,6 +225,9 @@ Partial Class frmUserLogin
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
+        Me.HelpButton = True
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmUserLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmLogin"
@@ -248,5 +258,6 @@ Partial Class frmUserLogin
     Friend WithEvents lblSS As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents LoginTimer As System.Windows.Forms.Timer
+    Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
 
 End Class

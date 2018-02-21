@@ -1,4 +1,4 @@
-﻿Public Class ImpMakeHTMLQuizGrades
+﻿Public Class ImpMakeHTMLClassroomGrades
     Implements IMakeHTML
     Private MakeCSS As IMakeCSS = New ImpMakeCSS
     Private QuizName As String = ""

@@ -33,6 +33,7 @@ Partial Class frmStudyMaterialsHub
         Me.txtMaterialDescription = New System.Windows.Forms.TextBox()
         Me.grpMaterilas = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpMaterilas.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -44,28 +45,34 @@ Partial Class frmStudyMaterialsHub
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.HelpProvider1.SetHelpString(Me.DataGridView1, "Choose the Material to Select")
         Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.HelpProvider1.SetShowHelp(Me.DataGridView1, True)
         Me.DataGridView1.Size = New System.Drawing.Size(467, 150)
         Me.DataGridView1.TabIndex = 3
         '
         'txtMaterialID
         '
         Me.txtMaterialID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.txtMaterialID, "This is the Material ID")
         Me.txtMaterialID.Location = New System.Drawing.Point(122, 3)
         Me.txtMaterialID.Name = "txtMaterialID"
         Me.txtMaterialID.ReadOnly = True
+        Me.HelpProvider1.SetShowHelp(Me.txtMaterialID, True)
         Me.txtMaterialID.Size = New System.Drawing.Size(255, 20)
         Me.txtMaterialID.TabIndex = 4
         '
         'txtMaterialName
         '
         Me.txtMaterialName.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.txtMaterialName, "This is the Material Name")
         Me.txtMaterialName.Location = New System.Drawing.Point(122, 35)
         Me.txtMaterialName.Name = "txtMaterialName"
         Me.txtMaterialName.ReadOnly = True
+        Me.HelpProvider1.SetShowHelp(Me.txtMaterialName, True)
         Me.txtMaterialName.Size = New System.Drawing.Size(255, 20)
         Me.txtMaterialName.TabIndex = 5
         '
@@ -89,8 +96,10 @@ Partial Class frmStudyMaterialsHub
         '
         'btnOK
         '
+        Me.HelpProvider1.SetHelpString(Me.btnOK, "Select this Study Materials")
         Me.btnOK.Location = New System.Drawing.Point(404, 233)
         Me.btnOK.Name = "btnOK"
+        Me.HelpProvider1.SetShowHelp(Me.btnOK, True)
         Me.btnOK.Size = New System.Drawing.Size(75, 23)
         Me.btnOK.TabIndex = 11
         Me.btnOK.Text = "O K"
@@ -98,8 +107,10 @@ Partial Class frmStudyMaterialsHub
         '
         'btnView
         '
+        Me.HelpProvider1.SetHelpString(Me.btnView, "View the material")
         Me.btnView.Location = New System.Drawing.Point(404, 262)
         Me.btnView.Name = "btnView"
+        Me.HelpProvider1.SetShowHelp(Me.btnView, True)
         Me.btnView.Size = New System.Drawing.Size(75, 23)
         Me.btnView.TabIndex = 9
         Me.btnView.Text = "View"
@@ -117,17 +128,21 @@ Partial Class frmStudyMaterialsHub
         'txtMaterialDescription
         '
         Me.txtMaterialDescription.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.txtMaterialDescription, "The Material Description")
         Me.txtMaterialDescription.Location = New System.Drawing.Point(122, 67)
         Me.txtMaterialDescription.Name = "txtMaterialDescription"
         Me.txtMaterialDescription.ReadOnly = True
+        Me.HelpProvider1.SetShowHelp(Me.txtMaterialDescription, True)
         Me.txtMaterialDescription.Size = New System.Drawing.Size(255, 20)
         Me.txtMaterialDescription.TabIndex = 13
         '
         'grpMaterilas
         '
         Me.grpMaterilas.Controls.Add(Me.TableLayoutPanel1)
+        Me.HelpProvider1.SetHelpString(Me.grpMaterilas, "This is the material details")
         Me.grpMaterilas.Location = New System.Drawing.Point(12, 172)
         Me.grpMaterilas.Name = "grpMaterilas"
+        Me.HelpProvider1.SetShowHelp(Me.grpMaterilas, True)
         Me.grpMaterilas.Size = New System.Drawing.Size(386, 116)
         Me.grpMaterilas.TabIndex = 14
         Me.grpMaterilas.TabStop = False
@@ -163,7 +178,13 @@ Partial Class frmStudyMaterialsHub
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.btnView)
         Me.Controls.Add(Me.DataGridView1)
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpString(Me, "Study Materials Hub. This is where you can select and choose your study materials" & _
+        "")
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmStudyMaterialsHub"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmStudyMaterialHub"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -186,4 +207,5 @@ Partial Class frmStudyMaterialsHub
     Friend WithEvents txtMaterialDescription As System.Windows.Forms.TextBox
     Friend WithEvents grpMaterilas As System.Windows.Forms.GroupBox
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
 End Class

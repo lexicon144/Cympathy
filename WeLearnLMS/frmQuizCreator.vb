@@ -111,4 +111,8 @@ Public Class frmQuizCreator
     Private Sub txtQuizName_Validated(sender As Object, e As EventArgs) Handles txtQuizName.Validated
 
     End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        Me.grpXmlPreview.Visible = CheckBox1.Checked
+    End Sub
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmQuizGradesReporter
+Partial Class frmClassroomGradeReporter
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -92,6 +92,7 @@ Partial Class frmQuizGradesReporter
         Me.Name = "frmQuizGradesReporter"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "QuizGradesReporter"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)

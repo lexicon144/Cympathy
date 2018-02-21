@@ -36,6 +36,7 @@ Partial Class frmArticleLinker
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.grpArtilceDisplay.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.grpClassroom.SuspendLayout()
@@ -46,19 +47,23 @@ Partial Class frmArticleLinker
         'txtArticleID
         '
         Me.txtArticleID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.txtArticleID, "The ID of the article that will be linked to THAT classroom ")
         Me.txtArticleID.Location = New System.Drawing.Point(110, 3)
         Me.txtArticleID.Name = "txtArticleID"
         Me.txtArticleID.ReadOnly = True
-        Me.txtArticleID.Size = New System.Drawing.Size(101, 23)
+        Me.HelpProvider1.SetShowHelp(Me.txtArticleID, True)
+        Me.txtArticleID.Size = New System.Drawing.Size(101, 20)
         Me.txtArticleID.TabIndex = 0
         '
         'txtArticleName
         '
         Me.txtArticleName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtArticleName.Location = New System.Drawing.Point(110, 59)
+        Me.HelpProvider1.SetHelpString(Me.txtArticleName, "The name of the article that will be linked to THAT classroom")
+        Me.txtArticleName.Location = New System.Drawing.Point(110, 60)
         Me.txtArticleName.Name = "txtArticleName"
         Me.txtArticleName.ReadOnly = True
-        Me.txtArticleName.Size = New System.Drawing.Size(101, 23)
+        Me.HelpProvider1.SetShowHelp(Me.txtArticleName, True)
+        Me.txtArticleName.Size = New System.Drawing.Size(101, 20)
         Me.txtArticleName.TabIndex = 1
         '
         'grpArtilceDisplay
@@ -82,21 +87,21 @@ Partial Class frmArticleLinker
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 19)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 16)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(214, 112)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(214, 115)
         Me.TableLayoutPanel1.TabIndex = 17
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Location = New System.Drawing.Point(3, 56)
+        Me.Label2.Location = New System.Drawing.Point(3, 57)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(101, 56)
+        Me.Label2.Size = New System.Drawing.Size(101, 58)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Name"
         '
@@ -106,7 +111,7 @@ Partial Class frmArticleLinker
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(101, 56)
+        Me.Label1.Size = New System.Drawing.Size(101, 57)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "ID"
         '
@@ -131,40 +136,44 @@ Partial Class frmArticleLinker
         Me.TableLayoutPanel2.Controls.Add(Me.txtClassroomID, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Label3, 0, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 19)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 16)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 2
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(216, 112)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(216, 115)
         Me.TableLayoutPanel2.TabIndex = 18
         '
         'txtClassroomName
         '
         Me.txtClassroomName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtClassroomName.Location = New System.Drawing.Point(111, 59)
+        Me.HelpProvider1.SetHelpString(Me.txtClassroomName, "The Name of the Classroom the Article will be linked to...")
+        Me.txtClassroomName.Location = New System.Drawing.Point(111, 60)
         Me.txtClassroomName.Name = "txtClassroomName"
         Me.txtClassroomName.ReadOnly = True
-        Me.txtClassroomName.Size = New System.Drawing.Size(102, 23)
+        Me.HelpProvider1.SetShowHelp(Me.txtClassroomName, True)
+        Me.txtClassroomName.Size = New System.Drawing.Size(102, 20)
         Me.txtClassroomName.TabIndex = 1
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label4.Location = New System.Drawing.Point(3, 56)
+        Me.Label4.Location = New System.Drawing.Point(3, 57)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(102, 56)
+        Me.Label4.Size = New System.Drawing.Size(102, 58)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Name"
         '
         'txtClassroomID
         '
         Me.txtClassroomID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.txtClassroomID, "ID of the Classroom the Article will be linked to...")
         Me.txtClassroomID.Location = New System.Drawing.Point(111, 3)
         Me.txtClassroomID.Name = "txtClassroomID"
         Me.txtClassroomID.ReadOnly = True
-        Me.txtClassroomID.Size = New System.Drawing.Size(102, 23)
+        Me.HelpProvider1.SetShowHelp(Me.txtClassroomID, True)
+        Me.txtClassroomID.Size = New System.Drawing.Size(102, 20)
         Me.txtClassroomID.TabIndex = 0
         '
         'Label3
@@ -173,7 +182,7 @@ Partial Class frmArticleLinker
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label3.Location = New System.Drawing.Point(3, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(102, 56)
+        Me.Label3.Size = New System.Drawing.Size(102, 57)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "ID"
         '
@@ -198,8 +207,10 @@ Partial Class frmArticleLinker
         '
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.LinkLabel1, "Links this article from the ARTICLE to the CLASSROOM")
         Me.LinkLabel1.Location = New System.Drawing.Point(229, 0)
         Me.LinkLabel1.Name = "LinkLabel1"
+        Me.HelpProvider1.SetShowHelp(Me.LinkLabel1, True)
         Me.LinkLabel1.Size = New System.Drawing.Size(220, 140)
         Me.LinkLabel1.TabIndex = 5
         Me.LinkLabel1.TabStop = True
@@ -208,7 +219,7 @@ Partial Class frmArticleLinker
         '
         'frmArticleLinker
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(680, 140)
         Me.Controls.Add(Me.TableLayoutPanel3)
@@ -242,4 +253,5 @@ Partial Class frmArticleLinker
     Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents TableLayoutPanel3 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
 End Class

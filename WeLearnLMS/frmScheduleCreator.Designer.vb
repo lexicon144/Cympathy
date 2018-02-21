@@ -39,9 +39,9 @@ Partial Class frmScheduleCreator
         'btnCreateSchedule
         '
         Me.btnCreateSchedule.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCreateSchedule.Location = New System.Drawing.Point(187, 198)
+        Me.btnCreateSchedule.Location = New System.Drawing.Point(187, 219)
         Me.btnCreateSchedule.Name = "btnCreateSchedule"
-        Me.btnCreateSchedule.Size = New System.Drawing.Size(178, 59)
+        Me.btnCreateSchedule.Size = New System.Drawing.Size(178, 69)
         Me.btnCreateSchedule.TabIndex = 6
         Me.btnCreateSchedule.Text = "Create Schedule"
         Me.btnCreateSchedule.UseVisualStyleBackColor = True
@@ -49,7 +49,7 @@ Partial Class frmScheduleCreator
         'txtDay
         '
         Me.txtDay.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtDay.Location = New System.Drawing.Point(371, 133)
+        Me.txtDay.Location = New System.Drawing.Point(371, 147)
         Me.txtDay.Name = "txtDay"
         Me.txtDay.ReadOnly = True
         Me.txtDay.Size = New System.Drawing.Size(181, 20)
@@ -59,9 +59,9 @@ Partial Class frmScheduleCreator
         '
         Me.Label3.AutoSize = True
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label3.Location = New System.Drawing.Point(371, 65)
+        Me.Label3.Location = New System.Drawing.Point(371, 72)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(181, 65)
+        Me.Label3.Size = New System.Drawing.Size(181, 72)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Day"
         '
@@ -70,7 +70,7 @@ Partial Class frmScheduleCreator
         Me.btnBrowseDays.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBrowseDays.Location = New System.Drawing.Point(371, 3)
         Me.btnBrowseDays.Name = "btnBrowseDays"
-        Me.btnBrowseDays.Size = New System.Drawing.Size(181, 59)
+        Me.btnBrowseDays.Size = New System.Drawing.Size(181, 66)
         Me.btnBrowseDays.TabIndex = 10
         Me.btnBrowseDays.Text = "Browse Days"
         Me.btnBrowseDays.UseVisualStyleBackColor = True
@@ -80,7 +80,7 @@ Partial Class frmScheduleCreator
         Me.btnBrowseTime.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBrowseTime.Location = New System.Drawing.Point(187, 3)
         Me.btnBrowseTime.Name = "btnBrowseTime"
-        Me.btnBrowseTime.Size = New System.Drawing.Size(178, 59)
+        Me.btnBrowseTime.Size = New System.Drawing.Size(178, 66)
         Me.btnBrowseTime.TabIndex = 16
         Me.btnBrowseTime.Text = "Browse Time"
         Me.btnBrowseTime.UseVisualStyleBackColor = True
@@ -90,7 +90,7 @@ Partial Class frmScheduleCreator
         Me.btnBrowseClassroom.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBrowseClassroom.Location = New System.Drawing.Point(3, 3)
         Me.btnBrowseClassroom.Name = "btnBrowseClassroom"
-        Me.btnBrowseClassroom.Size = New System.Drawing.Size(178, 59)
+        Me.btnBrowseClassroom.Size = New System.Drawing.Size(178, 66)
         Me.btnBrowseClassroom.TabIndex = 15
         Me.btnBrowseClassroom.Text = "Browse Classroom"
         Me.btnBrowseClassroom.UseVisualStyleBackColor = True
@@ -99,9 +99,9 @@ Partial Class frmScheduleCreator
         '
         Me.Label4.AutoSize = True
         Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label4.Location = New System.Drawing.Point(187, 65)
+        Me.Label4.Location = New System.Drawing.Point(187, 72)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(178, 65)
+        Me.Label4.Size = New System.Drawing.Size(178, 72)
         Me.Label4.TabIndex = 14
         Me.Label4.Text = "Time"
         '
@@ -109,16 +109,16 @@ Partial Class frmScheduleCreator
         '
         Me.Label5.AutoSize = True
         Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label5.Location = New System.Drawing.Point(3, 65)
+        Me.Label5.Location = New System.Drawing.Point(3, 72)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(178, 65)
+        Me.Label5.Size = New System.Drawing.Size(178, 72)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "Classroom"
         '
         'txtTime
         '
         Me.txtTime.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtTime.Location = New System.Drawing.Point(187, 133)
+        Me.txtTime.Location = New System.Drawing.Point(187, 147)
         Me.txtTime.Name = "txtTime"
         Me.txtTime.ReadOnly = True
         Me.txtTime.Size = New System.Drawing.Size(178, 20)
@@ -127,7 +127,7 @@ Partial Class frmScheduleCreator
         'txtClassroom
         '
         Me.txtClassroom.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtClassroom.Location = New System.Drawing.Point(3, 133)
+        Me.txtClassroom.Location = New System.Drawing.Point(3, 147)
         Me.txtClassroom.Name = "txtClassroom"
         Me.txtClassroom.ReadOnly = True
         Me.txtClassroom.Size = New System.Drawing.Size(178, 20)
@@ -157,14 +157,14 @@ Partial Class frmScheduleCreator
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(555, 260)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(555, 291)
         Me.TableLayoutPanel1.TabIndex = 18
         '
         'frmScheduleCreator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(555, 260)
+        Me.ClientSize = New System.Drawing.Size(555, 291)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont

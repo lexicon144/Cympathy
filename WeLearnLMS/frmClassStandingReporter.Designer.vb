@@ -93,6 +93,7 @@ Partial Class frmClassStandingReporter
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmClassStandingReporter"
         Me.Text = "frmClassStandingReporter"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)

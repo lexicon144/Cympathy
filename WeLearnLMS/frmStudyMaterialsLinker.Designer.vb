@@ -36,6 +36,7 @@ Partial Class frmStudyMaterialsLinker
         Me.txtMaterialName = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.grpClassroom.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.grpMaterialDisplay.SuspendLayout()
@@ -47,8 +48,10 @@ Partial Class frmStudyMaterialsLinker
         '
         Me.grpClassroom.Controls.Add(Me.TableLayoutPanel1)
         Me.grpClassroom.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.grpClassroom, "This is the Classroom Where the Material will be linked")
         Me.grpClassroom.Location = New System.Drawing.Point(334, 3)
         Me.grpClassroom.Name = "grpClassroom"
+        Me.HelpProvider1.SetShowHelp(Me.grpClassroom, True)
         Me.grpClassroom.Size = New System.Drawing.Size(161, 105)
         Me.grpClassroom.TabIndex = 7
         Me.grpClassroom.TabStop = False
@@ -64,31 +67,33 @@ Partial Class frmStudyMaterialsLinker
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txtClassroomName, 1, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 19)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 16)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(155, 83)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(155, 86)
         Me.TableLayoutPanel1.TabIndex = 17
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label4.Location = New System.Drawing.Point(3, 41)
+        Me.Label4.Location = New System.Drawing.Point(3, 43)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(71, 42)
+        Me.Label4.Size = New System.Drawing.Size(71, 43)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Name"
         '
         'txtClassroomID
         '
         Me.txtClassroomID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.txtClassroomID, "The ID of the Classroom")
         Me.txtClassroomID.Location = New System.Drawing.Point(80, 3)
         Me.txtClassroomID.Name = "txtClassroomID"
         Me.txtClassroomID.ReadOnly = True
-        Me.txtClassroomID.Size = New System.Drawing.Size(72, 23)
+        Me.HelpProvider1.SetShowHelp(Me.txtClassroomID, True)
+        Me.txtClassroomID.Size = New System.Drawing.Size(72, 20)
         Me.txtClassroomID.TabIndex = 0
         '
         'Label3
@@ -97,25 +102,29 @@ Partial Class frmStudyMaterialsLinker
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label3.Location = New System.Drawing.Point(3, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(71, 41)
+        Me.Label3.Size = New System.Drawing.Size(71, 43)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "ID"
         '
         'txtClassroomName
         '
         Me.txtClassroomName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtClassroomName.Location = New System.Drawing.Point(80, 44)
+        Me.HelpProvider1.SetHelpString(Me.txtClassroomName, "The name of the classroom")
+        Me.txtClassroomName.Location = New System.Drawing.Point(80, 46)
         Me.txtClassroomName.Name = "txtClassroomName"
         Me.txtClassroomName.ReadOnly = True
-        Me.txtClassroomName.Size = New System.Drawing.Size(72, 23)
+        Me.HelpProvider1.SetShowHelp(Me.txtClassroomName, True)
+        Me.txtClassroomName.Size = New System.Drawing.Size(72, 20)
         Me.txtClassroomName.TabIndex = 1
         '
         'grpMaterialDisplay
         '
         Me.grpMaterialDisplay.Controls.Add(Me.TableLayoutPanel2)
         Me.grpMaterialDisplay.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.grpMaterialDisplay, "This is the Material to be LINKED to the classroom")
         Me.grpMaterialDisplay.Location = New System.Drawing.Point(3, 3)
         Me.grpMaterialDisplay.Name = "grpMaterialDisplay"
+        Me.HelpProvider1.SetShowHelp(Me.grpMaterialDisplay, True)
         Me.grpMaterialDisplay.Size = New System.Drawing.Size(151, 105)
         Me.grpMaterialDisplay.TabIndex = 5
         Me.grpMaterialDisplay.TabStop = False
@@ -131,31 +140,33 @@ Partial Class frmStudyMaterialsLinker
         Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.txtMaterialName, 1, 1)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 19)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 16)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 2
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(145, 83)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(145, 86)
         Me.TableLayoutPanel2.TabIndex = 17
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Location = New System.Drawing.Point(3, 41)
+        Me.Label2.Location = New System.Drawing.Point(3, 43)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 42)
+        Me.Label2.Size = New System.Drawing.Size(66, 43)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Name"
         '
         'txtMaterialID
         '
         Me.txtMaterialID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.txtMaterialID, "The ID of the material")
         Me.txtMaterialID.Location = New System.Drawing.Point(75, 3)
         Me.txtMaterialID.Name = "txtMaterialID"
         Me.txtMaterialID.ReadOnly = True
-        Me.txtMaterialID.Size = New System.Drawing.Size(67, 23)
+        Me.HelpProvider1.SetShowHelp(Me.txtMaterialID, True)
+        Me.txtMaterialID.Size = New System.Drawing.Size(67, 20)
         Me.txtMaterialID.TabIndex = 0
         '
         'Label1
@@ -164,17 +175,19 @@ Partial Class frmStudyMaterialsLinker
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(66, 41)
+        Me.Label1.Size = New System.Drawing.Size(66, 43)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "ID"
         '
         'txtMaterialName
         '
         Me.txtMaterialName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtMaterialName.Location = New System.Drawing.Point(75, 44)
+        Me.HelpProvider1.SetHelpString(Me.txtMaterialName, "The Name of the Material")
+        Me.txtMaterialName.Location = New System.Drawing.Point(75, 46)
         Me.txtMaterialName.Name = "txtMaterialName"
         Me.txtMaterialName.ReadOnly = True
-        Me.txtMaterialName.Size = New System.Drawing.Size(67, 23)
+        Me.HelpProvider1.SetShowHelp(Me.txtMaterialName, True)
+        Me.txtMaterialName.Size = New System.Drawing.Size(67, 20)
         Me.txtMaterialName.TabIndex = 1
         '
         'TableLayoutPanel3
@@ -198,8 +211,10 @@ Partial Class frmStudyMaterialsLinker
         '
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.LinkLabel1, "Link the Material to the Classroom")
         Me.LinkLabel1.Location = New System.Drawing.Point(160, 0)
         Me.LinkLabel1.Name = "LinkLabel1"
+        Me.HelpProvider1.SetShowHelp(Me.LinkLabel1, True)
         Me.LinkLabel1.Size = New System.Drawing.Size(168, 111)
         Me.LinkLabel1.TabIndex = 8
         Me.LinkLabel1.TabStop = True
@@ -208,7 +223,7 @@ Partial Class frmStudyMaterialsLinker
         '
         'frmStudyMaterialsLinker
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(498, 111)
         Me.Controls.Add(Me.TableLayoutPanel3)
@@ -242,4 +257,5 @@ Partial Class frmStudyMaterialsLinker
     Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents TableLayoutPanel3 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
 End Class

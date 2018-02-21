@@ -122,12 +122,6 @@
         End Using
     End Sub
 
-    Private Sub btnLinkUserHere_Click(sender As Object, e As EventArgs) Handles btnLinkUserHere.Click
-        Using linker As New frmClassroomLinker(_SharedClassroom)
-            linker.ShowDialog()
-        End Using
-    End Sub
-
     Private Sub btnViewClassGrades_Click(sender As Object, e As EventArgs) Handles btnViewClassGrades.Click
         Using viewer As New frmGradesClassroomViewer
             viewer.ShowDialog()
@@ -153,6 +147,6 @@
     End Sub
 
     Private Sub frmClassroomHub_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        e.Cancel = (MessageBox.Show("Are you sure you want to close this classroom?", "WeLearnLMS", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes)
+        e.Cancel = Not (MessageBox.Show("Are you sure you want to close this classroom?", "WeLearnLMS", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes)
     End Sub
 End Class

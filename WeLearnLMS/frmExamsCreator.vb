@@ -127,4 +127,8 @@ Public Class frmExamsCreator
     Private Sub txtExamPIN_Validated(sender As Object, e As EventArgs) Handles txtExamPIN.Validated
         Me._NewExam.PIN = DirectCast(sender, TextBox).Text
     End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        Me.grpXmlPreview.Visible = CheckBox1.Checked
+    End Sub
 End Class

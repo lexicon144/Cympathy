@@ -62,7 +62,7 @@ Partial Class frmReportHub
         Me.btnQuizReports.Name = "btnQuizReports"
         Me.btnQuizReports.Size = New System.Drawing.Size(170, 78)
         Me.btnQuizReports.TabIndex = 1
-        Me.btnQuizReports.Text = "Quiz Reports"
+        Me.btnQuizReports.Text = "Class Grade Reports"
         Me.btnQuizReports.UseVisualStyleBackColor = True
         '
         'btnClassStanding

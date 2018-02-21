@@ -7,13 +7,34 @@
 
     Private MainSalt As String
 
+
+    Friend WriteOnly Property DisableProfessors As Boolean
+        Set(value As Boolean)
+            rdTeacher.Enabled = Not value
+            rdStudent.Enabled = value
+        End Set
+    End Property
+
+
     Private Sub frmUserRegistration_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         MainSalt = _Salter.SaltThis()
         _Information.UserSalt = MainSalt
     End Sub
 
+
+
     Private Sub btn_save_Click(sender As Object, e As EventArgs) Handles btn_save.Click
+
+        Dim emptyTextBoxes =
+            From txt In Me.TableLayoutPanel1.Controls.OfType(Of TextBox)()
+            Where txt.Text.Length = 0
+            Select txt.Name
+        If emptyTextBoxes.Any Then
+            MessageBox.Show(String.Format("Please Fill up all the necessary data", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation))
+        Else
+
+        End If
 
         Using Connection As New MySqlConnection()
 
