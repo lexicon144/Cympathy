@@ -71,21 +71,21 @@ Partial Class frmClassroomLinker
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txtStudentName, 1, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(2, 18)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(2, 15)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(232, 95)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(232, 98)
         Me.TableLayoutPanel1.TabIndex = 16
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label5.Location = New System.Drawing.Point(3, 47)
+        Me.Label5.Location = New System.Drawing.Point(3, 49)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(69, 48)
+        Me.Label5.Size = New System.Drawing.Size(69, 49)
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "Name"
         '
@@ -96,7 +96,7 @@ Partial Class frmClassroomLinker
         Me.txtStudentID.Margin = New System.Windows.Forms.Padding(2)
         Me.txtStudentID.Name = "txtStudentID"
         Me.txtStudentID.ReadOnly = True
-        Me.txtStudentID.Size = New System.Drawing.Size(153, 23)
+        Me.txtStudentID.Size = New System.Drawing.Size(153, 20)
         Me.txtStudentID.TabIndex = 1
         '
         'Label1
@@ -106,17 +106,17 @@ Partial Class frmClassroomLinker
         Me.Label1.Location = New System.Drawing.Point(2, 0)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(71, 47)
+        Me.Label1.Size = New System.Drawing.Size(71, 49)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "ID"
         '
         'txtStudentName
         '
         Me.txtStudentName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtStudentName.Location = New System.Drawing.Point(78, 50)
+        Me.txtStudentName.Location = New System.Drawing.Point(78, 52)
         Me.txtStudentName.Name = "txtStudentName"
         Me.txtStudentName.ReadOnly = True
-        Me.txtStudentName.Size = New System.Drawing.Size(151, 23)
+        Me.txtStudentName.Size = New System.Drawing.Size(151, 20)
         Me.txtStudentName.TabIndex = 4
         '
         'Label4
@@ -126,18 +126,18 @@ Partial Class frmClassroomLinker
         Me.Label4.Location = New System.Drawing.Point(2, 0)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(69, 31)
+        Me.Label4.Size = New System.Drawing.Size(69, 32)
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "ID"
         '
         'txtClassName
         '
         Me.txtClassName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtClassName.Location = New System.Drawing.Point(75, 33)
+        Me.txtClassName.Location = New System.Drawing.Point(75, 34)
         Me.txtClassName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtClassName.Name = "txtClassName"
         Me.txtClassName.ReadOnly = True
-        Me.txtClassName.Size = New System.Drawing.Size(156, 23)
+        Me.txtClassName.Size = New System.Drawing.Size(156, 20)
         Me.txtClassName.TabIndex = 4
         '
         'ErrorProvider1
@@ -148,10 +148,10 @@ Partial Class frmClassroomLinker
         '
         Me.Label3.AutoSize = True
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label3.Location = New System.Drawing.Point(2, 62)
+        Me.Label3.Location = New System.Drawing.Point(2, 64)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(69, 33)
+        Me.Label3.Size = New System.Drawing.Size(69, 34)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Desc"
         '
@@ -159,22 +159,22 @@ Partial Class frmClassroomLinker
         '
         Me.Label2.AutoSize = True
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Location = New System.Drawing.Point(2, 31)
+        Me.Label2.Location = New System.Drawing.Point(2, 32)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 31)
+        Me.Label2.Size = New System.Drawing.Size(69, 32)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Name"
         '
         'txtClassDesc
         '
         Me.txtClassDesc.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtClassDesc.Location = New System.Drawing.Point(75, 64)
+        Me.txtClassDesc.Location = New System.Drawing.Point(75, 66)
         Me.txtClassDesc.Margin = New System.Windows.Forms.Padding(2)
         Me.txtClassDesc.Multiline = True
         Me.txtClassDesc.Name = "txtClassDesc"
         Me.txtClassDesc.ReadOnly = True
-        Me.txtClassDesc.Size = New System.Drawing.Size(156, 29)
+        Me.txtClassDesc.Size = New System.Drawing.Size(156, 30)
         Me.txtClassDesc.TabIndex = 1
         '
         'txtClassID
@@ -184,7 +184,7 @@ Partial Class frmClassroomLinker
         Me.txtClassID.Margin = New System.Windows.Forms.Padding(2)
         Me.txtClassID.Name = "txtClassID"
         Me.txtClassID.ReadOnly = True
-        Me.txtClassID.Size = New System.Drawing.Size(156, 23)
+        Me.txtClassID.Size = New System.Drawing.Size(156, 20)
         Me.txtClassID.TabIndex = 0
         '
         'grpClassDetails
@@ -212,13 +212,13 @@ Partial Class frmClassroomLinker
         Me.TableLayoutPanel2.Controls.Add(Me.txtClassName, 1, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.txtClassDesc, 1, 2)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(2, 18)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(2, 15)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 3
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(233, 95)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(233, 98)
         Me.TableLayoutPanel2.TabIndex = 16
         '
         'TableLayoutPanel3
@@ -253,7 +253,7 @@ Partial Class frmClassroomLinker
         '
         'frmClassroomLinker
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(721, 119)
         Me.Controls.Add(Me.TableLayoutPanel3)

@@ -37,6 +37,7 @@ Partial Class frmExamsCreator
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.grpXmlPreview.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -67,10 +68,10 @@ Partial Class frmExamsCreator
         'rtbXMLPreview
         '
         Me.rtbXMLPreview.Dock = System.Windows.Forms.DockStyle.Left
-        Me.rtbXMLPreview.Location = New System.Drawing.Point(3, 19)
+        Me.rtbXMLPreview.Location = New System.Drawing.Point(3, 16)
         Me.rtbXMLPreview.Name = "rtbXMLPreview"
         Me.rtbXMLPreview.ReadOnly = True
-        Me.rtbXMLPreview.Size = New System.Drawing.Size(340, 242)
+        Me.rtbXMLPreview.Size = New System.Drawing.Size(340, 245)
         Me.rtbXMLPreview.TabIndex = 1
         Me.rtbXMLPreview.Text = ""
         '
@@ -89,14 +90,14 @@ Partial Class frmExamsCreator
         Me.txtExamPIN.Location = New System.Drawing.Point(196, 36)
         Me.txtExamPIN.MaxLength = 4
         Me.txtExamPIN.Name = "txtExamPIN"
-        Me.txtExamPIN.Size = New System.Drawing.Size(147, 23)
+        Me.txtExamPIN.Size = New System.Drawing.Size(147, 20)
         Me.txtExamPIN.TabIndex = 7
         '
         'txtExamName
         '
         Me.txtExamName.Location = New System.Drawing.Point(196, 3)
         Me.txtExamName.Name = "txtExamName"
-        Me.txtExamName.Size = New System.Drawing.Size(147, 23)
+        Me.txtExamName.Size = New System.Drawing.Size(147, 20)
         Me.txtExamName.TabIndex = 8
         '
         'Label1
@@ -124,7 +125,7 @@ Partial Class frmExamsCreator
         Me.txtQType.Location = New System.Drawing.Point(196, 69)
         Me.txtQType.Name = "txtQType"
         Me.txtQType.ReadOnly = True
-        Me.txtQType.Size = New System.Drawing.Size(147, 23)
+        Me.txtQType.Size = New System.Drawing.Size(147, 20)
         Me.txtQType.TabIndex = 11
         '
         'Label3
@@ -180,15 +181,27 @@ Partial Class frmExamsCreator
         Me.FlowLayoutPanel1.Controls.Add(Me.TableLayoutPanel1)
         Me.FlowLayoutPanel1.Controls.Add(Me.grpXmlPreview)
         Me.FlowLayoutPanel1.Controls.Add(Me.TableLayoutPanel2)
+        Me.FlowLayoutPanel1.Controls.Add(Me.CheckBox1)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(398, 454)
         Me.FlowLayoutPanel1.TabIndex = 16
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.Appearance = System.Windows.Forms.Appearance.Button
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(209, 379)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(110, 23)
+        Me.CheckBox1.TabIndex = 16
+        Me.CheckBox1.Text = "Show XML Preview"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'frmExamsCreator
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(398, 454)
         Me.Controls.Add(Me.FlowLayoutPanel1)
@@ -203,6 +216,7 @@ Partial Class frmExamsCreator
         Me.TableLayoutPanel1.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.FlowLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -220,4 +234,5 @@ Partial Class frmExamsCreator
     Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
 End Class

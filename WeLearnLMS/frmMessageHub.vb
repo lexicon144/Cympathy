@@ -19,7 +19,7 @@
 
         With btn
             .HeaderText = "Action"
-            .Text = "Open"
+            .Text = "Select"
             .Name = "btn"
             .UseColumnTextForButtonValue = True
         End With

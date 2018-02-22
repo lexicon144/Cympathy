@@ -47,21 +47,18 @@ Partial Class frmGradesExamPreCreator
         '
         Me.Label5.AutoSize = True
         Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label5.Location = New System.Drawing.Point(4, 191)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(3, 155)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(51, 17)
+        Me.Label5.Size = New System.Drawing.Size(39, 13)
         Me.Label5.TabIndex = 6
         Me.Label5.Text = "Label5"
         '
         'grpGrade
         '
         Me.grpGrade.Controls.Add(Me.TableLayoutPanel2)
-        Me.grpGrade.Location = New System.Drawing.Point(392, 4)
-        Me.grpGrade.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpGrade.Location = New System.Drawing.Point(294, 3)
         Me.grpGrade.Name = "grpGrade"
-        Me.grpGrade.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.grpGrade.Size = New System.Drawing.Size(380, 183)
+        Me.grpGrade.Size = New System.Drawing.Size(285, 149)
         Me.grpGrade.TabIndex = 8
         Me.grpGrade.TabStop = False
         Me.grpGrade.Text = "Grade"
@@ -76,43 +73,39 @@ Partial Class frmGradesExamPreCreator
         Me.TableLayoutPanel2.Controls.Add(Me.Label3, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Label4, 0, 1)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(4, 19)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 16)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 2
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(372, 160)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(279, 130)
         Me.TableLayoutPanel2.TabIndex = 10
         '
         'txtGradeNumber
         '
         Me.txtGradeNumber.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtGradeNumber.Location = New System.Drawing.Point(190, 84)
-        Me.txtGradeNumber.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtGradeNumber.Location = New System.Drawing.Point(142, 68)
         Me.txtGradeNumber.Name = "txtGradeNumber"
         Me.txtGradeNumber.ReadOnly = True
-        Me.txtGradeNumber.Size = New System.Drawing.Size(178, 22)
+        Me.txtGradeNumber.Size = New System.Drawing.Size(134, 20)
         Me.txtGradeNumber.TabIndex = 3
         '
         'txtGradeFullScore
         '
         Me.txtGradeFullScore.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtGradeFullScore.Location = New System.Drawing.Point(190, 4)
-        Me.txtGradeFullScore.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtGradeFullScore.Location = New System.Drawing.Point(142, 3)
         Me.txtGradeFullScore.Name = "txtGradeFullScore"
         Me.txtGradeFullScore.ReadOnly = True
-        Me.txtGradeFullScore.Size = New System.Drawing.Size(178, 22)
+        Me.txtGradeFullScore.Size = New System.Drawing.Size(134, 20)
         Me.txtGradeFullScore.TabIndex = 4
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label3.Location = New System.Drawing.Point(4, 0)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(3, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(178, 80)
+        Me.Label3.Size = New System.Drawing.Size(133, 65)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Full Score"
         '
@@ -120,21 +113,18 @@ Partial Class frmGradesExamPreCreator
         '
         Me.Label4.AutoSize = True
         Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label4.Location = New System.Drawing.Point(4, 80)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(3, 65)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(178, 80)
+        Me.Label4.Size = New System.Drawing.Size(133, 65)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Average Number"
         '
         'grpQuiz
         '
         Me.grpQuiz.Controls.Add(Me.TableLayoutPanel1)
-        Me.grpQuiz.Location = New System.Drawing.Point(4, 4)
-        Me.grpQuiz.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpQuiz.Location = New System.Drawing.Point(3, 3)
         Me.grpQuiz.Name = "grpQuiz"
-        Me.grpQuiz.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.grpQuiz.Size = New System.Drawing.Size(380, 183)
+        Me.grpQuiz.Size = New System.Drawing.Size(285, 149)
         Me.grpQuiz.TabIndex = 7
         Me.grpQuiz.TabStop = False
         Me.grpQuiz.Text = "Exam"
@@ -149,55 +139,50 @@ Partial Class frmGradesExamPreCreator
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txtExamName, 1, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(4, 19)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 16)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(372, 160)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(279, 130)
         Me.TableLayoutPanel1.TabIndex = 9
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Location = New System.Drawing.Point(4, 80)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(3, 65)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(178, 80)
+        Me.Label2.Size = New System.Drawing.Size(133, 65)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Exam Name"
         '
         'txtExamID
         '
         Me.txtExamID.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtExamID.Location = New System.Drawing.Point(190, 4)
-        Me.txtExamID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtExamID.Location = New System.Drawing.Point(142, 3)
         Me.txtExamID.Name = "txtExamID"
         Me.txtExamID.ReadOnly = True
-        Me.txtExamID.Size = New System.Drawing.Size(178, 22)
+        Me.txtExamID.Size = New System.Drawing.Size(134, 20)
         Me.txtExamID.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Location = New System.Drawing.Point(4, 0)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(178, 80)
+        Me.Label1.Size = New System.Drawing.Size(133, 65)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Exam ID"
         '
         'txtExamName
         '
         Me.txtExamName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtExamName.Location = New System.Drawing.Point(190, 84)
-        Me.txtExamName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtExamName.Location = New System.Drawing.Point(142, 68)
         Me.txtExamName.Name = "txtExamName"
         Me.txtExamName.ReadOnly = True
-        Me.txtExamName.Size = New System.Drawing.Size(178, 22)
+        Me.txtExamName.Size = New System.Drawing.Size(134, 20)
         Me.txtExamName.TabIndex = 1
         '
         'FlowLayoutPanel1
@@ -207,18 +192,16 @@ Partial Class frmGradesExamPreCreator
         Me.FlowLayoutPanel1.Controls.Add(Me.Label5)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(776, 231)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(582, 188)
         Me.FlowLayoutPanel1.TabIndex = 9
         '
         'frmGradesExamPreCreator
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(776, 231)
+        Me.ClientSize = New System.Drawing.Size(582, 188)
         Me.Controls.Add(Me.FlowLayoutPanel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmGradesExamPreCreator"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmGradesExamFinalizer"

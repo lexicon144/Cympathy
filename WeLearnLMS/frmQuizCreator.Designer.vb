@@ -35,6 +35,7 @@ Partial Class frmQuizCreator
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.grpXmlPreview.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -55,10 +56,10 @@ Partial Class frmQuizCreator
         'rtbXMLPreview
         '
         Me.rtbXMLPreview.Dock = System.Windows.Forms.DockStyle.Left
-        Me.rtbXMLPreview.Location = New System.Drawing.Point(3, 19)
+        Me.rtbXMLPreview.Location = New System.Drawing.Point(3, 16)
         Me.rtbXMLPreview.Name = "rtbXMLPreview"
         Me.rtbXMLPreview.ReadOnly = True
-        Me.rtbXMLPreview.Size = New System.Drawing.Size(354, 216)
+        Me.rtbXMLPreview.Size = New System.Drawing.Size(354, 219)
         Me.rtbXMLPreview.TabIndex = 1
         Me.rtbXMLPreview.Text = ""
         '
@@ -86,7 +87,7 @@ Partial Class frmQuizCreator
         '
         Me.txtQuizName.Location = New System.Drawing.Point(196, 3)
         Me.txtQuizName.Name = "txtQuizName"
-        Me.txtQuizName.Size = New System.Drawing.Size(161, 23)
+        Me.txtQuizName.Size = New System.Drawing.Size(161, 20)
         Me.txtQuizName.TabIndex = 4
         '
         'Label1
@@ -94,7 +95,7 @@ Partial Class frmQuizCreator
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(78, 17)
+        Me.Label1.Size = New System.Drawing.Size(59, 13)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Quiz Name"
         '
@@ -103,7 +104,7 @@ Partial Class frmQuizCreator
         Me.txtQuizType.Location = New System.Drawing.Point(196, 53)
         Me.txtQuizType.Name = "txtQuizType"
         Me.txtQuizType.ReadOnly = True
-        Me.txtQuizType.Size = New System.Drawing.Size(161, 23)
+        Me.txtQuizType.Size = New System.Drawing.Size(161, 20)
         Me.txtQuizType.TabIndex = 6
         '
         'Label2
@@ -111,7 +112,7 @@ Partial Class frmQuizCreator
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(3, 50)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 17)
+        Me.Label2.Size = New System.Drawing.Size(55, 13)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Quiz Type"
         '
@@ -151,6 +152,7 @@ Partial Class frmQuizCreator
         Me.FlowLayoutPanel1.Controls.Add(Me.TableLayoutPanel1)
         Me.FlowLayoutPanel1.Controls.Add(Me.grpXmlPreview)
         Me.FlowLayoutPanel1.Controls.Add(Me.TableLayoutPanel2)
+        Me.FlowLayoutPanel1.Controls.Add(Me.CheckBox1)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
@@ -161,9 +163,20 @@ Partial Class frmQuizCreator
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.Appearance = System.Windows.Forms.Appearance.Button
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(209, 353)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(110, 23)
+        Me.CheckBox1.TabIndex = 11
+        Me.CheckBox1.Text = "Show XML Preview"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'frmQuizCreator
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(397, 440)
         Me.Controls.Add(Me.FlowLayoutPanel1)
@@ -177,6 +190,7 @@ Partial Class frmQuizCreator
         Me.TableLayoutPanel1.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.FlowLayoutPanel1.PerformLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -193,4 +207,5 @@ Partial Class frmQuizCreator
     Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
 End Class

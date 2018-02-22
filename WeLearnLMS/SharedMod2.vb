@@ -11,6 +11,12 @@ Public Module SharedMod2
     Friend WeLearnAC As New ContextAntiCheatEngine
     Friend FrmUAC As New ContextDisableControls()
     Friend WeLearnMessageDisplay As New ContextWeLearnException()
+
+    Friend Enum SessionState
+        Dirty
+        Clean
+    End Enum
+
     Friend Enum Marker
         Quiz
         Exam

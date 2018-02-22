@@ -51,12 +51,12 @@
                         txtClassId.Text = .Cells("id").Value.ToString()
                         txtClassName.Text = .Cells("class_name").Value.ToString()
                         txtClassDescription.Text = .Cells("class_description").Value.ToString()
-                        txtClassType.Text = .Cells("classType").Value.ToString
+                        txtClassType.Text = [Enum].GetName(GetType(eClassType), .Cells("classType").Value)
                     End With
                 End If
             End If
         Catch XXX As Exception
-            WeLearnMessageDisplay.Display(WeLearnExceptions.General, Me, XXX)
+            WeLearnMessageDisplay.Display(WeLearnExceptions.Simple, Me, XXX)
         End Try
     End Sub
 
@@ -67,7 +67,7 @@
     Private Sub PrepareDatagrid()
         Dim btn As New DataGridViewButtonColumn()
         btn.HeaderText = "Action"
-        btn.Text = "Open"
+        btn.Text = "Select"
         btn.Name = "btn"
         btn.UseColumnTextForButtonValue = True
 
@@ -140,9 +140,16 @@
     End Function
 
     Private Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
-        Me._Classroom = ParseFromTextbox()
-        _SharedClassroom = ParseFromTextbox()
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Dim emptyTextBoxes =
+            From txt In Me.TableLayoutPanel1.Controls.OfType(Of TextBox)()
+            Where txt.Text.Length = 0
+            Select txt.Name
+        If emptyTextBoxes.Any Then
+            MessageBox.Show(String.Format("Please Select a Classroom", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation))
+        Else
+            Me._Classroom = ParseFromTextbox()
+            _SharedClassroom = ParseFromTextbox()
+            Me.DialogResult = Windows.Forms.DialogResult.OK
+        End If
     End Sub
-
 End Class

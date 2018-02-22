@@ -45,7 +45,6 @@ Partial Class frmClassroomHub
         Me.PanelProfessorsOnly = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnLinkUserHere = New System.Windows.Forms.Button()
         Me.grpViewing = New System.Windows.Forms.GroupBox()
         Me.tablelayoutViewing = New System.Windows.Forms.TableLayoutPanel()
         Me.grpMisc = New System.Windows.Forms.GroupBox()
@@ -62,6 +61,7 @@ Partial Class frmClassroomHub
         Me.SchedulesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClassStandingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.PanelProfessorsOnly.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -80,8 +80,10 @@ Partial Class frmClassroomHub
         'btnLinkExamHere
         '
         Me.btnLinkExamHere.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnLinkExamHere, "Link an Exam to this classroom")
         Me.btnLinkExamHere.Location = New System.Drawing.Point(3, 62)
         Me.btnLinkExamHere.Name = "btnLinkExamHere"
+        Me.HelpProvider1.SetShowHelp(Me.btnLinkExamHere, True)
         Me.btnLinkExamHere.Size = New System.Drawing.Size(128, 53)
         Me.btnLinkExamHere.TabIndex = 21
         Me.btnLinkExamHere.Text = "Link Exam Here"
@@ -90,8 +92,10 @@ Partial Class frmClassroomHub
         'btnLinkQuizHere
         '
         Me.btnLinkQuizHere.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnLinkQuizHere, "Link a Quiz to this classroom")
         Me.btnLinkQuizHere.Location = New System.Drawing.Point(3, 3)
         Me.btnLinkQuizHere.Name = "btnLinkQuizHere"
+        Me.HelpProvider1.SetShowHelp(Me.btnLinkQuizHere, True)
         Me.btnLinkQuizHere.Size = New System.Drawing.Size(128, 53)
         Me.btnLinkQuizHere.TabIndex = 20
         Me.btnLinkQuizHere.Text = "Link Quiz Here"
@@ -100,8 +104,10 @@ Partial Class frmClassroomHub
         'btnLinkMaterialHere
         '
         Me.btnLinkMaterialHere.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnLinkMaterialHere, "Link a material to this classroom")
         Me.btnLinkMaterialHere.Location = New System.Drawing.Point(3, 180)
         Me.btnLinkMaterialHere.Name = "btnLinkMaterialHere"
+        Me.HelpProvider1.SetShowHelp(Me.btnLinkMaterialHere, True)
         Me.btnLinkMaterialHere.Size = New System.Drawing.Size(128, 53)
         Me.btnLinkMaterialHere.TabIndex = 19
         Me.btnLinkMaterialHere.Text = "Link Material Here"
@@ -110,8 +116,10 @@ Partial Class frmClassroomHub
         'btnLinkArticleHere
         '
         Me.btnLinkArticleHere.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnLinkArticleHere, "Link an Article to this classroom")
         Me.btnLinkArticleHere.Location = New System.Drawing.Point(3, 121)
         Me.btnLinkArticleHere.Name = "btnLinkArticleHere"
+        Me.HelpProvider1.SetShowHelp(Me.btnLinkArticleHere, True)
         Me.btnLinkArticleHere.Size = New System.Drawing.Size(128, 53)
         Me.btnLinkArticleHere.TabIndex = 18
         Me.btnLinkArticleHere.Text = "Link Article Here"
@@ -120,18 +128,22 @@ Partial Class frmClassroomHub
         'btnLinkStudentToClassroom
         '
         Me.btnLinkStudentToClassroom.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnLinkStudentToClassroom, "Link a student to this classroom")
         Me.btnLinkStudentToClassroom.Location = New System.Drawing.Point(3, 239)
         Me.btnLinkStudentToClassroom.Name = "btnLinkStudentToClassroom"
+        Me.HelpProvider1.SetShowHelp(Me.btnLinkStudentToClassroom, True)
         Me.btnLinkStudentToClassroom.Size = New System.Drawing.Size(128, 53)
         Me.btnLinkStudentToClassroom.TabIndex = 17
-        Me.btnLinkStudentToClassroom.Text = "Link Student Here"
+        Me.btnLinkStudentToClassroom.Text = "Link User Here"
         Me.btnLinkStudentToClassroom.UseVisualStyleBackColor = True
         '
         'btnViewMaterials
         '
         Me.btnViewMaterials.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnViewMaterials, "View Materials in thie classroom")
         Me.btnViewMaterials.Location = New System.Drawing.Point(3, 55)
         Me.btnViewMaterials.Name = "btnViewMaterials"
+        Me.HelpProvider1.SetShowHelp(Me.btnViewMaterials, True)
         Me.btnViewMaterials.Size = New System.Drawing.Size(151, 46)
         Me.btnViewMaterials.TabIndex = 15
         Me.btnViewMaterials.Text = "View Materials"
@@ -140,8 +152,10 @@ Partial Class frmClassroomHub
         'btnViewArticles
         '
         Me.btnViewArticles.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnViewArticles, "View the Articles in thie classroom")
         Me.btnViewArticles.Location = New System.Drawing.Point(3, 3)
         Me.btnViewArticles.Name = "btnViewArticles"
+        Me.HelpProvider1.SetShowHelp(Me.btnViewArticles, True)
         Me.btnViewArticles.Size = New System.Drawing.Size(151, 46)
         Me.btnViewArticles.TabIndex = 13
         Me.btnViewArticles.Text = "View Articles"
@@ -150,8 +164,10 @@ Partial Class frmClassroomHub
         'btnOpenQuestionnaire
         '
         Me.btnOpenQuestionnaire.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnOpenQuestionnaire, "View the quizes present in this classroom")
         Me.btnOpenQuestionnaire.Location = New System.Drawing.Point(3, 3)
         Me.btnOpenQuestionnaire.Name = "btnOpenQuestionnaire"
+        Me.HelpProvider1.SetShowHelp(Me.btnOpenQuestionnaire, True)
         Me.btnOpenQuestionnaire.Size = New System.Drawing.Size(145, 69)
         Me.btnOpenQuestionnaire.TabIndex = 11
         Me.btnOpenQuestionnaire.Text = "View Quizes"
@@ -242,8 +258,10 @@ Partial Class frmClassroomHub
         'btnViewLessonlist
         '
         Me.btnViewLessonlist.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnViewLessonlist, "View Everything Related in thie classroom")
         Me.btnViewLessonlist.Location = New System.Drawing.Point(3, 107)
         Me.btnViewLessonlist.Name = "btnViewLessonlist"
+        Me.HelpProvider1.SetShowHelp(Me.btnViewLessonlist, True)
         Me.btnViewLessonlist.Size = New System.Drawing.Size(151, 46)
         Me.btnViewLessonlist.TabIndex = 28
         Me.btnViewLessonlist.Text = "View Lesson List"
@@ -252,8 +270,10 @@ Partial Class frmClassroomHub
         'btnViewExams
         '
         Me.btnViewExams.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnViewExams, "View the Exams present in this classroom")
         Me.btnViewExams.Location = New System.Drawing.Point(3, 78)
         Me.btnViewExams.Name = "btnViewExams"
+        Me.HelpProvider1.SetShowHelp(Me.btnViewExams, True)
         Me.btnViewExams.Size = New System.Drawing.Size(145, 70)
         Me.btnViewExams.TabIndex = 29
         Me.btnViewExams.Text = "View Exams"
@@ -262,8 +282,10 @@ Partial Class frmClassroomHub
         'frmViewGrades
         '
         Me.frmViewGrades.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.frmViewGrades, "View the quiz grades  in thie classroom")
         Me.frmViewGrades.Location = New System.Drawing.Point(3, 3)
         Me.frmViewGrades.Name = "frmViewGrades"
+        Me.HelpProvider1.SetShowHelp(Me.frmViewGrades, True)
         Me.frmViewGrades.Size = New System.Drawing.Size(149, 46)
         Me.frmViewGrades.TabIndex = 30
         Me.frmViewGrades.Text = "View Quiz Grades"
@@ -272,8 +294,10 @@ Partial Class frmClassroomHub
         'btnViewExamGrades
         '
         Me.btnViewExamGrades.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnViewExamGrades, "View the Exam Grades in thie classroom")
         Me.btnViewExamGrades.Location = New System.Drawing.Point(3, 55)
         Me.btnViewExamGrades.Name = "btnViewExamGrades"
+        Me.HelpProvider1.SetShowHelp(Me.btnViewExamGrades, True)
         Me.btnViewExamGrades.Size = New System.Drawing.Size(149, 46)
         Me.btnViewExamGrades.TabIndex = 31
         Me.btnViewExamGrades.Text = "View Exam Grades"
@@ -306,7 +330,6 @@ Partial Class frmClassroomHub
         Me.TableLayoutPanel2.ColumnCount = 1
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.btnLinkQuizHere, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.btnLinkUserHere, 0, 5)
         Me.TableLayoutPanel2.Controls.Add(Me.btnLinkStudentToClassroom, 0, 4)
         Me.TableLayoutPanel2.Controls.Add(Me.btnLinkExamHere, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.btnLinkMaterialHere, 0, 3)
@@ -323,17 +346,6 @@ Partial Class frmClassroomHub
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(134, 356)
         Me.TableLayoutPanel2.TabIndex = 23
-        '
-        'btnLinkUserHere
-        '
-        Me.btnLinkUserHere.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnLinkUserHere.Location = New System.Drawing.Point(2, 297)
-        Me.btnLinkUserHere.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnLinkUserHere.Name = "btnLinkUserHere"
-        Me.btnLinkUserHere.Size = New System.Drawing.Size(130, 57)
-        Me.btnLinkUserHere.TabIndex = 22
-        Me.btnLinkUserHere.Text = "Link User Here"
-        Me.btnLinkUserHere.UseVisualStyleBackColor = True
         '
         'grpViewing
         '
@@ -394,8 +406,10 @@ Partial Class frmClassroomHub
         'btnViewClassGrades
         '
         Me.btnViewClassGrades.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnViewClassGrades, "View the Classroom Grades")
         Me.btnViewClassGrades.Location = New System.Drawing.Point(3, 107)
         Me.btnViewClassGrades.Name = "btnViewClassGrades"
+        Me.HelpProvider1.SetShowHelp(Me.btnViewClassGrades, True)
         Me.btnViewClassGrades.Size = New System.Drawing.Size(149, 46)
         Me.btnViewClassGrades.TabIndex = 34
         Me.btnViewClassGrades.Text = "View Class Grades"
@@ -470,6 +484,7 @@ Partial Class frmClassroomHub
         Me.TableLayoutPanel1.Controls.Add(Me.txtClassName, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txtClassId, 1, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.TableLayoutPanel1, "These are the details of this classroom")
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(2, 15)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -478,6 +493,7 @@ Partial Class frmClassroomHub
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.HelpProvider1.SetShowHelp(Me.TableLayoutPanel1, True)
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(327, 159)
         Me.TableLayoutPanel1.TabIndex = 39
         '
@@ -526,8 +542,10 @@ Partial Class frmClassroomHub
         Me.DataBindings.Add(New System.Windows.Forms.Binding("BackColor", Global.WeLearnLMS.My.MySettings.Default, "ClassroomHubBGC", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
+        Me.HelpProvider1.SetHelpString(Me, "This is where the Classroom Can be Fully Functional")
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmClassroomHub"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmClassroomHub"
         Me.PanelProfessorsOnly.ResumeLayout(False)
@@ -580,7 +598,6 @@ Partial Class frmClassroomHub
     Friend WithEvents mainpanel As System.Windows.Forms.FlowLayoutPanel
     Friend WithEvents grpClassDATA As System.Windows.Forms.GroupBox
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents btnLinkUserHere As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
@@ -589,4 +606,5 @@ Partial Class frmClassroomHub
     Friend WithEvents ScheduleToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SchedulesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ClassStandingToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
 End Class

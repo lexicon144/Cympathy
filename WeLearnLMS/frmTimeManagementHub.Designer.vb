@@ -26,6 +26,7 @@ Partial Class frmTimeManagementHub
         Me.btnScheduleCreator = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnLifeSpan = New System.Windows.Forms.Button()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -34,8 +35,10 @@ Partial Class frmTimeManagementHub
         Me.btnScheduleViewer.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.HelpProvider1.SetHelpString(Me.btnScheduleViewer, "Click this to open the Schedule Viewer")
         Me.btnScheduleViewer.Location = New System.Drawing.Point(3, 3)
         Me.btnScheduleViewer.Name = "btnScheduleViewer"
+        Me.HelpProvider1.SetShowHelp(Me.btnScheduleViewer, True)
         Me.btnScheduleViewer.Size = New System.Drawing.Size(218, 105)
         Me.btnScheduleViewer.TabIndex = 2
         Me.btnScheduleViewer.Text = "Schedule Viewer"
@@ -46,8 +49,10 @@ Partial Class frmTimeManagementHub
         Me.btnScheduleCreator.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.HelpProvider1.SetHelpString(Me.btnScheduleCreator, "Click this to Create The Schedules")
         Me.btnScheduleCreator.Location = New System.Drawing.Point(227, 3)
         Me.btnScheduleCreator.Name = "btnScheduleCreator"
+        Me.HelpProvider1.SetShowHelp(Me.btnScheduleCreator, True)
         Me.btnScheduleCreator.Size = New System.Drawing.Size(218, 105)
         Me.btnScheduleCreator.TabIndex = 3
         Me.btnScheduleCreator.Text = "Schedule Creator"
@@ -74,8 +79,10 @@ Partial Class frmTimeManagementHub
         'btnLifeSpan
         '
         Me.btnLifeSpan.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnLifeSpan, "Click this to Create the Life span of the classroom")
         Me.btnLifeSpan.Location = New System.Drawing.Point(451, 3)
         Me.btnLifeSpan.Name = "btnLifeSpan"
+        Me.HelpProvider1.SetShowHelp(Me.btnLifeSpan, True)
         Me.btnLifeSpan.Size = New System.Drawing.Size(220, 105)
         Me.btnLifeSpan.TabIndex = 4
         Me.btnLifeSpan.Text = "Lifespan Creator"
@@ -83,7 +90,7 @@ Partial Class frmTimeManagementHub
         '
         'frmTimeManagementHub
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(674, 111)
         Me.Controls.Add(Me.TableLayoutPanel1)
@@ -100,4 +107,5 @@ Partial Class frmTimeManagementHub
     Friend WithEvents btnScheduleCreator As System.Windows.Forms.Button
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents btnLifeSpan As System.Windows.Forms.Button
+    Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
 End Class

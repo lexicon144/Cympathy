@@ -34,6 +34,7 @@ Partial Class frmClassroomCreator
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.PanelProfessorsOnly = New System.Windows.Forms.Panel()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelProfessorsOnly.SuspendLayout()
@@ -57,9 +58,11 @@ Partial Class frmClassroomCreator
         '
         'Button1
         '
+        Me.HelpProvider1.SetHelpString(Me.Button1, "now before you can save the classroom, you have to add it")
         Me.Button1.Location = New System.Drawing.Point(3, 2)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
+        Me.HelpProvider1.SetShowHelp(Me.Button1, True)
         Me.Button1.Size = New System.Drawing.Size(91, 33)
         Me.Button1.TabIndex = 20
         Me.Button1.Text = "Add"
@@ -68,12 +71,14 @@ Partial Class frmClassroomCreator
         'OK_Button
         '
         Me.OK_Button.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.HelpProvider1.SetHelpString(Me.OK_Button, "click this to save the classroom")
         Me.OK_Button.Location = New System.Drawing.Point(101, 4)
         Me.OK_Button.Margin = New System.Windows.Forms.Padding(4)
         Me.OK_Button.Name = "OK_Button"
+        Me.HelpProvider1.SetShowHelp(Me.OK_Button, True)
         Me.OK_Button.Size = New System.Drawing.Size(89, 30)
         Me.OK_Button.TabIndex = 0
-        Me.OK_Button.Text = "OK"
+        Me.OK_Button.Text = "SAVE"
         '
         'Label2
         '
@@ -81,7 +86,7 @@ Partial Class frmClassroomCreator
         Me.Label2.Location = New System.Drawing.Point(1, 0)
         Me.Label2.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(263, 17)
+        Me.Label2.Size = New System.Drawing.Size(198, 13)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Type in the Class Name or Subject Code"
         '
@@ -91,35 +96,42 @@ Partial Class frmClassroomCreator
         Me.Label1.Location = New System.Drawing.Point(1, 138)
         Me.Label1.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(78, 17)
+        Me.Label1.Size = New System.Drawing.Size(59, 13)
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Class Type"
         '
         'txtClassName
         '
+        Me.HelpProvider1.SetHelpString(Me.txtClassName, "This is the name of the classroom. Anything goes... not really. type in the subje" & _
+        "ct code or the classroom name")
         Me.txtClassName.Location = New System.Drawing.Point(3, 23)
         Me.txtClassName.Margin = New System.Windows.Forms.Padding(1)
         Me.txtClassName.MaxLength = 20
         Me.txtClassName.Name = "txtClassName"
-        Me.txtClassName.Size = New System.Drawing.Size(401, 23)
+        Me.HelpProvider1.SetShowHelp(Me.txtClassName, True)
+        Me.txtClassName.Size = New System.Drawing.Size(401, 20)
         Me.txtClassName.TabIndex = 2
         '
         'cmbClassroomType
         '
         Me.cmbClassroomType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbClassroomType.FormattingEnabled = True
+        Me.HelpProvider1.SetHelpString(Me.cmbClassroomType, "Check if the classroom is SEMESTRAL or TRIMESTRAL")
         Me.cmbClassroomType.Location = New System.Drawing.Point(4, 159)
         Me.cmbClassroomType.Margin = New System.Windows.Forms.Padding(1)
         Me.cmbClassroomType.Name = "cmbClassroomType"
-        Me.cmbClassroomType.Size = New System.Drawing.Size(135, 25)
+        Me.HelpProvider1.SetShowHelp(Me.cmbClassroomType, True)
+        Me.cmbClassroomType.Size = New System.Drawing.Size(135, 21)
         Me.cmbClassroomType.TabIndex = 17
         '
         'rtbClassDescription
         '
+        Me.HelpProvider1.SetHelpString(Me.rtbClassDescription, "Type in the Classroom Description")
         Me.rtbClassDescription.Location = New System.Drawing.Point(3, 67)
         Me.rtbClassDescription.Margin = New System.Windows.Forms.Padding(1)
         Me.rtbClassDescription.MaxLength = 20
         Me.rtbClassDescription.Name = "rtbClassDescription"
+        Me.HelpProvider1.SetShowHelp(Me.rtbClassDescription, True)
         Me.rtbClassDescription.Size = New System.Drawing.Size(401, 71)
         Me.rtbClassDescription.TabIndex = 7
         Me.rtbClassDescription.Text = ""
@@ -130,7 +142,7 @@ Partial Class frmClassroomCreator
         Me.Label4.Location = New System.Drawing.Point(-1, 49)
         Me.Label4.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(288, 17)
+        Me.Label4.Size = New System.Drawing.Size(212, 13)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Your Class Description... (Err.. Keep it short)"
         '
@@ -157,14 +169,16 @@ Partial Class frmClassroomCreator
         '
         'frmClassroomCreator
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(432, 273)
         Me.Controls.Add(Me.PanelProfessorsOnly)
         Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
+        Me.HelpProvider1.SetHelpString(Me, "This module is where we create a classroom! Time to start studyying!!")
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmClassroomCreator"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmClassroomCreator"
         Me.TableLayoutPanel1.ResumeLayout(False)
@@ -185,4 +199,5 @@ Partial Class frmClassroomCreator
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
     Friend WithEvents PanelProfessorsOnly As System.Windows.Forms.Panel
+    Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
 End Class

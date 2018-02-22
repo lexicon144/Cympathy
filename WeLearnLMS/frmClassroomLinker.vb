@@ -23,7 +23,10 @@
         Dim Browser As New frmUsersViewer
         If Browser.ShowDialog = Windows.Forms.DialogResult.OK Then
             Me._User = Browser.GetSmallCredentials
+        Else
+            LinkLabel1.Enabled = False
         End If
+
         ParseToTextbox()
     End Sub
 

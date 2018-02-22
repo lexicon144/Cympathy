@@ -27,6 +27,7 @@ Partial Class frmMessageHub
         Me.btnViewFeedback = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
@@ -36,17 +37,21 @@ Partial Class frmMessageHub
         '
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.HelpProvider1.SetHelpString(Me.DataGridView1, "This is the Messages Hub. and where we view all the messages sent to (YOU)")
         Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.HelpProvider1.SetShowHelp(Me.DataGridView1, True)
         Me.DataGridView1.Size = New System.Drawing.Size(382, 150)
         Me.DataGridView1.TabIndex = 0
         '
         'btnCreateFeedback
         '
         Me.btnCreateFeedback.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnCreateFeedback, "Opens the Message Creator")
         Me.btnCreateFeedback.Location = New System.Drawing.Point(3, 3)
         Me.btnCreateFeedback.Name = "btnCreateFeedback"
+        Me.HelpProvider1.SetShowHelp(Me.btnCreateFeedback, True)
         Me.btnCreateFeedback.Size = New System.Drawing.Size(125, 44)
         Me.btnCreateFeedback.TabIndex = 1
         Me.btnCreateFeedback.Text = "Create Feedback"
@@ -55,8 +60,10 @@ Partial Class frmMessageHub
         'btnViewFeedback
         '
         Me.btnViewFeedback.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnViewFeedback, "Opens the Message Viewer")
         Me.btnViewFeedback.Location = New System.Drawing.Point(3, 53)
         Me.btnViewFeedback.Name = "btnViewFeedback"
+        Me.HelpProvider1.SetShowHelp(Me.btnViewFeedback, True)
         Me.btnViewFeedback.Size = New System.Drawing.Size(125, 44)
         Me.btnViewFeedback.TabIndex = 2
         Me.btnViewFeedback.Text = "View Feedback"
@@ -108,4 +115,5 @@ Partial Class frmMessageHub
     Friend WithEvents btnViewFeedback As System.Windows.Forms.Button
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
+    Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
 End Class

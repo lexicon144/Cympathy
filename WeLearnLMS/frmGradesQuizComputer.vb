@@ -2,10 +2,10 @@
 
     Private _AllQuizCount As UInt32
     Private _RecordedCount As UInt32
-    Private _AverageDatatable As New DataTable
     Private _GradeSummation As Double = 0.0
     Private _FullAverage As Double = 0.0
 
+    Private _AverageDatatable As New DataTable
     Public Sub New()
 
         ' This call is required by the designer.
@@ -17,27 +17,63 @@
     End Sub
 
 #Region "properties"
+    ''' <summary>
+    ''' Return AllQuizCount
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Friend ReadOnly Property QuizCount As UInt32
         Get
             Return _AllQuizCount
         End Get
     End Property
 
+    ''' <summary>
+    ''' Returns RecordedCount
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Friend ReadOnly Property RecordedCount As UInt32
         Get
             Return _RecordedCount
         End Get
     End Property
 
+    ''' <summary>
+    ''' Return GradeSummation
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Friend ReadOnly Property GradeSummation As Double
         Get
             Return _GradeSummation
         End Get
     End Property
 
+    ''' <summary>
+    ''' Return FullAverage
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Friend ReadOnly Property FullAverage As Double
         Get
             Return _FullAverage
+        End Get
+    End Property
+
+    ''' <summary>
+    ''' Return AverageDatatable
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Friend ReadOnly Property GetMyDatatable As DataTable
+        Get
+            Return Me._AverageDatatable
         End Get
     End Property
 #End Region
@@ -84,7 +120,7 @@
     ''' Summate all the quiz grades
     ''' </summary>
     ''' <remarks></remarks>
-    Private Sub GetSumationOfQuizes()
+    Friend Sub GetSumationOfQuizes()
         Me._GradeSummation = 0.0
         For Each Row As DataRow In Me._AverageDatatable.Rows
             Me._GradeSummation += Row("quiz_grade")
@@ -97,7 +133,7 @@
     ''' Count of all the Quizes the Studen Answered
     ''' </summary>
     ''' <remarks></remarks>
-    Private Sub GetRecordedCount(ByVal Count As UInt32)
+    Friend Sub GetRecordedCount(ByVal Count As UInt32)
         Count = Me._AverageDatatable.Rows.Count
     End Sub
 
@@ -222,6 +258,18 @@
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
         DisplayOnDatagridview()
         DisplayOnTextboxes()
+    End Sub
+
+    Friend Sub TriggerNecessaryFunctions()
+        Me._AverageDatatable = GetAnsweredQuizes(_SharedUserID, _SharedClassroom.ClassroomId)
+        'get sum of all recorded exams (YOU)
+        GetRecordedCount(_RecordedCount)
+        'get count of all exams (ALL)
+        Me._AllQuizCount = GetCountQuizesInClassroom(_SharedClassroom.ClassroomId)
+        'get sum of grades of all exams
+        GetSumationOfQuizes()
+
+        Me._FullAverage = GetNewAverage(Me._GradeSummation, Me._AllQuizCount)
     End Sub
 
     Private Sub BackgroundWorker1_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorker1.ProgressChanged

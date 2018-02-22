@@ -28,21 +28,24 @@ Partial Class frmPasswordChallenge
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnOK = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtAnswer
         '
         Me.txtAnswer.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtAnswer.Location = New System.Drawing.Point(191, 75)
+        Me.HelpProvider1.SetHelpString(Me.txtAnswer, "Input your answer here")
+        Me.txtAnswer.Location = New System.Drawing.Point(191, 76)
         Me.txtAnswer.Name = "txtAnswer"
+        Me.HelpProvider1.SetShowHelp(Me.txtAnswer, True)
         Me.txtAnswer.Size = New System.Drawing.Size(183, 20)
         Me.txtAnswer.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(3, 72)
+        Me.Label1.Location = New System.Drawing.Point(3, 73)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(42, 13)
         Me.Label1.TabIndex = 1
@@ -51,10 +54,12 @@ Partial Class frmPasswordChallenge
         'RichTextBox1
         '
         Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.RichTextBox1, "This is your Question")
         Me.RichTextBox1.Location = New System.Drawing.Point(191, 3)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(183, 66)
+        Me.HelpProvider1.SetShowHelp(Me.RichTextBox1, True)
+        Me.RichTextBox1.Size = New System.Drawing.Size(183, 67)
         Me.RichTextBox1.TabIndex = 2
         Me.RichTextBox1.Text = ""
         '
@@ -70,9 +75,11 @@ Partial Class frmPasswordChallenge
         'btnOK
         '
         Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnOK.Location = New System.Drawing.Point(191, 147)
+        Me.HelpProvider1.SetHelpString(Me.btnOK, "Hit this!")
+        Me.btnOK.Location = New System.Drawing.Point(191, 149)
         Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(183, 69)
+        Me.HelpProvider1.SetShowHelp(Me.btnOK, True)
+        Me.btnOK.Size = New System.Drawing.Size(183, 67)
         Me.btnOK.TabIndex = 4
         Me.btnOK.Text = "O K "
         Me.btnOK.UseVisualStyleBackColor = True
@@ -105,7 +112,10 @@ Partial Class frmPasswordChallenge
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
+        Me.HelpProvider1.SetHelpString(Me, "This module provides the challenge to check if the user remembers their security " & _
+        "question")
         Me.Name = "frmPasswordChallenge"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmPasswordChallenge"
         Me.TableLayoutPanel1.ResumeLayout(False)
@@ -119,4 +129,5 @@ Partial Class frmPasswordChallenge
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents btnOK As System.Windows.Forms.Button
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
 End Class

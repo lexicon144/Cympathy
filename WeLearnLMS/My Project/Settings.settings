@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
   <Profiles />
   <Settings>
-    <Setting Name="city85" Type="System.String" Scope="Application">
+    <Setting Name="city85" Type="System.String" Scope="User">
       <Value Profile="(Default)">127.0.0.1</Value>
     </Setting>
     <Setting Name="AttendanceReadOnly" Type="System.Boolean" Scope="User">
@@ -22,6 +22,9 @@
     </Setting>
     <Setting Name="ClassroomHubBGC" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">Control</Value>
+    </Setting>
+    <Setting Name="QuestionnaireViewerFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Microsoft Sans Serif, 8.25pt</Value>
     </Setting>
   </Settings>
 </SettingsFile>

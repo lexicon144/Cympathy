@@ -35,6 +35,7 @@ Partial Class frmArticleHub
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -45,8 +46,10 @@ Partial Class frmArticleHub
         'btnView
         '
         Me.btnView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnView, "View This Article")
         Me.btnView.Location = New System.Drawing.Point(3, 39)
         Me.btnView.Name = "btnView"
+        Me.HelpProvider1.SetShowHelp(Me.btnView, True)
         Me.btnView.Size = New System.Drawing.Size(69, 30)
         Me.btnView.TabIndex = 0
         Me.btnView.Text = "View"
@@ -58,28 +61,34 @@ Partial Class frmArticleHub
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.HelpProvider1.SetHelpString(Me.DataGridView1, "Choose which article to select")
         Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.HelpProvider1.SetShowHelp(Me.DataGridView1, True)
         Me.DataGridView1.Size = New System.Drawing.Size(398, 150)
         Me.DataGridView1.TabIndex = 2
         '
         'txtArticleID
         '
         Me.txtArticleID.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.txtArticleID, "This is the ID for the article")
         Me.txtArticleID.Location = New System.Drawing.Point(158, 3)
         Me.txtArticleID.Name = "txtArticleID"
         Me.txtArticleID.ReadOnly = True
+        Me.HelpProvider1.SetShowHelp(Me.txtArticleID, True)
         Me.txtArticleID.Size = New System.Drawing.Size(150, 20)
         Me.txtArticleID.TabIndex = 3
         '
         'txtArticleName
         '
         Me.txtArticleName.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.txtArticleName, "This is the name of the article")
         Me.txtArticleName.Location = New System.Drawing.Point(158, 36)
         Me.txtArticleName.Name = "txtArticleName"
         Me.txtArticleName.ReadOnly = True
+        Me.HelpProvider1.SetShowHelp(Me.txtArticleName, True)
         Me.txtArticleName.Size = New System.Drawing.Size(150, 20)
         Me.txtArticleName.TabIndex = 4
         '
@@ -104,8 +113,10 @@ Partial Class frmArticleHub
         'btnOK
         '
         Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.btnOK, "Select this article!")
         Me.btnOK.Location = New System.Drawing.Point(3, 3)
         Me.btnOK.Name = "btnOK"
+        Me.HelpProvider1.SetShowHelp(Me.btnOK, True)
         Me.btnOK.Size = New System.Drawing.Size(69, 30)
         Me.btnOK.TabIndex = 8
         Me.btnOK.Text = "O K"
@@ -114,9 +125,11 @@ Partial Class frmArticleHub
         'txtArticleBase
         '
         Me.txtArticleBase.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HelpProvider1.SetHelpString(Me.txtArticleBase, "This is the RTF of the article")
         Me.txtArticleBase.Location = New System.Drawing.Point(158, 69)
         Me.txtArticleBase.Name = "txtArticleBase"
         Me.txtArticleBase.ReadOnly = True
+        Me.HelpProvider1.SetShowHelp(Me.txtArticleBase, True)
         Me.txtArticleBase.Size = New System.Drawing.Size(150, 20)
         Me.txtArticleBase.TabIndex = 9
         '
@@ -193,7 +206,12 @@ Partial Class frmArticleHub
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.DataBindings.Add(New System.Windows.Forms.Binding("Font", Global.WeLearnLMS.My.MySettings.Default, "MainFont", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.Font = Global.WeLearnLMS.My.MySettings.Default.MainFont
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpString(Me, "This is the Articles Hub! this is where you get to select articles!")
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmArticleHub"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmArticleHub"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -218,4 +236,5 @@ Partial Class frmArticleHub
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
     Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
 End Class

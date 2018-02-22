@@ -37,6 +37,7 @@ Partial Class frmMessageCreator
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btnSave = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -47,7 +48,7 @@ Partial Class frmMessageCreator
         Me.Label1.Location = New System.Drawing.Point(11, 9)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(83, 17)
+        Me.Label1.Size = New System.Drawing.Size(63, 13)
         Me.Label1.TabIndex = 16
         Me.Label1.Text = "Time Stamp"
         '
@@ -57,7 +58,7 @@ Partial Class frmMessageCreator
         Me.Label2.Location = New System.Drawing.Point(2, 0)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(71, 17)
+        Me.Label2.Size = New System.Drawing.Size(55, 13)
         Me.Label2.TabIndex = 17
         Me.Label2.Text = "Sender ID"
         '
@@ -77,7 +78,7 @@ Partial Class frmMessageCreator
         Me.txtSenderID.Margin = New System.Windows.Forms.Padding(2)
         Me.txtSenderID.Name = "txtSenderID"
         Me.txtSenderID.ReadOnly = True
-        Me.txtSenderID.Size = New System.Drawing.Size(97, 23)
+        Me.txtSenderID.Size = New System.Drawing.Size(97, 20)
         Me.txtSenderID.TabIndex = 13
         '
         'Label3
@@ -86,7 +87,7 @@ Partial Class frmMessageCreator
         Me.Label3.Location = New System.Drawing.Point(2, 84)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(81, 17)
+        Me.Label3.Size = New System.Drawing.Size(64, 13)
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "Receiver ID"
         '
@@ -96,7 +97,7 @@ Partial Class frmMessageCreator
         Me.Label4.Location = New System.Drawing.Point(2, 168)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(65, 17)
+        Me.Label4.Size = New System.Drawing.Size(50, 13)
         Me.Label4.TabIndex = 19
         Me.Label4.Text = "Message"
         '
@@ -106,7 +107,7 @@ Partial Class frmMessageCreator
         Me.txtReceiverID.Margin = New System.Windows.Forms.Padding(2)
         Me.txtReceiverID.Name = "txtReceiverID"
         Me.txtReceiverID.ReadOnly = True
-        Me.txtReceiverID.Size = New System.Drawing.Size(97, 23)
+        Me.txtReceiverID.Size = New System.Drawing.Size(97, 20)
         Me.txtReceiverID.TabIndex = 14
         '
         'ErrorProvider1
@@ -119,7 +120,7 @@ Partial Class frmMessageCreator
         Me.txtTimeStamp.Location = New System.Drawing.Point(94, 9)
         Me.txtTimeStamp.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.txtTimeStamp.Name = "txtTimeStamp"
-        Me.txtTimeStamp.Size = New System.Drawing.Size(74, 17)
+        Me.txtTimeStamp.Size = New System.Drawing.Size(56, 13)
         Me.txtTimeStamp.TabIndex = 22
         Me.txtTimeStamp.TabStop = True
         Me.txtTimeStamp.Text = "timeStamp"
@@ -130,7 +131,7 @@ Partial Class frmMessageCreator
         Me.txtReceiverNAME.Location = New System.Drawing.Point(311, 118)
         Me.txtReceiverNAME.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.txtReceiverNAME.Name = "txtReceiverNAME"
-        Me.txtReceiverNAME.Size = New System.Drawing.Size(51, 17)
+        Me.txtReceiverNAME.Size = New System.Drawing.Size(39, 13)
         Me.txtReceiverNAME.TabIndex = 21
         Me.txtReceiverNAME.Text = "Label6"
         '
@@ -140,7 +141,7 @@ Partial Class frmMessageCreator
         Me.txtSenderNAME.Location = New System.Drawing.Point(311, 29)
         Me.txtSenderNAME.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.txtSenderNAME.Name = "txtSenderNAME"
-        Me.txtSenderNAME.Size = New System.Drawing.Size(51, 17)
+        Me.txtSenderNAME.Size = New System.Drawing.Size(39, 13)
         Me.txtSenderNAME.TabIndex = 20
         Me.txtSenderNAME.Text = "Label5"
         '
@@ -179,7 +180,7 @@ Partial Class frmMessageCreator
         '
         'frmMessageCreator
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(391, 358)
         Me.Controls.Add(Me.TableLayoutPanel1)
@@ -214,4 +215,5 @@ Partial Class frmMessageCreator
     Friend WithEvents txtSenderNAME As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
 End Class

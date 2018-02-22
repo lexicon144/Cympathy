@@ -25,6 +25,7 @@
     Private Sub frmTimeManagementHub_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If _SharedAdvancedCredentials.MyUserType = c_MainCredentials.UserType.STU Then
             btnScheduleCreator.Enabled = False
+            btnLifeSpan.Enabled = False
         End If
     End Sub
 

@@ -9,7 +9,7 @@
 
     Private Sub frmGradesClassroomHub_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        FrmUAC.DisableAllMe(_SharedMainCredentials.MyUserType, Me)
+        FrmUAC.DisableAllMe(_SharedMainCredentials.MyUserType, Me.TableLayoutPanel1)
 
     End Sub
 

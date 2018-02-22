@@ -3,7 +3,16 @@
     Private _NewMaterial As New c_Material
 
     Private Sub btnAddMaterial_Click(sender As Object, e As EventArgs) Handles btnAddMaterial.Click
-        InsertNewMaterial()
+        Dim emptyTextBoxes =
+            From txt In Me.TableLayoutPanel1.Controls.OfType(Of TextBox)()
+            Where txt.Text.Length = 0
+            Select txt.Name
+        If emptyTextBoxes.Any Then
+            MessageBox.Show(String.Format("Please Select a Classroom", "WeLearnLMS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation))
+        Else
+            InsertNewMaterial()
+        End If
+
     End Sub
 
     Private Sub InsertNewMaterial()
