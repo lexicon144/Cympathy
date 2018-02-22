@@ -65,10 +65,11 @@
     Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
         Using Saver As New SaveFileDialog
             With Saver
+                .FileName = "CYMPATHY_REPORTS_" & POSIXEpoch.DateTimeToEpoch(DateTime.Now).ToString & ".HTML"
                 .Filter = "HTLM File|*.HTML"
                 .Title = "Save the HTML Report"
                 If .ShowDialog() = DialogResult.OK Then
-                    System.IO.File.WriteAllText(.FileName, WebBrowser1.DocumentText)
+                    System.IO.File.WriteAllText(.FileName, Me._HTMLString)
                 End If
             End With
         End Using

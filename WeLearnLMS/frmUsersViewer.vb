@@ -15,11 +15,20 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
+        LoadAllUsers()
+    End Sub
 
+    Public Sub New(ByRef ClassroomID As String)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        LoadAllUsers(ClassroomID)
     End Sub
 
     Private Sub frmUsersViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LoadAllUsers()
+
         Dim btn As New DataGridViewButtonColumn()
         btn.HeaderText = "Action"
         btn.Text = "Open"
@@ -53,6 +62,34 @@
                 With Command
                     .Connection = Connection
                     .CommandText = "SELECT user_id, user_name FROM tbl_user"
+                End With
+                Using Adapter As New MySqlDataAdapter
+                    With Adapter
+                        .SelectCommand = Command
+                        .Fill(_Datatable)
+                    End With
+                End Using
+            End Using
+        End Using
+    End Sub
+
+    Friend Sub LoadAllUsers(ByRef ClassroomID As String)
+        Using Connection As New MySqlConnection
+            With Connection
+                .ConnectionString = _SharedConnString.ConnString
+
+                If .State = ConnectionState.Closed Then
+                    .Open()
+                End If
+            End With
+            Using Command As New MySqlCommand
+                With Command
+                    .Connection = Connection
+                    .CommandType = CommandType.StoredProcedure
+                    .CommandText = "SelectEnrolledStudentsInThisClass"
+                    With .Parameters
+                        .AddWithValue("ClassID", ClassroomID)
+                    End With
                 End With
                 Using Adapter As New MySqlDataAdapter
                     With Adapter

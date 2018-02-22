@@ -69,20 +69,29 @@
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-
-        Dim Computer As New frmGradeExamComputer()
-        With Computer
-            Me._ExamCompiledGrades = .ReturnFullAverage()
-        End With
+        Me._ExamCompiledGrades = ExamComputer()
         BackgroundWorker1.ReportProgress(50)
 
-        Dim GradeComputer As New frmGradesQuizComputer()
-        With GradeComputer
-            Me._QuizCompiledGrades = .ReturnFullAverage()
-
-        End With
+        Me._QuizCompiledGrades = QuizComputer()
         BackgroundWorker1.ReportProgress(100)
     End Sub
+
+    Friend Function QuizComputer() As Double
+        Using Computer As New frmGradesQuizComputer
+            With Computer
+                Return .ReturnFullAverage
+            End With
+        End Using
+    End Function
+
+    Friend Function ExamComputer() As Double
+        Using Computer As New frmGradeExamComputer
+            With Computer
+                Return .ReturnFullAverage
+            End With
+        End Using
+    End Function
+
 
     Private Sub BackgroundWorker1_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorker1.ProgressChanged
         Me.backgroundProgress.Value = e.ProgressPercentage

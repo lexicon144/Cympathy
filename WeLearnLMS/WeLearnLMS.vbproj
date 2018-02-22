@@ -211,6 +211,18 @@
     <Compile Include="frmClassroomGradeReporter.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmExamPreGradeReporter.Designer.vb">
+      <DependentUpon>frmExamPreGradeReporter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmExamPreGradeReporter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuizPreGradesReporter.Designer.vb">
+      <DependentUpon>frmQuizPreGradesReporter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuizPreGradesReporter.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmReportHub.Designer.vb">
       <DependentUpon>frmReportHub.vb</DependentUpon>
     </Compile>
@@ -574,6 +586,7 @@
     <Compile Include="IHappyMessage.vb" />
     <Compile Include="IHashing.vb" />
     <Compile Include="ImpEndSession.vb" />
+    <Compile Include="ImpMakeHTMLPreGradeReport.vb" />
     <Compile Include="IStartSession.vb" />
     <Compile Include="ImpStartSession.vb" />
     <Compile Include="IMakeCSS.vb" />
@@ -693,6 +706,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmClassroomGradeReporter.resx">
       <DependentUpon>frmClassroomGradeReporter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuizPreGradesReporter.resx">
+      <DependentUpon>frmQuizPreGradesReporter.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportHub.resx">
       <DependentUpon>frmReportHub.vb</DependentUpon>

@@ -3,8 +3,7 @@
     Private _AdvancedCredentials As New c_AdvancedCredentials
     Private _Stopwatch As New Stopwatch
     Private _HappyStuff As IHappyMessage = New ImpHappyMessage
-    Private _MySession As New ImpStartSession
-    Private NYOOOMS As String = Application.StartupPath & "\foo\" & _SharedMainCredentials.UserName & ".nyooom"
+
     Public Sub New(ByRef AdvancedCredentials As c_AdvancedCredentials)
 
         ' This call is required by the designer.
@@ -29,7 +28,6 @@
 
         FlagThisUser(True, Me._AdvancedCredentials.UserID)
 
-        _MySession.MakeNyoooms(_SharedMainCredentials.UserName)
         SetMyClassroom()
         Me.blinker.Start()
     End Sub
@@ -168,12 +166,6 @@
     Private Sub frmMenu_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If MessageBox.Show("Are you sure you want to log out?", "WeLearnLMS", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then
             logoutsound()
-
-            If System.IO.File.Exists(NYOOOMS) Then
-                MessageBox.Show("Clearing Your Session.... Done! You are now Logged Out!", "Cympathy", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\foo\" & _SharedMainCredentials.UserName & ".nyooom", FileIO.UIOption.OnlyErrorDialogs, FileIO.RecycleOption.DeletePermanently)
-            End If
-
             FlagThisUser(False, Me._AdvancedCredentials.UserID)
             e.Cancel = False
             Exit Sub
@@ -246,10 +238,10 @@
         Using Dialog As New frmClassroomDialog()
             If Dialog.ShowDialog = Windows.Forms.DialogResult.OK Then
                 _SharedClassroom = Dialog.GetClassroom
+                SetMyClassroom(_SharedClassroom.ClassroomId, _SharedClassroom.ClassroomName)
+
             End If
         End Using
-
-        SetMyClassroom(_SharedClassroom.ClassroomId, _SharedClassroom.ClassroomName)
 
     End Sub
 

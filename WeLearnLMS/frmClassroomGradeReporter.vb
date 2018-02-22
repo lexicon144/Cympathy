@@ -5,7 +5,7 @@
     Private _HTMLString As String
     Private _FormattedTable As New DataTable
 
-    Private Sub frmQuizGradesCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub frmClassroomGradeReporter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Cursor = Cursors.WaitCursor
         BackgroundWorker1.RunWorkerAsync()
     End Sub
@@ -64,5 +64,18 @@
             SaveToolStripMenuItem.Enabled = True
         End If
 
+    End Sub
+
+    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
+        Using Saver As New SaveFileDialog
+            With Saver
+                .FileName = "CYMPATHY_REPORTS_" & POSIXEpoch.DateTimeToEpoch(DateTime.Now).ToString & ".HTML"
+                .Filter = "HTLM File|*.HTML"
+                .Title = "Save the HTML Report"
+                If .ShowDialog() = DialogResult.OK Then
+                    System.IO.File.WriteAllText(.FileName, Me._HTMLString)
+                End If
+            End With
+        End Using
     End Sub
 End Class

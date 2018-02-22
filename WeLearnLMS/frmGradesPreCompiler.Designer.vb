@@ -45,11 +45,9 @@ Partial Class frmGradesPreCompiler
         'grpCompiler
         '
         Me.grpCompiler.Controls.Add(Me.TableLayoutPanel1)
-        Me.grpCompiler.Location = New System.Drawing.Point(13, 13)
-        Me.grpCompiler.Margin = New System.Windows.Forms.Padding(4)
+        Me.grpCompiler.Location = New System.Drawing.Point(10, 11)
         Me.grpCompiler.Name = "grpCompiler"
-        Me.grpCompiler.Padding = New System.Windows.Forms.Padding(4)
-        Me.grpCompiler.Size = New System.Drawing.Size(389, 187)
+        Me.grpCompiler.Size = New System.Drawing.Size(292, 152)
         Me.grpCompiler.TabIndex = 2
         Me.grpCompiler.TabStop = False
         Me.grpCompiler.Text = "Compilation"
@@ -66,77 +64,71 @@ Partial Class frmGradesPreCompiler
         Me.TableLayoutPanel1.Controls.Add(Me.txtExamsAverage, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(4, 19)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 16)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(381, 164)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(286, 133)
         Me.TableLayoutPanel1.TabIndex = 5
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(4, 108)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(3, 88)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 17)
+        Me.Label3.Size = New System.Drawing.Size(82, 13)
         Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Attendance"
+        Me.Label3.Text = "Attendance /10"
         '
         'txtAttendance
         '
-        Me.txtAttendance.Location = New System.Drawing.Point(194, 112)
-        Me.txtAttendance.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtAttendance.Location = New System.Drawing.Point(146, 91)
         Me.txtAttendance.Name = "txtAttendance"
-        Me.txtAttendance.Size = New System.Drawing.Size(132, 22)
+        Me.txtAttendance.Size = New System.Drawing.Size(100, 20)
         Me.txtAttendance.TabIndex = 5
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(4, 54)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(3, 44)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(49, 17)
+        Me.Label2.Size = New System.Drawing.Size(38, 13)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Exams"
         '
         'txtQuizesAverage
         '
-        Me.txtQuizesAverage.Location = New System.Drawing.Point(194, 4)
-        Me.txtQuizesAverage.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtQuizesAverage.Location = New System.Drawing.Point(146, 3)
         Me.txtQuizesAverage.Name = "txtQuizesAverage"
         Me.txtQuizesAverage.ReadOnly = True
-        Me.txtQuizesAverage.Size = New System.Drawing.Size(132, 22)
+        Me.txtQuizesAverage.Size = New System.Drawing.Size(100, 20)
         Me.txtQuizesAverage.TabIndex = 0
         '
         'txtExamsAverage
         '
-        Me.txtExamsAverage.Location = New System.Drawing.Point(194, 58)
-        Me.txtExamsAverage.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtExamsAverage.Location = New System.Drawing.Point(146, 47)
         Me.txtExamsAverage.Name = "txtExamsAverage"
         Me.txtExamsAverage.ReadOnly = True
-        Me.txtExamsAverage.Size = New System.Drawing.Size(132, 22)
+        Me.txtExamsAverage.Size = New System.Drawing.Size(100, 20)
         Me.txtExamsAverage.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(4, 0)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 17)
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Quizes"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(298, 208)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Location = New System.Drawing.Point(224, 169)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 28)
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "O K "
         Me.Button1.UseVisualStyleBackColor = True
@@ -152,26 +144,26 @@ Partial Class frmGradesPreCompiler
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.backgroundProgress})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 254)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 202)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(415, 22)
+        Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 10, 0)
+        Me.StatusStrip1.Size = New System.Drawing.Size(311, 22)
         Me.StatusStrip1.TabIndex = 4
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'backgroundProgress
         '
         Me.backgroundProgress.Name = "backgroundProgress"
-        Me.backgroundProgress.Size = New System.Drawing.Size(100, 16)
+        Me.backgroundProgress.Size = New System.Drawing.Size(75, 16)
         '
         'frmGradesPreCompiler
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(415, 276)
+        Me.ClientSize = New System.Drawing.Size(311, 224)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.grpCompiler)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmGradesPreCompiler"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmGradesPreCompiler"

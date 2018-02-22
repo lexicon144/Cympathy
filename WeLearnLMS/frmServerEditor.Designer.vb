@@ -38,7 +38,7 @@ Partial Class frmServerEditor
         '
         Me.TextBox1.Location = New System.Drawing.Point(226, 3)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(182, 23)
+        Me.TextBox1.Size = New System.Drawing.Size(182, 20)
         Me.TextBox1.TabIndex = 0
         Me.TextBox1.Text = Global.WeLearnLMS.My.MySettings.Default.city85
         '
@@ -58,7 +58,7 @@ Partial Class frmServerEditor
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(198, 34)
+        Me.Label1.Size = New System.Drawing.Size(182, 13)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Type the [IPADDRESS] of the server"
         '
@@ -70,7 +70,7 @@ Partial Class frmServerEditor
         '
         Me.txtTypeOK.Location = New System.Drawing.Point(226, 54)
         Me.txtTypeOK.Name = "txtTypeOK"
-        Me.txtTypeOK.Size = New System.Drawing.Size(182, 23)
+        Me.txtTypeOK.Size = New System.Drawing.Size(182, 20)
         Me.txtTypeOK.TabIndex = 3
         '
         'Label2
@@ -78,7 +78,7 @@ Partial Class frmServerEditor
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(3, 51)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(125, 17)
+        Me.Label2.Size = New System.Drawing.Size(94, 13)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "type OK to confirm"
         '
@@ -104,7 +104,7 @@ Partial Class frmServerEditor
         '
         'frmServerEditor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(446, 155)
         Me.Controls.Add(Me.TableLayoutPanel1)

@@ -54,13 +54,16 @@ Namespace My
             End Get
         End Property
         
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("127.0.0.1")>  _
-        Public ReadOnly Property city85() As String
+        Public Property city85() As String
             Get
                 Return CType(Me("city85"),String)
             End Get
+            Set
+                Me("city85") = value
+            End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _

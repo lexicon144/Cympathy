@@ -5,6 +5,7 @@
         For Each elem As Control In ThisIsMe.Controls
             If elem.Name = "PanelProfessorsOnly" Then
                 elem.Enabled = False
+                elem.Visible = False
             End If
         Next
     End Sub

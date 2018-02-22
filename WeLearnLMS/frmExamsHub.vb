@@ -68,6 +68,7 @@ Public Class frmExamsHub
             WeLearnMessageDisplay.Display(WeLearnExceptions.DGV, Me, XXX)
         End Try
     End Sub
+
     Friend Sub LoadDatagridView(ByRef ClassroomID As String)
         Try
             Using Connection As New MySqlConnection

@@ -145,3 +145,4 @@ C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.fr
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\bin\Debug\welearnman.chm
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmClassroomGradeReporter.resources
 C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.vbprojResolveAssemblyReference.cache
+C:\Users\genocideDaemon\Source\Repos\Cympathy\WeLearnLMS\obj\Debug\WeLearnLMS.frmQuizPreGradesReporter.resources

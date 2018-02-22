@@ -37,7 +37,7 @@
     End Sub
 
     Private Sub btnUserBrowser_Click(sender As Object, e As EventArgs) Handles btnUserBrowser.Click
-        Dim userbrowser As New frmUsersViewer()
+        Dim userbrowser As New frmUsersViewer(_SharedClassroom.ClassroomId)
         If userbrowser.ShowDialog = Windows.Forms.DialogResult.OK Then
             With Me._Grades
                 .UserID = userbrowser.GetSmallCredentials.UserID
@@ -101,7 +101,7 @@
         Dim GradeComputer As New frmGradesPreCompiler()
         If GradeComputer.ShowDialog() = Windows.Forms.DialogResult.OK Then
             With Me
-                .txtAverage.Text = GradeComputer.CompileAllGrades().ToString
+                .txtAverage.Text = If(Double.IsNaN(GradeComputer.CompileAllGrades), GradeComputer.CompileAllGrades, 0.0)
             End With
         End If
         RefreshData()
